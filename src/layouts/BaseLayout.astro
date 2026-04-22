@@ -214,6 +214,22 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             border-color: rgba(255,255,255,0.08) !important;
           }
 
+          /* EXCEPTIONS à "transparent" — éléments qui DOIVENT avoir un bg
+             visible (champs de formulaire, boutons quantité) */
+          #snipcart .snipcart-input {
+            background-color: #1C1C1C !important;
+            border-radius: 0.5rem !important;
+          }
+          #snipcart .snipcart-input:hover {
+            background-color: #242424 !important;
+            border-color: rgba(255,255,255,0.2) !important;
+          }
+          #snipcart .snipcart-input:focus-within {
+            background-color: #242424 !important;
+            border-color: rgba(255,255,255,0.35) !important;
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.06) !important;
+          }
+
           /* Backdrop derrière le modal */
           #snipcart .snipcart__backdrop,
           #snipcart .snipcart-modal__backdrop {
