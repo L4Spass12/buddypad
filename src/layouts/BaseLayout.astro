@@ -377,30 +377,66 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             border-radius: 9999px !important;
           }
 
-          /* Inputs, textarea, select */
+          /* ───────────────────────────────────────────────────────────
+             Champs de formulaire — style GLIDE (pur neutre, subtil)
+             Wrapper transparent + input avec bg neutre et bordure fine.
+             ─────────────────────────────────────────────────────────── */
+          /* Wrapper : transparent pour éviter le "box-in-box" */
+          #snipcart .snipcart-form__field,
+          #snipcart [class*="snipcart-form__field-container"],
+          #snipcart [class*="snipcart-input__container"] {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+          }
+          /* L'input lui-même : gris neutre subtil, sans tint bleuté */
           #snipcart input,
           #snipcart textarea,
           #snipcart select,
-          #snipcart .snipcart-form__field,
           #snipcart .snipcart-form__select {
-            background-color: #14141C !important;
+            background-color: #141414 !important;
             color: #F4F4F7 !important;
             border: 1px solid rgba(255,255,255,0.08) !important;
             border-radius: 0.5rem !important;
+            padding: 0.75rem 1rem !important;
+          }
+          #snipcart input:hover,
+          #snipcart textarea:hover,
+          #snipcart select:hover {
+            border-color: rgba(255,255,255,0.15) !important;
           }
           #snipcart input:focus,
           #snipcart textarea:focus,
           #snipcart select:focus {
+            background-color: #1A1A1A !important;
             border-color: rgba(255,255,255,0.3) !important;
             outline: none !important;
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.06) !important;
+          }
+          #snipcart input::placeholder,
+          #snipcart textarea::placeholder {
+            color: #525252 !important;
           }
 
-          /* Quantité buttons (— 1 +) */
+          /* Quantité buttons (— 1 +) — même gris neutre */
           #snipcart .snipcart-item-quantity__quantity,
           #snipcart .snipcart-item-quantity__button {
-            background-color: #14141C !important;
+            background-color: #141414 !important;
             color: #F4F4F7 !important;
             border: 1px solid rgba(255,255,255,0.08) !important;
+          }
+
+          /* Checkbox (ex. "Utiliser une adresse de livraison différente") */
+          #snipcart [class*="snipcart-form__checkbox"],
+          #snipcart [class*="checkbox__box"] {
+            background-color: transparent !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            border-radius: 0.25rem !important;
+          }
+          #snipcart input[type="checkbox"]:checked + [class*="checkbox__box"],
+          #snipcart [class*="checkbox__box"][class*="--checked"] {
+            background-color: #F4F4F7 !important;
+            border-color: #F4F4F7 !important;
           }
 
           /* ───────────────────────────────────────────────────────────
