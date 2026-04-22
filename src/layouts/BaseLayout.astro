@@ -403,6 +403,80 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             border: 1px solid rgba(255,255,255,0.08) !important;
           }
 
+          /* ───────────────────────────────────────────────────────────
+             Autocomplete d'adresse (Snipcart + Google Places)
+             Sans ces règles, les suggestions sont transparentes et
+             se superposent aux champs "Ville", "Pays", etc.
+             ─────────────────────────────────────────────────────────── */
+          #snipcart .snipcart-address-autocomplete__items,
+          #snipcart .snipcart-autocomplete__items,
+          #snipcart [class*="autocomplete__items"],
+          #snipcart [class*="autocomplete__dropdown"],
+          #snipcart [class*="suggestions"] {
+            background-color: #14141C !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            border-radius: 0.75rem !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
+            z-index: 10050 !important;
+            overflow: hidden !important;
+          }
+          #snipcart .snipcart-address-autocomplete__item,
+          #snipcart .snipcart-autocomplete__item,
+          #snipcart [class*="autocomplete__item"] {
+            background-color: transparent !important;
+            color: #F4F4F7 !important;
+            padding: 0.75rem 1rem !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+          }
+          #snipcart .snipcart-address-autocomplete__item:last-child,
+          #snipcart [class*="autocomplete__item"]:last-child {
+            border-bottom: none !important;
+          }
+          #snipcart .snipcart-address-autocomplete__item:hover,
+          #snipcart [class*="autocomplete__item"]:hover,
+          #snipcart [class*="autocomplete__item--highlighted"],
+          #snipcart [class*="autocomplete__item--active"] {
+            background-color: rgba(255,255,255,0.05) !important;
+            color: #FFFFFF !important;
+          }
+
+          /* Google Places autocomplete (injecté dans <body>, hors de #snipcart) */
+          .pac-container {
+            background-color: #14141C !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            border-radius: 0.75rem !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
+            margin-top: 4px !important;
+            font-family: 'Inter', system-ui, sans-serif !important;
+            overflow: hidden !important;
+            z-index: 100000 !important;
+          }
+          .pac-item {
+            background-color: transparent !important;
+            color: #F4F4F7 !important;
+            padding: 0.75rem 1rem !important;
+            border-top: 1px solid rgba(255,255,255,0.06) !important;
+            cursor: pointer !important;
+          }
+          .pac-item:first-child { border-top: none !important; }
+          .pac-item:hover,
+          .pac-item-selected,
+          .pac-item.pac-item-selected {
+            background-color: rgba(255,255,255,0.05) !important;
+          }
+          .pac-item-query,
+          .pac-matched {
+            color: #FFFFFF !important;
+            font-weight: 500 !important;
+          }
+          .pac-item span:not(.pac-item-query) {
+            color: #A3A3A3 !important;
+          }
+          .pac-icon {
+            filter: invert(1) opacity(0.7) !important;
+          }
+
           /* Dividers / séparateurs / hr */
           #snipcart hr,
           #snipcart .snipcart__separator,
