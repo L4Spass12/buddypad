@@ -156,13 +156,26 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             --bgColor-buttonSecondary-active:rgba(255,255,255,0.08);
             --borderColor-buttonSecondary:   rgba(255,255,255,0.12);
 
-            /* Inputs */
+            /* Inputs — variables officielles Snipcart v3.7
+               (toutes les variantes, y compris autofill qui par défaut
+               est bleu clair #d9f0fc et écrase nos règles) */
             --color-input:                   #F4F4F7;
-            --color-inputLabel:              #A3A3A3;
-            --bgColor-input:                 #14141C;
-            --bgColor-inputLabel:            #0D0D0D;
+            --color-input-hover:             #F4F4F7;
+            --color-input-focus:             #F4F4F7;
+            --color-inputLabel:              #D4D4D8;
+            --color-inputPlaceholder:        #525252;
+            --color-inputIcon:               #A3A3A3;
+            --color-inputIcon-hover:         #F4F4F7;
+            --color-inputIcon-focus:         #F4F4F7;
+            --bgColor-input:                 #141414;
+            --bgColor-input-hover:           #1A1A1A;
+            --bgColor-input-focus:           #1A1A1A;
+            --bgColor-input-autofill:        #141414;
+            --bgColor-inputLabel:            transparent;
             --borderColor-input:             rgba(255,255,255,0.08);
-            --borderColor-input-focus:       rgba(255,255,255,0.3);
+            --borderColor-input-hover:       rgba(255,255,255,0.2);
+            --borderColor-input-focus:       rgba(255,255,255,0.35);
+            --shadow-input-focus:            0 0 0 2px rgba(255,255,255,0.06);
 
             /* Erreurs */
             --color-error:                   #F87171;
@@ -382,40 +395,40 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
              Wrapper transparent + input avec bg neutre et bordure fine.
              ─────────────────────────────────────────────────────────── */
           /* Wrapper : transparent pour éviter le "box-in-box" */
-          #snipcart .snipcart-form__field,
-          #snipcart [class*="snipcart-form__field-container"],
-          #snipcart [class*="snipcart-input__container"] {
-            background-color: transparent !important;
-            border: none !important;
-            padding: 0 !important;
-          }
-          /* L'input lui-même : gris neutre subtil, sans tint bleuté */
-          #snipcart input,
-          #snipcart textarea,
-          #snipcart select,
-          #snipcart .snipcart-form__select {
-            background-color: #141414 !important;
-            color: #F4F4F7 !important;
-            border: 1px solid rgba(255,255,255,0.08) !important;
+          /* Structure Snipcart v3.7 :
+               .snipcart-form__field           ← wrapper (label + box)
+                 .snipcart-form__label         ← "Nom complet"
+                 .snipcart-input               ← BOX VISIBLE (border, bg)
+                   .snipcart-input__input      ← <input> réel (padding only)
+             Le box visible = .snipcart-input. C'est LUI qu'on arrondit. */
+
+          /* Les CSS vars Snipcart gèrent déjà bg/border/color pour
+             .snipcart-input et ses états hover/focus/autofill.
+             On ne touche qu'au border-radius (non exposé en var). */
+          #snipcart .snipcart-input {
             border-radius: 0.5rem !important;
-            padding: 0.75rem 1rem !important;
           }
-          #snipcart input:hover,
-          #snipcart textarea:hover,
-          #snipcart select:hover {
-            border-color: rgba(255,255,255,0.15) !important;
-          }
-          #snipcart input:focus,
-          #snipcart textarea:focus,
-          #snipcart select:focus {
-            background-color: #1A1A1A !important;
-            border-color: rgba(255,255,255,0.3) !important;
-            outline: none !important;
+          #snipcart .snipcart-input:focus-within {
             box-shadow: 0 0 0 2px rgba(255,255,255,0.06) !important;
           }
-          #snipcart input::placeholder,
-          #snipcart textarea::placeholder {
-            color: #525252 !important;
+
+          /* Wrapper de champ : transparent (pas de "box-in-box") */
+          #snipcart .snipcart-form__field,
+          #snipcart .snipcart-form__select-wrapper {
+            background-color: transparent !important;
+            border: none !important;
+          }
+
+          /* Autofill — safety net au cas où --bgColor-input-autofill
+             ne couvre pas tous les navigateurs. */
+          #snipcart input:-webkit-autofill,
+          #snipcart .snipcart-input__input:-webkit-autofill,
+          #snipcart textarea:-webkit-autofill,
+          #snipcart select:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+            -webkit-text-fill-color: #F4F4F7 !important;
+            caret-color: #F4F4F7 !important;
+            transition: background-color 99999s ease-in-out 0s !important;
           }
 
           /* Quantité buttons (— 1 +) — même gris neutre */
