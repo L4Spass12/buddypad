@@ -1,27 +1,18 @@
-@import '@fontsource/dosis/300.css';
-@import '@fontsource/dosis/400.css';
-@import '@fontsource/dosis/500.css';
-@import '@fontsource/dosis/600.css';
-@import '@fontsource/dosis/700.css';
-@import '@fontsource/dancing-script/400.css';
-@import '@fontsource/dancing-script/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Ciguatera';
-  src: local('Ciguatera');
-  font-display: swap;
-}
-
 :root {
-  --header-h: 72px;
+  --header-h: 64px;
   color-scheme: dark;
 }
 @media (min-width: 768px) {
-  :root { --header-h: 80px; }
+  :root { --header-h: 72px; }
 }
 
 @layer base {
@@ -29,115 +20,129 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-dark text-cream font-body antialiased;
+    @apply bg-dark text-n-400 font-body antialiased;
+    /* Pure minimal look */
+    font-feature-settings: 'ss01', 'cv11';
   }
-  h1, h2, h3 {
-    @apply font-display;
+  h1, h2, h3, h4 {
+    @apply text-cream font-medium tracking-tight;
   }
   ::selection {
-    @apply bg-terracotta/40 text-cream;
+    @apply bg-beige text-cream;
   }
 }
 
 @layer components {
+  /* Primary button — white on black (GLIDE-style) */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-terracotta text-cream px-6 py-3 rounded-full font-body font-semibold text-sm tracking-wide transition-all duration-200 hover:bg-opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-terracotta/30;
+    @apply inline-flex items-center justify-center gap-2
+           bg-cream text-dark
+           px-6 py-3 rounded-full
+           font-body text-sm font-medium tracking-tight
+           transition-colors duration-300
+           hover:bg-n-400;
   }
+  /* Secondary outline button */
   .btn-outline {
-    @apply inline-flex items-center gap-2 border-2 border-beige text-cream px-6 py-3 rounded-full font-body font-semibold text-sm tracking-wide transition-all duration-200 hover:bg-panel hover:border-terracotta hover:text-terracotta;
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-cream
+           border border-white/10
+           px-6 py-3 rounded-full
+           font-body text-sm font-medium tracking-tight
+           transition-colors duration-300
+           hover:bg-white/5;
   }
   .section-title {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl text-cream leading-tight;
+    @apply font-medium tracking-tight text-cream text-3xl md:text-4xl lg:text-5xl leading-[1.1];
   }
   .section-subtitle {
-    @apply font-body text-lg text-cream/70 leading-relaxed;
-  }
-  .tag {
-    @apply inline-flex items-center gap-2 font-body text-[11px] font-bold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full;
-  }
-  .tag::before {
-    content: '';
-    @apply w-1.5 h-1.5 rounded-full bg-current opacity-80;
-  }
-  /* Variants */
-  .tag-light {
-    @apply bg-panel text-terracotta border border-terracotta/30;
-  }
-  .tag-beige {
-    @apply bg-beige text-terracotta;
-  }
-  .tag-terracotta {
-    @apply bg-terracotta text-cream;
-  }
-  .tag-teal {
-    @apply bg-teal text-sage border border-sage/20;
-  }
-  .tag-sage {
-    @apply bg-sage/15 text-sage border border-sage/30;
-  }
-  .tag-outline-light {
-    @apply bg-white/5 text-cream backdrop-blur-sm border border-white/10;
+    @apply font-light text-base md:text-lg text-n-400 leading-relaxed;
   }
 
-  /* Images de contenu */
+  /* Pill tag — minimal border style */
+  .tag {
+    @apply inline-flex items-center gap-2
+           px-3 py-1 rounded-full
+           text-xs font-medium
+           border border-white/[0.08] bg-white/[0.02] text-n-400
+           backdrop-blur-sm;
+  }
+  .tag::before { content: none; }
+  .tag-light {
+    @apply bg-white/[0.02] text-cream border-white/[0.08];
+  }
+  .tag-beige {
+    @apply bg-white/[0.02] text-n-400 border-white/[0.08];
+  }
+  .tag-terracotta {
+    @apply bg-cream text-dark border-transparent;
+  }
+  .tag-teal {
+    @apply bg-white/[0.02] text-cream border-white/[0.08];
+  }
+  .tag-sage {
+    @apply bg-sage/10 text-sage border-sage/20;
+  }
+  .tag-outline-light {
+    @apply bg-white/[0.02] text-cream backdrop-blur-sm border-white/[0.08];
+  }
+  /* Status pill with colored dot (like "Nouveau : ..." in GLIDE) */
+  .tag-status::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: rgba(34, 197, 94, 0.85);
+  }
+
+  /* Prose / blog figures */
   .prose figure {
-    @apply my-8 rounded-2xl overflow-hidden border border-beige;
+    @apply my-8 rounded-2xl overflow-hidden border border-white/[0.05];
   }
   .prose figure img {
     @apply w-full h-64 md:h-80 object-cover;
   }
   .prose figure figcaption {
-    @apply text-center text-xs text-cream/40 font-body py-2 px-4 bg-panel;
+    @apply text-center text-xs text-n-500 font-light py-2 px-4 bg-panel;
   }
 
-  /* FAQ accordion — details/summary */
+  /* FAQ accordion */
   .prose details {
-    @apply mb-3 rounded-2xl overflow-hidden border border-beige bg-panel shadow-sm;
-    transition: box-shadow 0.2s ease;
+    @apply mb-3 rounded-2xl overflow-hidden border border-white/[0.08] bg-panel;
+    transition: border-color 0.2s ease;
   }
-  .prose details:hover {
-    @apply shadow-md border-terracotta/30;
-  }
-  .prose details[open] {
-    @apply border-terracotta/50 shadow-md;
-  }
+  .prose details:hover { @apply border-white/20; }
+  .prose details[open] { @apply border-white/20; }
   .prose details summary {
     @apply flex items-center justify-between gap-4 px-5 py-4 cursor-pointer select-none list-none;
-    @apply font-display text-base text-cream;
+    @apply font-medium text-base text-cream tracking-tight;
     @apply transition-colors duration-150;
   }
   .prose details summary::-webkit-details-marker { display: none; }
   .prose details summary::after {
     content: '';
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    background-color: theme('colors.terracotta');
-    border-radius: 50%;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
+    width: 18px;
+    height: 18px;
+    background-color: theme('colors.cream');
+    border-radius: 9999px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%230a0a0a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
     mask-size: cover;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%230a0a0a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
     -webkit-mask-size: cover;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .prose details[open] summary::after {
-    transform: rotate(180deg);
-  }
-  .prose details[open] summary {
-    @apply text-terracotta border-b border-terracotta/20;
-    background-color: rgba(168, 85, 247, 0.08);
-  }
+  .prose details[open] summary::after { transform: rotate(180deg); }
   .prose details > *:not(summary) {
-    @apply px-5 pb-5 pt-3 font-body text-sm text-cream/70 leading-relaxed;
+    @apply px-5 pb-5 pt-3 font-body font-light text-sm text-n-400 leading-relaxed;
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 
-/* Scrollbar dark */
-@media (hover: hover) {
-  ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: #0A0A0F; }
-  ::-webkit-scrollbar-thumb { background: #2A2A3A; border-radius: 10px; }
-  ::-webkit-scrollbar-thumb:hover { background: #A855F7; }
-}
+/* Custom thin scrollbar (GLIDE-style) */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #404040; }

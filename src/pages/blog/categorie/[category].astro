@@ -38,31 +38,31 @@ const catSlug = catToSlug(cat);
   title={`${cat} — Blog ${siteConfig.name}`}
   description={`Tous les articles ${siteConfig.name} dans la catégorie ${cat} : conseils, inspirations et guides pratiques.`}
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
     <!-- Breadcrumb -->
-    <nav class="flex items-center gap-2 font-body text-sm text-cream/50 mb-8">
-      <a href="/" class="hover:text-terracotta transition-colors">Accueil</a>
+    <nav class="flex items-center gap-2 text-xs text-n-500 mb-10 font-light">
+      <a href="/" class="hover:text-cream transition-colors">Accueil</a>
       <span>/</span>
-      <a href="/blog" class="hover:text-terracotta transition-colors">Blog</a>
+      <a href="/blog" class="hover:text-cream transition-colors">Blog</a>
       <span>/</span>
-      <span class="text-cream/70">{cat}</span>
+      <span class="text-n-400">{cat}</span>
     </nav>
 
     <div class="mb-12">
-      <span class="tag tag-beige mb-4">{posts.length} article{posts.length > 1 ? 's' : ''}</span>
-      <h1 class="section-title mt-4 mb-3">{cat}</h1>
-      <p class="section-subtitle">Tous nos articles dans la catégorie <strong>{cat}</strong>.</p>
+      <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">{posts.length} article{posts.length > 1 ? 's' : ''}</span>
+      <h1 class="text-4xl md:text-5xl font-medium tracking-tight text-cream leading-[1.1] mb-3">{cat}</h1>
+      <p class="text-sm text-n-400 font-light">Tous nos articles dans la catégorie {cat}.</p>
     </div>
 
     <!-- Filtres catégories -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <a href="/blog" class="font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-beige text-cream/70 hover:bg-terracotta hover:text-cream transition-all">
+    <div class="flex flex-wrap gap-2 mb-12">
+      <a href="/blog" class="text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors">
         Tous
       </a>
       {CATEGORIES.map(c => (
         <a
           href={`/blog/categorie/${catToSlug(c)}`}
-          class={`font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all ${c === cat ? 'bg-terracotta text-cream shadow-md shadow-terracotta/30' : 'bg-beige text-cream/70 hover:bg-terracotta hover:text-cream'}`}
+          class={`text-xs font-medium px-4 py-2 rounded-full transition-colors ${c === cat ? 'bg-cream text-dark' : 'border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20'}`}
         >
           {c}
         </a>
@@ -70,40 +70,36 @@ const catSlug = catToSlug(cat);
     </div>
 
     {posts.length > 0 ? (
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {posts.map(post => (
-          <article class="group bg-panel border border-beige rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1">
-            <div class="aspect-video bg-teal flex items-center justify-center relative overflow-hidden">
+          <a href={`/blog/${post.slug}`} class="group block">
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
               {post.data.image
                 ? <img
                     src={unsplashAt(post.data.image, 600)}
                     srcset={unsplashSrcset(post.data.image, [400, 600, 800])}
                     sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
                     alt={post.data.imageAlt ?? post.data.title}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    width="800" height="450" loading="lazy"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    width="800" height="600" loading="lazy"
                   />
-                : <div class="text-terracotta/40"><Icon name="mouse" size={64} strokeWidth={1.25} /></div>
+                : <div class="w-full h-full flex items-center justify-center text-n-500"><Icon name="mouse" size={48} strokeWidth={1.25} /></div>
               }
-              <div class="absolute top-3 left-3">
-                <span class="tag tag-teal">{post.data.category}</span>
-              </div>
             </div>
-            <div class="p-6">
-              <time datetime={post.data.pubDate.toISOString()} class="font-body text-xs text-cream/50 mb-3 block">
-                {formatDate(post.data.pubDate)}
-              </time>
-              <h2 class="font-display text-lg text-cream mb-2 leading-snug group-hover:text-terracotta transition-colors">
-                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <div>
+              <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">{post.data.category}</span>
+              <h2 class="text-base font-medium text-cream tracking-tight leading-snug group-hover:underline underline-offset-4">
+                {post.data.title}
               </h2>
-              <p class="font-body text-sm text-cream/60 leading-relaxed line-clamp-3">{post.data.description}</p>
+              <p class="text-xs text-n-500 font-light line-clamp-2 mt-1">{post.data.description}</p>
+              <time datetime={post.data.pubDate.toISOString()} class="text-[11px] text-n-500 font-light mt-3 block">{formatDate(post.data.pubDate)}</time>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     ) : (
       <div class="text-center py-20">
-        <p class="font-body text-cream/50">Aucun article dans cette catégorie pour l'instant.</p>
+        <p class="text-sm text-n-500 font-light">Aucun article dans cette catégorie pour l'instant.</p>
       </div>
     )}
   </div>

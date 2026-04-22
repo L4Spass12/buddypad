@@ -1,64 +1,76 @@
 ---
-import Icon from './Icon.astro';
 import siteConfig from '../../site.config.mjs';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-panel text-cream/60 pt-16 pb-8 border-t border-beige">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-beige">
-      <!-- Brand -->
-      <div class="md:col-span-2">
-        <a href="/" class="font-display text-3xl">
-          <span class="text-cream">{siteConfig.logoPrefix}</span><span class="text-terracotta">{siteConfig.logoSuffix}</span>
-        </a>
-        <p class="font-body text-sm leading-relaxed mt-4 max-w-xs">
-          {siteConfig.description}
-        </p>
-        <div class="flex gap-4 mt-6">
-          {siteConfig.socials?.instagram && (
-            <a href={siteConfig.socials.instagram} aria-label="Instagram" class="w-9 h-9 rounded-full bg-beige flex items-center justify-center text-cream/70 hover:bg-terracotta hover:text-cream transition-colors">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-          )}
-          {siteConfig.socials?.tiktok && (
-            <a href={siteConfig.socials.tiktok} aria-label="TikTok" class="w-9 h-9 rounded-full bg-beige flex items-center justify-center text-cream/70 hover:bg-terracotta hover:text-cream transition-colors">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.84 4.84 0 01-1.01-.08z"/></svg>
-            </a>
-          )}
-          {siteConfig.socials?.youtube && (
-            <a href={siteConfig.socials.youtube} aria-label="YouTube" class="w-9 h-9 rounded-full bg-beige flex items-center justify-center text-cream/70 hover:bg-terracotta hover:text-cream transition-colors">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-          )}
-        </div>
-      </div>
-
-      <!-- Links -->
-      <div>
-        <h3 class="font-body text-sm font-bold text-cream uppercase tracking-widest mb-5">Explorer</h3>
-        <ul class="space-y-3 font-body text-sm">
-          <li><a href="/" class="hover:text-terracotta transition-colors">Accueil</a></li>
-          <li><a href="/blog" class="hover:text-terracotta transition-colors">Blog</a></li>
-          {siteConfig.shop?.enabled && <li><a href="/boutique" class="hover:text-terracotta transition-colors">Boutique</a></li>}
-          <li><a href="/#a-propos" class="hover:text-terracotta transition-colors">À propos</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-body text-sm font-bold text-cream uppercase tracking-widest mb-5">Catégories</h3>
-        <ul class="space-y-3 font-body text-sm">
-          {siteConfig.categories.map(cat => {
-            const slug = cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
-            return <li><a href={`/blog/categorie/${slug}`} class="hover:text-terracotta transition-colors">{cat}</a></li>;
-          })}
-        </ul>
+<footer class="border-t border-white/[0.04] bg-dark pt-16 pb-8 px-6 mt-auto">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <!-- Brand -->
+    <div class="md:col-span-1">
+      <a href="/" class="text-lg font-medium tracking-tightest text-cream inline-block mb-4">
+        {siteConfig.logoPrefix}<span class="text-n-400">{siteConfig.logoSuffix}</span>
+      </a>
+      <p class="text-xs text-n-500 font-light leading-relaxed max-w-xs">
+        {siteConfig.description}
+      </p>
+      <div class="flex gap-3 mt-6">
+        {siteConfig.socials?.instagram && (
+          <a href={siteConfig.socials.instagram} aria-label="Instagram" class="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-n-400 hover:text-cream hover:border-white/20 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        )}
+        {siteConfig.socials?.tiktok && (
+          <a href={siteConfig.socials.tiktok} aria-label="TikTok" class="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-n-400 hover:text-cream hover:border-white/20 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.84 4.84 0 01-1.01-.08z"/></svg>
+          </a>
+        )}
+        {siteConfig.socials?.youtube && (
+          <a href={siteConfig.socials.youtube} aria-label="YouTube" class="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-n-400 hover:text-cream hover:border-white/20 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        )}
       </div>
     </div>
 
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body text-xs">
-      <p>© {currentYear} {siteConfig.name}. Tous droits réservés.</p>
-      <p class="inline-flex items-center gap-1.5">Fait avec <Icon name="heart" size={14} fill class="text-terracotta" /> en France</p>
+    <!-- Links -->
+    <div>
+      <h4 class="text-sm font-medium text-cream mb-4 tracking-tight">Explorer</h4>
+      <ul class="space-y-3 text-xs text-n-500 font-light">
+        <li><a href="/" class="hover:text-cream transition-colors">Accueil</a></li>
+        <li><a href="/blog" class="hover:text-cream transition-colors">Blog</a></li>
+        {siteConfig.shop?.enabled && <li><a href="/boutique" class="hover:text-cream transition-colors">Boutique</a></li>}
+        <li><a href="/#a-propos" class="hover:text-cream transition-colors">À propos</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-medium text-cream mb-4 tracking-tight">Catégories</h4>
+      <ul class="space-y-3 text-xs text-n-500 font-light">
+        {siteConfig.categories.map(cat => {
+          const slug = cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+          return <li><a href={`/blog/categorie/${slug}`} class="hover:text-cream transition-colors">{cat}</a></li>;
+        })}
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-medium text-cream mb-4 tracking-tight">Restez informé</h4>
+      <p class="text-xs text-n-500 font-light mb-4">Les meilleurs tests & nouveautés setup, une fois par semaine.</p>
+      <form class="flex items-stretch" action="#" method="post">
+        <input type="email" placeholder="Adresse email" required class="bg-panel border border-white/[0.08] rounded-l-md px-3 py-2 w-full text-xs text-cream placeholder-n-500 focus:outline-none focus:border-white/20 transition-colors" />
+        <button type="submit" class="bg-cream text-dark px-3 py-2 rounded-r-md text-xs font-medium hover:bg-n-400 border border-cream transition-colors">
+          Rejoindre
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.04] text-[10px] text-n-500 font-light">
+    <p>© {currentYear} {siteConfig.name}. Tous droits réservés.</p>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <a href="#" class="hover:text-n-400 transition-colors">CGV</a>
+      <a href="#" class="hover:text-n-400 transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-n-400 transition-colors">Mentions Légales</a>
     </div>
   </div>
 </footer>

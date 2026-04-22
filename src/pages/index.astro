@@ -81,79 +81,81 @@ const faqSchema = {
   jsonLd={[websiteSchema, faqSchema]}
 >
     <!-- Hero -->
-    <section class="relative bg-panel text-cream pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden border-b border-beige">
-      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-terracotta/20 blur-[120px]"></div>
-      <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(#A855F7 1px, transparent 1px), linear-gradient(90deg, #A855F7 1px, transparent 1px); background-size: 40px 40px;"></div>
-      <div class="relative max-w-4xl mx-auto px-6 text-center">
-        <span class="tag tag-light mb-6">Le blog du setup parfait</span>
-        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-          Le tapis de souris<br />
-          <span class="text-terracotta">taillé pour votre setup</span>
+    <section class="relative pt-24 pb-16 md:pt-40 md:pb-28 px-6 overflow-hidden">
+      <!-- Decorative background gradient -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/[0.03] blur-[120px] rounded-[100%] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <span class="tag tag-status mb-8">Nouveau : sélection 2026</span>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-cream mb-6 leading-[1.1]">
+          La surface parfaite pour<br class="hidden md:block" />
+          une précision absolue.
         </h1>
-        <p class="font-body text-lg md:text-xl text-cream/70 max-w-2xl mx-auto leading-relaxed mb-10">
-          Gaming, bureautique, XXL ou RGB : guides, tests et conseils pour choisir le tapis qui change vraiment l'expérience — et booster tout votre poste de travail.
+
+        <p class="text-base md:text-lg text-n-400 mb-10 max-w-2xl mx-auto font-light">
+          Des tapis de souris testés, analysés et sélectionnés pour offrir une friction minimale, une base antidérapante inébranlable et une esthétique qui sublime votre setup.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="/blog" class="btn-primary">Découvrir le blog</a>
-          <a href="#categories" class="font-body text-sm font-semibold text-cream/80 hover:text-terracotta transition-colors">Explorer les catégories →</a>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="/blog" class="w-full sm:w-auto btn-primary">Explorer le blog</a>
+          <a href="#categories" class="w-full sm:w-auto btn-outline">Découvrir les catégories</a>
         </div>
       </div>
     </section>
 
-    <!-- À propos / SEO intro -->
-    <section id="a-propos" class="py-16 md:py-24 bg-dark">
-      <div class="max-w-4xl mx-auto px-6">
+    <!-- À propos -->
+    <section id="a-propos" class="py-24 px-6 border-y border-white/[0.04] bg-panel">
+      <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
-          <span class="tag tag-beige mb-4">À propos</span>
-          <h2 class="section-title mt-4 mb-6">
-            Le média pour <span class="text-terracotta">équiper son bureau</span>
+          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-cream mb-4">
+            Le média pour équiper son bureau.
           </h2>
+          <p class="text-sm text-n-500 max-w-xl mx-auto font-light">
+            Tests, analyses et conseils — sans filler marketing.
+          </p>
         </div>
-        <div class="prose prose-lg max-w-none prose-p:font-body prose-p:text-cream/75 prose-p:leading-relaxed prose-strong:text-cream">
+        <div class="prose prose-invert prose-lg max-w-none prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed prose-strong:text-cream prose-strong:font-medium">
           <p>
-            <strong>{siteConfig.name}</strong> est le site francophone dédié aux <strong>tapis de souris gaming et bureautique</strong>, ainsi qu'à l'optimisation complète de votre poste de travail. Notre mission : vous aider à trouver le matériel qui <strong>change vraiment votre expérience</strong>, sans vous ruiner en RGB inutile ni en gadgets qui ne servent qu'à remplir une vitrine.
+            <strong>{siteConfig.name}</strong> est le site francophone dédié aux <strong>tapis de souris gaming et bureautique</strong>, ainsi qu'à l'optimisation complète de votre poste de travail. Notre mission : vous aider à trouver le matériel qui <strong>change vraiment votre expérience</strong>, sans vous ruiner en RGB inutile.
           </p>
           <p>
-            Chaque semaine, nous publions des <strong>tests approfondis</strong>, des <strong>guides d'achat</strong> et des <strong>comparatifs</strong> sur les tapis XXL, les surfaces contrôle ou vitesse, les accessoires ergonomiques et tout ce qui compose un setup productif. Du joueur compétitif à l'utilisateur bureautique intensif, vous trouverez des conseils adaptés à votre usage réel.
+            Chaque semaine, nous publions des <strong>tests approfondis</strong>, des <strong>guides d'achat</strong> et des <strong>comparatifs</strong>. Du joueur compétitif à l'utilisateur bureautique intensif, vous trouverez des conseils adaptés à votre usage réel.
           </p>
           <p>
-            Un bon tapis ne se voit pas : il se <strong>sent sous la souris</strong>, il préserve vos poignets, et il tient des années. On explique pourquoi certains modèles à 80€ sont une arnaque, pourquoi un tapis à 25€ peut suffire, et comment choisir la surface qui colle à votre style.
+            Un bon tapis ne se voit pas : il se <strong>sent sous la souris</strong>, il préserve vos poignets, et il tient des années.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Catégories -->
-    <section id="categories" class="py-16 md:py-24 bg-panel border-y border-beige">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-14">
-          <span class="tag tag-terracotta mb-4">Explorer</span>
-          <h2 class="section-title mt-4 mb-4">
-            Cinq univers à <span class="text-terracotta">découvrir</span>
+    <section id="categories" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-cream mb-4">
+            L'ingénierie au service du mouvement.
           </h2>
-          <p class="section-subtitle max-w-xl mx-auto">
-            Du joueur compétitif au télétravailleur, trouvez les conseils qui correspondent à votre usage.
+          <p class="text-sm text-n-500 max-w-xl mx-auto font-light">
+            Cinq univers, chacun optimisé pour un usage précis.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {siteConfig.categories.map(cat => (
             <a
               href={`/blog/categorie/${catToSlug(cat)}`}
-              class="group block bg-dark border border-beige rounded-3xl p-8 shadow-sm hover:shadow-lg hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1"
+              class="group flex flex-col items-center text-center"
             >
-              <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5 group-hover:bg-terracotta group-hover:text-cream transition-colors">
-                <Icon name={categoryIcons[cat] ?? 'sparkle'} size={24} strokeWidth={1.75} />
+              <div class="h-12 w-12 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center mb-6 text-cream group-hover:border-white/30 transition-colors">
+                <Icon name={categoryIcons[cat] ?? 'sparkle'} size={22} strokeWidth={1.5} />
               </div>
-              <h3 class="font-display text-xl text-cream mb-2 group-hover:text-terracotta transition-colors">
+              <h3 class="text-lg font-medium text-cream tracking-tight mb-2 group-hover:underline underline-offset-4">
                 {cat}
               </h3>
-              <p class="font-body text-sm text-cream/60 leading-relaxed">
+              <p class="text-sm text-n-500 font-light leading-relaxed max-w-xs">
                 {categoryDescriptions[cat] ?? `Articles et conseils autour de ${cat.toLowerCase()}.`}
               </p>
-              <span class="inline-flex items-center gap-1 mt-5 font-body text-xs font-semibold text-terracotta uppercase tracking-wider">
-                Explorer →
-              </span>
             </a>
           ))}
         </div>
@@ -164,22 +166,21 @@ const faqSchema = {
     {recentPosts.length > 0 && <BlogPreview posts={recentPosts} />}
 
     <!-- FAQ -->
-    <section class="py-16 md:py-24 bg-dark">
-      <div class="max-w-3xl mx-auto px-6">
+    <section class="py-24 px-6 border-t border-white/[0.04] bg-panel">
+      <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12">
-          <span class="tag tag-beige mb-4">Questions fréquentes</span>
-          <h2 class="section-title mt-4 mb-4">
-            Vos questions, nos <span class="text-terracotta">réponses</span>
+          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-cream mb-4">
+            Questions fréquentes
           </h2>
         </div>
-        <div class="space-y-4">
+        <div class="space-y-3">
           {faqs.map(f => (
-            <details class="group bg-panel border border-beige rounded-2xl p-6 shadow-sm open:shadow-md open:shadow-terracotta/5 open:border-terracotta/40 transition-all">
-              <summary class="font-display text-lg text-cream cursor-pointer list-none flex items-start justify-between gap-4">
+            <details class="group rounded-2xl border border-white/[0.08] bg-dark open:border-white/20 transition-colors">
+              <summary class="flex items-start justify-between gap-4 px-6 py-5 cursor-pointer list-none font-medium text-base text-cream tracking-tight">
                 <span class="flex-1">{f.q}</span>
-                <span class="text-terracotta text-2xl leading-none transition-transform group-open:rotate-45 shrink-0">+</span>
+                <span class="text-n-400 text-xl leading-none transition-transform group-open:rotate-45 shrink-0">+</span>
               </summary>
-              <p class="font-body text-cream/70 leading-relaxed mt-4">
+              <p class="px-6 pb-5 pt-1 font-light text-sm text-n-400 leading-relaxed">
                 {f.a}
               </p>
             </details>
@@ -189,18 +190,18 @@ const faqSchema = {
     </section>
 
     <!-- CTA final -->
-    <section class="relative py-20 bg-panel text-cream overflow-hidden border-t border-beige">
-      <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-terracotta/15 blur-[120px]"></div>
-      <div class="relative max-w-3xl mx-auto px-6 text-center">
-        <h2 class="font-display text-3xl md:text-4xl leading-tight mb-4">
-          Prêt·e à <span class="text-terracotta">upgrader votre setup</span> ?
+    <section class="relative py-24 px-6 overflow-hidden">
+      <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/[0.04] blur-[120px] rounded-[100%] pointer-events-none"></div>
+      <div class="relative max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-cream mb-4 leading-[1.1]">
+          Prêt à upgrader votre setup ?
         </h2>
-        <p class="font-body text-cream/70 text-lg mb-8 max-w-xl mx-auto">
-          Explorez la boutique et le blog pour trouver le tapis qui correspond à votre style.
+        <p class="text-base text-n-400 mb-10 max-w-xl mx-auto font-light">
+          Explorez la boutique et le blog pour trouver la surface qui correspond à votre style.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          {siteConfig.shop?.enabled && <a href="/boutique" class="btn-primary"><Icon name="cart" size={18} strokeWidth={1.75} />Voir la boutique</a>}
-          <a href="/blog" class="btn-outline">Lire le blog</a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          {siteConfig.shop?.enabled && <a href="/boutique" class="w-full sm:w-auto btn-primary">Voir la boutique</a>}
+          <a href="/blog" class="w-full sm:w-auto btn-outline">Lire le blog</a>
         </div>
       </div>
     </section>

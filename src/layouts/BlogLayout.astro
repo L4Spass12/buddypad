@@ -97,40 +97,40 @@ const breadcrumbSchema = {
   image={image ?? '/og-image.jpg'}
   jsonLd={[articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]}
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
     <!-- Breadcrumb -->
-    <nav class="flex items-center gap-2 font-body text-sm text-cream/50 mb-6 md:mb-8 overflow-x-auto whitespace-nowrap pb-1">
-      <a href="/" class="hover:text-terracotta transition-colors shrink-0">Accueil</a>
+    <nav class="flex items-center gap-2 text-xs text-n-500 mb-10 overflow-x-auto whitespace-nowrap pb-1 font-light">
+      <a href="/" class="hover:text-cream transition-colors shrink-0">Accueil</a>
       <span class="shrink-0">/</span>
-      <a href="/blog" class="hover:text-terracotta transition-colors shrink-0">Blog</a>
+      <a href="/blog" class="hover:text-cream transition-colors shrink-0">Blog</a>
       <span class="shrink-0">/</span>
-      <span class="text-cream/70 truncate">{title}</span>
+      <span class="text-n-400 truncate">{title}</span>
     </nav>
 
     <!-- 2-col layout — single column on mobile, 2 cols on desktop -->
-    <div class="grid lg:grid-cols-[1fr_320px] lg:gap-12">
+    <div class="grid lg:grid-cols-[1fr_300px] lg:gap-16">
       <!-- Article -->
-      <div class="min-w-0">
+      <div class="min-w-0 max-w-3xl">
         <!-- Category tag -->
-        <a href={`/blog/categorie/${catToSlug(category)}`} class="tag tag-beige mb-4">{category}</a>
+        <a href={`/blog/categorie/${catToSlug(category)}`} class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors">{category}</a>
 
         <!-- Title -->
-        <h1 class="font-display text-3xl md:text-4xl lg:text-5xl text-cream mt-4 mb-6 leading-tight">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream mt-4 mb-6 leading-[1.15]">
           {title}
         </h1>
 
         <!-- Description/lede -->
-        <p class="font-body text-lg text-cream/70 leading-relaxed mb-6">
+        <p class="text-base md:text-lg text-n-400 leading-relaxed mb-8 font-light">
           {description}
         </p>
 
         <!-- Meta -->
-        <div class="flex flex-wrap items-center gap-4 font-body text-sm text-cream/50 mb-8 pb-8 border-b border-beige">
+        <div class="flex flex-wrap items-center gap-3 text-xs text-n-500 mb-10 pb-8 border-b border-white/[0.08] font-light">
           <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-teal flex items-center justify-center text-xs font-bold text-cream">
+            <div class="w-7 h-7 rounded-full bg-cream text-dark flex items-center justify-center text-[11px] font-medium">
               {author.charAt(0)}
             </div>
-            <span>Par <strong class="text-cream/70">{author}</strong></span>
+            <span>Par <span class="text-n-400">{author}</span></span>
           </div>
           <span>·</span>
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
@@ -144,7 +144,7 @@ const breadcrumbSchema = {
 
         <!-- Cover image -->
         {image && (
-          <figure class="rounded-2xl overflow-hidden mb-10 aspect-video bg-beige">
+          <figure class="rounded-2xl overflow-hidden mb-12 aspect-video bg-panel border border-white/[0.05]">
             <img
               src={unsplashAt(image, 800)}
               srcset={unsplashSrcset(image, [400, 600, 800, 1200])}
@@ -160,52 +160,52 @@ const breadcrumbSchema = {
         )}
 
         <!-- Content -->
-        <article class="prose prose-lg max-w-none
-          prose-headings:font-display prose-headings:text-cream prose-headings:scroll-mt-24
-          prose-h2:text-2xl prose-h2:mt-12 prose-h3:text-xl
-          prose-p:font-body prose-p:text-cream/80 prose-p:leading-relaxed
-          prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline
-          prose-strong:text-cream prose-strong:font-semibold
-          prose-ul:font-body prose-ol:font-body prose-li:text-cream/80
-          prose-blockquote:border-terracotta prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-cream/80
-          prose-code:text-terracotta prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal
-          prose-hr:border-beige">
+        <article class="prose prose-invert prose-lg max-w-none
+          prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream prose-headings:scroll-mt-24
+          prose-h2:text-2xl prose-h2:mt-14 prose-h3:text-xl
+          prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
+          prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
+          prose-strong:text-cream prose-strong:font-medium
+          prose-ul:font-light prose-ol:font-light prose-li:text-n-400
+          prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-n-400
+          prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal
+          prose-hr:border-white/[0.08]">
           <slot />
         </article>
 
         <!-- Tags -->
         {tags.length > 0 && (
-          <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-beige">
+          <div class="flex flex-wrap gap-2 mt-14 pt-8 border-t border-white/[0.08]">
             {tags.map(tag => (
-              <span class="inline-block font-body text-xs px-3 py-1 rounded-full bg-beige/80 text-cream/60">#{tag}</span>
+              <span class="inline-block text-[11px] font-light px-3 py-1 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-500">#{tag}</span>
             ))}
           </div>
         )}
 
         <!-- À lire aussi -->
         {related.length > 0 && (
-          <section class="mt-14 pt-10 border-t border-beige">
-            <h2 class="font-display text-2xl text-cream mb-6">À lire aussi</h2>
+          <section class="mt-16 pt-10 border-t border-white/[0.08]">
+            <h2 class="text-xl font-medium tracking-tight text-cream mb-8">À lire aussi</h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map(p => (
-                <a href={`/blog/${p.slug}`} class="group block bg-panel border border-beige rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all hover:-translate-y-1">
-                  <div class="aspect-video bg-teal overflow-hidden">
+                <a href={`/blog/${p.slug}`} class="group block">
+                  <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
                     {p.data.image
                       ? <img
                           src={unsplashAt(p.data.image, 400)}
                           srcset={unsplashSrcset(p.data.image, [400, 600])}
                           sizes="(max-width: 640px) 100vw, 33vw"
                           alt={p.data.imageAlt ?? p.data.title}
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                           loading="lazy"
                         />
-                      : <div class="w-full h-full flex items-center justify-center text-terracotta/30"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="6"/><line x1="12" y1="2" x2="12" y2="11"/></svg></div>
+                      : <div class="w-full h-full flex items-center justify-center text-n-500"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="6"/><line x1="12" y1="2" x2="12" y2="11"/></svg></div>
                     }
                   </div>
-                  <div class="p-4">
-                    <span class="font-body text-xs text-terracotta font-semibold uppercase tracking-wide">{p.data.category}</span>
-                    <h3 class="font-display text-base text-cream mt-1 leading-snug group-hover:text-terracotta transition-colors line-clamp-2">{p.data.title}</h3>
-                    <time class="font-body text-xs text-cream/50 mt-2 block">{formatDate(p.data.pubDate)}</time>
+                  <div>
+                    <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest">{p.data.category}</span>
+                    <h3 class="text-sm font-medium text-cream mt-1 tracking-tight leading-snug group-hover:underline underline-offset-4 line-clamp-2">{p.data.title}</h3>
+                    <time class="text-[11px] text-n-500 font-light mt-2 block">{formatDate(p.data.pubDate)}</time>
                   </div>
                 </a>
               ))}
@@ -214,8 +214,8 @@ const breadcrumbSchema = {
         )}
 
         <!-- Back to blog -->
-        <div class="mt-12">
-          <a href="/blog" class="inline-flex items-center gap-2 font-body text-sm font-semibold text-terracotta hover:text-terracotta transition-colors">
+        <div class="mt-14">
+          <a href="/blog" class="inline-flex items-center gap-2 text-sm text-n-400 hover:text-cream transition-colors">
             ← Retour au blog
           </a>
         </div>

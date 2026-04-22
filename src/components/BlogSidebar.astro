@@ -14,15 +14,15 @@ const toc = headings.filter((h) => h.depth === 2);
 <aside class="hidden lg:block lg:sticky lg:top-24 lg:self-start space-y-6">
 
   {toc.length > 0 && (
-    <nav class="bg-panel rounded-2xl p-6 shadow-sm border border-beige" aria-label="Sommaire">
-      <p class="font-body text-xs font-bold uppercase tracking-widest text-cream/50 mb-4">Sommaire</p>
-      <ul class="space-y-1">
+    <nav aria-label="Sommaire">
+      <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-4">Sommaire</p>
+      <ul class="space-y-0.5 border-l border-white/[0.08]">
         {toc.map((h) => (
           <li>
             <a
               href={`#${h.slug}`}
               data-toc-link={h.slug}
-              class="toc-link block font-body text-sm text-cream/70 hover:text-terracotta transition-colors leading-snug py-1.5 border-l-2 border-transparent pl-3 truncate"
+              class="toc-link block text-sm text-n-400 hover:text-cream transition-colors leading-snug py-1.5 pl-4 -ml-px border-l border-transparent truncate font-light"
               title={h.text}
             >
               {h.text}
@@ -34,38 +34,31 @@ const toc = headings.filter((h) => h.depth === 2);
   )}
 
   <!-- CTA -->
-  <div class="bg-teal rounded-2xl p-6 overflow-hidden relative border border-beige">
-    <div class="absolute -top-2 -right-2 text-terracotta/10">
-      <Icon name="gamepad" size={100} strokeWidth={1} />
-    </div>
-    <div class="relative">
-      <span class="tag tag-terracotta mb-3">Boutique {siteConfig.name}</span>
-      <h3 class="font-display text-xl text-cream leading-tight mt-3 mb-3">
-        Le tapis parfait<br />
-        <span class="text-terracotta">pour votre setup</span>
-      </h3>
-      <p class="font-body text-xs text-cream/70 leading-relaxed mb-5">
-        Découvrez notre sélection de tapis gaming et bureautique, testés pour votre productivité et vos performances.
-      </p>
-      <a href="/boutique" class="btn-primary w-full justify-center text-xs">
-        <Icon name="cart" size={16} strokeWidth={1.75} />
-        Voir la boutique
-      </a>
-    </div>
+  <div class="rounded-2xl p-6 border border-white/[0.08] bg-panel">
+    <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-3">Boutique</p>
+    <h3 class="text-base font-medium text-cream tracking-tight leading-tight mb-3">
+      Le tapis parfait pour votre setup.
+    </h3>
+    <p class="text-xs text-n-500 font-light leading-relaxed mb-5">
+      Notre sélection, testée et notée.
+    </p>
+    <a href="/boutique" class="btn-primary w-full text-xs py-2.5">
+      Voir la boutique
+    </a>
   </div>
 
   <!-- Share -->
-  <div class="bg-panel rounded-2xl p-6 shadow-sm border border-beige">
-    <p class="font-body text-xs font-bold uppercase tracking-widest text-cream/50 mb-4">Partager</p>
+  <div>
+    <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-3">Partager</p>
     <div class="flex gap-2">
-      <button data-share="twitter" aria-label="Partager sur X" class="share-btn w-9 h-9 rounded-full bg-beige hover:bg-terracotta hover:text-cream text-cream/60 flex items-center justify-center transition-colors">
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <button data-share="twitter" aria-label="Partager sur X" class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </button>
-      <button data-share="facebook" aria-label="Partager sur Facebook" class="share-btn w-9 h-9 rounded-full bg-beige hover:bg-terracotta hover:text-cream text-cream/60 flex items-center justify-center transition-colors">
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      <button data-share="facebook" aria-label="Partager sur Facebook" class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </button>
-      <button data-share="copy" aria-label="Copier le lien" class="share-btn w-9 h-9 rounded-full bg-beige hover:bg-terracotta hover:text-cream text-cream/60 flex items-center justify-center transition-colors">
-        <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+      <button data-share="copy" aria-label="Copier le lien" class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
       </button>
     </div>
   </div>
@@ -222,10 +215,10 @@ const toc = headings.filter((h) => h.depth === 2);
       const id = entry.target.id;
       tocLinks.forEach(link => {
         const active = link.dataset.tocLink === id;
-        link.classList.toggle('text-terracotta', active);
-        link.classList.toggle('border-terracotta', active);
-        link.classList.toggle('font-semibold', active);
-        link.classList.toggle('text-cream/70', !active);
+        link.classList.toggle('text-cream', active);
+        link.classList.toggle('border-cream', active);
+        link.classList.toggle('font-medium', active);
+        link.classList.toggle('text-n-400', !active);
         link.classList.toggle('border-transparent', !active);
       });
     });

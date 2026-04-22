@@ -40,134 +40,119 @@ const breadcrumbSchema = {
   description={`Notre sélection de tapis de souris gaming, bureautique, XXL et d'accessoires testés pour sublimer votre setup.`}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
-  <div>
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
-      <!-- Page header -->
-      <div class="text-center mb-14">
-        <span class="tag tag-beige mb-4">La boutique {siteConfig.name}</span>
-        <h1 class="section-title mt-4 mb-4">
-          Équipez votre <span class="text-terracotta">setup</span>
-        </h1>
-        <p class="section-subtitle max-w-xl mx-auto">
-          Tapis gaming, bureautique, XXL ou RGB : une sélection testée pour chaque usage et chaque budget.
-        </p>
-        <div class="flex items-center justify-center gap-2 mt-6 font-body text-xs text-cream/50">
-          <Icon name="shield-check" size={16} strokeWidth={1.75} />
-          <span>Livraison offerte dès 49€</span>
-          <span class="mx-2">·</span>
-          <Icon name="arrow-right" size={16} strokeWidth={1.75} />
-          <span>Retours gratuits 30 jours</span>
-        </div>
+  <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+    <!-- Page header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-medium tracking-tight text-cream mb-2 leading-[1.15]">La Collection</h1>
+        <p class="text-sm text-n-500 font-light">Trouvez la surface adaptée à votre style.</p>
       </div>
+      <div class="flex items-center gap-2 text-xs text-n-500 font-light">
+        <Icon name="shield-check" size={14} strokeWidth={1.5} />
+        <span>Livraison dès 49€</span>
+        <span class="mx-2">·</span>
+        <span>Retour 30 jours</span>
+      </div>
+    </div>
 
-      {products.length === 0 ? (
-        <div class="text-center py-20">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-beige text-terracotta mb-4">
-            <Icon name="sparkle" size={28} strokeWidth={1.75} />
-          </div>
-          <p class="font-body text-cream/50">Les premiers produits arrivent bientôt…</p>
-        </div>
-      ) : (
-        <>
-          <!-- Featured product -->
-          {featured && (
-            <a href={`/boutique/${featured.slug}`} class="group block bg-panel border border-beige rounded-3xl overflow-hidden mb-10 md:mb-14 hover:border-terracotta/50 hover:shadow-lg hover:shadow-terracotta/10 transition-all">
-              <div class="grid md:grid-cols-5">
-                <div class="md:col-span-3 aspect-video bg-teal flex items-center justify-center">
-                  <img
-                    src={unsplashAt(featured.data.image, 800)}
-                    srcset={unsplashSrcset(featured.data.image)}
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                    alt={featured.data.imageAlt ?? featured.data.name}
-                    class="w-full h-full object-cover"
-                    width="1200" height="676" fetchpriority="high" decoding="async"
-                  />
+    {products.length === 0 ? (
+      <div class="text-center py-20">
+        <p class="text-sm text-n-500 font-light">Les premiers produits arrivent bientôt…</p>
+      </div>
+    ) : (
+      <>
+        <!-- Featured product -->
+        {featured && (
+          <a href={`/boutique/${featured.slug}`} class="group block mb-16 md:mb-20">
+            <div class="grid md:grid-cols-5 gap-8 md:gap-10">
+              <div class="md:col-span-3 relative aspect-[16/10] md:aspect-[21/12] rounded-2xl overflow-hidden bg-panel border border-white/[0.05]">
+                <img
+                  src={unsplashAt(featured.data.image, 800)}
+                  srcset={unsplashSrcset(featured.data.image)}
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  alt={featured.data.imageAlt ?? featured.data.name}
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  width="1200" height="675" fetchpriority="high" decoding="async"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="bg-cream text-dark text-[10px] font-medium px-2 py-1 rounded-sm uppercase tracking-wider">Bestseller</span>
                 </div>
-                <div class="md:col-span-2 p-6 md:p-10 flex flex-col justify-center">
-                  <div class="flex items-center gap-2 mb-4">
-                    <span class="tag tag-terracotta">Coup de cœur</span>
-                    <span class="tag tag-outline-light">{featured.data.category}</span>
+              </div>
+              <div class="md:col-span-2 flex flex-col justify-center">
+                <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3">{featured.data.category}</span>
+                <h2 class="text-2xl md:text-3xl text-cream font-medium tracking-tight leading-tight mb-4 group-hover:underline underline-offset-4">
+                  {featured.data.name}
+                </h2>
+                <p class="text-sm text-n-400 font-light leading-relaxed mb-6">
+                  {featured.data.shortDescription}
+                </p>
+                <div class="flex items-baseline gap-3">
+                  <span class="text-2xl text-cream font-medium tracking-tight">{formatPrice(featured.data.price)}</span>
+                  {featured.data.compareAtPrice && (
+                    <span class="text-sm text-n-500 line-through font-light">{formatPrice(featured.data.compareAtPrice)}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </a>
+        )}
+
+        <!-- Category filters -->
+        {categories.length > 1 && (
+          <div class="flex flex-wrap gap-2 mb-10">
+            <button data-filter="all" class="filter-btn text-xs font-medium px-4 py-2 rounded-full bg-cream text-dark transition-colors">
+              Tous
+            </button>
+            {categories.map(cat => (
+              <button
+                data-filter={cat}
+                class="filter-btn text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors"
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <!-- Products grid -->
+        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {rest.map(product => (
+            <a href={`/boutique/${product.slug}`} class="product-card group block" data-category={product.data.category}>
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
+                <img
+                  src={unsplashAt(product.data.image, 600)}
+                  srcset={unsplashSrcset(product.data.image, [400, 600, 800])}
+                  sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
+                  alt={product.data.imageAlt ?? product.data.name}
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  width="800" height="600" loading="lazy"
+                />
+                {product.data.compareAtPrice && (
+                  <div class="absolute top-4 left-4">
+                    <span class="bg-cream text-dark text-[10px] font-medium px-2 py-1 rounded-sm uppercase tracking-wider">Promo</span>
                   </div>
-                  <h2 class="font-display text-2xl md:text-3xl text-cream leading-tight mb-4 group-hover:underline">
-                    {featured.data.name}
+                )}
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div class="min-w-0">
+                  <h2 class="text-base font-medium text-cream mb-1 tracking-tight group-hover:underline underline-offset-4 truncate">
+                    {product.data.name}
                   </h2>
-                  <p class="font-body text-sm text-cream/70 leading-relaxed mb-6">
-                    {featured.data.shortDescription}
-                  </p>
-                  <div class="flex items-baseline gap-3">
-                    <span class="font-display text-3xl text-cream">{formatPrice(featured.data.price)}</span>
-                    {featured.data.compareAtPrice && (
-                      <span class="font-body text-sm text-cream/50 line-through">{formatPrice(featured.data.compareAtPrice)}</span>
-                    )}
-                  </div>
+                  <p class="text-xs text-n-500 font-light truncate">{product.data.shortDescription}</p>
+                </div>
+                <div class="flex items-baseline gap-2 shrink-0">
+                  <span class="text-sm text-cream font-medium">{formatPrice(product.data.price)}</span>
+                  {product.data.compareAtPrice && (
+                    <span class="text-xs text-n-500 line-through font-light">{formatPrice(product.data.compareAtPrice)}</span>
+                  )}
                 </div>
               </div>
             </a>
-          )}
-
-          <!-- Category filters -->
-          {categories.length > 1 && (
-            <div class="flex flex-wrap gap-2 mb-10">
-              <button data-filter="all" class="filter-btn font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-terracotta text-cream shadow-md shadow-terracotta/30 transition-all">
-                Tous
-              </button>
-              {categories.map(cat => (
-                <button
-                  data-filter={cat}
-                  class="filter-btn font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-beige text-cream/70 hover:bg-terracotta hover:text-cream transition-all"
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          )}
-
-          <!-- Products grid -->
-          <div id="products-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {rest.map(product => (
-              <article class="product-card group bg-panel border border-beige rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1" data-category={product.data.category}>
-                <a href={`/boutique/${product.slug}`} class="block">
-                  <div class="aspect-video bg-teal flex items-center justify-center relative overflow-hidden">
-                    <img
-                      src={unsplashAt(product.data.image, 600)}
-                      srcset={unsplashSrcset(product.data.image, [400, 600, 800])}
-                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
-                      alt={product.data.imageAlt ?? product.data.name}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      width="800" height="450" loading="lazy"
-                    />
-                    <div class="absolute top-3 left-3">
-                      <span class="tag tag-teal">{product.data.category}</span>
-                    </div>
-                    {product.data.compareAtPrice && (
-                      <div class="absolute top-3 right-3">
-                        <span class="tag tag-terracotta">Promo</span>
-                      </div>
-                    )}
-                  </div>
-                  <div class="p-6">
-                    <h2 class="font-display text-lg text-cream mb-2 leading-snug group-hover:text-terracotta transition-colors">
-                      {product.data.name}
-                    </h2>
-                    <p class="font-body text-sm text-cream/60 leading-relaxed line-clamp-2 mb-4">{product.data.shortDescription}</p>
-                    <div class="flex items-center justify-between pt-4 border-t border-beige">
-                      <div class="flex items-baseline gap-2">
-                        <span class="font-display text-xl text-terracotta">{formatPrice(product.data.price)}</span>
-                        {product.data.compareAtPrice && (
-                          <span class="font-body text-xs text-cream/40 line-through">{formatPrice(product.data.compareAtPrice)}</span>
-                        )}
-                      </div>
-                      <span class="font-body text-xs font-semibold text-terracotta uppercase tracking-wider">Voir →</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            ))}
-          </div>
-        </>
-      )}
-    </section>
-  </div>
+          ))}
+        </div>
+      </>
+    )}
+  </section>
 </BaseLayout>
 
 <script is:inline>
@@ -177,11 +162,11 @@ const breadcrumbSchema = {
     btn.addEventListener('click', () => {
       const f = btn.getAttribute('data-filter');
       filterBtns.forEach(b => {
-        b.classList.remove('bg-terracotta', 'text-cream', 'shadow-md');
-        b.classList.add('bg-beige', 'text-cream/70');
+        b.classList.remove('bg-cream', 'text-dark');
+        b.classList.add('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
       });
-      btn.classList.add('bg-terracotta', 'text-cream', 'shadow-md');
-      btn.classList.remove('bg-beige', 'text-cream/70');
+      btn.classList.add('bg-cream', 'text-dark');
+      btn.classList.remove('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
       cards.forEach(c => {
         const match = f === 'all' || c.getAttribute('data-category') === f;
         c.style.display = match ? '' : 'none';
