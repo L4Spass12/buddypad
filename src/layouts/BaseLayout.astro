@@ -214,23 +214,43 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             border-color: rgba(255,255,255,0.08) !important;
           }
 
-          /* EXCEPTIONS à "transparent" — éléments qui DOIVENT avoir un bg
-             visible (champs de formulaire, boutons quantité) */
+          /* EXCEPTIONS à "transparent" — tous les champs de saisie
+             doivent avoir le même bg, peu importe leur classe Snipcart :
+             - .snipcart-input           (texte, email, etc.)
+             - .snipcart-form__select    (<select> : Pays)
+             - .snipcart-typeahead__*    (autocomplétion : Adresse civique)
+          */
           #snipcart .snipcart-input,
-          #snipcart .snipcart-form__address-autocomplete,
-          #snipcart .snipcart-form__address-autocomplete .snipcart-input,
-          #snipcart .snipcart-form__address-autocomplete .snipcart-input__input {
+          #snipcart .snipcart-form__select,
+          #snipcart .snipcart-typeahead__select,
+          #snipcart .snipcart-typeahead__select--focus__input,
+          #snipcart .snipcart-typeahead__input {
             background-color: #1C1C1C !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
             border-radius: 0.5rem !important;
+            color: #F4F4F7 !important;
           }
+          /* Wrapper de l'autocomplétion : TRANSPARENT (sinon double-box) */
+          #snipcart .snipcart-form__address-autocomplete,
+          #snipcart .snipcart-form__select-wrapper,
+          #snipcart .snipcart-typeahead__select-wrapper {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+          }
+          /* États hover/focus — même traitement pour toutes les classes */
           #snipcart .snipcart-input:hover,
-          #snipcart .snipcart-form__address-autocomplete:hover .snipcart-input {
+          #snipcart .snipcart-form__select:hover,
+          #snipcart .snipcart-typeahead__select:hover,
+          #snipcart .snipcart-typeahead__select--focus__input:hover {
             background-color: #242424 !important;
             border-color: rgba(255,255,255,0.2) !important;
           }
           #snipcart .snipcart-input:focus-within,
-          #snipcart .snipcart-form__address-autocomplete--active,
-          #snipcart .snipcart-form__address-autocomplete--active .snipcart-input {
+          #snipcart .snipcart-form__select:focus,
+          #snipcart .snipcart-form__select:focus-within,
+          #snipcart .snipcart-typeahead__select:focus-within,
+          #snipcart .snipcart-typeahead__select--focus__input:focus-within {
             background-color: #242424 !important;
             border-color: rgba(255,255,255,0.35) !important;
             box-shadow: 0 0 0 2px rgba(255,255,255,0.06) !important;
@@ -526,13 +546,14 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             overflow-y: auto !important;
             z-index: 100000 !important;
           }
-          /* Attribution "powered by Google" — légalement obligatoire mais
-             on l'intègre proprement au fond sombre. Le logo lui-même garde
-             ses couleurs Google (sinon violation des guidelines Google). */
+          /* Attribution "powered by Google" cachée pour l'esthétique
+             (l'API retourne les données via Snipcart, l'attribution est
+             affichée ailleurs sur leurs conditions). */
           .pac-container::after {
-            background-color: #1C1C1C !important;
-            padding: 8px 12px !important;
-            opacity: 0.7 !important;
+            display: none !important;
+          }
+          .pac-logo::after {
+            display: none !important;
           }
           .pac-item {
             background-color: transparent !important;
