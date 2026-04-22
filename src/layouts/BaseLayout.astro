@@ -216,15 +216,21 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
 
           /* EXCEPTIONS à "transparent" — éléments qui DOIVENT avoir un bg
              visible (champs de formulaire, boutons quantité) */
-          #snipcart .snipcart-input {
+          #snipcart .snipcart-input,
+          #snipcart .snipcart-form__address-autocomplete,
+          #snipcart .snipcart-form__address-autocomplete .snipcart-input,
+          #snipcart .snipcart-form__address-autocomplete .snipcart-input__input {
             background-color: #1C1C1C !important;
             border-radius: 0.5rem !important;
           }
-          #snipcart .snipcart-input:hover {
+          #snipcart .snipcart-input:hover,
+          #snipcart .snipcart-form__address-autocomplete:hover .snipcart-input {
             background-color: #242424 !important;
             border-color: rgba(255,255,255,0.2) !important;
           }
-          #snipcart .snipcart-input:focus-within {
+          #snipcart .snipcart-input:focus-within,
+          #snipcart .snipcart-form__address-autocomplete--active,
+          #snipcart .snipcart-form__address-autocomplete--active .snipcart-input {
             background-color: #242424 !important;
             border-color: rgba(255,255,255,0.35) !important;
             box-shadow: 0 0 0 2px rgba(255,255,255,0.06) !important;
@@ -478,12 +484,14 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
           #snipcart [class*="autocomplete__items"],
           #snipcart [class*="autocomplete__dropdown"],
           #snipcart [class*="suggestions"] {
-            background-color: #14141C !important;
+            background-color: #1C1C1C !important;
             border: 1px solid rgba(255,255,255,0.15) !important;
             border-radius: 0.75rem !important;
             box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
             z-index: 10050 !important;
-            overflow: hidden !important;
+            max-height: 320px !important;
+            overflow-y: auto !important;
+            overscroll-behavior: contain !important;
           }
           #snipcart .snipcart-address-autocomplete__item,
           #snipcart .snipcart-autocomplete__item,
@@ -508,14 +516,23 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
 
           /* Google Places autocomplete (injecté dans <body>, hors de #snipcart) */
           .pac-container {
-            background-color: #14141C !important;
+            background-color: #1C1C1C !important;
             border: 1px solid rgba(255,255,255,0.15) !important;
             border-radius: 0.75rem !important;
             box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
             margin-top: 4px !important;
             font-family: 'Inter', system-ui, sans-serif !important;
-            overflow: hidden !important;
+            max-height: 320px !important;
+            overflow-y: auto !important;
             z-index: 100000 !important;
+          }
+          /* Attribution "powered by Google" — légalement obligatoire mais
+             on l'intègre proprement au fond sombre. Le logo lui-même garde
+             ses couleurs Google (sinon violation des guidelines Google). */
+          .pac-container::after {
+            background-color: #1C1C1C !important;
+            padding: 8px 12px !important;
+            opacity: 0.7 !important;
           }
           .pac-item {
             background-color: transparent !important;
