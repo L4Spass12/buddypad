@@ -110,7 +110,7 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
 
     {/* ─────────── Atelier widget (paiement 1 étape via Stripe) ─────────── */}
     {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
-      <script src="https://seamless-cart-stripe.lovable.app/widget.js" defer></script>
+      <script src="https://seamless-cart-stripe.lovable.app/api/public/widget.js" defer></script>
     )}
 
     {/* ─────────── Snipcart (fallback, désactivé tant que provider ≠ snipcart) ─────────── */}
