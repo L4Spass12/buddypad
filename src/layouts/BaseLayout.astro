@@ -381,12 +381,17 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
              Champs de formulaire — style GLIDE (pur neutre, subtil)
              Wrapper transparent + input avec bg neutre et bordure fine.
              ─────────────────────────────────────────────────────────── */
-          /* Wrapper : transparent pour éviter le "box-in-box" */
-          #snipcart .snipcart-form__field,
+          /* Wrapper — pas de bordure, pas de bg, pas de shadow
+             (on exclut input/textarea/select pour ne pas retirer leur bordure) */
+          #snipcart .snipcart-form__field:not(input):not(textarea):not(select),
+          #snipcart .snipcart-form__field-container,
+          #snipcart .snipcart-input__container,
           #snipcart [class*="snipcart-form__field-container"],
-          #snipcart [class*="snipcart-input__container"] {
+          #snipcart [class*="snipcart-input__container"],
+          #snipcart [class*="snipcart-form__group"] {
             background-color: transparent !important;
             border: none !important;
+            box-shadow: none !important;
             padding: 0 !important;
           }
           /* L'input lui-même : gris neutre subtil, sans tint bleuté */
@@ -416,6 +421,25 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
           #snipcart input::placeholder,
           #snipcart textarea::placeholder {
             color: #525252 !important;
+          }
+
+          /* Autofill — le navigateur applique son propre bg (jaune Chrome,
+             bleuté Safari) qui écrase le style. On force le même dark. */
+          #snipcart input:-webkit-autofill,
+          #snipcart input:-webkit-autofill:hover,
+          #snipcart input:-webkit-autofill:focus,
+          #snipcart input:-webkit-autofill:active,
+          #snipcart textarea:-webkit-autofill,
+          #snipcart select:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+            -webkit-text-fill-color: #F4F4F7 !important;
+            caret-color: #F4F4F7 !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+            transition: background-color 99999s ease-in-out 0s !important;
+          }
+          #snipcart input:-moz-autofill {
+            background-color: #141414 !important;
+            color: #F4F4F7 !important;
           }
 
           /* Quantité buttons (— 1 +) — même gris neutre */
