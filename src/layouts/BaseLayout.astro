@@ -178,85 +178,189 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
           }
 
           /* ───────────────────────────────────────────────────────────
-             Overrides agressifs — Snipcart v3.7 oublie certaines
-             surfaces ; on force le dark sur l'ensemble du modal.
+             Overrides agressifs — Snipcart v3.7 ignore les CSS vars
+             sur beaucoup de surfaces. On force le dark via wildcard
+             sur toutes les classes "snipcart-" existantes.
              ─────────────────────────────────────────────────────────── */
+
+          /* Force global dark bg + white text on EVERY Snipcart surface */
           #snipcart,
-          #snipcart .snipcart-layout,
-          #snipcart .snipcart-layout__content,
-          #snipcart .snipcart-modal,
-          #snipcart .snipcart-modal__container,
-          #snipcart .snipcart-modal__content,
-          #snipcart .snipcart__box,
-          #snipcart .snipcart-cart,
-          #snipcart .snipcart-cart__content,
-          #snipcart .snipcart-cart__empty,
-          #snipcart .snipcart__backdrop,
-          #snipcart .snipcart-layout__header {
+          #snipcart [class^="snipcart-"],
+          #snipcart [class*=" snipcart-"],
+          #snipcart [class^="snipcart__"],
+          #snipcart [class*=" snipcart__"] {
             background-color: #0A0A0A !important;
             color: #F4F4F7 !important;
-          }
-          #snipcart .snipcart-modal__close {
-            color: #F4F4F7 !important;
+            border-color: rgba(255,255,255,0.08) !important;
           }
 
-          /* Typographie interne */
-          #snipcart h1, #snipcart h2, #snipcart h3,
-          #snipcart .snipcart__font--bold,
-          #snipcart .snipcart-typography--heading,
-          #snipcart .snipcart-typography--title {
+          /* Backdrop behind modal */
+          #snipcart .snipcart__backdrop,
+          #snipcart .snipcart-modal__backdrop {
+            background-color: rgba(0,0,0,0.7) !important;
+          }
+
+          /* Headers / Footers internes (panels légèrement distincts) */
+          #snipcart .snipcart-modal__header,
+          #snipcart .snipcart-cart-header,
+          #snipcart .snipcart-cart__header,
+          #snipcart .snipcart-layout__header,
+          #snipcart .snipcart-layout__footer,
+          #snipcart .snipcart-cart-summary,
+          #snipcart .snipcart-cart__secondary-header {
+            background-color: #0A0A0A !important;
+            color: #F4F4F7 !important;
+            border-color: rgba(255,255,255,0.08) !important;
+          }
+
+          /* Close button / back arrow / icons */
+          #snipcart .snipcart-modal__close,
+          #snipcart .snipcart-modal__close-icon,
+          #snipcart .snipcart-modal__close-title,
+          #snipcart .snipcart__icon,
+          #snipcart [class*="snipcart__icon"],
+          #snipcart svg {
+            color: #F4F4F7 !important;
+            fill: #F4F4F7 !important;
+          }
+          /* Le logo VISA/MasterCard etc. en bas — on garde leurs couleurs originales */
+          #snipcart .snipcart-payment-method__logo svg,
+          #snipcart .snipcart__actions--payment svg,
+          #snipcart img {
+            filter: none !important;
+          }
+
+          /* Typographie — toutes variantes */
+          #snipcart h1, #snipcart h2, #snipcart h3, #snipcart h4,
+          #snipcart p, #snipcart span, #snipcart label, #snipcart a,
+          #snipcart strong, #snipcart em, #snipcart li,
+          #snipcart [class*="snipcart-typography"],
+          #snipcart [class*="snipcart__font"],
+          #snipcart [class*="snipcart__title"],
+          #snipcart [class*="snipcart__heading"],
+          #snipcart [class*="snipcart__text"] {
             color: #F4F4F7 !important;
             font-family: 'Inter', system-ui, sans-serif !important;
+            background-color: transparent !important;
+          }
+          #snipcart h1, #snipcart h2, #snipcart h3, #snipcart h4,
+          #snipcart [class*="snipcart-typography--heading"],
+          #snipcart [class*="snipcart-typography--title"] {
             font-weight: 500 !important;
             letter-spacing: -0.01em !important;
           }
-          #snipcart .snipcart-typography--secondary,
-          #snipcart .snipcart-form__label {
+          /* Texte secondaire (ex. "Quantité", "Les frais de livraison...") */
+          #snipcart [class*="snipcart-typography--secondary"],
+          #snipcart [class*="snipcart-typography--small"],
+          #snipcart [class*="snipcart-form__label"],
+          #snipcart .snipcart__font--tiny,
+          #snipcart .snipcart__font--secondary {
             color: #A3A3A3 !important;
+            background-color: transparent !important;
           }
 
-          /* Boutons */
+          /* Prix, line items, totaux — tous en blanc */
+          #snipcart [class*="snipcart-price"],
+          #snipcart [class*="snipcart-cart-summary-item"],
+          #snipcart [class*="snipcart-cart-summary-fees"],
+          #snipcart [class*="snipcart-item-line__label"],
+          #snipcart [class*="snipcart-item-line__content"],
+          #snipcart [class*="snipcart-item-quantity"],
+          #snipcart .snipcart-item-list__item {
+            color: #F4F4F7 !important;
+            background-color: transparent !important;
+          }
+
+          /* Boutons primaires — blanc sur noir (pilule) */
           #snipcart .snipcart-cart-button--highlight,
           #snipcart .snipcart-button-primary,
-          #snipcart button.snipcart__actions--link {
-            background: #F4F4F7 !important;
+          #snipcart button[class*="snipcart-button-primary"],
+          #snipcart button[type="submit"] {
+            background-color: #F4F4F7 !important;
             color: #0A0A0A !important;
             border-radius: 9999px !important;
+            border: none !important;
+          }
+          #snipcart .snipcart-cart-button--highlight *,
+          #snipcart .snipcart-button-primary *,
+          #snipcart button[class*="snipcart-button-primary"] *,
+          #snipcart button[type="submit"] * {
+            color: #0A0A0A !important;
+            fill: #0A0A0A !important;
           }
           #snipcart .snipcart-cart-button--highlight:hover,
-          #snipcart .snipcart-button-primary:hover {
-            background: #E5E5E5 !important;
+          #snipcart .snipcart-button-primary:hover,
+          #snipcart button[type="submit"]:hover {
+            background-color: #E5E5E5 !important;
           }
-          #snipcart .snipcart-button-link {
+
+          /* Boutons secondaires / links / "Continuer les achats" */
+          #snipcart .snipcart-button-secondary,
+          #snipcart .snipcart-button-link,
+          #snipcart a[class*="snipcart-button-link"],
+          #snipcart button[class*="snipcart-button-link"],
+          #snipcart [class*="snipcart__actions--link"],
+          #snipcart .snipcart-continue-shopping,
+          #snipcart a[class*="snipcart-continue"] {
+            background-color: transparent !important;
+            color: #A3A3A3 !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            border-radius: 9999px !important;
+          }
+          #snipcart .snipcart-button-secondary:hover,
+          #snipcart .snipcart-button-link:hover,
+          #snipcart [class*="snipcart__actions--link"]:hover {
+            background-color: rgba(255,255,255,0.05) !important;
             color: #F4F4F7 !important;
           }
 
-          /* Empty cart illustration tint */
-          #snipcart .snipcart-cart__empty svg,
-          #snipcart .snipcart-cart__empty-icon {
-            filter: invert(1) hue-rotate(180deg) contrast(0.9);
+          /* Badges / pills (compteur panier, remove item, etc.) */
+          #snipcart [class*="snipcart__badge"],
+          #snipcart .snipcart-cart-item__remove-container button,
+          #snipcart .snipcart-cart-item__remove {
+            background-color: rgba(255,255,255,0.08) !important;
+            color: #F4F4F7 !important;
+            border-radius: 9999px !important;
           }
 
-          /* Badges / pills */
-          #snipcart .snipcart__badge {
-            background: #F4F4F7 !important;
-            color: #0A0A0A !important;
-          }
-
-          /* Inputs */
+          /* Inputs, textarea, select */
           #snipcart input,
           #snipcart textarea,
-          #snipcart select {
+          #snipcart select,
+          #snipcart .snipcart-form__field,
+          #snipcart .snipcart-form__select {
             background-color: #14141C !important;
             color: #F4F4F7 !important;
-            border-color: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+            border-radius: 0.5rem !important;
+          }
+          #snipcart input:focus,
+          #snipcart textarea:focus,
+          #snipcart select:focus {
+            border-color: rgba(255,255,255,0.3) !important;
+            outline: none !important;
           }
 
-          /* Dividers / borders */
+          /* Quantité buttons (— 1 +) */
+          #snipcart .snipcart-item-quantity__quantity,
+          #snipcart .snipcart-item-quantity__button {
+            background-color: #14141C !important;
+            color: #F4F4F7 !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+          }
+
+          /* Dividers / séparateurs / hr */
           #snipcart hr,
           #snipcart .snipcart__separator,
-          #snipcart [class*="snipcart__border"] {
+          #snipcart [class*="separator"] {
             border-color: rgba(255,255,255,0.08) !important;
+            background-color: rgba(255,255,255,0.08) !important;
+          }
+
+          /* Empty cart illustration — si SVG noir, on l'inverse ; si image, on la laisse */
+          #snipcart .snipcart-cart__empty svg,
+          #snipcart .snipcart-cart__empty-icon svg {
+            filter: invert(1) contrast(0.85) !important;
           }
 
           /* Snipcart modal sits below the fixed site header so nothing overlaps.
