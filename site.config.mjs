@@ -39,7 +39,7 @@ const config = {
   // Boutique Snipcart (laisser publicKey vide '' pour désactiver la boutique)
   shop: {
     enabled: true,
-    publicKey: '',
+    publicKey: 'MmEzOWY1N2YtNTY3Yi00NGRlLWJkY2EtOTYxNjg2YWZiYjY4NjM5MTIyODc4MDUwNjU5Mzkx',
     currency: 'EUR',
   },
 };
