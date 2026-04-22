@@ -108,9 +108,9 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
 
-    {/* ─────────── Atelier widget (paiement 1 étape) ─────────── */}
+    {/* ─────────── Atelier widget (paiement 1 étape via Stripe) ─────────── */}
     {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
-      <script src="https://atelier.lovable.app/widget.js" defer></script>
+      <script src="https://seamless-cart-stripe.lovable.app/widget.js" defer></script>
     )}
 
     {/* ─────────── Snipcart (fallback, désactivé tant que provider ≠ snipcart) ─────────── */}

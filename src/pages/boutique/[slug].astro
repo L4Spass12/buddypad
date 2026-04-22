@@ -125,7 +125,7 @@ const breadcrumbSchema = {
           {/* ─── Bouton d'achat — dépend du provider ─── */}
           {siteConfig.shop?.provider === 'atelier' ? (
             <button
-              class="atelier-buy-button btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+              class="buy-button btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
               disabled={stock === 0}
               data-item-id={sku ?? product.slug}
               data-item-name={name}
