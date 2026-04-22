@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { getCollection } from 'astro:content';
+import siteConfig from '../../../site.config.mjs';
+import { unsplashSrcset, unsplashAt } from '../../lib/image';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const featured = posts.find(p => p.data.featured);
+const rest = posts.filter(p => !p.data.featured || p.slug !== featured?.slug);
+
+const categories = siteConfig.categories;
+function catToSlug(cat: string) {
+  return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+}
+
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }).format(date);
+
+const SITE_URL = siteConfig.url;
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Blog ${siteConfig.name}`,
+  description: "Articles, tests et guides d'achat sur les tapis de souris gaming, bureautique et l'optimisation de votre setup PC.",
+  url: `${SITE_URL}/blog`,
+  inLanguage: 'fr-FR',
+  isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: SITE_URL },
+  hasPart: posts.map((p) => ({
+    '@type': 'BlogPosting',
+    headline: p.data.title,
+    url: `${SITE_URL}/blog/${p.slug}/`,
+    datePublished: p.data.pubDate.toISOString(),
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+  ],
+};
+---
+
+<BaseLayout
+  title={`Blog ${siteConfig.name} – Tapis de souris & setup`}
+  description="Articles, tests et guides d'achat sur les tapis de souris gaming, bureautique et l'optimisation de votre setup PC."
+  jsonLd={[collectionSchema, breadcrumbSchema]}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+    <!-- Page header -->
+    <div class="text-center mb-14">
+      <span class="tag tag-beige mb-4">Le blog {siteConfig.name}</span>
+      <h1 class="section-title mt-4 mb-4">
+        Tests, guides & <span class="text-terracotta">inspirations setup</span>
+      </h1>
+      <p class="section-subtitle max-w-xl mx-auto">
+        Tapis de souris, ergonomie, gaming compétitif et télétravail : tout ce qu'il faut pour un bureau qui tient la route.
+      </p>
+    </div>
+
+    <!-- Featured post -->
+    {featured && (
+      <a href={`/blog/${featured.slug}`} class="group block bg-panel border border-beige rounded-3xl overflow-hidden mb-10 md:mb-14 hover:border-terracotta/50 hover:shadow-lg hover:shadow-terracotta/10 transition-all">
+        <div class="grid md:grid-cols-5">
+          <div class="md:col-span-3 aspect-video bg-teal flex items-center justify-center">
+            {featured.data.image
+              ? <img
+                  src={unsplashAt(featured.data.image, 800)}
+                  srcset={unsplashSrcset(featured.data.image)}
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  alt={featured.data.imageAlt ?? featured.data.title}
+                  class="w-full h-full object-cover"
+                  width="1200" height="676" fetchpriority="high" decoding="async"
+                />
+              : <div class="text-cream/20"><Icon name="mouse" size={96} strokeWidth={1.25} /></div>
+            }
+          </div>
+          <div class="md:col-span-2 p-6 md:p-10 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="tag tag-terracotta">À la une</span>
+              <span class="tag tag-outline-light">{featured.data.category}</span>
+            </div>
+            <h2 class="font-display text-2xl md:text-3xl text-cream leading-tight mb-4 group-hover:underline">
+              {featured.data.title}
+            </h2>
+            <p class="font-body text-sm text-cream/70 leading-relaxed mb-6">
+              {featured.data.description}
+            </p>
+            <div class="flex items-center gap-3 font-body text-xs text-cream/50">
+              <span>{featured.data.author}</span>
+              <span>·</span>
+              <time datetime={featured.data.pubDate.toISOString()}>{formatDate(featured.data.pubDate)}</time>
+            </div>
+          </div>
+        </div>
+      </a>
+    )}
+
+    <!-- Category filters -->
+    <div class="flex flex-wrap gap-2 mb-10">
+      <a href="/blog" class="font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-terracotta text-cream shadow-md shadow-terracotta/30 transition-all">
+        Tous
+      </a>
+      {categories.map(cat => (
+        <a
+          href={`/blog/categorie/${catToSlug(cat)}`}
+          class="font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-beige text-cream/70 hover:bg-terracotta hover:text-cream transition-all"
+        >
+          {cat}
+        </a>
+      ))}
+    </div>
+
+    <!-- Posts grid -->
+    {rest.length > 0 ? (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {rest.map(post => (
+          <article class="group bg-panel border border-beige rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1">
+            <div class="aspect-video bg-teal flex items-center justify-center relative overflow-hidden">
+              {post.data.image
+                ? <img
+                    src={unsplashAt(post.data.image, 600)}
+                    srcset={unsplashSrcset(post.data.image, [400, 600, 800])}
+                    sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
+                    alt={post.data.imageAlt ?? post.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width="800" height="450" loading="lazy"
+                  />
+                : <div class="text-terracotta/40"><Icon name="mouse" size={64} strokeWidth={1.25} /></div>
+              }
+              <div class="absolute top-3 left-3">
+                <span class="tag tag-teal">{post.data.category}</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <time datetime={post.data.pubDate.toISOString()} class="font-body text-xs text-cream/50 mb-3 block">
+                {formatDate(post.data.pubDate)}
+              </time>
+              <h2 class="font-display text-lg text-cream mb-2 leading-snug group-hover:text-terracotta transition-colors">
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              </h2>
+              <p class="font-body text-sm text-cream/60 leading-relaxed line-clamp-3">{post.data.description}</p>
+              <div class="flex items-center gap-2 mt-4 pt-4 border-t border-beige">
+                <div class="w-7 h-7 rounded-full bg-terracotta flex items-center justify-center text-xs font-bold text-cream flex-shrink-0">
+                  {post.data.author.charAt(0)}
+                </div>
+                <span class="font-body text-xs text-cream/60">{post.data.author}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-20">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-beige text-terracotta mb-4">
+          <Icon name="pen" size={28} strokeWidth={1.75} />
+        </div>
+        <p class="font-body text-cream/50">D'autres articles arrivent bientôt…</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

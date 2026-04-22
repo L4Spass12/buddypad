@@ -1,0 +1,170 @@
+---
+import '../styles/global.css';
+import siteConfig from '../../site.config.mjs';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** Additional JSON-LD block(s) to inject (object or array) */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const SITE_NAME = siteConfig.name;
+const SITE_URL = siteConfig.url;
+const DEFAULT_DESCRIPTION = siteConfig.description;
+
+const {
+  title,
+  description = DEFAULT_DESCRIPTION,
+  image = '/og-image.jpg',
+  type = 'website',
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? SITE_URL);
+const ogImage = new URL(image, Astro.site ?? SITE_URL).toString();
+
+// Organization + WebSite structured data (always present)
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.svg`,
+  sameAs: Object.values(siteConfig.socials).filter(Boolean),
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: 'fr-FR',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE_URL}/blog?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const baseSchemas = [organizationSchema, websiteSchema];
+const extraSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allSchemas = [...baseSchemas, ...extraSchemas];
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0A0A0F" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#A855F7" />
+
+    <!-- Primary meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content={SITE_NAME} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- RSS feed discovery -->
+    <link rel="alternate" type="application/rss+xml" title={`Blog ${SITE_NAME}`} href={`${SITE_URL}/rss.xml`} />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+
+    <!-- Structured data (JSON-LD) -->
+    {allSchemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+
+    {siteConfig.shop?.enabled && siteConfig.shop?.publicKey && (
+      <>
+        <style is:global set:html={`
+          #snipcart {
+            --color-default: #F4F4F7;
+            --color-alt: #0A0A0F;
+            --color-link: #A855F7;
+            --color-link-hover: #C084FC;
+            --color-buttonPrimary: #F4F4F7;
+            --color-buttonPrimary-hover: #F4F4F7;
+            --color-buttonPrimary-active: #F4F4F7;
+            --bgColor-buttonPrimary: #A855F7;
+            --bgColor-buttonPrimary-hover: #8B5CF6;
+            --bgColor-buttonPrimary-active: #8B5CF6;
+            --color-buttonSecondary: #F4F4F7;
+            --bgColor-buttonSecondary: transparent;
+            --borderColor-buttonSecondary: #A855F7;
+            --color-badge: #F4F4F7;
+            --bgColor-badge: #A855F7;
+            --bgColor-default: #14141C;
+            --bgColor-alt: #1A1A26;
+            --color-icon: #A855F7;
+            --borderColor-default: #22222E;
+            --borderColor-alt: #22222E;
+            --borderRadius-m: 1rem;
+            --borderRadius-l: 1.5rem;
+            --font-body: 'Dosis', sans-serif;
+          }
+          .snipcart-cart-button--highlight { background: #A855F7 !important; }
+
+          /* Snipcart modal sits below the fixed site header so nothing overlaps.
+             Apply the offset ONLY on the outermost fixed overlay to avoid
+             stacking the offset on every nested container. */
+          #snipcart .snipcart-modal {
+            top: var(--header-h) !important;
+            height: calc(100vh - var(--header-h)) !important;
+            max-height: calc(100vh - var(--header-h)) !important;
+          }
+        `} />
+        <script is:inline define:vars={{ publicKey: siteConfig.shop.publicKey, currency: siteConfig.shop.currency }}>
+          window.SnipcartSettings = {
+            publicApiKey: publicKey,
+            currency: currency,
+            version: '3.7.1',
+            loadStrategy: 'on-user-interaction',
+            timeoutDuration: 2750,
+          };
+          (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <Header />
+    <main style="padding-top: var(--header-h);">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

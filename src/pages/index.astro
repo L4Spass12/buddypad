@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPreview from '../components/BlogPreview.astro';
+import Icon from '../components/Icon.astro';
+import siteConfig from '../../site.config.mjs';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const recentPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+function catToSlug(cat) {
+  return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+}
+
+const categoryDescriptions = {
+  'Gaming': 'Tapis XXL, RGB et surfaces optimisées pour les FPS et les MMO.',
+  'Bureautique': 'Confort, précision et discrétion pour un usage quotidien intensif.',
+  'Ergonomie': 'Posture, repose-poignets et conseils pour un poste de travail sain.',
+  'Guides': 'Comparatifs, tests et conseils d\'achat avant de craquer.',
+  'Setup': 'Inspirations, agencements et accessoires pour sublimer votre bureau.',
+};
+
+const categoryIcons = {
+  'Gaming': 'gamepad',
+  'Bureautique': 'keyboard',
+  'Ergonomie': 'ruler',
+  'Guides': 'star',
+  'Setup': 'desk',
+};
+
+const faqs = [
+  {
+    q: 'Tapis de souris gaming ou bureautique, lequel choisir ?',
+    a: `Cela dépend de votre usage principal. Un tapis gaming privilégie la vitesse du glisse, la précision et la taille (souvent XXL pour couvrir aussi le clavier). Un tapis bureautique mise sur la stabilité, la durabilité et un toucher agréable. Si vous alternez, un tapis hybride type "contrôle" est un bon compromis.`,
+  },
+  {
+    q: 'Un grand tapis XXL vaut-il vraiment le coup ?',
+    a: `Oui, surtout en gaming compétitif et pour les sensibilités de souris basses. Un tapis XXL (90×40 cm ou plus) couvre la souris ET le clavier, uniformise la surface, et évite que la souris ne sorte du tapis en plein combat. Il protège aussi le bureau des rayures.`,
+  },
+  {
+    q: 'Les tapis RGB améliorent-ils les performances ?',
+    a: `Non, techniquement le RGB n'améliore pas la précision ni la vitesse. Mais c'est un vrai plus esthétique pour un setup gaming, et certains modèles intègrent un hub USB ou une recharge sans fil pour la souris — là, ça devient pratique.`,
+  },
+  {
+    q: 'Comment nettoyer un tapis de souris ?',
+    a: `À la main avec de l'eau tiède et un peu de savon doux, en frottant délicatement avec une éponge. Rincez abondamment et laissez sécher à plat, à l'air libre (jamais au sèche-cheveux ni au soleil direct). Évitez la machine à laver sur les modèles avec base caoutchouc cousue.`,
+  },
+  {
+    q: 'Quelle surface choisir : tissu, dur ou hybride ?',
+    a: `Le tissu est polyvalent, confortable et discret — parfait pour 90 % des usages. Les surfaces dures (plastique, aluminium) sont ultra-rapides mais bruyantes et usent plus vite les patins de souris. Les hybrides offrent un entre-deux pour ceux qui veulent vitesse ET contrôle.`,
+  },
+];
+
+const SITE_URL = siteConfig.url;
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: SITE_URL,
+  inLanguage: 'fr-FR',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<BaseLayout
+  title={`${siteConfig.name} – Tapis de souris gaming & bureautique`}
+  description={siteConfig.description}
+  jsonLd={[websiteSchema, faqSchema]}
+>
+    <!-- Hero -->
+    <section class="relative bg-panel text-cream pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden border-b border-beige">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-terracotta/20 blur-[120px]"></div>
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(#A855F7 1px, transparent 1px), linear-gradient(90deg, #A855F7 1px, transparent 1px); background-size: 40px 40px;"></div>
+      <div class="relative max-w-4xl mx-auto px-6 text-center">
+        <span class="tag tag-light mb-6">Le blog du setup parfait</span>
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+          Le tapis de souris<br />
+          <span class="text-terracotta">taillé pour votre setup</span>
+        </h1>
+        <p class="font-body text-lg md:text-xl text-cream/70 max-w-2xl mx-auto leading-relaxed mb-10">
+          Gaming, bureautique, XXL ou RGB : guides, tests et conseils pour choisir le tapis qui change vraiment l'expérience — et booster tout votre poste de travail.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/blog" class="btn-primary">Découvrir le blog</a>
+          <a href="#categories" class="font-body text-sm font-semibold text-cream/80 hover:text-terracotta transition-colors">Explorer les catégories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos / SEO intro -->
+    <section id="a-propos" class="py-16 md:py-24 bg-dark">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="tag tag-beige mb-4">À propos</span>
+          <h2 class="section-title mt-4 mb-6">
+            Le média pour <span class="text-terracotta">équiper son bureau</span>
+          </h2>
+        </div>
+        <div class="prose prose-lg max-w-none prose-p:font-body prose-p:text-cream/75 prose-p:leading-relaxed prose-strong:text-cream">
+          <p>
+            <strong>{siteConfig.name}</strong> est le site francophone dédié aux <strong>tapis de souris gaming et bureautique</strong>, ainsi qu'à l'optimisation complète de votre poste de travail. Notre mission : vous aider à trouver le matériel qui <strong>change vraiment votre expérience</strong>, sans vous ruiner en RGB inutile ni en gadgets qui ne servent qu'à remplir une vitrine.
+          </p>
+          <p>
+            Chaque semaine, nous publions des <strong>tests approfondis</strong>, des <strong>guides d'achat</strong> et des <strong>comparatifs</strong> sur les tapis XXL, les surfaces contrôle ou vitesse, les accessoires ergonomiques et tout ce qui compose un setup productif. Du joueur compétitif à l'utilisateur bureautique intensif, vous trouverez des conseils adaptés à votre usage réel.
+          </p>
+          <p>
+            Un bon tapis ne se voit pas : il se <strong>sent sous la souris</strong>, il préserve vos poignets, et il tient des années. On explique pourquoi certains modèles à 80€ sont une arnaque, pourquoi un tapis à 25€ peut suffire, et comment choisir la surface qui colle à votre style.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catégories -->
+    <section id="categories" class="py-16 md:py-24 bg-panel border-y border-beige">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="tag tag-terracotta mb-4">Explorer</span>
+          <h2 class="section-title mt-4 mb-4">
+            Cinq univers à <span class="text-terracotta">découvrir</span>
+          </h2>
+          <p class="section-subtitle max-w-xl mx-auto">
+            Du joueur compétitif au télétravailleur, trouvez les conseils qui correspondent à votre usage.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {siteConfig.categories.map(cat => (
+            <a
+              href={`/blog/categorie/${catToSlug(cat)}`}
+              class="group block bg-dark border border-beige rounded-3xl p-8 shadow-sm hover:shadow-lg hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1"
+            >
+              <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5 group-hover:bg-terracotta group-hover:text-cream transition-colors">
+                <Icon name={categoryIcons[cat] ?? 'sparkle'} size={24} strokeWidth={1.75} />
+              </div>
+              <h3 class="font-display text-xl text-cream mb-2 group-hover:text-terracotta transition-colors">
+                {cat}
+              </h3>
+              <p class="font-body text-sm text-cream/60 leading-relaxed">
+                {categoryDescriptions[cat] ?? `Articles et conseils autour de ${cat.toLowerCase()}.`}
+              </p>
+              <span class="inline-flex items-center gap-1 mt-5 font-body text-xs font-semibold text-terracotta uppercase tracking-wider">
+                Explorer →
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog preview -->
+    {recentPosts.length > 0 && <BlogPreview posts={recentPosts} />}
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24 bg-dark">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="tag tag-beige mb-4">Questions fréquentes</span>
+          <h2 class="section-title mt-4 mb-4">
+            Vos questions, nos <span class="text-terracotta">réponses</span>
+          </h2>
+        </div>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="group bg-panel border border-beige rounded-2xl p-6 shadow-sm open:shadow-md open:shadow-terracotta/5 open:border-terracotta/40 transition-all">
+              <summary class="font-display text-lg text-cream cursor-pointer list-none flex items-start justify-between gap-4">
+                <span class="flex-1">{f.q}</span>
+                <span class="text-terracotta text-2xl leading-none transition-transform group-open:rotate-45 shrink-0">+</span>
+              </summary>
+              <p class="font-body text-cream/70 leading-relaxed mt-4">
+                {f.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="relative py-20 bg-panel text-cream overflow-hidden border-t border-beige">
+      <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-terracotta/15 blur-[120px]"></div>
+      <div class="relative max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-display text-3xl md:text-4xl leading-tight mb-4">
+          Prêt·e à <span class="text-terracotta">upgrader votre setup</span> ?
+        </h2>
+        <p class="font-body text-cream/70 text-lg mb-8 max-w-xl mx-auto">
+          Explorez la boutique et le blog pour trouver le tapis qui correspond à votre style.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          {siteConfig.shop?.enabled && <a href="/boutique" class="btn-primary"><Icon name="cart" size={18} strokeWidth={1.75} />Voir la boutique</a>}
+          <a href="/blog" class="btn-outline">Lire le blog</a>
+        </div>
+      </div>
+    </section>
+</BaseLayout>

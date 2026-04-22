@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { getCollection } from 'astro:content';
+import siteConfig from '../../../site.config.mjs';
+import { unsplashSrcset, unsplashAt } from '../../lib/image';
+
+const allProducts = await getCollection('products');
+const products = allProducts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categories = [...new Set(products.map(p => p.data.category))];
+const featured = products.find(p => p.data.featured);
+const rest = products.filter(p => !p.data.featured || p.slug !== featured?.slug);
+
+const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: siteConfig.shop.currency }).format(n);
+
+const SITE_URL = siteConfig.url;
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Boutique ${siteConfig.name}`,
+  description: `Tapis de souris gaming, bureautique, XXL et accessoires setup sélectionnés par ${siteConfig.name}.`,
+  url: `${SITE_URL}/boutique`,
+  inLanguage: 'fr-FR',
+  isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: SITE_URL },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Boutique', item: `${SITE_URL}/boutique` },
+  ],
+};
+---
+
+<BaseLayout
+  title={`Boutique ${siteConfig.name} – Tapis de souris & accessoires setup`}
+  description={`Notre sélection de tapis de souris gaming, bureautique, XXL et d'accessoires testés pour sublimer votre setup.`}
+  jsonLd={[collectionSchema, breadcrumbSchema]}
+>
+  <div>
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+      <!-- Page header -->
+      <div class="text-center mb-14">
+        <span class="tag tag-beige mb-4">La boutique {siteConfig.name}</span>
+        <h1 class="section-title mt-4 mb-4">
+          Équipez votre <span class="text-terracotta">setup</span>
+        </h1>
+        <p class="section-subtitle max-w-xl mx-auto">
+          Tapis gaming, bureautique, XXL ou RGB : une sélection testée pour chaque usage et chaque budget.
+        </p>
+        <div class="flex items-center justify-center gap-2 mt-6 font-body text-xs text-cream/50">
+          <Icon name="shield-check" size={16} strokeWidth={1.75} />
+          <span>Livraison offerte dès 49€</span>
+          <span class="mx-2">·</span>
+          <Icon name="arrow-right" size={16} strokeWidth={1.75} />
+          <span>Retours gratuits 30 jours</span>
+        </div>
+      </div>
+
+      {products.length === 0 ? (
+        <div class="text-center py-20">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-beige text-terracotta mb-4">
+            <Icon name="sparkle" size={28} strokeWidth={1.75} />
+          </div>
+          <p class="font-body text-cream/50">Les premiers produits arrivent bientôt…</p>
+        </div>
+      ) : (
+        <>
+          <!-- Featured product -->
+          {featured && (
+            <a href={`/boutique/${featured.slug}`} class="group block bg-panel border border-beige rounded-3xl overflow-hidden mb-10 md:mb-14 hover:border-terracotta/50 hover:shadow-lg hover:shadow-terracotta/10 transition-all">
+              <div class="grid md:grid-cols-5">
+                <div class="md:col-span-3 aspect-video bg-teal flex items-center justify-center">
+                  <img
+                    src={unsplashAt(featured.data.image, 800)}
+                    srcset={unsplashSrcset(featured.data.image)}
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                    alt={featured.data.imageAlt ?? featured.data.name}
+                    class="w-full h-full object-cover"
+                    width="1200" height="676" fetchpriority="high" decoding="async"
+                  />
+                </div>
+                <div class="md:col-span-2 p-6 md:p-10 flex flex-col justify-center">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="tag tag-terracotta">Coup de cœur</span>
+                    <span class="tag tag-outline-light">{featured.data.category}</span>
+                  </div>
+                  <h2 class="font-display text-2xl md:text-3xl text-cream leading-tight mb-4 group-hover:underline">
+                    {featured.data.name}
+                  </h2>
+                  <p class="font-body text-sm text-cream/70 leading-relaxed mb-6">
+                    {featured.data.shortDescription}
+                  </p>
+                  <div class="flex items-baseline gap-3">
+                    <span class="font-display text-3xl text-cream">{formatPrice(featured.data.price)}</span>
+                    {featured.data.compareAtPrice && (
+                      <span class="font-body text-sm text-cream/50 line-through">{formatPrice(featured.data.compareAtPrice)}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </a>
+          )}
+
+          <!-- Category filters -->
+          {categories.length > 1 && (
+            <div class="flex flex-wrap gap-2 mb-10">
+              <button data-filter="all" class="filter-btn font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-terracotta text-cream shadow-md shadow-terracotta/30 transition-all">
+                Tous
+              </button>
+              {categories.map(cat => (
+                <button
+                  data-filter={cat}
+                  class="filter-btn font-body text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-beige text-cream/70 hover:bg-terracotta hover:text-cream transition-all"
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <!-- Products grid -->
+          <div id="products-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {rest.map(product => (
+              <article class="product-card group bg-panel border border-beige rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:shadow-terracotta/10 hover:border-terracotta/40 transition-all duration-200 hover:-translate-y-1" data-category={product.data.category}>
+                <a href={`/boutique/${product.slug}`} class="block">
+                  <div class="aspect-video bg-teal flex items-center justify-center relative overflow-hidden">
+                    <img
+                      src={unsplashAt(product.data.image, 600)}
+                      srcset={unsplashSrcset(product.data.image, [400, 600, 800])}
+                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
+                      alt={product.data.imageAlt ?? product.data.name}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      width="800" height="450" loading="lazy"
+                    />
+                    <div class="absolute top-3 left-3">
+                      <span class="tag tag-teal">{product.data.category}</span>
+                    </div>
+                    {product.data.compareAtPrice && (
+                      <div class="absolute top-3 right-3">
+                        <span class="tag tag-terracotta">Promo</span>
+                      </div>
+                    )}
+                  </div>
+                  <div class="p-6">
+                    <h2 class="font-display text-lg text-cream mb-2 leading-snug group-hover:text-terracotta transition-colors">
+                      {product.data.name}
+                    </h2>
+                    <p class="font-body text-sm text-cream/60 leading-relaxed line-clamp-2 mb-4">{product.data.shortDescription}</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-beige">
+                      <div class="flex items-baseline gap-2">
+                        <span class="font-display text-xl text-terracotta">{formatPrice(product.data.price)}</span>
+                        {product.data.compareAtPrice && (
+                          <span class="font-body text-xs text-cream/40 line-through">{formatPrice(product.data.compareAtPrice)}</span>
+                        )}
+                      </div>
+                      <span class="font-body text-xs font-semibold text-terracotta uppercase tracking-wider">Voir →</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </>
+      )}
+    </section>
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.product-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.getAttribute('data-filter');
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-terracotta', 'text-cream', 'shadow-md');
+        b.classList.add('bg-beige', 'text-cream/70');
+      });
+      btn.classList.add('bg-terracotta', 'text-cream', 'shadow-md');
+      btn.classList.remove('bg-beige', 'text-cream/70');
+      cards.forEach(c => {
+        const match = f === 'all' || c.getAttribute('data-category') === f;
+        c.style.display = match ? '' : 'none';
+      });
+    });
+  });
+</script>
