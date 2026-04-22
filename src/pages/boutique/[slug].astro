@@ -122,22 +122,35 @@ const breadcrumbSchema = {
             </div>
           )}
 
-          <!-- Ajouter au panier (Snipcart) -->
-          <button
-            class="snipcart-add-item btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
-            disabled={stock === 0}
-            data-item-id={sku ?? product.slug}
-            data-item-name={name}
-            data-item-price={price.toFixed(2)}
-            data-item-url={`/boutique/${product.slug}/`}
-            data-item-image={image}
-            data-item-description={shortDescription}
-            data-item-weight={weight}
-            data-item-max-quantity={stock}
-            data-item-categories={category}
-          >
-            {stock === 0 ? 'Indisponible' : 'Ajouter au panier'}
-          </button>
+          {/* ─── Bouton d'achat — dépend du provider ─── */}
+          {siteConfig.shop?.provider === 'atelier' ? (
+            <button
+              class="atelier-buy-button btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+              disabled={stock === 0}
+              data-item-id={sku ?? product.slug}
+              data-item-name={name}
+              data-item-price={Math.round(price * 100)}
+              data-item-image={image}
+            >
+              {stock === 0 ? 'Indisponible' : `Acheter — ${formatPrice(price)}`}
+            </button>
+          ) : (
+            <button
+              class="snipcart-add-item btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+              disabled={stock === 0}
+              data-item-id={sku ?? product.slug}
+              data-item-name={name}
+              data-item-price={price.toFixed(2)}
+              data-item-url={`/boutique/${product.slug}/`}
+              data-item-image={image}
+              data-item-description={shortDescription}
+              data-item-weight={weight}
+              data-item-max-quantity={stock}
+              data-item-categories={category}
+            >
+              {stock === 0 ? 'Indisponible' : 'Ajouter au panier'}
+            </button>
+          )}
 
           <!-- Garanties -->
           <div class="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-white/[0.08]">

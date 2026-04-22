@@ -108,7 +108,13 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
 
-    {siteConfig.shop?.enabled && siteConfig.shop?.publicKey && (
+    {/* ─────────── Atelier widget (paiement 1 étape) ─────────── */}
+    {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
+      <script src="https://atelier.lovable.app/widget.js" defer></script>
+    )}
+
+    {/* ─────────── Snipcart (fallback, désactivé tant que provider ≠ snipcart) ─────────── */}
+    {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'snipcart' && siteConfig.shop?.snipcartPublicKey && (
       <>
         <style is:global set:html={`
           /* ───────────────────────────────────────────────────────────
@@ -602,7 +608,7 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             max-height: calc(100vh - var(--header-h)) !important;
           }
         `} />
-        <script is:inline define:vars={{ publicKey: siteConfig.shop.publicKey, currency: siteConfig.shop.currency }}>
+        <script is:inline define:vars={{ publicKey: siteConfig.shop.snipcartPublicKey, currency: siteConfig.shop.currency }}>
           window.SnipcartSettings = {
             publicApiKey: publicKey,
             currency: currency,

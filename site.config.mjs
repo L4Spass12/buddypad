@@ -36,11 +36,16 @@ const config = {
     unsplashContext: "gaming setup desk mousepad",
   },
 
-  // Boutique Snipcart (laisser publicKey vide '' pour désactiver la boutique)
+  // Boutique — choix du provider de paiement :
+  //   'atelier'  → widget Atelier (direct-buy, paiement 1 étape)
+  //   'snipcart' → Snipcart (panier multi-étapes)
+  //   ''         → désactivée
   shop: {
     enabled: true,
-    publicKey: 'MmEzOWY1N2YtNTY3Yi00NGRlLWJkY2EtOTYxNjg2YWZiYjY4NjM5MTIyODc4MDUwNjU5Mzkx',
+    provider: 'atelier',
     currency: 'EUR',
+    // Snipcart key (utilisée seulement si provider === 'snipcart')
+    snipcartPublicKey: 'MmEzOWY1N2YtNTY3Yi00NGRlLWJkY2EtOTYxNjg2YWZiYjY4NjM5MTIyODc4MDUwNjU5Mzkx',
   },
 };
 
