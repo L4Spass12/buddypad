@@ -178,39 +178,49 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
           }
 
           /* ───────────────────────────────────────────────────────────
-             Overrides agressifs — Snipcart v3.7 ignore les CSS vars
-             sur beaucoup de surfaces. On force le dark via wildcard
-             sur toutes les classes "snipcart-" existantes.
+             Snipcart v3.7 — dark theme
+             Stratégie : bg TRANSPARENT par défaut (hérite du root dark),
+             puis on restaure un bg dark uniquement sur les conteneurs
+             racine. Évite d'imposer du noir aux enfants des boutons
+             blancs (qui restent donc propres).
              ─────────────────────────────────────────────────────────── */
 
-          /* Force global dark bg + white text on EVERY Snipcart surface */
-          #snipcart,
+          /* Root : le SEUL endroit avec un vrai bg dark appliqué */
+          #snipcart {
+            background-color: #0A0A0A !important;
+            color: #F4F4F7 !important;
+          }
+
+          /* Tout le reste : transparent, hérite du root */
           #snipcart [class^="snipcart-"],
           #snipcart [class*=" snipcart-"],
           #snipcart [class^="snipcart__"],
           #snipcart [class*=" snipcart__"] {
-            background-color: #0A0A0A !important;
+            background-color: transparent !important;
             color: #F4F4F7 !important;
             border-color: rgba(255,255,255,0.08) !important;
           }
 
-          /* Backdrop behind modal */
+          /* Backdrop derrière le modal */
           #snipcart .snipcart__backdrop,
           #snipcart .snipcart-modal__backdrop {
             background-color: rgba(0,0,0,0.7) !important;
           }
 
-          /* Headers / Footers internes (panels légèrement distincts) */
-          #snipcart .snipcart-modal__header,
-          #snipcart .snipcart-cart-header,
-          #snipcart .snipcart-cart__header,
+          /* Conteneurs racine — re-forcer le dark pour éviter les "trous"
+             s'il y avait des bg blancs intermédiaires injectés par Snipcart */
+          #snipcart .snipcart-modal,
+          #snipcart .snipcart-modal__container,
+          #snipcart .snipcart-layout,
+          #snipcart .snipcart-layout__content,
           #snipcart .snipcart-layout__header,
-          #snipcart .snipcart-layout__footer,
-          #snipcart .snipcart-cart-summary,
-          #snipcart .snipcart-cart__secondary-header {
+          #snipcart .snipcart-cart,
+          #snipcart .snipcart-cart__content,
+          #snipcart .snipcart-cart__empty,
+          #snipcart .snipcart-checkout,
+          #snipcart .snipcart-checkout__content,
+          #snipcart .snipcart__box {
             background-color: #0A0A0A !important;
-            color: #F4F4F7 !important;
-            border-color: rgba(255,255,255,0.08) !important;
           }
 
           /* Close button / back arrow / icons */
@@ -252,11 +262,47 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
           /* Texte secondaire (ex. "Quantité", "Les frais de livraison...") */
           #snipcart [class*="snipcart-typography--secondary"],
           #snipcart [class*="snipcart-typography--small"],
-          #snipcart [class*="snipcart-form__label"],
           #snipcart .snipcart__font--tiny,
           #snipcart .snipcart__font--secondary {
             color: #A3A3A3 !important;
             background-color: transparent !important;
+          }
+
+          /* Labels de formulaire (checkout) — plus lumineux pour la lisibilité */
+          #snipcart label,
+          #snipcart .snipcart-form__label,
+          #snipcart [class*="snipcart-form__label"],
+          #snipcart [class*="snipcart-input__label"] {
+            color: #D4D4D8 !important;
+            background-color: transparent !important;
+            font-weight: 400 !important;
+          }
+
+          /* Bouton "Modifier" dans le résumé du checkout */
+          #snipcart button[class*="modify"],
+          #snipcart a[class*="modify"],
+          #snipcart .snipcart-cart-summary-modify,
+          #snipcart .snipcart-cart-summary__edit-btn {
+            background-color: rgba(255,255,255,0.04) !important;
+            color: #D4D4D8 !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            border-radius: 9999px !important;
+            padding: 0.3rem 0.9rem !important;
+          }
+          #snipcart button[class*="modify"]:hover,
+          #snipcart a[class*="modify"]:hover {
+            background-color: rgba(255,255,255,0.08) !important;
+            color: #F4F4F7 !important;
+            border-color: rgba(255,255,255,0.25) !important;
+          }
+
+          /* Numéro d'étape (cercle "1", "2"...) */
+          #snipcart .snipcart-layout__step-number,
+          #snipcart [class*="step-number"],
+          #snipcart [class*="step__number"] {
+            background-color: rgba(255,255,255,0.05) !important;
+            color: #F4F4F7 !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
           }
 
           /* Prix, line items, totaux — tous en blanc */
@@ -271,7 +317,7 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             background-color: transparent !important;
           }
 
-          /* Boutons primaires — blanc sur noir (pilule) */
+          /* Boutons primaires — pilule blanche, texte noir */
           #snipcart .snipcart-cart-button--highlight,
           #snipcart .snipcart-button-primary,
           #snipcart button[class*="snipcart-button-primary"],
@@ -280,13 +326,21 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
             color: #0A0A0A !important;
             border-radius: 9999px !important;
             border: none !important;
+            padding: 0.9rem 1.5rem !important;
           }
+          /* Enfants du bouton primaire : transparent + texte noir
+             (sinon mon wildcard précédent leur mettait un bg noir visible) */
           #snipcart .snipcart-cart-button--highlight *,
           #snipcart .snipcart-button-primary *,
           #snipcart button[class*="snipcart-button-primary"] *,
-          #snipcart button[type="submit"] * {
+          #snipcart button[type="submit"] *,
+          #snipcart .snipcart-cart-button--highlight [class^="snipcart-"],
+          #snipcart .snipcart-button-primary [class^="snipcart-"],
+          #snipcart button[type="submit"] [class^="snipcart-"] {
+            background-color: transparent !important;
             color: #0A0A0A !important;
             fill: #0A0A0A !important;
+            stroke: #0A0A0A !important;
           }
           #snipcart .snipcart-cart-button--highlight:hover,
           #snipcart .snipcart-button-primary:hover,
