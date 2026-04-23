@@ -108,22 +108,20 @@ const breadcrumbSchema = {
           </a>
         )}
 
-        <!-- Category filters -->
-        {categorySlugs.length > 1 && (
-          <div class="flex flex-wrap gap-2 mb-10">
-            <button data-filter="all" class="filter-btn text-xs font-medium px-4 py-2 rounded-full bg-cream text-dark transition-colors">
-              Tous
-            </button>
-            {categorySlugs.map(slug => (
-              <button
-                data-filter={slug}
-                class="filter-btn text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors"
-              >
-                {catLabel(slug)}
-              </button>
-            ))}
-          </div>
-        )}
+        <!-- Category filters (vrais liens pour le SEO + maillage interne) -->
+        <div class="flex flex-wrap gap-2 mb-10">
+          <a href="/tapis-de-souris" class="text-xs font-medium px-4 py-2 rounded-full bg-cream text-dark transition-colors">
+            Tous
+          </a>
+          {(siteConfig.productCategories as {slug:string; label:string}[]).map(c => (
+            <a
+              href={`/product-category/${c.slug}`}
+              class="text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors"
+            >
+              {c.label.replace(/^Tapis de souris\s*/i, '')}
+            </a>
+          ))}
+        </div>
 
         <!-- Products grid -->
         <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -171,25 +169,3 @@ const breadcrumbSchema = {
   </section>
 </BaseLayout>
 
-<script is:inline>
-  (function() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.product-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const f = btn.getAttribute('data-filter');
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-cream', 'text-dark');
-          if (!b.classList.contains('border')) b.classList.add('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
-        });
-        btn.classList.add('bg-cream', 'text-dark');
-        btn.classList.remove('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
-        cards.forEach(c => {
-          const cats = (c.getAttribute('data-categories') || '').split(',');
-          const match = f === 'all' || cats.includes(f);
-          c.style.display = match ? '' : 'none';
-        });
-      });
-    });
-  })();
-</script>

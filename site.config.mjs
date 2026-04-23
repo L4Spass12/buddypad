@@ -53,6 +53,8 @@ const config = {
     { slug: 'girl-boss',                          label: 'Tapis de souris Girl Boss' },
     { slug: 'tapis-de-souris-girly',              label: 'Tapis de souris Girly rose' },
     { slug: 'tapis-de-souris-kawaii',             label: 'Tapis de souris kawaii' },
+    { slug: 'tapis-souris-led-rgb',               label: 'Tapis de souris LED / RGB' },
+    { slug: 'tapis-souris-led-rgb-charge-sans-fil', label: 'Tapis de souris LED / RGB & Charge sans fil' },
     { slug: 'tapis-de-souris-manga-anime',        label: 'Tapis de souris Manga / Anime' },
     { slug: 'tapis-de-souris-minimaliste',        label: 'Tapis de souris Minimaliste' },
     { slug: 'tapis-de-souris-xxl',                label: 'Tapis de souris XXL' },
