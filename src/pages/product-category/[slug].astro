@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset } from '../../lib/image';
+import InfiniteReveal from '../../components/InfiniteReveal.astro';
 
 export async function getStaticPaths() {
   const allProducts = await getCollection('products');
@@ -82,9 +83,10 @@ const breadcrumbSchema = {
     </div>
 
     {products.length > 0 ? (
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <>
+      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {products.map(product => (
-          <a href={`/product/${product.slug}`} class="group block">
+          <a href={`/product/${product.slug}`} class="product-card group block">
             <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
               <img
                 src={product.data.image}
@@ -114,6 +116,8 @@ const breadcrumbSchema = {
           </a>
         ))}
       </div>
+      <InfiniteReveal targetId="products-grid" itemSelector=".product-card" initial={12} batch={12} />
+      </>
     ) : (
       <div class="text-center py-20">
         <p class="text-sm text-n-500 font-light">Aucun produit dans cette catégorie pour l'instant.</p>

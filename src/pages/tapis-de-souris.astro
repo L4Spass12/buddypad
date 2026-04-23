@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import InfiniteReveal from '../components/InfiniteReveal.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../site.config.mjs';
 import { responsiveSrcset } from '../lib/responsive';
@@ -161,6 +162,7 @@ const breadcrumbSchema = {
             </a>
           ))}
         </div>
+        <InfiniteReveal targetId="products-grid" itemSelector=".product-card" initial={12} batch={12} />
       </>
     )}
   </section>
