@@ -144,7 +144,7 @@ const faqSchema = {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {siteConfig.categories.map(cat => (
             <a
-              href={`/blog/categorie/${catToSlug(cat)}`}
+              href={`/category/${catToSlug(cat)}`}
               class="group flex flex-col items-center text-center"
             >
               <div class="h-12 w-12 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center mb-6 text-cream group-hover:border-white/30 transition-colors">
@@ -200,7 +200,7 @@ const faqSchema = {
           Explorez la boutique et le blog pour trouver la surface qui correspond à votre style.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-          {siteConfig.shop?.enabled && <a href="/boutique" class="w-full sm:w-auto btn-primary">Voir la boutique</a>}
+          {siteConfig.shop?.enabled && <a href="/tapis-de-souris" class="w-full sm:w-auto btn-primary">Voir la boutique</a>}
           <a href="/blog" class="w-full sm:w-auto btn-outline">Lire le blog</a>
         </div>
       </div>

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Icon from '../../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
-import siteConfig from '../../../site.config.mjs';
-import { unsplashSrcset, unsplashAt } from '../../lib/image';
+import siteConfig from '../../site.config.mjs';
+import { unsplashSrcset, unsplashAt } from '../lib/image';
 
 const allProducts = await getCollection('products');
 const products = allProducts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -20,7 +20,7 @@ const collectionSchema = {
   '@type': 'CollectionPage',
   name: `Boutique ${siteConfig.name}`,
   description: `Tapis de souris gaming, bureautique, XXL et accessoires setup sélectionnés par ${siteConfig.name}.`,
-  url: `${SITE_URL}/boutique`,
+  url: `${SITE_URL}/tapis-de-souris`,
   inLanguage: 'fr-FR',
   isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: SITE_URL },
 };
@@ -30,7 +30,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Boutique', item: `${SITE_URL}/boutique` },
+    { '@type': 'ListItem', position: 2, name: 'Boutique', item: `${SITE_URL}/tapis-de-souris` },
   ],
 };
 ---
@@ -63,7 +63,7 @@ const breadcrumbSchema = {
       <>
         <!-- Featured product -->
         {featured && (
-          <a href={`/boutique/${featured.slug}`} class="group block mb-16 md:mb-20">
+          <a href={`/product/${featured.slug}`} class="group block mb-16 md:mb-20">
             <div class="grid md:grid-cols-5 gap-8 md:gap-10">
               <div class="md:col-span-3 relative aspect-[16/10] md:aspect-[21/12] rounded-2xl overflow-hidden bg-panel border border-white/[0.05]">
                 <img
@@ -117,7 +117,7 @@ const breadcrumbSchema = {
         <!-- Products grid -->
         <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {rest.map(product => (
-            <a href={`/boutique/${product.slug}`} class="product-card group block" data-category={product.data.category}>
+            <a href={`/product/${product.slug}`} class="product-card group block" data-category={product.data.category}>
               <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
                 <img
                   src={unsplashAt(product.data.image, 600)}

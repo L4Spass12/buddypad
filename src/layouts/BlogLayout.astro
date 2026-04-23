@@ -30,7 +30,7 @@ const formattedUpdated = updatedDate
   : null;
 
 const SITE_URL = siteConfig.url;
-const articleUrl = `${SITE_URL}/blog/${post.slug}/`;
+const articleUrl = `${SITE_URL}/${post.slug}/`;
 const imageUrl = image ? new URL(image, SITE_URL).toString() : `${SITE_URL}/og-image.jpg`;
 
 // Article schema (schema.org/Article)
@@ -112,7 +112,7 @@ const breadcrumbSchema = {
       <!-- Article -->
       <div class="min-w-0 max-w-3xl">
         <!-- Category tag -->
-        <a href={`/blog/categorie/${catToSlug(category)}`} class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors">{category}</a>
+        <a href={`/category/${catToSlug(category)}`} class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors">{category}</a>
 
         <!-- Title -->
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream mt-4 mb-6 leading-[1.15]">
@@ -188,7 +188,7 @@ const breadcrumbSchema = {
             <h2 class="text-xl font-medium tracking-tight text-cream mb-8">À lire aussi</h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map(p => (
-                <a href={`/blog/${p.slug}`} class="group block">
+                <a href={`/${p.slug}`} class="group block">
                   <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
                     {p.data.image
                       ? <img

@@ -38,7 +38,7 @@ const currentYear = new Date().getFullYear();
       <ul class="space-y-3 text-xs text-n-500 font-light">
         <li><a href="/" class="hover:text-cream transition-colors">Accueil</a></li>
         <li><a href="/blog" class="hover:text-cream transition-colors">Blog</a></li>
-        {siteConfig.shop?.enabled && <li><a href="/boutique" class="hover:text-cream transition-colors">Boutique</a></li>}
+        {siteConfig.shop?.enabled && <li><a href="/tapis-de-souris" class="hover:text-cream transition-colors">Boutique</a></li>}
         <li><a href="/#a-propos" class="hover:text-cream transition-colors">À propos</a></li>
       </ul>
     </div>
@@ -48,7 +48,7 @@ const currentYear = new Date().getFullYear();
       <ul class="space-y-3 text-xs text-n-500 font-light">
         {siteConfig.categories.map(cat => {
           const slug = cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
-          return <li><a href={`/blog/categorie/${slug}`} class="hover:text-cream transition-colors">{cat}</a></li>;
+          return <li><a href={`/category/${slug}`} class="hover:text-cream transition-colors">{cat}</a></li>;
         })}
       </ul>
     </div>

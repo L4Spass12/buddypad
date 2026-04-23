@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Icon from '../../../components/Icon.astro';
-import siteConfig from '../../../../site.config.mjs';
-import { unsplashSrcset, unsplashAt } from '../../../lib/image';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import siteConfig from '../../../site.config.mjs';
+import { unsplashSrcset, unsplashAt } from '../../lib/image';
 
 export function catToSlug(cat: string) {
   return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
@@ -61,7 +61,7 @@ const catSlug = catToSlug(cat);
       </a>
       {CATEGORIES.map(c => (
         <a
-          href={`/blog/categorie/${catToSlug(c)}`}
+          href={`/category/${catToSlug(c)}`}
           class={`text-xs font-medium px-4 py-2 rounded-full transition-colors ${c === cat ? 'bg-cream text-dark' : 'border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20'}`}
         >
           {c}
@@ -72,7 +72,7 @@ const catSlug = catToSlug(cat);
     {posts.length > 0 ? (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {posts.map(post => (
-          <a href={`/blog/${post.slug}`} class="group block">
+          <a href={`/${post.slug}`} class="group block">
             <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
               {post.data.image
                 ? <img

@@ -26,7 +26,7 @@ const formatDate = (date: Date) =>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {posts.map((post) => (
-        <a href={`/blog/${post.slug}`} class="group block">
+        <a href={`/${post.slug}`} class="group block">
           <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
             {post.data.image
               ? <img
