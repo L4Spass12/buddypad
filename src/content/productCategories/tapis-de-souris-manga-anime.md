@@ -2,6 +2,7 @@
 title: "Tapis de souris Manga / Anime — Notre sélection 2026"
 metaDescription: "Transformez votre setup avec notre collection de tapis de souris anime et manga : des designs inspirés de la culture japonaise et de vos séries préférées, impri"
 intro: "Transformez votre setup avec notre collection de tapis de souris anime et manga : des designs inspirés de la culture japonaise et de vos séries préférées, imprimés en haute définition sur une surface optimisée pour le gaming. Que vous soyez fan de l'univers de Naruto, One Piece, Demon Slayer, Dragon Ball ou Jujutsu Kaisen, trouvez le modèle qui correspond à votre style parmi notre sélection de tapis de souris manga en format standard et XXL."
+guideHeading: "Le guide du tapis de souris manga et anime"
 keywords:
   - "tapis de souris manga / anime"
   - "manga"
@@ -21,28 +22,28 @@ faq:
 updatedDate: 2026-04-23
 ---
 
-## Le manga et l'anime au cœur du setup
+### Le manga et l'anime au cœur du setup
 
 Un **tapis de souris manga** ou **anime** transforme un bureau standard en territoire d'expression. Que vous soyez fan de shonen classiques (combats, épopées), de seinen plus sombre, ou de l'esthétique shojo colorée, le tapis est l'endroit idéal pour afficher votre univers sans envahir toute la pièce.
 
-## Les grandes familles de designs
+### Les grandes familles de designs
 
-### Samouraï et culture japonaise traditionnelle
+#### Samouraï et culture japonaise traditionnelle
 
 Katanas, armures, cerisiers, paysages montagneux. Esthétique sombre souvent, avec des accents rouges ou dorés.
 
-### Anime contemporain
+#### Anime contemporain
 
 Personnages stylisés, scènes d'action, portraits de héros. Designs très graphiques avec lignes nettes.
 
-### Kawaii manga
+#### Kawaii manga
 
 Intersection avec la catégorie kawaii : personnages mignons en style manga classique (gros yeux, expressions exagérées, couleurs pastel).
 
-## Qualité d'impression et résistance
+### Qualité d'impression et résistance
 
 Tous nos tapis manga utilisent une **impression par sublimation thermique** : les pigments pénètrent le tissu au lieu d'être posés à sa surface. Résultat : couleurs vibrantes, résistance aux UV, et surtout pas de dégradation au nettoyage. Un tapis anime bien entretenu garde son éclat 3-5 ans facilement.
 
-## Format recommandé selon le design
+### Format recommandé selon le design
 
 Les **scènes complètes** (paysages, tableaux) brillent en XXL 90×40 cm. Les **portraits ou icônes** restent percutants en format standard. À vous de voir selon l'espace disponible sur votre bureau.

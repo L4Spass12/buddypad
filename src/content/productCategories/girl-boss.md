@@ -2,6 +2,7 @@
 title: "Tapis de souris Girl Boss — Notre sélection 2026"
 metaDescription: "La collection Girl Boss : des tapis de souris pensés pour les femmes ambitieuses et créatives. Citations motivantes, esthétique moderne et couleurs affirmées po"
 intro: "La collection Girl Boss : des tapis de souris pensés pour les femmes ambitieuses et créatives. Citations motivantes, esthétique moderne et couleurs affirmées pour un bureau qui vous ressemble. Format XXL disponible pour un confort de travail optimal."
+guideHeading: "Le tapis de souris Girl Boss en détail"
 keywords:
   - "tapis de souris girl boss"
   - "motivation"
@@ -21,31 +22,31 @@ faq:
 updatedDate: 2026-04-23
 ---
 
-## Un bureau qui affirme vos valeurs
+### Un bureau qui affirme vos valeurs
 
 La collection **Girl Boss** n'est pas qu'une tendance marketing : c'est un concept de bureau qui transforme votre espace de travail en territoire d'affirmation personnelle. Citations motivantes, esthétique sobre et affirmée, couleurs qui donnent de l'énergie — chaque détail contribue à l'état d'esprit.
 
-## Pour qui ces tapis sont-ils faits ?
+### Pour qui ces tapis sont-ils faits ?
 
-### Entrepreneures et freelances
+#### Entrepreneures et freelances
 
 Le tapis est un rappel visuel constant de vos objectifs pendant les longues journées de travail autonome. Plus efficace qu'un post-it motivant collé à l'écran.
 
-### Étudiantes ambitieuses
+#### Étudiantes ambitieuses
 
 Préparation de concours, études longues, projets perso — l'énergie que diffuse un bureau bien designé influence directement la productivité et la persévérance.
 
-### Créatrices de contenu et designeuses
+#### Créatrices de contenu et designeuses
 
 Un bureau photogénique qui passe bien en vidéo et en photo sans effort. Pratique si vous partagez régulièrement votre setup sur les réseaux.
 
-## Les codes esthétiques Girl Boss
+### Les codes esthétiques Girl Boss
 
 - **Palette dominante** : noir, blanc, doré (ou rose + noir pour la version plus féminine)
 - **Typographie** : serif élégante ou script manuscrit
 - **Messages** : motivation, affirmation, ambition, élégance
 
-## Complément idéal au reste du setup
+### Complément idéal au reste du setup
 
 Un tapis Girl Boss se marie bien avec :
 

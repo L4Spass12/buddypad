@@ -2,6 +2,7 @@
 title: "Tapis de Souris LED / RGB — Notre sélection 2026"
 metaDescription: "Nos tapis de souris LED et RGB illuminent votre setup gaming avec des effets lumineux spectaculaires. Rétroéclairage personnalisable, surface de glisse optimale"
 intro: "Nos tapis de souris LED et RGB illuminent votre setup gaming avec des effets lumineux spectaculaires. Rétroéclairage personnalisable, surface de glisse optimale et design futuriste pour un bureau gaming qui brille aussi bien qu'il performe."
+guideHeading: "Le tapis de souris LED / RGB en détail"
 keywords:
   - "tapis de souris led / rgb"
   - "rgb"
@@ -21,11 +22,11 @@ faq:
 updatedDate: 2026-04-23
 ---
 
-## Le RGB, esthétique avant tout
+### Le RGB, esthétique avant tout
 
 Un **tapis de souris LED/RGB** transforme votre bureau en enseigne lumineuse. Soyons honnêtes : c'est du spectacle, pas de la performance. Mais dans un setup gaming bien pensé, le rétroéclairage donne une signature visuelle que rien d'autre ne peut reproduire.
 
-## Les modes d'éclairage typiques
+### Les modes d'éclairage typiques
 
 - **Statique** : une couleur fixe, la plus sobre
 - **Respiration** : fondus doux entre couleurs, relaxant
@@ -33,21 +34,21 @@ Un **tapis de souris LED/RGB** transforme votre bureau en enseigne lumineuse. So
 - **Réactif audio** : synchronisé avec le son du PC (musique, sons de jeu)
 - **Spectrum mode** : sync avec d'autres accessoires RGB (Razer Chroma, Corsair iCue…)
 
-## Choisir la bonne intensité
+### Choisir la bonne intensité
 
 Un tapis RGB trop agressif fatigue les yeux sur une session longue. Cherchez un modèle avec **plusieurs niveaux d'intensité réglables** et des modes "calmes" (blanc tamisé, couleur unique basse intensité) en plus des modes "gaming" spectaculaires.
 
-## Compatibilité logicielle
+### Compatibilité logicielle
 
 Si vous avez déjà un clavier et une souris RGB d'une marque (Razer, Corsair, Logitech, SteelSeries), privilégiez un tapis de la **même marque ou compatible** pour pouvoir synchroniser les effets. Sinon vous aurez 3 éclairages désaccordés qui ruinent l'effet recherché.
 
-## Les pièges à éviter
+### Les pièges à éviter
 
 - Tapis RGB avec câble rigide court : difficile à placer proprement
 - Bouton de contrôle caché sous le tapis : pénible pour changer d'effet
 - Rétroéclairage qui "fuite" sous le bord (mauvaise finition)
 - Tissu trop fin où on voit les LED par transparence en plein jour
 
-## Combiné avec la recharge sans fil
+### Combiné avec la recharge sans fil
 
 Certains tapis RGB intègrent une **zone Qi** pour recharger la souris (compatible) directement sur le tapis. C'est la gamme premium — voir notre catégorie dédiée.

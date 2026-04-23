@@ -2,6 +2,7 @@
 title: "Tapis de Souris LED / RGB & Charge Sans Fil — Notre sélection 2026"
 metaDescription: "Le combo ultime : tapis de souris LED RGB avec recharge sans fil intégrée. Illuminez votre setup et rechargez vos appareils compatibles Qi directement sur votre"
 intro: "Le combo ultime : tapis de souris LED RGB avec recharge sans fil intégrée. Illuminez votre setup et rechargez vos appareils compatibles Qi directement sur votre bureau. Design gaming premium, éclairage personnalisable et surface de précision en un seul accessoire."
+guideHeading: "Tapis de souris LED RGB avec charge sans fil"
 keywords:
   - "tapis de souris led / rgb & charge sans fil"
   - "rgb"
@@ -24,39 +25,39 @@ faq:
 updatedDate: 2026-04-23
 ---
 
-## Le combo ultime : RGB + recharge sans fil
+### Le combo ultime : RGB + recharge sans fil
 
 Les **tapis LED RGB avec charge sans fil** représentent le haut de gamme absolu en matière d'accessoires gaming. Vous n'avez plus jamais à penser à charger votre souris — elle se recharge en permanence pendant que vous jouez.
 
-## Comment ça marche ?
+### Comment ça marche ?
 
 Le tapis intègre une **bobine de charge Qi** (norme standard de recharge sans fil) dans une zone dédiée. Quand une souris compatible entre dans cette zone, la recharge s'active automatiquement. Aucun câble, aucun dock séparé — la souris se recharge dans son environnement naturel.
 
-## Les vrais avantages au quotidien
+### Les vrais avantages au quotidien
 
 - **Plus jamais de souris déchargée** en pleine partie
 - **Plus de câble sur le bureau** (la souris sans fil devient vraiment sans fil)
 - **Setup plus propre visuellement**
 - **Compatible avec les souris sans batterie apparente** (ultra-légères)
 
-## Les limites à connaître
+### Les limites à connaître
 
 Tous les modèles de souris ne sont pas compatibles. Seules les souris conçues avec une bobine de réception Qi peuvent être rechargées de cette manière. Avant d'acheter le tapis, vérifiez absolument que **votre souris actuelle est compatible**, sinon il vous faudra changer les deux.
 
-## Marques et écosystèmes
+### Marques et écosystèmes
 
-### Logitech PowerPlay
+#### Logitech PowerPlay
 
 Le système propriétaire de Logitech, fonctionne avec les G Pro Superlight, G502 Lightspeed, et autres G compatibles. Très fiable.
 
-### Razer Hyperflux
+#### Razer Hyperflux
 
 Système Razer, plus limité en compatibilité mais avec intégration parfaite dans l'écosystème Razer Chroma.
 
-### Qi standard
+#### Qi standard
 
 Tapis "ouverts" compatibles avec toutes les souris Qi — plus flexibles mais parfois moins optimisés en vitesse de charge.
 
-## Le confort RGB en bonus
+### Le confort RGB en bonus
 
 En plus de la charge sans fil, ces tapis premium intègrent un rétroéclairage RGB complet, personnalisable, et souvent synchronisé avec le clavier et la souris via le logiciel de la marque. Le setup devient un vrai produit cohérent, plus qu'un assemblage d'accessoires.

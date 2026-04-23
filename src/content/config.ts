@@ -98,6 +98,9 @@ const productCategories = defineCollection({
     title: z.string(),                // H1 + <title>
     metaDescription: z.string(),      // <meta name="description">
     intro: z.string(),                // paragraphe sous le H1, au-dessus de la grille (plaintext)
+    // Titre du toggle "guide d'achat" — doit contenir le mot-clé cible
+    // ex: "Tout savoir sur les tapis de souris kawaii"
+    guideHeading: z.string().optional(),
     keywords: z.array(z.string()).default([]),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     updatedDate: z.coerce.date().optional(),
