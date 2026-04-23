@@ -197,7 +197,7 @@ const breadcrumbSchema = {
                           srcset={unsplashSrcset(p.data.image, [400, 600])}
                           sizes="(max-width: 640px) 100vw, 33vw"
                           alt={p.data.imageAlt ?? p.data.title}
-                          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                           loading="lazy"
                         />
                       : <div class="w-full h-full flex items-center justify-center text-n-500"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="6"/><line x1="12" y1="2" x2="12" y2="11"/></svg></div>
