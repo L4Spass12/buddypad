@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
+import { unsplashSrcset } from '../../lib/image';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -96,6 +97,8 @@ const breadcrumbSchema = {
           <img
             id="product-main-image"
             src={image}
+            srcset={unsplashSrcset(image)}
+            sizes="(max-width: 1024px) 100vw, 560px"
             alt={imageAlt ?? name}
             class="w-full h-full object-cover"
             width="1200" height="1200" fetchpriority="high" decoding="async"
@@ -108,7 +111,7 @@ const breadcrumbSchema = {
                 data-gallery-thumb={g}
                 class={`gallery-thumb aspect-square rounded-lg overflow-hidden border ${i === 0 ? 'border-white/30' : 'border-white/[0.05]'} hover:border-white/30 transition-colors`}
               >
-                <img src={g} alt="" loading="lazy" class="w-full h-full object-cover" />
+                <img src={g.replace(/\.webp$/, '-400w.webp')} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
               </button>
             ))}
           </div>
@@ -266,9 +269,11 @@ const breadcrumbSchema = {
               <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
                 <img
                   src={p.data.image}
+                  srcset={unsplashSrcset(p.data.image)}
+                  sizes="(max-width: 640px) 100vw, 33vw"
                   alt={p.data.imageAlt ?? p.data.name}
                   class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <h3 class="text-sm font-medium text-cream mt-1 tracking-tight group-hover:underline underline-offset-4 line-clamp-2">{p.data.name}</h3>

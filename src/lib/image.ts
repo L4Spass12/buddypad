@@ -1,14 +1,31 @@
 /**
- * Build a responsive srcset from an Unsplash URL.
- * Rewrites the `w=` query param to generate multiple candidates so the
- * browser picks the right size based on the `sizes` attribute.
- *
- * Falls back gracefully for non-Unsplash URLs (returns empty srcset).
+ * Helpers srcset responsive.
+ * Supporte :
+ *  - Unsplash : rewrites `w=` param
+ *  - WebP local : utilise les variantes -400w.webp / -800w.webp générées
+ *    par scripts/generate-responsive.mjs
+ *  - Autre (png/jpg externes) : fallback gracieux (pas de srcset)
  */
 const UNSPLASH_WIDTHS = [400, 600, 800, 1200, 1600];
 
+function isLocalWebp(src: string): boolean {
+  return !!src && !src.startsWith('http') && /\.webp$/i.test(src);
+}
+
+function isUnsplash(src: string): boolean {
+  return !!src && src.includes('images.unsplash.com');
+}
+
 export function unsplashSrcset(src: string, widths: number[] = UNSPLASH_WIDTHS): string {
-  if (!src || !src.includes('images.unsplash.com')) return '';
+  if (!src) return '';
+
+  // WebP local → variantes pré-générées (-400w, -800w)
+  if (isLocalWebp(src)) {
+    const base = src.replace(/\.webp$/i, '');
+    return `${base}-400w.webp 400w, ${base}-800w.webp 800w, ${src} 1200w`;
+  }
+
+  if (!isUnsplash(src)) return '';
   try {
     const url = new URL(src);
     return widths
@@ -22,9 +39,17 @@ export function unsplashSrcset(src: string, widths: number[] = UNSPLASH_WIDTHS):
   }
 }
 
-/** Force a specific width on an Unsplash URL (for the base src). */
+/** Base src — width spécifique pour Unsplash, sinon src tel quel. */
 export function unsplashAt(src: string, w: number): string {
-  if (!src || !src.includes('images.unsplash.com')) return src;
+  if (!src) return src;
+  if (isLocalWebp(src)) {
+    // Sert la variante la plus proche comme base
+    const base = src.replace(/\.webp$/i, '');
+    if (w <= 500) return `${base}-400w.webp`;
+    if (w <= 900) return `${base}-800w.webp`;
+    return src;
+  }
+  if (!isUnsplash(src)) return src;
   try {
     const url = new URL(src);
     url.searchParams.set('w', String(w));
