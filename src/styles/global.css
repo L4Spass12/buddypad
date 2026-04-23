@@ -146,3 +146,17 @@
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #262626; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #404040; }
+
+/* Atelier widget — icône panier dans le header (GLIDE dark) */
+[data-atelier-header-icon] {
+  color: #A3A3A3 !important;
+  margin-left: 0 !important;
+  transition: color 0.2s ease;
+}
+[data-atelier-header-icon]:hover {
+  color: #F4F4F7 !important;
+}
+[data-atelier-header-badge] {
+  background: #F4F4F7 !important;
+  color: #0A0A0A !important;
+}

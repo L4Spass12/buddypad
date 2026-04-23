@@ -28,6 +28,12 @@ import siteConfig from '../../site.config.mjs';
         </button>
       )}
 
+      {/* Slot Atelier — le widget détecte data-atelier-cart-icon et injecte
+          son bouton panier ici (à droite, aligné avec le logo) */}
+      {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
+        <div data-atelier-cart-icon class="flex items-center"></div>
+      )}
+
       <!-- Mobile menu button -->
       <button
         id="menu-btn"
