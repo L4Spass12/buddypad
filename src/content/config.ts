@@ -21,23 +21,67 @@ const blog = defineCollection({
   }),
 });
 
+/**
+ * Une valeur d'attribut (ex. "XL", "Bleu foncé")
+ */
+const attrValue = z.object({
+  label: z.string(),  // "Bleu foncé"
+  slug: z.string(),   // "bleu-fonce"
+});
+
+/**
+ * Un attribut de produit (ex. "Dimensions" avec 3 valeurs)
+ */
+const attribute = z.object({
+  name: z.string(),              // "Dimensions"
+  values: z.array(attrValue),    // [{label:"45 × 35 cm", slug:"45-x-35-cm"}, ...]
+});
+
+/**
+ * Une variante = une combinaison spécifique d'attributs, avec son prix/stock/image propres
+ */
+const variation = z.object({
+  id: z.union([z.number(), z.string()]),
+  sku: z.string().optional(),
+  price: z.number().positive(),
+  compareAtPrice: z.number().positive().optional(),
+  inStock: z.boolean().default(true),
+  stock: z.number().int().nonnegative().nullable().optional(),
+  // quelle combinaison d'attributs cette variation représente
+  // ex: {"Dimensions": "45-x-35-cm", "Couleurs": "bleu-fonce"}
+  attributes: z.record(z.string(), z.string()),
+  // image propre à la variante (optionnelle)
+  image: z.string().optional(),
+});
+
 const products = defineCollection({
   type: 'content',
   schema: z.object({
     name: z.string(),
+    // Prix affichés par défaut (= prix min si plusieurs variantes)
     price: z.number().positive(),
     compareAtPrice: z.number().positive().optional(),
+    // Si le produit a plusieurs variantes avec des prix différents,
+    // on affiche "dès X €" sur les listings
+    priceRange: z.object({
+      min: z.number().positive(),
+      max: z.number().positive(),
+    }).optional(),
     image: z.string(),
     imageAlt: z.string().optional(),
     gallery: z.array(z.string()).default([]),
-    category: z.string(),
+    // Plusieurs catégories possibles (ex. gaming + manga-anime)
+    categories: z.array(z.string()).default([]),
     shortDescription: z.string(),
-    weight: z.number().int().positive(),
-    stock: z.number().int().nonnegative().default(999),
+    weight: z.number().int().positive().optional(),
+    stock: z.number().int().nonnegative().nullable().optional(),
     sku: z.string().optional(),
     featured: z.boolean().default(false),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
+    // ─── Variantes ───
+    attributes: z.array(attribute).default([]),
+    variations: z.array(variation).default([]),
   }),
 });
 

@@ -7,3 +7,6 @@ dist/
 
 # Fichiers de travail migration WP
 import/
+
+# Astro cache
+.astro/

@@ -15,8 +15,9 @@ interface Props {
 const { post, headings, related = [] } = Astro.props;
 const { title, description, pubDate, updatedDate, author, category, tags, image, imageAlt, imageTitle, faq } = post.data;
 
-function catToSlug(cat: string) {
-  return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+function catToSlug(cat: string): string {
+  return (siteConfig.categorySlugs as Record<string,string>)?.[cat]
+    ?? cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 const formatDate = (date: Date) =>
   new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' }).format(date);

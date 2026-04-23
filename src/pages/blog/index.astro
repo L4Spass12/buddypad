@@ -11,8 +11,9 @@ const featured = posts.find(p => p.data.featured);
 const rest = posts.filter(p => !p.data.featured || p.slug !== featured?.slug);
 
 const categories = siteConfig.categories;
-function catToSlug(cat: string) {
-  return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+function catToSlug(cat: string): string {
+  return (siteConfig.categorySlugs as Record<string,string>)?.[cat]
+    ?? cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
 const formatDate = (date: Date) =>

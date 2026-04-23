@@ -19,8 +19,17 @@ const config = {
     youtube: '',
   },
 
-  // Catégories du blog (exactement 5 recommandé)
-  categories: ['Gaming', 'Bureautique', 'Ergonomie', 'Guides', 'Setup'],
+  // Catégories du blog (doivent matcher exactement les catégories WordPress
+  // pour que les URLs /category/<slug>/ correspondent au SEO existant)
+  categories: ['Tapis de souris Gaming', "Guide d’achat & conseils", 'Bureau & Setup'],
+
+  // Mapping explicite nom → slug WP (les règles de slugification WP ne sont
+  // pas reproductibles avec une regex générique : "Guide d'achat" → "guide-achat")
+  categorySlugs: {
+    'Tapis de souris Gaming': 'tapis-de-souris-gaming',
+    "Guide d’achat & conseils": 'guide-achat-conseils',
+    'Bureau & Setup': 'bureau-setup',
+  },
 
   // Génération d'articles IA
   article: {
@@ -35,6 +44,19 @@ const config = {
     // Mot-clé ajouté aux recherches Unsplash pour cadrer les images
     unsplashContext: "gaming setup desk mousepad",
   },
+
+  // Catégories produits WooCommerce (correspondent aux URLs /product-category/<slug>/)
+  productCategories: [
+    { slug: 'tapis-de-souris-buddypad-adventure', label: 'Tapis de souris Buddypad Adventure' },
+    { slug: 'tapis-de-souris-fantasy',            label: 'Tapis de souris Fantasy' },
+    { slug: 'tapis-de-souris-gaming',             label: 'Tapis de souris Gamer' },
+    { slug: 'girl-boss',                          label: 'Tapis de souris Girl Boss' },
+    { slug: 'tapis-de-souris-girly',              label: 'Tapis de souris Girly rose' },
+    { slug: 'tapis-de-souris-kawaii',             label: 'Tapis de souris kawaii' },
+    { slug: 'tapis-de-souris-manga-anime',        label: 'Tapis de souris Manga / Anime' },
+    { slug: 'tapis-de-souris-minimaliste',        label: 'Tapis de souris Minimaliste' },
+    { slug: 'tapis-de-souris-xxl',                label: 'Tapis de souris XXL' },
+  ],
 
   // Boutique — choix du provider de paiement :
   //   'atelier'  → widget Atelier (direct-buy, paiement 1 étape)

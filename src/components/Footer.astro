@@ -47,7 +47,8 @@ const currentYear = new Date().getFullYear();
       <h4 class="text-sm font-medium text-cream mb-4 tracking-tight">Catégories</h4>
       <ul class="space-y-3 text-xs text-n-500 font-light">
         {siteConfig.categories.map(cat => {
-          const slug = cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+          const slug = siteConfig.categorySlugs?.[cat]
+            ?? cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
           return <li><a href={`/category/${slug}`} class="hover:text-cream transition-colors">{cat}</a></li>;
         })}
       </ul>
@@ -68,9 +69,10 @@ const currentYear = new Date().getFullYear();
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.04] text-[10px] text-n-500 font-light">
     <p>© {currentYear} {siteConfig.name}. Tous droits réservés.</p>
     <div class="flex gap-4 mt-4 md:mt-0">
-      <a href="#" class="hover:text-n-400 transition-colors">CGV</a>
-      <a href="#" class="hover:text-n-400 transition-colors">Confidentialité</a>
-      <a href="#" class="hover:text-n-400 transition-colors">Mentions Légales</a>
+      <a href="/conditions-generales-de-vente-cgv" class="hover:text-n-400 transition-colors">CGV</a>
+      <a href="/politique-de-confidentialite" class="hover:text-n-400 transition-colors">Confidentialité</a>
+      <a href="/mentions-legales" class="hover:text-n-400 transition-colors">Mentions Légales</a>
+      <a href="/contact" class="hover:text-n-400 transition-colors">Contact</a>
     </div>
   </div>
 </footer>

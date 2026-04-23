@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
-import { unsplashSrcset, unsplashAt } from '../../lib/image';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -15,31 +14,50 @@ export async function getStaticPaths() {
 
 const { product } = Astro.props;
 const { Content } = await product.render();
-const { name, price, compareAtPrice, image, imageAlt, category, shortDescription, weight, stock, sku } = product.data;
+const {
+  name, price, compareAtPrice, priceRange, image, imageAlt, gallery,
+  categories, shortDescription, stock, sku, attributes, variations,
+} = product.data;
 
 const allProducts = await getCollection('products');
-const related = allProducts.filter(p => p.slug !== product.slug && p.data.category === category).slice(0, 3);
+const related = allProducts
+  .filter(p => p.slug !== product.slug && p.data.categories.some(c => categories.includes(c)))
+  .slice(0, 3);
 
-const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: siteConfig.shop.currency }).format(n);
+const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
+  style: 'currency', currency: siteConfig.shop.currency,
+}).format(n);
 
 const SITE_URL = siteConfig.url;
 const productUrl = `${SITE_URL}/product/${product.slug}/`;
 const imageUrl = new URL(image, SITE_URL).toString();
+const hasVariations = Array.isArray(variations) && variations.length > 0;
+const inStock = hasVariations ? variations.some(v => v.inStock) : (stock == null || stock > 0);
+
+// Serialize variations + attributes pour le JS client (sélecteur de variantes)
+const variantsJson = JSON.stringify(variations || []);
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name,
   description: shortDescription,
-  image: [imageUrl],
+  image: [imageUrl, ...(gallery || []).slice(1).map(g => new URL(g, SITE_URL).toString())],
   sku: sku ?? product.slug,
   brand: { '@type': 'Brand', name: siteConfig.name },
-  offers: {
+  offers: hasVariations ? {
+    '@type': 'AggregateOffer',
+    priceCurrency: siteConfig.shop.currency,
+    lowPrice: priceRange?.min ?? price,
+    highPrice: priceRange?.max ?? price,
+    offerCount: variations.length,
+    availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+  } : {
     '@type': 'Offer',
     url: productUrl,
     priceCurrency: siteConfig.shop.currency,
     price: price.toFixed(2),
-    availability: stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+    availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
     itemCondition: 'https://schema.org/NewCondition',
   },
 };
@@ -61,165 +79,329 @@ const breadcrumbSchema = {
   image={image}
   jsonLd={[productSchema, breadcrumbSchema]}
 >
-  <div>
-    <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
-      <!-- Breadcrumb -->
-      <nav class="flex items-center gap-2 text-xs text-n-500 mb-10 overflow-x-auto whitespace-nowrap pb-1 font-light">
-        <a href="/" class="hover:text-cream transition-colors shrink-0">Accueil</a>
-        <span class="shrink-0">/</span>
-        <a href="/tapis-de-souris" class="hover:text-cream transition-colors shrink-0">Boutique</a>
-        <span class="shrink-0">/</span>
-        <span class="text-n-400 truncate">{name}</span>
-      </nav>
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-n-500 mb-10 overflow-x-auto whitespace-nowrap pb-1 font-light">
+      <a href="/" class="hover:text-cream transition-colors shrink-0">Accueil</a>
+      <span class="shrink-0">/</span>
+      <a href="/tapis-de-souris" class="hover:text-cream transition-colors shrink-0">Boutique</a>
+      <span class="shrink-0">/</span>
+      <span class="text-n-400 truncate">{name}</span>
+    </nav>
 
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
-        <!-- Image -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <!-- Gallery -->
+      <div class="space-y-3">
         <div class="rounded-2xl overflow-hidden bg-panel border border-white/[0.05] aspect-square">
           <img
-            src={unsplashAt(image, 800)}
-            srcset={unsplashSrcset(image, [400, 600, 800, 1200])}
-            sizes="(max-width: 1024px) 100vw, 50vw"
+            id="product-main-image"
+            src={image}
             alt={imageAlt ?? name}
             class="w-full h-full object-cover"
             width="1200" height="1200" fetchpriority="high" decoding="async"
           />
         </div>
-
-        <!-- Info + CTA -->
-        <div class="flex flex-col">
-          <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3">{category}</span>
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream leading-[1.15] mb-4">
-            {name}
-          </h1>
-          <p class="text-base md:text-lg text-n-400 leading-relaxed mb-8 font-light">
-            {shortDescription}
-          </p>
-
-          <!-- Prix -->
-          <div class="flex items-baseline gap-3 mb-2">
-            <span class="text-3xl md:text-4xl text-cream font-medium tracking-tight">{formatPrice(price)}</span>
-            {compareAtPrice && (
-              <>
-                <span class="text-base text-n-500 line-through font-light">{formatPrice(compareAtPrice)}</span>
-                <span class="text-[10px] font-medium bg-cream text-dark px-2 py-1 rounded-sm uppercase tracking-wider">
-                  -{Math.round((1 - price / compareAtPrice) * 100)}%
-                </span>
-              </>
-            )}
+        {gallery && gallery.length > 1 && (
+          <div class="grid grid-cols-5 gap-2">
+            {gallery.slice(0, 5).map((g, i) => (
+              <button
+                data-gallery-thumb={g}
+                class={`gallery-thumb aspect-square rounded-lg overflow-hidden border ${i === 0 ? 'border-white/30' : 'border-white/[0.05]'} hover:border-white/30 transition-colors`}
+              >
+                <img src={g} alt="" loading="lazy" class="w-full h-full object-cover" />
+              </button>
+            ))}
           </div>
-          <p class="text-xs text-n-500 mb-8 font-light">TVA incluse — livraison calculée au checkout</p>
+        )}
+      </div>
 
-          <!-- Stock -->
-          {stock > 0 ? (
-            <div class="flex items-center gap-2 mb-6 text-sm text-sage font-light">
-              <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
-              <span>{stock > 10 ? 'En stock' : `Plus que ${stock} en stock`}</span>
-            </div>
-          ) : (
-            <div class="flex items-center gap-2 mb-6 text-sm text-n-500 font-light">
-              <span class="w-1.5 h-1.5 rounded-full bg-n-500"></span>
-              <span>Rupture de stock</span>
-            </div>
+      <!-- Info + CTA -->
+      <div class="flex flex-col">
+        <!-- Categories -->
+        {categories && categories.length > 0 && (
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            {categories.map(c => (
+              <a
+                href={`/product-category/${c}`}
+                class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors"
+              >
+                {c.replace(/-/g, ' ')}
+              </a>
+            ))}
+          </div>
+        )}
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream leading-[1.15] mb-4">
+          {name}
+        </h1>
+        <p class="text-base md:text-lg text-n-400 leading-relaxed mb-8 font-light">
+          {shortDescription}
+        </p>
+
+        <!-- Prix -->
+        <div class="flex items-baseline gap-3 mb-2">
+          <span id="product-price" class="text-3xl md:text-4xl text-cream font-medium tracking-tight">
+            {priceRange && priceRange.min !== priceRange.max
+              ? `Dès ${formatPrice(priceRange.min)}`
+              : formatPrice(price)}
+          </span>
+          {compareAtPrice && (
+            <span id="product-compare" class="text-base text-n-500 line-through font-light">
+              {formatPrice(compareAtPrice)}
+            </span>
           )}
-
-          {/* ─── Bouton d'achat — dépend du provider ─── */}
-          {siteConfig.shop?.provider === 'atelier' ? (
-            <button
-              class="buy-button btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
-              disabled={stock === 0}
-              data-item-id={sku ?? product.slug}
-              data-item-name={name}
-              data-item-price={Math.round(price * 100)}
-              data-item-image={image}
-            >
-              {stock === 0 ? 'Indisponible' : `Acheter — ${formatPrice(price)}`}
-            </button>
-          ) : (
-            <button
-              class="snipcart-add-item btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
-              disabled={stock === 0}
-              data-item-id={sku ?? product.slug}
-              data-item-name={name}
-              data-item-price={price.toFixed(2)}
-              data-item-url={`/product/${product.slug}/`}
-              data-item-image={image}
-              data-item-description={shortDescription}
-              data-item-weight={weight}
-              data-item-max-quantity={stock}
-              data-item-categories={category}
-            >
-              {stock === 0 ? 'Indisponible' : 'Ajouter au panier'}
-            </button>
+          {compareAtPrice && (
+            <span class="text-[10px] font-medium bg-cream text-dark px-2 py-1 rounded-sm uppercase tracking-wider">
+              -{Math.round((1 - price / compareAtPrice) * 100)}%
+            </span>
           )}
+        </div>
+        <p class="text-xs text-n-500 mb-8 font-light">TVA incluse — livraison calculée au checkout</p>
 
-          <!-- Garanties -->
-          <div class="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
-                <Icon name="shield-check" size={16} strokeWidth={1.5} />
-              </div>
+        <!-- Stock -->
+        <div id="product-stock" class={`flex items-center gap-2 mb-6 text-sm font-light ${inStock ? 'text-sage' : 'text-n-500'}`}>
+          <span class={`w-1.5 h-1.5 rounded-full ${inStock ? 'bg-sage' : 'bg-n-500'}`}></span>
+          <span>{inStock ? 'En stock' : 'Rupture de stock'}</span>
+        </div>
+
+        <!-- Sélecteurs de variantes -->
+        {hasVariations && attributes.length > 0 && (
+          <div id="variant-selector" class="space-y-6 mb-8">
+            {attributes.map(attr => (
               <div>
-                <p class="text-xs font-medium text-cream tracking-tight">Livraison offerte</p>
-                <p class="text-xs text-n-500 font-light">dès 49€ d'achat</p>
+                <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
+                  {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
+                </label>
+                <div class="flex flex-wrap gap-2">
+                  {attr.values.map((val, idx) => (
+                    <button
+                      type="button"
+                      data-variant-option
+                      data-attr={attr.name}
+                      data-value={val.slug}
+                      class={`variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors ${idx === 0 ? 'bg-cream text-dark border-cream' : 'bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20'}`}
+                    >
+                      {val.label}
+                    </button>
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+        )}
+
+        <!-- Bouton d'achat (Atelier) -->
+        {siteConfig.shop?.provider === 'atelier' ? (
+          <button
+            id="buy-button"
+            class="buy-button btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={Math.round(price * 100)}
+            data-item-image={image}
+          >
+            {inStock ? `Acheter — ${priceRange && priceRange.min !== priceRange.max ? `dès ${formatPrice(priceRange.min)}` : formatPrice(price)}` : 'Indisponible'}
+          </button>
+        ) : (
+          <button
+            class="snipcart-add-item btn-primary text-sm px-8 py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={price.toFixed(2)}
+            data-item-url={`/product/${product.slug}/`}
+            data-item-image={image}
+          >
+            {inStock ? 'Ajouter au panier' : 'Indisponible'}
+          </button>
+        )}
+
+        <!-- Garanties -->
+        <div class="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-white/[0.08]">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
+              <Icon name="shield-check" size={16} strokeWidth={1.5} />
             </div>
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
-                <Icon name="arrow-right" size={16} strokeWidth={1.5} />
-              </div>
-              <div>
-                <p class="text-xs font-medium text-cream tracking-tight">Retour 30 jours</p>
-                <p class="text-xs text-n-500 font-light">gratuit et simple</p>
-              </div>
+            <div>
+              <p class="text-xs font-medium text-cream tracking-tight">Livraison offerte</p>
+              <p class="text-xs text-n-500 font-light">dès 49€ d'achat</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
+              <Icon name="arrow-right" size={16} strokeWidth={1.5} />
+            </div>
+            <div>
+              <p class="text-xs font-medium text-cream tracking-tight">Retour 30 jours</p>
+              <p class="text-xs text-n-500 font-light">gratuit et simple</p>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Description longue -->
-      <section class="mt-20 max-w-3xl">
-        <article class="prose prose-invert prose-lg max-w-none
-          prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
-          prose-h2:text-2xl prose-h2:mt-12 prose-h3:text-xl
-          prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
-          prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
-          prose-strong:text-cream prose-strong:font-medium
-          prose-ul:font-light prose-li:text-n-400
-          prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:text-n-400
-          prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal">
-          <Content />
-        </article>
-      </section>
-
-      <!-- Related -->
-      {related.length > 0 && (
-        <section class="mt-20 pt-12 border-t border-white/[0.08]">
-          <h2 class="text-xl font-medium tracking-tight text-cream mb-8">Vous aimerez aussi</h2>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {related.map(p => (
-              <a href={`/product/${p.slug}`} class="group block">
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
-                  <img
-                    src={unsplashAt(p.data.image, 400)}
-                    srcset={unsplashSrcset(p.data.image, [400, 600])}
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    alt={p.data.imageAlt ?? p.data.name}
-                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="flex justify-between items-start gap-4">
-                  <div class="min-w-0">
-                    <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest">{p.data.category}</span>
-                    <h3 class="text-sm font-medium text-cream mt-1 tracking-tight group-hover:underline underline-offset-4 line-clamp-2">{p.data.name}</h3>
-                  </div>
-                  <span class="text-sm text-cream font-medium shrink-0">{formatPrice(p.data.price)}</span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
+
+    <!-- Description longue -->
+    <section class="mt-20 max-w-3xl">
+      <article class="prose prose-invert prose-lg max-w-none
+        prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
+        prose-h2:text-2xl prose-h2:mt-12 prose-h3:text-xl
+        prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
+        prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
+        prose-strong:text-cream prose-strong:font-medium
+        prose-ul:font-light prose-li:text-n-400
+        prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:text-n-400
+        prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal">
+        <Content />
+      </article>
+    </section>
+
+    <!-- Related -->
+    {related.length > 0 && (
+      <section class="mt-20 pt-12 border-t border-white/[0.08]">
+        <h2 class="text-xl font-medium tracking-tight text-cream mb-8">Vous aimerez aussi</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {related.map(p => (
+            <a href={`/product/${p.slug}`} class="group block">
+              <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
+                <img
+                  src={p.data.image}
+                  alt={p.data.imageAlt ?? p.data.name}
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="text-sm font-medium text-cream mt-1 tracking-tight group-hover:underline underline-offset-4 line-clamp-2">{p.data.name}</h3>
+              <span class="text-sm text-cream font-medium mt-1 block">
+                {p.data.priceRange && p.data.priceRange.min !== p.data.priceRange.max
+                  ? `Dès ${formatPrice(p.data.priceRange.min)}`
+                  : formatPrice(p.data.price)}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </div>
+
+  <!-- Variant selector JS + gallery thumbs -->
+  <script is:inline set:html={`
+    (function() {
+      const variants = ${variantsJson};
+      const buyBtn = document.getElementById('buy-button');
+      const priceEl = document.getElementById('product-price');
+      const compareEl = document.getElementById('product-compare');
+      const stockEl = document.getElementById('product-stock');
+      const mainImg = document.getElementById('product-main-image');
+      const selector = document.getElementById('variant-selector');
+      const currency = '${siteConfig.shop.currency}';
+
+      if (!variants.length || !selector || !buyBtn) return;
+
+      // Initial selection = premier bouton actif de chaque attribut
+      const selected = {};
+      selector.querySelectorAll('[data-attr]').forEach(btn => {
+        const attr = btn.dataset.attr;
+        if (selected[attr]) return;
+        if (btn.classList.contains('bg-cream')) selected[attr] = btn.dataset.value;
+      });
+
+      const fmtPrice = (v) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency }).format(v);
+
+      function findVariant() {
+        return variants.find(v => {
+          for (const [k, val] of Object.entries(selected)) {
+            if (v.attributes[k] !== val) return false;
+          }
+          return true;
+        });
+      }
+
+      function update() {
+        const v = findVariant();
+        // Update les labels de sélection
+        Object.entries(selected).forEach(([attr, slug]) => {
+          const label = document.querySelector('[data-selected-label="' + attr + '"]');
+          if (label) {
+            const pill = selector.querySelector('[data-attr="' + attr + '"][data-value="' + slug + '"]');
+            label.textContent = pill ? pill.textContent.trim() : slug;
+          }
+        });
+
+        if (!v) {
+          buyBtn.disabled = true;
+          buyBtn.textContent = 'Combinaison indisponible';
+          if (stockEl) { stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-n-500'; stockEl.querySelector('span:last-child').textContent = 'Indisponible'; stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-n-500'; }
+          return;
+        }
+
+        // Update prix
+        if (priceEl) priceEl.textContent = fmtPrice(v.price);
+        if (compareEl) {
+          if (v.compareAtPrice) {
+            compareEl.textContent = fmtPrice(v.compareAtPrice);
+            compareEl.classList.remove('hidden');
+          } else {
+            compareEl.classList.add('hidden');
+          }
+        }
+
+        // Update stock
+        if (stockEl) {
+          if (v.inStock) {
+            stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-sage';
+            stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-sage';
+            stockEl.querySelector('span:last-child').textContent = 'En stock';
+          } else {
+            stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-n-500';
+            stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-n-500';
+            stockEl.querySelector('span:last-child').textContent = 'Rupture';
+          }
+        }
+
+        // Update image si la variante en a une
+        if (v.image && mainImg) mainImg.src = v.image;
+
+        // Update bouton Atelier
+        buyBtn.disabled = !v.inStock;
+        buyBtn.dataset.itemId = v.id;
+        buyBtn.dataset.itemPrice = Math.round(v.price * 100);
+        const variantDesc = Object.entries(selected).map(([k, val]) => {
+          const pill = selector.querySelector('[data-attr="' + k + '"][data-value="' + val + '"]');
+          return k + ': ' + (pill ? pill.textContent.trim() : val);
+        }).join(', ');
+        buyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
+        if (v.image) buyBtn.dataset.itemImage = v.image;
+        buyBtn.textContent = v.inStock ? 'Acheter — ' + fmtPrice(v.price) : 'Indisponible';
+      }
+
+      // Gère les clics sur les pills de variante
+      selector.querySelectorAll('[data-variant-option]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const attr = btn.dataset.attr;
+          // Désactiver les autres pills de cet attribut
+          selector.querySelectorAll('[data-attr="' + attr + '"]').forEach(b => {
+            b.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+          });
+          btn.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-cream text-dark border-cream';
+          selected[attr] = btn.dataset.value;
+          update();
+        });
+      });
+
+      // Initial update (pour afficher le prix de la variante par défaut)
+      update();
+
+      // Gallery thumbs
+      document.querySelectorAll('[data-gallery-thumb]').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+          e.preventDefault();
+          const src = thumb.dataset.galleryThumb;
+          if (mainImg) mainImg.src = src;
+          document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.replace('border-white/30', 'border-white/[0.05]'));
+          thumb.classList.replace('border-white/[0.05]', 'border-white/30');
+        });
+      });
+    })();
+  `} />
 </BaseLayout>

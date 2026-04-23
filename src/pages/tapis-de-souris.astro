@@ -3,16 +3,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../site.config.mjs';
-import { unsplashSrcset, unsplashAt } from '../lib/image';
 
 const allProducts = await getCollection('products');
 const products = allProducts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const categories = [...new Set(products.map(p => p.data.category))];
+// Collect unique category slugs from all products (array field)
+const categorySlugs = [...new Set(products.flatMap(p => p.data.categories || []))].sort();
 const featured = products.find(p => p.data.featured);
 const rest = products.filter(p => !p.data.featured || p.slug !== featured?.slug);
 
-const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: siteConfig.shop.currency }).format(n);
+const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
+  style: 'currency', currency: siteConfig.shop.currency,
+}).format(n);
+
+const displayPrice = (d: any) =>
+  d.priceRange && d.priceRange.min !== d.priceRange.max
+    ? `Dès ${formatPrice(d.priceRange.min)}`
+    : formatPrice(d.price);
+
+// Transforme slug en label lisible : "tapis-de-souris-xxl" → "Tapis de souris XXL"
+const catLabel = (slug: string) =>
+  slug.replace(/^tapis-de-souris-/, '').replace(/-/g, ' ').replace(/^\w/, c => c.toUpperCase());
 
 const SITE_URL = siteConfig.url;
 const collectionSchema = {
@@ -30,14 +41,14 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Boutique', item: `${SITE_URL}/tapis-de-souris` },
+    { '@type': 'ListItem', position: 2, name: 'Tapis de souris', item: `${SITE_URL}/tapis-de-souris` },
   ],
 };
 ---
 
 <BaseLayout
-  title={`Boutique ${siteConfig.name} – Tapis de souris & accessoires setup`}
-  description={`Notre sélection de tapis de souris gaming, bureautique, XXL et d'accessoires testés pour sublimer votre setup.`}
+  title={`Tapis de souris — Boutique ${siteConfig.name}`}
+  description={`Notre sélection de tapis de souris gaming, bureautique, XXL, kawaii, manga et minimaliste. Livraison offerte dès 49€.`}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
@@ -45,7 +56,7 @@ const breadcrumbSchema = {
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
       <div>
         <h1 class="text-3xl md:text-4xl font-medium tracking-tight text-cream mb-2 leading-[1.15]">La Collection</h1>
-        <p class="text-sm text-n-500 font-light">Trouvez la surface adaptée à votre style.</p>
+        <p class="text-sm text-n-500 font-light">{products.length} tapis testés et sélectionnés.</p>
       </div>
       <div class="flex items-center gap-2 text-xs text-n-500 font-light">
         <Icon name="shield-check" size={14} strokeWidth={1.5} />
@@ -61,15 +72,12 @@ const breadcrumbSchema = {
       </div>
     ) : (
       <>
-        <!-- Featured product -->
         {featured && (
           <a href={`/product/${featured.slug}`} class="group block mb-16 md:mb-20">
             <div class="grid md:grid-cols-5 gap-8 md:gap-10">
               <div class="md:col-span-3 relative aspect-[16/10] md:aspect-[21/12] rounded-2xl overflow-hidden bg-panel border border-white/[0.05]">
                 <img
-                  src={unsplashAt(featured.data.image, 800)}
-                  srcset={unsplashSrcset(featured.data.image)}
-                  sizes="(max-width: 768px) 100vw, 60vw"
+                  src={featured.data.image}
                   alt={featured.data.imageAlt ?? featured.data.name}
                   class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   width="1200" height="675" fetchpriority="high" decoding="async"
@@ -79,7 +87,6 @@ const breadcrumbSchema = {
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col justify-center">
-                <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3">{featured.data.category}</span>
                 <h2 class="text-2xl md:text-3xl text-cream font-medium tracking-tight leading-tight mb-4 group-hover:underline underline-offset-4">
                   {featured.data.name}
                 </h2>
@@ -87,7 +94,7 @@ const breadcrumbSchema = {
                   {featured.data.shortDescription}
                 </p>
                 <div class="flex items-baseline gap-3">
-                  <span class="text-2xl text-cream font-medium tracking-tight">{formatPrice(featured.data.price)}</span>
+                  <span class="text-2xl text-cream font-medium tracking-tight">{displayPrice(featured.data)}</span>
                   {featured.data.compareAtPrice && (
                     <span class="text-sm text-n-500 line-through font-light">{formatPrice(featured.data.compareAtPrice)}</span>
                   )}
@@ -98,17 +105,17 @@ const breadcrumbSchema = {
         )}
 
         <!-- Category filters -->
-        {categories.length > 1 && (
+        {categorySlugs.length > 1 && (
           <div class="flex flex-wrap gap-2 mb-10">
             <button data-filter="all" class="filter-btn text-xs font-medium px-4 py-2 rounded-full bg-cream text-dark transition-colors">
               Tous
             </button>
-            {categories.map(cat => (
+            {categorySlugs.map(slug => (
               <button
-                data-filter={cat}
+                data-filter={slug}
                 class="filter-btn text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors"
               >
-                {cat}
+                {catLabel(slug)}
               </button>
             ))}
           </div>
@@ -117,12 +124,14 @@ const breadcrumbSchema = {
         <!-- Products grid -->
         <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {rest.map(product => (
-            <a href={`/product/${product.slug}`} class="product-card group block" data-category={product.data.category}>
+            <a
+              href={`/product/${product.slug}`}
+              class="product-card group block"
+              data-categories={(product.data.categories || []).join(',')}
+            >
               <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
                 <img
-                  src={unsplashAt(product.data.image, 600)}
-                  srcset={unsplashSrcset(product.data.image, [400, 600, 800])}
-                  sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 48px), 380px"
+                  src={product.data.image}
                   alt={product.data.imageAlt ?? product.data.name}
                   class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   width="800" height="600" loading="lazy"
@@ -141,10 +150,7 @@ const breadcrumbSchema = {
                   <p class="text-xs text-n-500 font-light truncate">{product.data.shortDescription}</p>
                 </div>
                 <div class="flex items-baseline gap-2 shrink-0">
-                  <span class="text-sm text-cream font-medium">{formatPrice(product.data.price)}</span>
-                  {product.data.compareAtPrice && (
-                    <span class="text-xs text-n-500 line-through font-light">{formatPrice(product.data.compareAtPrice)}</span>
-                  )}
+                  <span class="text-sm text-cream font-medium whitespace-nowrap">{displayPrice(product.data)}</span>
                 </div>
               </div>
             </a>
@@ -156,21 +162,24 @@ const breadcrumbSchema = {
 </BaseLayout>
 
 <script is:inline>
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.product-card');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const f = btn.getAttribute('data-filter');
-      filterBtns.forEach(b => {
-        b.classList.remove('bg-cream', 'text-dark');
-        b.classList.add('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
-      });
-      btn.classList.add('bg-cream', 'text-dark');
-      btn.classList.remove('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
-      cards.forEach(c => {
-        const match = f === 'all' || c.getAttribute('data-category') === f;
-        c.style.display = match ? '' : 'none';
+  (function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.product-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const f = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-cream', 'text-dark');
+          if (!b.classList.contains('border')) b.classList.add('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
+        });
+        btn.classList.add('bg-cream', 'text-dark');
+        btn.classList.remove('border', 'border-white/[0.08]', 'bg-white/[0.02]', 'text-n-400');
+        cards.forEach(c => {
+          const cats = (c.getAttribute('data-categories') || '').split(',');
+          const match = f === 'all' || cats.includes(f);
+          c.style.display = match ? '' : 'none';
+        });
       });
     });
-  });
+  })();
 </script>

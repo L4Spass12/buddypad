@@ -11,23 +11,20 @@ const recentPosts = allPosts
   .slice(0, 3);
 
 function catToSlug(cat) {
-  return cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+  return siteConfig.categorySlugs?.[cat]
+    ?? cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
 const categoryDescriptions = {
-  'Gaming': 'Tapis XXL, RGB et surfaces optimisées pour les FPS et les MMO.',
-  'Bureautique': 'Confort, précision et discrétion pour un usage quotidien intensif.',
-  'Ergonomie': 'Posture, repose-poignets et conseils pour un poste de travail sain.',
-  'Guides': 'Comparatifs, tests et conseils d\'achat avant de craquer.',
-  'Setup': 'Inspirations, agencements et accessoires pour sublimer votre bureau.',
+  'Tapis de souris Gaming': 'Tests, comparatifs et guides d\'achat pour gamers exigeants.',
+  "Guide d’achat & conseils": 'Choisir, nettoyer, entretenir : tout ce qu\'il faut savoir avant d\'acheter.',
+  'Bureau & Setup': 'Aménagement, télétravail, desk mats : inspirer un bureau qui a du sens.',
 };
 
 const categoryIcons = {
-  'Gaming': 'gamepad',
-  'Bureautique': 'keyboard',
-  'Ergonomie': 'ruler',
-  'Guides': 'star',
-  'Setup': 'desk',
+  'Tapis de souris Gaming': 'gamepad',
+  "Guide d’achat & conseils": 'star',
+  'Bureau & Setup': 'desk',
 };
 
 const faqs = [
