@@ -85,4 +85,23 @@ const products = defineCollection({
   }),
 });
 
-export const collections = { blog, products };
+/**
+ * Contenu SEO des pages /product-category/<slug>/
+ *  - frontmatter = métadonnées + intro courte + FAQ structurée
+ *  - body markdown = guide d'achat (H2/H3), affiché sous la grille produits
+ */
+const productCategories = defineCollection({
+  type: 'content',
+  // NB: le slug est dérivé automatiquement du nom de fichier par Astro.
+  // Le fichier `tapis-de-souris-kawaii.md` → entry.slug === 'tapis-de-souris-kawaii'.
+  schema: z.object({
+    title: z.string(),                // H1 + <title>
+    metaDescription: z.string(),      // <meta name="description">
+    intro: z.string(),                // paragraphe sous le H1, au-dessus de la grille (plaintext)
+    keywords: z.array(z.string()).default([]),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    updatedDate: z.coerce.date().optional(),
+  }),
+});
+
+export const collections = { blog, products, productCategories };
