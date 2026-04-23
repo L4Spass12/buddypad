@@ -9,7 +9,7 @@ image: "/images/products/tapis-de-souris-ceo-girl/1.webp"
 imageAlt: "Tapis de Souris CEO Girl"
 gallery:
   - "/images/products/tapis-de-souris-ceo-girl/1.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "girl-boss"

@@ -9,7 +9,7 @@ image: "/images/products/tapis-de-souris-seigneur-des-ombres/1.webp"
 imageAlt: "Tapis de Souris Seigneur des Ombres"
 gallery:
   - "/images/products/tapis-de-souris-seigneur-des-ombres/1.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "tapis-de-souris-fantasy"

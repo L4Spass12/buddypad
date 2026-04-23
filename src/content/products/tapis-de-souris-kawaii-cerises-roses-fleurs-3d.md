@@ -9,7 +9,7 @@ image: "/images/products/tapis-de-souris-kawaii-cerises-roses-fleurs-3d/1.webp"
 imageAlt: "Tapis de Souris Kawaii rose 3D"
 gallery:
   - "/images/products/tapis-de-souris-kawaii-cerises-roses-fleurs-3d/1.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "tapis-de-souris-girly"

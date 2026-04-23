@@ -9,7 +9,7 @@ image: "/images/products/tapis-de-souris-samourai-papillons-bleus/1.webp"
 imageAlt: "Tapis de Souris Samouraï &#038; Papillons Bleus"
 gallery:
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/1.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "tapis-de-souris-manga-anime"

@@ -17,7 +17,7 @@ Dans un setup minimaliste, chaque objet doit justifier sa présence. Le **desk m
 
 C’est la logique qu’utilisent les designers d’intérieur : un grand tapis dans un salon ne remplit pas l’espace, il le structure. Le desk mat joue exactement ce rôle sur votre bureau.
 
-![](/images/inline/Design-sans-titre-2026-04-16T093022.731-1024x559.png)
+![](/images/inline/Design-sans-titre-2026-04-16T093022.731-1024x559.webp)
 
 ### Pourquoi le format XXL est indispensable dans un setup minimaliste
 

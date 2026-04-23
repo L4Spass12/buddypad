@@ -10,7 +10,7 @@ imageAlt: "Tapis de Souris Fin de la Quête"
 gallery:
   - "/images/products/tapis-de-souris-fin-de-la-quete/1.webp"
   - "/images/products/tapis-de-souris-fin-de-la-quete/2.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "tapis-de-souris-fantasy"

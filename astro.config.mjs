@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import siteConfig from './site.config.mjs';
+import rehypeImageOptim from './src/lib/rehype-image-optim.mjs';
 
 export default defineConfig({
   site: siteConfig.url,
@@ -15,6 +16,9 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+  markdown: {
+    rehypePlugins: [rehypeImageOptim],
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'viewport',

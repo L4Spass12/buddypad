@@ -10,7 +10,7 @@ imageAlt: "Tapis de Souris Geisha et cerisiers"
 gallery:
   - "/images/products/tapis-de-souris-geisha-et-cerisiers/1.webp"
   - "/images/products/tapis-de-souris-geisha-et-cerisiers/2.webp"
-  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.png"
+  - "/images/products/tapis-de-souris-samourai-papillons-bleus/2.webp"
   - "/images/products/tapis-de-souris-samourai-papillons-bleus/3.webp"
 categories:
   - "tapis-de-souris-manga-anime"
