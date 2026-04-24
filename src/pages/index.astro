@@ -227,16 +227,19 @@ const faqSchema = {
         </div>
       </div>
 
-      <!-- Slider horizontal (scroll-snap, pur CSS) -->
-      <div class="product-slider relative">
-        <div class="slider-track flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-6 md:px-8 lg:px-[max(2rem,calc((100vw-1280px)/2+2rem))]">
+      <!-- Slider horizontal avec boutons desktop + swipe mobile -->
+      <div class="product-slider relative max-w-7xl mx-auto" data-slider>
+        <div class="slider-track flex gap-3 md:gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 px-6">
           {row.products.map(p => (
-            <a href={`/product/${p.slug}`} class="slider-card group flex-none w-[72vw] xs:w-[60vw] sm:w-[45vw] md:w-[280px] lg:w-[280px] snap-start block">
+            <a
+              href={`/product/${p.slug}`}
+              class="slider-card group flex-none w-[72vw] sm:w-[45vw] md:w-[calc((100%-2rem)/3-1px)] lg:w-[calc((100%-3.75rem)/4-1px)] snap-start block"
+            >
               <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-3">
                 <img
                   src={p.data.image}
                   srcset={unsplashSrcset(p.data.image)}
-                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 45vw, 280px"
+                  sizes="(max-width: 640px) 72vw, (max-width: 768px) 45vw, (max-width: 1024px) 32vw, 300px"
                   alt={p.data.imageAlt ?? p.data.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   width="800" height="600" loading="lazy" decoding="async"
@@ -258,13 +261,31 @@ const faqSchema = {
               </div>
             </a>
           ))}
-          <!-- Spacer final pour que la dernière card soit entièrement visible -->
-          <div class="flex-none w-4 md:w-6" aria-hidden="true"></div>
+          <!-- Spacer final pour que la dernière card respire -->
+          <div class="flex-none w-2" aria-hidden="true"></div>
         </div>
 
-        <!-- Indicateur mobile : petit texte "← swipe →" discret, apparaît une seule fois -->
+        <!-- Boutons flèches (desktop uniquement) -->
+        <button
+          type="button"
+          data-scroll="prev"
+          class="slider-btn hidden md:flex absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10 shadow-lg"
+          aria-label="Produits précédents"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button
+          type="button"
+          data-scroll="next"
+          class="slider-btn hidden md:flex absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10 shadow-lg"
+          aria-label="Produits suivants"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <!-- Indicateur mobile : petit texte "← swipe →" sous la 1ère section -->
         {idx === 0 && (
-          <div class="md:hidden px-6 mt-1 text-center">
+          <div class="md:hidden px-6 mt-2 text-center">
             <span class="inline-flex items-center gap-2 text-[10px] text-n-500 font-light uppercase tracking-widest">
               <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
               Glissez pour explorer
@@ -278,7 +299,7 @@ const faqSchema = {
   })}
 
   <style>
-    /* Masque la scrollbar native sur le slider mais garde le scroll */
+    /* Scrollbar masquée mais scroll/swipe actif */
     .product-slider .slider-track {
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -286,11 +307,40 @@ const faqSchema = {
     .product-slider .slider-track::-webkit-scrollbar {
       display: none;
     }
-    /* Breakpoint xs personnalisé pour la transition mobile landscape */
-    @media (min-width: 480px) {
-      .xs\:w-\[60vw\] { width: 60vw !important; }
-    }
   </style>
+
+  <script is:inline>
+    // Contrôle des boutons flèches des sliders produits (desktop)
+    document.querySelectorAll('[data-slider]').forEach(slider => {
+      const track = slider.querySelector('.slider-track');
+      const prev = slider.querySelector('[data-scroll="prev"]');
+      const next = slider.querySelector('[data-scroll="next"]');
+      if (!track) return;
+
+      function scrollBy(dir) {
+        const card = track.querySelector('.slider-card');
+        if (!card) return;
+        const cardWidth = card.getBoundingClientRect().width + 20; // + gap approx
+        track.scrollBy({ left: cardWidth * 2 * dir, behavior: 'smooth' });
+      }
+
+      prev?.addEventListener('click', () => scrollBy(-1));
+      next?.addEventListener('click', () => scrollBy(1));
+
+      // Active/désactive les boutons selon la position de scroll
+      function update() {
+        if (!prev || !next) return;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+      }
+      track.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      // Init après layout
+      requestAnimationFrame(update);
+    });
+  </script>
 
   <!-- ═══════════════════════════ AVIS CLIENTS ═══════════════════════════ -->
   <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel overflow-hidden">
