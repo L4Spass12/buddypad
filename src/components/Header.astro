@@ -123,16 +123,16 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
       <a href="/tapis-de-souris" class={`block py-2.5 transition-colors ${isShop ? 'text-cream font-medium' : 'text-n-400 hover:text-cream'}`} aria-current={isShop ? 'page' : undefined}>Boutique</a>
     )}
 
-    {/* Catégories en accordéon sur mobile */}
+    {/* Catégories en accordéon sur mobile — style pill distinct */}
     {siteConfig.shop?.enabled && cats.length > 0 && (
-      <details class="mobile-cat-details">
-        <summary class="flex items-center justify-between py-2.5 text-n-400 cursor-pointer list-none select-none">
-          <span>Catégories</span>
-          <svg class="w-4 h-4 mobile-cat-chevron text-n-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <details class="mobile-cat-details my-1.5">
+        <summary class="flex items-center justify-between gap-2 px-4 py-2.5 rounded-full border border-white/[0.12] bg-white/[0.03] text-cream cursor-pointer list-none select-none hover:border-white/25 hover:bg-white/[0.07] transition-colors">
+          <span class="text-sm">Catégories</span>
+          <svg class="w-4 h-4 mobile-cat-chevron text-n-400 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <polyline points="6 9 12 15 18 9"/>
           </svg>
         </summary>
-        <div class="pl-4 py-1 space-y-0.5 border-l border-white/[0.08] ml-1">
+        <div class="mt-2 pl-4 py-1 space-y-0.5 border-l border-white/[0.08] ml-1">
           {cats.map(c => {
             const active = pathname === `/product-category/${c.slug}`;
             return (
