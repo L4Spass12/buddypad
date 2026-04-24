@@ -215,7 +215,7 @@ const faqSchema = {
   )}
 
   <!-- ═══════════════════════════ PERSONNALISATION ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-br from-[#1a1008] via-panel to-dark overflow-hidden">
+  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-br from-[#1a1008] via-panel to-dark overflow-hidden below-fold-defer">
     <!-- Accents chauds (amber/coral) pour la vibe créative -->
     <div class="absolute top-1/2 left-10 -translate-y-1/2 w-[400px] h-[400px] bg-[#ff9b5c]/[0.05] blur-[140px] rounded-full pointer-events-none"></div>
     <div class="absolute bottom-0 right-20 w-[500px] h-[250px] bg-[#ff5c7a]/[0.04] blur-[140px] rounded-full pointer-events-none"></div>
@@ -238,7 +238,7 @@ const faqSchema = {
   {categoryRows.map((row, idx) => {
     const bgClass = idx % 3 === 0 ? '' : idx % 3 === 1 ? 'bg-panel' : 'bg-teal';
     return (
-    <section class={`relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden ${bgClass}`}>
+    <section class={`relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden below-fold-defer ${bgClass}`}>
       <!-- Glows thématiques (desktop : larges et visibles / mobile : réduits via CSS) -->
       <div class="slider-glow slider-glow-1" style={`background: ${row.glow1}`}></div>
       <div class="slider-glow slider-glow-2" style={`background: ${row.glow2}`}></div>
@@ -345,6 +345,15 @@ const faqSchema = {
       display: block;
       z-index: 0;
     }
+
+    /* ─── content-visibility: auto pour sections below-fold ───────
+       Skip layout/paint des sections hors viewport au load → LCP
+       committé plus rapidement par Lighthouse. contain-intrinsic-size
+       réserve l'espace pour éviter les sauts de scroll. */
+    .below-fold-defer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 800px;
+    }
     /* Voile sombre en ::after : z-index 1 pour passer SOUS le contenu texte */
     .hero-section::after {
       content: "";
@@ -412,40 +421,46 @@ const faqSchema = {
   </style>
 
   <script is:inline>
-    // Contrôle des boutons flèches des sliders produits (desktop)
-    document.querySelectorAll('[data-slider]').forEach(slider => {
-      const track = slider.querySelector('.slider-track');
-      const prev = slider.querySelector('[data-scroll="prev"]');
-      const next = slider.querySelector('[data-scroll="next"]');
-      if (!track) return;
+    // Contrôle des boutons flèches des sliders produits (desktop).
+    // Différé via requestIdleCallback pour libérer le main thread au load
+    // (laisse Lighthouse committer le LCP avant parse/exec de ce JS).
+    (function() {
+      function initSliders() {
+        document.querySelectorAll('[data-slider]').forEach(slider => {
+          const track = slider.querySelector('.slider-track');
+          const prev = slider.querySelector('[data-scroll="prev"]');
+          const next = slider.querySelector('[data-scroll="next"]');
+          if (!track) return;
 
-      function scrollBy(dir) {
-        const card = track.querySelector('.slider-card');
-        if (!card) return;
-        const cardWidth = card.getBoundingClientRect().width + 20; // + gap approx
-        track.scrollBy({ left: cardWidth * 2 * dir, behavior: 'smooth' });
+          function scrollBy(dir) {
+            const card = track.querySelector('.slider-card');
+            if (!card) return;
+            const cardWidth = card.getBoundingClientRect().width + 20;
+            track.scrollBy({ left: cardWidth * 2 * dir, behavior: 'smooth' });
+          }
+          prev?.addEventListener('click', () => scrollBy(-1));
+          next?.addEventListener('click', () => scrollBy(1));
+
+          function update() {
+            if (!prev || !next) return;
+            prev.disabled = track.scrollLeft <= 1;
+            next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+          }
+          track.addEventListener('scroll', update, { passive: true });
+          window.addEventListener('resize', update);
+          requestAnimationFrame(update);
+        });
       }
-
-      prev?.addEventListener('click', () => scrollBy(-1));
-      next?.addEventListener('click', () => scrollBy(1));
-
-      // Active/désactive les boutons selon la position de scroll
-      function update() {
-        if (!prev || !next) return;
-        const atStart = track.scrollLeft <= 1;
-        const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
-        prev.disabled = atStart;
-        next.disabled = atEnd;
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initSliders, { timeout: 2000 });
+      } else {
+        setTimeout(initSliders, 0);
       }
-      track.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', update);
-      // Init après layout
-      requestAnimationFrame(update);
-    });
+    })();
   </script>
 
   <!-- ═══════════════════════════ AVIS CLIENTS ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel overflow-hidden">
+  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel overflow-hidden below-fold-defer">
     <!-- Accent doré/cream pour écho aux étoiles des avis -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#ffd98c]/[0.04] blur-[140px] rounded-[100%] pointer-events-none"></div>
     <div class="absolute bottom-0 left-20 w-[400px] h-[200px] bg-[#fff3c4]/[0.03] blur-[120px] rounded-full pointer-events-none"></div>
@@ -475,7 +490,7 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ PERFORMANCE & DURABILITÉ ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-b from-dark via-[#08101a] to-panel/50 overflow-hidden">
+  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-b from-dark via-[#08101a] to-panel/50 overflow-hidden below-fold-defer">
     <!-- Accent tech / gaming (bleu profond) -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#3b5bff]/[0.05] blur-[140px] rounded-[100%] pointer-events-none"></div>
     <div class="relative max-w-4xl mx-auto text-center">
@@ -491,7 +506,7 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ SECTIONS GUIDES ═══════════════════════════ -->
-  <section class="relative py-16 md:py-20 px-6 border-t border-white/[0.04] bg-panel overflow-hidden">
+  <section class="relative py-16 md:py-20 px-6 border-t border-white/[0.04] bg-panel overflow-hidden below-fold-defer">
     <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-white/[0.02] blur-[140px] rounded-full pointer-events-none"></div>
     <div class="relative max-w-4xl mx-auto space-y-14">
       <article>
@@ -539,10 +554,10 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ BLOG PREVIEW ═══════════════════════════ -->
-  {recentPosts.length > 0 && <BlogPreview posts={recentPosts} />}
+  {recentPosts.length > 0 && <div class="below-fold-defer"><BlogPreview posts={recentPosts} /></div>}
 
   <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
-  <section class="py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel">
+  <section class="py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel below-fold-defer">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">FAQ</span>
@@ -567,7 +582,7 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ CTA FINAL ═══════════════════════════ -->
-  <section class="relative py-24 px-6 overflow-hidden border-t border-white/[0.04]">
+  <section class="relative py-24 px-6 overflow-hidden border-t border-white/[0.04] below-fold-defer">
     <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/[0.04] blur-[120px] rounded-[100%] pointer-events-none"></div>
     <div class="relative max-w-3xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-cream mb-4 leading-[1.1]">
