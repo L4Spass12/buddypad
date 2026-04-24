@@ -26,42 +26,37 @@ function byCategory(slug: string) {
   return sortedProducts.filter(p => (p.data.categories || []).includes(slug));
 }
 
-// Décor thématique par catégorie : couleurs de glow + icône SVG flottante
+// Décor thématique par catégorie : glows colorés plus marqués
 const categoryRows = [
   {
     slug: 'tapis-de-souris-manga-anime', label: 'Manga / Anime',
     products: byCategory('tapis-de-souris-manga-anime'),
-    glow1: 'rgba(255, 92, 122, 0.05)',    // rouge-rose sakura
-    glow2: 'rgba(255, 180, 100, 0.03)',   // ambre soleil couchant
-    icon: 'sakura',
+    glow1: 'rgba(255, 92, 122, 0.18)',    // rouge-rose sakura
+    glow2: 'rgba(255, 140, 80, 0.12)',    // ambre soleil couchant
   },
   {
     slug: 'tapis-de-souris-gaming', label: 'Gaming',
     products: byCategory('tapis-de-souris-gaming'),
-    glow1: 'rgba(0, 200, 255, 0.05)',     // cyan tech
-    glow2: 'rgba(59, 91, 255, 0.04)',     // bleu électrique
-    icon: 'crosshair',
+    glow1: 'rgba(0, 200, 255, 0.16)',     // cyan tech
+    glow2: 'rgba(59, 91, 255, 0.14)',     // bleu électrique
   },
   {
     slug: 'tapis-de-souris-fantasy', label: 'Fantasy',
     products: byCategory('tapis-de-souris-fantasy'),
-    glow1: 'rgba(155, 92, 255, 0.06)',    // violet magique
-    glow2: 'rgba(196, 163, 255, 0.04)',   // lavande
-    icon: 'sparkle',
+    glow1: 'rgba(155, 92, 255, 0.20)',    // violet magique
+    glow2: 'rgba(196, 120, 255, 0.14)',   // magenta profond
   },
   {
     slug: 'tapis-de-souris-girly', label: 'Girly',
     products: byCategory('tapis-de-souris-girly'),
-    glow1: 'rgba(255, 137, 184, 0.08)',   // rose bonbon
-    glow2: 'rgba(255, 192, 216, 0.06)',   // rose poudré
-    icon: 'heart',
+    glow1: 'rgba(255, 120, 180, 0.22)',   // rose bonbon
+    glow2: 'rgba(255, 180, 210, 0.15)',   // rose poudré
   },
   {
     slug: 'tapis-de-souris-minimaliste', label: 'Minimaliste',
     products: byCategory('tapis-de-souris-minimaliste'),
-    glow1: 'rgba(255, 255, 255, 0.04)',   // blanc pur
-    glow2: 'rgba(180, 180, 180, 0.02)',   // gris acier
-    icon: 'line',
+    glow1: 'rgba(200, 200, 220, 0.10)',   // blanc cassé
+    glow2: 'rgba(140, 140, 160, 0.06)',   // gris acier
   },
 ].filter(row => row.products.length > 0);
 
@@ -239,19 +234,9 @@ const faqSchema = {
     const bgClass = idx % 3 === 0 ? '' : idx % 3 === 1 ? 'bg-panel' : 'bg-teal';
     return (
     <section class={`relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden ${bgClass}`}>
-      <!-- Glows thématiques de la catégorie -->
-      <div class="absolute top-1/4 -left-20 w-[500px] h-[400px] blur-[140px] rounded-[100%] pointer-events-none" style={`background: ${row.glow1}`}></div>
-      <div class="absolute bottom-0 right-0 w-[400px] h-[300px] blur-[120px] rounded-[100%] pointer-events-none" style={`background: ${row.glow2}`}></div>
-
-      <!-- Icônes flottantes décoratives (subtiles, opacity basse, pointer-events-none) -->
-      <div class="cat-decor absolute inset-0 pointer-events-none overflow-hidden" data-icon={row.icon}>
-        {/* 5 icônes dispersées — même icône répétée avec tailles/positions différentes */}
-        <span class="cat-icon cat-icon-1"></span>
-        <span class="cat-icon cat-icon-2"></span>
-        <span class="cat-icon cat-icon-3"></span>
-        <span class="cat-icon cat-icon-4"></span>
-        <span class="cat-icon cat-icon-5"></span>
-      </div>
+      <!-- Glows thématiques de la catégorie (2 halos colorés, plus visibles) -->
+      <div class="absolute -top-20 -left-20 w-[700px] h-[500px] blur-[120px] rounded-[100%] pointer-events-none" style={`background: ${row.glow1}`}></div>
+      <div class="absolute -bottom-20 -right-20 w-[600px] h-[400px] blur-[110px] rounded-[100%] pointer-events-none" style={`background: ${row.glow2}`}></div>
 
       <div class="relative max-w-7xl mx-auto px-6">
         <div class="flex items-end justify-between mb-6 md:mb-8 gap-4">
@@ -347,83 +332,6 @@ const faqSchema = {
       display: none;
     }
 
-    /* ─── Décorations géométriques par catégorie ───────────────────────
-       Formes abstraites et éditoriales (Bauhaus / Swiss design) :
-       - Strokes fins, pas de fills chargés
-       - Gros cercles outline, arcs, grilles de points, lignes brisées
-       - Opacity 0.06-0.12, positions asymétriques pour une ambiance
-         "design magazine" plutôt que "cute/enfant"
-    ----------------------------------------------------------------- */
-    .cat-icon {
-      position: absolute;
-      background-color: currentColor;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      -webkit-mask-position: center;
-      mask-position: center;
-      display: block;
-    }
-
-    /* Manga/Anime — arcs de brosse (calligraphie abstraite) */
-    .cat-decor[data-icon="sakura"] { color: rgba(255, 170, 185, 0.10); }
-    .cat-decor[data-icon="sakura"] .cat-icon {
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10 50 Q 50 10 90 50' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10 50 Q 50 10 90 50' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    }
-
-    /* Gaming — hexagones outline (tech, modulaire) */
-    .cat-decor[data-icon="crosshair"] { color: rgba(0, 200, 255, 0.10); }
-    .cat-decor[data-icon="crosshair"] .cat-icon {
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 93,28 93,72 50,95 7,72 7,28' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E");
-              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 93,28 93,72 50,95 7,72 7,28' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E");
-    }
-
-    /* Fantasy — cercle constellation (3 points reliés par traits fins) */
-    .cat-decor[data-icon="sparkle"] { color: rgba(196, 163, 255, 0.11); }
-    .cat-decor[data-icon="sparkle"] .cat-icon {
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='20' y1='20' x2='70' y2='50' stroke='%23000' stroke-width='1'/%3E%3Cline x1='70' y1='50' x2='35' y2='85' stroke='%23000' stroke-width='1'/%3E%3Cline x1='35' y1='85' x2='20' y2='20' stroke='%23000' stroke-width='1'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23000'/%3E%3Ccircle cx='70' cy='50' r='3' fill='%23000'/%3E%3Ccircle cx='35' cy='85' r='3' fill='%23000'/%3E%3C/svg%3E");
-              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='20' y1='20' x2='70' y2='50' stroke='%23000' stroke-width='1'/%3E%3Cline x1='70' y1='50' x2='35' y2='85' stroke='%23000' stroke-width='1'/%3E%3Cline x1='35' y1='85' x2='20' y2='20' stroke='%23000' stroke-width='1'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23000'/%3E%3Ccircle cx='70' cy='50' r='3' fill='%23000'/%3E%3Ccircle cx='35' cy='85' r='3' fill='%23000'/%3E%3C/svg%3E");
-    }
-
-    /* Girly — anneau / cercle épais outline (élégant, éditorial) */
-    .cat-decor[data-icon="heart"] { color: rgba(255, 137, 184, 0.12); }
-    .cat-decor[data-icon="heart"] .cat-icon {
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E");
-              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E");
-    }
-
-    /* Minimaliste — grille de points réguliers (Swiss design) */
-    .cat-decor[data-icon="line"] { color: rgba(255, 255, 255, 0.09); }
-    .cat-decor[data-icon="line"] .cat-icon {
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23000'%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3Ccircle cx='50' cy='15' r='2'/%3E%3Ccircle cx='85' cy='15' r='2'/%3E%3Ccircle cx='15' cy='50' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='85' cy='50' r='2'/%3E%3Ccircle cx='15' cy='85' r='2'/%3E%3Ccircle cx='50' cy='85' r='2'/%3E%3Ccircle cx='85' cy='85' r='2'/%3E%3C/g%3E%3C/svg%3E");
-              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23000'%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3Ccircle cx='50' cy='15' r='2'/%3E%3Ccircle cx='85' cy='15' r='2'/%3E%3Ccircle cx='15' cy='50' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='85' cy='50' r='2'/%3E%3Ccircle cx='15' cy='85' r='2'/%3E%3Ccircle cx='50' cy='85' r='2'/%3E%3Ccircle cx='85' cy='85' r='2'/%3E%3C/g%3E%3C/svg%3E");
-    }
-
-    /* Placement éditorial asymétrique : quelques gros éléments bien espacés
-       plutôt qu'une dispersion confetti */
-    .cat-icon-1 { top: -10%;  left: -5%;  width: 260px; height: 260px; transform: rotate(-8deg); }
-    .cat-icon-2 { top: 30%;   right: 3%;  width: 140px; height: 140px; transform: rotate(15deg); opacity: 0.75; }
-    .cat-icon-3 { bottom: -8%; left: 38%; width: 180px; height: 180px; transform: rotate(25deg); opacity: 0.55; }
-    .cat-icon-4 { top: 60%;   right: 28%; width: 90px;  height: 90px;  transform: rotate(-18deg); opacity: 0.6; }
-    .cat-icon-5 { display: none; }
-
-    /* Arcs manga : allonger le ratio pour évoquer un trait de pinceau */
-    .cat-decor[data-icon="sakura"] .cat-icon-1 { width: 340px; height: 120px; }
-    .cat-decor[data-icon="sakura"] .cat-icon-3 { width: 260px; height: 90px; }
-    .cat-decor[data-icon="sakura"] .cat-icon-2 { width: 180px; height: 80px; }
-
-    /* Grille minimaliste : forme le module régulier */
-    .cat-decor[data-icon="line"] .cat-icon-1 { width: 220px; height: 220px; }
-    .cat-decor[data-icon="line"] .cat-icon-3 { width: 160px; height: 160px; }
-
-    /* Mobile : garder seulement 2 éléments décoratifs, réduits */
-    @media (max-width: 640px) {
-      .cat-icon-3, .cat-icon-4 { display: none; }
-      .cat-icon-1 { width: 180px; height: 180px; top: -8%; left: -15%; }
-      .cat-icon-2 { width: 100px; height: 100px; top: 40%; right: -5%; }
-    }
   </style>
 
   <script is:inline>
