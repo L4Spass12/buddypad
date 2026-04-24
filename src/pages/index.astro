@@ -137,7 +137,7 @@ const faqSchema = {
         srcset="/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1080w"
         sizes="100vw"
         width="1080"
-        height="1350"
+        height="700"
       />
       <img
         src="/images/home/hero-desktop.webp"
@@ -342,13 +342,15 @@ const faqSchema = {
 
   <style>
     /* ─── HERO : structure plate pour LCP détectable ───────────────────
-       L'image est un <img> direct de la section (pas de wrapper z-indexé).
-       Le voile sombre est un ::after en CSS (pas un div overlay). */
+       L'image est un <img> direct de la section.
+       Le voile sombre est un ::after en CSS (pas un div overlay dans le DOM
+       → Lighthouse voit l'image comme non couverte). */
     .hero-section { isolation: isolate; }
     .hero-bg {
       position: absolute;
       inset: 0;
       display: block;
+      z-index: 0;
     }
     .hero-img {
       width: 100%;
@@ -356,15 +358,18 @@ const faqSchema = {
       object-fit: cover;
       display: block;
     }
-    /* Voile sombre en ::after pour garantir la lisibilité du texte
-       SANS masquer l'image aux yeux de Lighthouse (pseudo-element,
-       pas un div overlay dans le DOM) */
+    /* Voile sombre en ::after : z-index 1 pour passer SOUS le contenu texte */
     .hero-section::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(10,10,15,0.85), rgba(10,10,15,0.55) 50%, rgba(10,10,15,0.25));
+      background: linear-gradient(to right, rgba(10,10,15,0.88), rgba(10,10,15,0.6) 55%, rgba(10,10,15,0.3));
       pointer-events: none;
+      z-index: 1;
+    }
+    /* Contenu (tag + h1 + boutons) : z-index 2, AU-DESSUS du voile */
+    .hero-section > .relative {
+      z-index: 2;
     }
 
     /* Scrollbar masquée mais scroll/swipe actif */
