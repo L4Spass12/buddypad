@@ -308,11 +308,12 @@ const breadcrumbSchema = {
                       // Position du tapis (centré verticalement, aligné à gauche)
                       const padX = pad;
                       const padY = pad + (maxH - val.h) / 2;
-                      // Souris : ~12 × 7 cm (toujours à droite du tapis, en bas-droite)
-                      const mouseW = Math.min(12, val.w * 0.22);
-                      const mouseH = mouseW * 0.58;
-                      const mouseX = padX + val.w - mouseW - val.w * 0.08;
-                      const mouseY = padY + val.h * 0.62;
+                      // Souris : orientation portrait (longueur > largeur, vue du dessus)
+                      // Dimensions réalistes ~7 × 12 cm
+                      const mouseW = Math.min(7, val.w * 0.13);
+                      const mouseH = Math.min(12, val.h * 0.32);
+                      const mouseCx = padX + val.w - mouseW / 2 - val.w * 0.08;
+                      const mouseCy = padY + val.h / 2;
                       // Clavier : ~36 × 13 cm, uniquement si le tapis fait ≥ 55 cm de large
                       const showKeyboard = val.w >= 55;
                       const kbW = Math.min(36, val.w * 0.55);
@@ -366,21 +367,42 @@ const breadcrumbSchema = {
                                 ))}
                               </g>
                             )}
-                            {/* Souris : forme ovoïde (ellipse + triangle en haut) */}
+                            {/* Souris : forme "pear" vue du dessus, palm en haut,
+                                 boutons en bas, molette centrale */}
                             <g class="mouse-g">
-                              <ellipse
-                                cx={mouseX + mouseW / 2} cy={mouseY + mouseH / 2}
-                                rx={mouseW / 2} ry={mouseH / 2}
+                              {/* Corps : path avec haut arrondi plus large, bas légèrement
+                                   resserré (proportions d'une souris type) */}
+                              <path
+                                d={
+                                  `M ${mouseCx - mouseW*0.48} ${mouseCy - mouseH*0.15}` +
+                                  ` C ${mouseCx - mouseW*0.48} ${mouseCy - mouseH*0.5}, ${mouseCx - mouseW*0.3} ${mouseCy - mouseH*0.5}, ${mouseCx} ${mouseCy - mouseH*0.5}` +
+                                  ` C ${mouseCx + mouseW*0.3} ${mouseCy - mouseH*0.5}, ${mouseCx + mouseW*0.48} ${mouseCy - mouseH*0.5}, ${mouseCx + mouseW*0.48} ${mouseCy - mouseH*0.15}` +
+                                  ` L ${mouseCx + mouseW*0.4} ${mouseCy + mouseH*0.4}` +
+                                  ` C ${mouseCx + mouseW*0.3} ${mouseCy + mouseH*0.5}, ${mouseCx - mouseW*0.3} ${mouseCy + mouseH*0.5}, ${mouseCx - mouseW*0.4} ${mouseCy + mouseH*0.4}` +
+                                  ` Z`
+                                }
                                 fill="rgba(255,255,255,0.08)"
                                 stroke="rgba(255,255,255,0.45)"
                                 stroke-width="0.4"
+                                stroke-linejoin="round"
                               />
-                              {/* Molette / séparation */}
+                              {/* Ligne de séparation des clics gauche/droit (haut) */}
                               <line
-                                x1={mouseX + mouseW / 2} y1={mouseY + mouseH * 0.15}
-                                x2={mouseX + mouseW / 2} y2={mouseY + mouseH * 0.48}
+                                x1={mouseCx} y1={mouseCy - mouseH*0.42}
+                                x2={mouseCx} y2={mouseCy - mouseH*0.12}
                                 stroke="rgba(255,255,255,0.3)"
                                 stroke-width="0.3"
+                              />
+                              {/* Molette : petit rect arrondi centré-haut */}
+                              <rect
+                                x={mouseCx - mouseW*0.06}
+                                y={mouseCy - mouseH*0.2}
+                                width={mouseW*0.12}
+                                height={mouseH*0.14}
+                                rx={mouseW*0.05}
+                                fill="rgba(255,255,255,0.3)"
+                                stroke="rgba(255,255,255,0.45)"
+                                stroke-width="0.2"
                               />
                             </g>
                           </svg>
