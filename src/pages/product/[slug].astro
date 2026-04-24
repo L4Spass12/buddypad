@@ -297,7 +297,7 @@ const breadcrumbSchema = {
                   <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
                     {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
                   </label>
-                  <div class="flex flex-col gap-2">
+                  <div class={`grid gap-2`} style={`grid-template-columns: repeat(${parsed.length}, minmax(0, 1fr));`}>
                     {parsed.map((val, idx) => {
                       const isSelected = idx === 0;
                       // Tapis scalé dans la card (viewBox = largeur max × hauteur max).
@@ -328,7 +328,7 @@ const breadcrumbSchema = {
                           data-variant-type="size"
                           data-attr={attr.name}
                           data-value={val.slug}
-                          class={`variant-size-card w-full rounded-xl border p-3 transition-colors ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
+                          class={`variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
                           aria-label={`Taille ${val.label}`}
                         >
                           <svg
@@ -407,7 +407,7 @@ const breadcrumbSchema = {
                             </g>
                           </svg>
                           <div class="text-center">
-                            <div class="text-[13px] font-medium text-cream tracking-tight leading-none">{val.label}</div>
+                            <div class="text-[11px] md:text-[13px] font-medium text-cream tracking-tight leading-none whitespace-nowrap">{val.label}</div>
                           </div>
                         </button>
                       );
@@ -857,7 +857,7 @@ const breadcrumbSchema = {
           selector.querySelectorAll('[data-attr="' + attr + '"]').forEach(b => {
             const t = b.dataset.variantType || 'pill';
             if (t === 'size') {
-              b.className = 'variant-size-card w-full rounded-xl border p-3 transition-colors bg-white/[0.02] border-white/[0.08] hover:border-white/25';
+              b.className = 'variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.02] border-white/[0.08] hover:border-white/25';
               // Repaint le rect du tapis en "non sélectionné"
               const rect = b.querySelector('.tapis-rect');
               if (rect) {
@@ -871,7 +871,7 @@ const breadcrumbSchema = {
 
           // Active le bouton cliqué
           if (type === 'size') {
-            btn.className = 'variant-size-card w-full rounded-xl border p-3 transition-colors bg-white/[0.04] border-cream';
+            btn.className = 'variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.04] border-cream';
             const rect = btn.querySelector('.tapis-rect');
             if (rect) {
               rect.setAttribute('fill', 'rgba(244,244,247,0.10)');
