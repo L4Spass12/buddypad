@@ -253,26 +253,147 @@ const breadcrumbSchema = {
         <!-- Sélecteurs de variantes -->
         {hasVariations && attributes.length > 0 && (
           <div id="variant-selector" class="space-y-6 mb-8">
-            {attributes.map(attr => (
-              <div>
-                <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
-                  {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
-                </label>
-                <div class="flex flex-wrap gap-2">
-                  {attr.values.map((val, idx) => (
-                    <button
-                      type="button"
-                      data-variant-option
-                      data-attr={attr.name}
-                      data-value={val.slug}
-                      class={`variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors ${idx === 0 ? 'bg-cream text-dark border-cream' : 'bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20'}`}
-                    >
-                      {val.label}
-                    </button>
-                  ))}
+            {attributes.map(attr => {
+              // Détecte si l'attribut est une dimension ("45 × 35 cm", "90x40 cm"…).
+              // Si oui → cards avec visualisation SVG. Sinon → pills classiques.
+              const SIZE_RE = /(\d+)\s*[x×]\s*(\d+)/i;
+              const parsed = attr.values.map(v => {
+                const m = v.label.match(SIZE_RE);
+                return m ? { ...v, w: parseInt(m[1], 10), h: parseInt(m[2], 10) } : { ...v, w: null, h: null };
+              });
+              const isSize = parsed.every(v => v.w != null && v.h != null);
+
+              if (!isSize) {
+                // ── Attribut classique (couleur, matière…) : pills ──
+                return (
+                  <div>
+                    <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
+                      {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
+                    </label>
+                    <div class="flex flex-wrap gap-2">
+                      {attr.values.map((val, idx) => (
+                        <button
+                          type="button"
+                          data-variant-option
+                          data-variant-type="pill"
+                          data-attr={attr.name}
+                          data-value={val.slug}
+                          class={`variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors ${idx === 0 ? 'bg-cream text-dark border-cream' : 'bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20'}`}
+                        >
+                          {val.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              // ── Attribut "Dimensions" : cards avec visualisation ──
+              const maxW = Math.max(...parsed.map(v => v.w));
+              const maxH = Math.max(...parsed.map(v => v.h));
+
+              return (
+                <div>
+                  <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
+                    {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
+                  </label>
+                  <div class="flex flex-wrap gap-2">
+                    {parsed.map((val, idx) => {
+                      const isSelected = idx === 0;
+                      // Tapis scalé dans la card (viewBox = largeur max × hauteur max).
+                      // Padding 5 unités tout autour pour laisser respirer.
+                      const pad = 5;
+                      const vbW = maxW + pad * 2;
+                      const vbH = maxH + pad * 2;
+                      // Position du tapis (centré verticalement, aligné à gauche)
+                      const padX = pad;
+                      const padY = pad + (maxH - val.h) / 2;
+                      // Souris : ~12 × 7 cm (toujours à droite du tapis, en bas-droite)
+                      const mouseW = Math.min(12, val.w * 0.22);
+                      const mouseH = mouseW * 0.58;
+                      const mouseX = padX + val.w - mouseW - val.w * 0.08;
+                      const mouseY = padY + val.h * 0.62;
+                      // Clavier : ~36 × 13 cm, uniquement si le tapis fait ≥ 55 cm de large
+                      const showKeyboard = val.w >= 55;
+                      const kbW = Math.min(36, val.w * 0.55);
+                      const kbH = kbW * 0.36;
+                      const kbX = padX + val.w * 0.08;
+                      const kbY = padY + (val.h - kbH) / 2;
+
+                      return (
+                        <button
+                          type="button"
+                          data-variant-option
+                          data-variant-type="size"
+                          data-attr={attr.name}
+                          data-value={val.slug}
+                          class={`variant-size-card flex-1 min-w-[140px] max-w-[220px] rounded-xl border p-3 transition-colors ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
+                          aria-label={`Taille ${val.label}`}
+                        >
+                          <svg
+                            viewBox={`0 0 ${vbW} ${vbH}`}
+                            class="w-full h-auto mb-2 block"
+                            aria-hidden="true"
+                          >
+                            <!-- Tapis -->
+                            <rect
+                              x={padX} y={padY} width={val.w} height={val.h}
+                              rx="2" ry="2"
+                              fill={isSelected ? 'rgba(244,244,247,0.10)' : 'rgba(255,255,255,0.04)'}
+                              stroke={isSelected ? 'rgba(244,244,247,0.8)' : 'rgba(255,255,255,0.25)'}
+                              stroke-width="0.5"
+                              class="tapis-rect"
+                            />
+                            {/* Clavier : rect + petites touches stylisées */}
+                            {showKeyboard && (
+                              <g class="keyboard-g">
+                                <rect
+                                  x={kbX} y={kbY} width={kbW} height={kbH}
+                                  rx="1" ry="1"
+                                  fill="rgba(255,255,255,0.06)"
+                                  stroke="rgba(255,255,255,0.35)"
+                                  stroke-width="0.4"
+                                />
+                                {/* Touches : 3 lignes de petits rects */}
+                                {[0.22, 0.45, 0.68].map(ry => (
+                                  <line
+                                    x1={kbX + kbW * 0.05} y1={kbY + kbH * ry}
+                                    x2={kbX + kbW * 0.95} y2={kbY + kbH * ry}
+                                    stroke="rgba(255,255,255,0.25)"
+                                    stroke-width="0.3"
+                                    stroke-dasharray="0.6 0.4"
+                                  />
+                                ))}
+                              </g>
+                            )}
+                            {/* Souris : forme ovoïde (ellipse + triangle en haut) */}
+                            <g class="mouse-g">
+                              <ellipse
+                                cx={mouseX + mouseW / 2} cy={mouseY + mouseH / 2}
+                                rx={mouseW / 2} ry={mouseH / 2}
+                                fill="rgba(255,255,255,0.08)"
+                                stroke="rgba(255,255,255,0.45)"
+                                stroke-width="0.4"
+                              />
+                              {/* Molette / séparation */}
+                              <line
+                                x1={mouseX + mouseW / 2} y1={mouseY + mouseH * 0.15}
+                                x2={mouseX + mouseW / 2} y2={mouseY + mouseH * 0.48}
+                                stroke="rgba(255,255,255,0.3)"
+                                stroke-width="0.3"
+                              />
+                            </g>
+                          </svg>
+                          <div class="text-center">
+                            <div class="text-[13px] font-medium text-cream tracking-tight leading-none">{val.label}</div>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 
@@ -615,11 +736,14 @@ const breadcrumbSchema = {
       const originalMainSrc = mainSlide ? mainSlide.getAttribute('src') : null;
 
       // Initial selection = premier bouton actif de chaque attribut
+      // (détecte bg-cream pour les pills OU border-cream pour les size cards)
       const selected = {};
       selector.querySelectorAll('[data-attr]').forEach(btn => {
         const attr = btn.dataset.attr;
         if (selected[attr]) return;
-        if (btn.classList.contains('bg-cream')) selected[attr] = btn.dataset.value;
+        if (btn.classList.contains('bg-cream') || btn.classList.contains('border-cream')) {
+          selected[attr] = btn.dataset.value;
+        }
       });
 
       const fmtPrice = (v) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency }).format(v);
@@ -705,10 +829,36 @@ const breadcrumbSchema = {
       selector.querySelectorAll('[data-variant-option]').forEach(btn => {
         btn.addEventListener('click', () => {
           const attr = btn.dataset.attr;
+          const type = btn.dataset.variantType || 'pill';
+
+          // Reset tous les boutons de cet attribut à leur style "non sélectionné"
           selector.querySelectorAll('[data-attr="' + attr + '"]').forEach(b => {
-            b.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+            const t = b.dataset.variantType || 'pill';
+            if (t === 'size') {
+              b.className = 'variant-size-card flex-1 min-w-[140px] max-w-[220px] rounded-xl border p-3 transition-colors bg-white/[0.02] border-white/[0.08] hover:border-white/25';
+              // Repaint le rect du tapis en "non sélectionné"
+              const rect = b.querySelector('.tapis-rect');
+              if (rect) {
+                rect.setAttribute('fill', 'rgba(255,255,255,0.04)');
+                rect.setAttribute('stroke', 'rgba(255,255,255,0.25)');
+              }
+            } else {
+              b.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+            }
           });
-          btn.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-cream text-dark border-cream';
+
+          // Active le bouton cliqué
+          if (type === 'size') {
+            btn.className = 'variant-size-card flex-1 min-w-[140px] max-w-[220px] rounded-xl border p-3 transition-colors bg-white/[0.04] border-cream';
+            const rect = btn.querySelector('.tapis-rect');
+            if (rect) {
+              rect.setAttribute('fill', 'rgba(244,244,247,0.10)');
+              rect.setAttribute('stroke', 'rgba(244,244,247,0.8)');
+            }
+          } else {
+            btn.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-cream text-dark border-cream';
+          }
+
           selected[attr] = btn.dataset.value;
           update();
         });
