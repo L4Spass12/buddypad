@@ -291,6 +291,11 @@ const breadcrumbSchema = {
               // ── Attribut "Dimensions" : cards avec visualisation ──
               const maxW = Math.max(...parsed.map(v => v.w));
               const maxH = Math.max(...parsed.map(v => v.h));
+              // Variante par défaut = la plus grande (par aire) → badge "Populaire"
+              const largestIdx = parsed.reduce(
+                (best, v, i, arr) => (v.w * v.h > arr[best].w * arr[best].h ? i : best),
+                0
+              );
 
               return (
                 <div>
@@ -299,7 +304,8 @@ const breadcrumbSchema = {
                   </label>
                   <div class={`grid gap-2`} style={`grid-template-columns: repeat(${parsed.length}, minmax(0, 1fr));`}>
                     {parsed.map((val, idx) => {
-                      const isSelected = idx === 0;
+                      const isSelected = idx === largestIdx;
+                      const isPopular  = idx === largestIdx;
                       // Tapis scalé dans la card (viewBox = largeur max × hauteur max).
                       // Padding 5 unités tout autour pour laisser respirer.
                       const pad = 5;
@@ -328,9 +334,14 @@ const breadcrumbSchema = {
                           data-variant-type="size"
                           data-attr={attr.name}
                           data-value={val.slug}
-                          class={`variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
-                          aria-label={`Taille ${val.label}`}
+                          class={`variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
+                          aria-label={`Taille ${val.label}${isPopular ? ' (le plus populaire)' : ''}`}
                         >
+                          {isPopular && (
+                            <span class="absolute -top-2 left-1/2 -translate-x-1/2 text-[9px] md:text-[10px] font-medium bg-cream text-dark px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm">
+                              Populaire
+                            </span>
+                          )}
                           <svg
                             viewBox={`0 0 ${vbW} ${vbH}`}
                             class="w-full h-auto mb-2 block"
@@ -857,7 +868,7 @@ const breadcrumbSchema = {
           selector.querySelectorAll('[data-attr="' + attr + '"]').forEach(b => {
             const t = b.dataset.variantType || 'pill';
             if (t === 'size') {
-              b.className = 'variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.02] border-white/[0.08] hover:border-white/25';
+              b.className = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.02] border-white/[0.08] hover:border-white/25';
               // Repaint le rect du tapis en "non sélectionné"
               const rect = b.querySelector('.tapis-rect');
               if (rect) {
@@ -871,7 +882,7 @@ const breadcrumbSchema = {
 
           // Active le bouton cliqué
           if (type === 'size') {
-            btn.className = 'variant-size-card rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.04] border-cream';
+            btn.className = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.04] border-cream';
             const rect = btn.querySelector('.tapis-rect');
             if (rect) {
               rect.setAttribute('fill', 'rgba(244,244,247,0.10)');
