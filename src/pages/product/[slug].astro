@@ -327,19 +327,101 @@ const breadcrumbSchema = {
       </div>
     </div>
 
-    <!-- Description longue -->
+    <!-- ═══════════════════════════ TOGGLES PRODUIT ═══════════════════════════
+         3 accordéons en HTML natif (<details>). Google indexe parfaitement le
+         contenu à l'intérieur (ouvert ou fermé), donc SEO-friendly. Zéro JS. -->
     <section class="mt-16 max-w-3xl">
-      <article class="prose prose-invert prose-lg max-w-none
-        prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
-        prose-h2:text-2xl prose-h2:mt-12 prose-h3:text-xl
-        prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
-        prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
-        prose-strong:text-cream prose-strong:font-medium
-        prose-ul:font-light prose-li:text-n-400
-        prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:text-n-400
-        prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal">
-        <Content />
-      </article>
+      <!-- Description -->
+      <details class="product-toggle group border-t border-white/[0.08] py-5" open>
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
+          <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Description</h2>
+          <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <article class="mt-5 prose prose-invert prose-base max-w-none
+          prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
+          prose-h2:text-xl prose-h2:mt-10 prose-h3:text-lg
+          prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
+          prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
+          prose-strong:text-cream prose-strong:font-medium
+          prose-ul:font-light prose-li:text-n-400
+          prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:text-n-400
+          prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal">
+          <Content />
+        </article>
+      </details>
+
+      <!-- Livraison & retours -->
+      <details class="product-toggle group border-t border-white/[0.08] py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
+          <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Livraison & retours</h2>
+          <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="mt-5 space-y-4 text-sm text-n-400 font-light leading-relaxed">
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Expédition</h3>
+            <p>Commande préparée sous 24 à 48 heures ouvrées. Expédition depuis notre atelier en France via Colissimo ou Mondial Relay selon votre choix au paiement.</p>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Délais de livraison</h3>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>France métropolitaine : 2 à 4 jours ouvrés</li>
+              <li>Europe (Belgique, Suisse, Luxembourg, Allemagne…) : 4 à 7 jours ouvrés</li>
+              <li>Reste du monde : 7 à 14 jours ouvrés</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Frais de livraison</h3>
+            <p><strong class="text-cream">Livraison offerte dès 49€ d'achat</strong> en France métropolitaine. En dessous, les frais sont calculés au checkout selon le transporteur sélectionné.</p>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Retours & remboursement</h3>
+            <p>Vous disposez de <strong class="text-cream">30 jours après réception</strong> pour changer d'avis. Retour gratuit en France (étiquette prépayée fournie). Le produit doit être renvoyé dans son état d'origine, non utilisé et dans son emballage. Remboursement intégral sous 5 jours ouvrés après réception du colis.</p>
+            <p class="mt-2 text-xs text-n-500">Les tapis personnalisés (impression sur-mesure d'un visuel client) ne sont ni repris ni échangés, sauf défaut de fabrication.</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Entretien -->
+      <details class="product-toggle group border-t border-b border-white/[0.08] py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
+          <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Entretien</h2>
+          <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="mt-5 space-y-4 text-sm text-n-400 font-light leading-relaxed">
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Nettoyage au quotidien</h3>
+            <p>Pour les petites salissures, passez simplement un chiffon microfibre légèrement humidifié sur la surface. Laissez sécher à l'air libre avant réutilisation.</p>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Nettoyage en profondeur</h3>
+            <ol class="list-decimal pl-5 space-y-1">
+              <li>Remplissez une bassine d'eau tiède (30°C max) avec un peu de savon doux ou de shampoing neutre.</li>
+              <li>Trempez le tapis, frottez délicatement la surface avec une éponge douce ou une brosse à poils souples.</li>
+              <li>Rincez abondamment à l'eau claire jusqu'à disparition complète du savon.</li>
+              <li>Essorez en pressant (jamais en tordant) puis laissez sécher <strong class="text-cream">à plat, à l'air libre</strong>, loin du soleil direct et de toute source de chaleur.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">À éviter absolument</h3>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Machine à laver (détériore la base caoutchouc cousue)</li>
+              <li>Sèche-linge, sèche-cheveux, radiateur</li>
+              <li>Exposition prolongée au soleil direct</li>
+              <li>Produits javel, solvants, nettoyants abrasifs</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-cream font-medium mb-1.5">Conseil durabilité</h3>
+            <p>Un tapis de souris BuddyPad entretenu correctement dure plusieurs années. Pour préserver la glisse de la surface micro-tissée, évitez de poser des boissons ou des aliments dessus, et nettoyez les taches dès leur apparition.</p>
+          </div>
+        </div>
+      </details>
     </section>
 
   </div>
@@ -431,6 +513,9 @@ const breadcrumbSchema = {
         /* Galerie : masque scrollbar horizontale sur le track */
         .gallery-track { scrollbar-width: none; -ms-overflow-style: none; }
         .gallery-track::-webkit-scrollbar { display: none; }
+        /* Toggles produit : masque le marker natif des <summary> */
+        .product-toggle summary::-webkit-details-marker { display: none; }
+        .product-toggle summary::marker { content: ''; }
       </style>
     </section>
   )}
