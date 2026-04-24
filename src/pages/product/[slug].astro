@@ -460,7 +460,7 @@ const breadcrumbSchema = {
             data-item-image={image}
           >
             {inStock ? (
-              <>Ajouter au panier <span class="opacity-70 font-normal">— {priceRange && priceRange.min !== priceRange.max ? `dès ${formatPrice(priceRange.min)}` : formatPrice(price)}</span></>
+              <>Ajouter au panier <span class="opacity-70 font-normal">{priceRange && priceRange.min !== priceRange.max ? `dès ${formatPrice(priceRange.min)}` : formatPrice(price)}</span></>
             ) : 'Indisponible'}
           </button>
         ) : (
@@ -632,7 +632,7 @@ const breadcrumbSchema = {
             data-item-price={Math.round(price * 100)}
             data-item-image={image}
           >
-            Ajouter au panier <span class="opacity-70 font-normal">— <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
           </button>
         ) : (
           <button
@@ -645,7 +645,7 @@ const breadcrumbSchema = {
             data-item-url={`/product/${product.slug}/`}
             data-item-image={image}
           >
-            Ajouter au panier <span class="opacity-70 font-normal">— <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
           </button>
         )}
         <p class="text-[11px] text-n-500 font-light mt-1.5 text-center">
@@ -1004,7 +1004,7 @@ const breadcrumbSchema = {
         buyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
         if (v.image) buyBtn.dataset.itemImage = v.image;
         buyBtn.innerHTML = v.inStock
-          ? 'Ajouter au panier <span class="opacity-70 font-normal">— ' + fmtPrice(v.price) + '</span>'
+          ? 'Ajouter au panier <span class="opacity-70 font-normal">' + fmtPrice(v.price) + '</span>'
           : 'Indisponible';
 
         // Sync sticky ATC bar (les 2 boutons mobile + desktop)
