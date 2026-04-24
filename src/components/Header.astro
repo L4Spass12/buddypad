@@ -120,7 +120,18 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
   >
     <a href="/" class={`block py-2.5 transition-colors ${isHome ? 'text-cream font-medium' : 'text-n-400 hover:text-cream'}`} aria-current={isHome ? 'page' : undefined}>Accueil</a>
     {siteConfig.shop?.enabled && (
-      <a href="/tapis-de-souris" class={`block py-2.5 transition-colors ${isShop ? 'text-cream font-medium' : 'text-n-400 hover:text-cream'}`} aria-current={isShop ? 'page' : undefined}>Boutique</a>
+      <a
+        href="/tapis-de-souris"
+        class={`my-1.5 flex items-center justify-between gap-2 px-4 py-2.5 rounded-full border transition-colors ${isShop ? 'bg-cream text-dark border-cream font-medium' : 'border-white/[0.12] bg-white/[0.03] text-cream hover:border-white/25 hover:bg-white/[0.07]'}`}
+        aria-current={isShop ? 'page' : undefined}
+      >
+        <span class="text-sm">Boutique</span>
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+          <path d="M3 6h18"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+      </a>
     )}
 
     {/* Catégories en accordéon sur mobile — style pill distinct */}
