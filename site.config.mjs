@@ -6,7 +6,7 @@
 const config = {
   // Identité
   name: 'BuddyPad',
-  url: 'https://buddypad.fr',
+  url: 'https://buddypad.com',
   // Logo : partie principale + partie colorée (accent)
   logoPrefix: 'Buddy',
   logoSuffix: 'Pad',
