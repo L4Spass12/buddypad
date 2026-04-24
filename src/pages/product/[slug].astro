@@ -22,9 +22,15 @@ const {
 } = product.data;
 
 const allProducts = await getCollection('products');
+// TOUS les produits de la même collection (hors produit courant) — slider horizontal
 const related = allProducts
-  .filter(p => p.slug !== product.slug && p.data.categories.some(c => categories.includes(c)))
-  .slice(0, 3);
+  .filter(p => p.slug !== product.slug && p.data.categories.some(c => categories.includes(c)));
+
+// Label de la collection (première catégorie) pour le titre de la section
+const relatedCategoryLabel = (categories?.[0] || '')
+  .replace(/^tapis-de-souris-/, '')
+  .replace(/-/g, ' ')
+  .replace(/^./, c => c.toUpperCase());
 
 const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
   style: 'currency', currency: siteConfig.shop.currency,
@@ -116,44 +122,37 @@ const breadcrumbSchema = {
       <!-- ═══════════════════════════ GALERIE ═══════════════════════════ -->
       {(() => {
         // Liste déduplicée : image principale + gallery + images de variantes
-        // (les images de variantes doivent être dans la galerie pour que le switch
-        //  de variante puisse aller sur le bon slide)
         const variantImages = (variations || []).map(v => v.image).filter(Boolean);
         const slides = Array.from(new Set([image, ...(gallery || []), ...variantImages]));
         return (
         <div class="product-gallery" data-gallery data-slide-count={slides.length}>
-          <!-- Viewport principal : scroll-snap horizontal pour swipe mobile natif + flèches desktop -->
-          <div class="gallery-main relative rounded-2xl overflow-hidden bg-panel border border-white/[0.05] aspect-[4/3] group">
-            <div
-              class="gallery-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-full"
-              data-gallery-track
-            >
-              {slides.map((src, i) => (
-                <div class="flex-none w-full h-full snap-start snap-always">
-                  <img
-                    src={src}
-                    srcset={unsplashSrcset(src)}
-                    sizes="(max-width: 1024px) 100vw, 560px"
-                    alt={i === 0 ? (imageAlt ?? name) : `${name} — image ${i + 1}`}
-                    class="w-full h-full object-cover"
-                    width="1200"
-                    height="900"
-                    fetchpriority={i === 0 ? 'high' : 'auto'}
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                    decoding={i === 0 ? 'async' : 'async'}
-                  />
-                </div>
-              ))}
-            </div>
+          <!-- Image principale : UNE SEULE visible à la fois. Les autres sont dans le DOM
+               (pour l'indexation + preload rapide) mais masquées via `.hidden`. -->
+          <div class="relative rounded-2xl overflow-hidden bg-panel border border-white/[0.05] aspect-[4/3] group">
+            {slides.map((src, i) => (
+              <img
+                data-gallery-slide={i}
+                src={src}
+                srcset={unsplashSrcset(src)}
+                sizes="(max-width: 1024px) 100vw, 560px"
+                alt={i === 0 ? (imageAlt ?? name) : `${name} — image ${i + 1}`}
+                class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${i === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                width="1200"
+                height="900"
+                fetchpriority={i === 0 ? 'high' : 'auto'}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+            ))}
 
-            <!-- Flèches desktop (masquées sur mobile : swipe natif) -->
+            <!-- Flèches desktop uniquement (apparaissent au hover) -->
             {slides.length > 1 && (
               <>
                 <button
                   type="button"
                   data-gallery-prev
                   aria-label="Image précédente"
-                  class="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all"
+                  class="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
                 >
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
@@ -161,27 +160,17 @@ const breadcrumbSchema = {
                   type="button"
                   data-gallery-next
                   aria-label="Image suivante"
-                  class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all"
+                  class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
                 >
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
                 </button>
-
-                <!-- Pagination dots (mobile-first) -->
-                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-dark/70 backdrop-blur-sm border border-white/[0.08]">
-                  {slides.map((_, i) => (
-                    <span
-                      data-gallery-dot={i}
-                      class={`block w-1.5 h-1.5 rounded-full transition-all ${i === 0 ? 'bg-cream w-4' : 'bg-white/30'}`}
-                    ></span>
-                  ))}
-                </div>
               </>
             )}
           </div>
 
-          <!-- Thumbs desktop : aperçu de toutes les images, clic = aller à cette image -->
+          <!-- Thumbs : navigation principale sur mobile ET desktop -->
           {slides.length > 1 && (
-            <div class="hidden md:grid grid-cols-5 gap-2 mt-3">
+            <div class="grid grid-cols-5 gap-2 mt-3">
               {slides.slice(0, 10).map((g, i) => (
                 <button
                   type="button"
@@ -339,94 +328,162 @@ const breadcrumbSchema = {
       </article>
     </section>
 
-    <!-- Related -->
-    {related.length > 0 && (
-      <section class="mt-20 pt-12 border-t border-white/[0.08]">
-        <h2 class="text-xl font-medium tracking-tight text-cream mb-8">Vous aimerez aussi</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {related.map(p => (
-            <a href={`/product/${p.slug}`} class="group block">
-              <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
-                <img
-                  src={p.data.image}
-                  srcset={unsplashSrcset(p.data.image)}
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  alt={p.data.imageAlt ?? p.data.name}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <h3 class="text-sm font-medium text-cream mt-1 tracking-tight group-hover:underline underline-offset-4 line-clamp-2">{p.data.name}</h3>
-              <span class="text-sm text-cream font-medium mt-1 block">
-                {p.data.priceRange && p.data.priceRange.min !== p.data.priceRange.max
-                  ? `Dès ${formatPrice(p.data.priceRange.min)}`
-                  : formatPrice(p.data.price)}
-              </span>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
   </div>
 
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
   <FabricationSection />
 
+  <!-- ═══════════════════════════ VOUS AIMEREZ AUSSI (slider full-width) ═══════════════════════════ -->
+  {related.length > 0 && (
+    <section class="relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden">
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-6 md:mb-8 gap-4">
+          <div>
+            <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">Collection</span>
+            <h2 class="text-xl md:text-2xl font-medium tracking-tight text-cream">Vous aimerez aussi</h2>
+          </div>
+          <a href={`/product-category/${categories?.[0]}`} class="inline-flex items-center gap-1.5 text-xs md:text-sm text-n-400 hover:text-cream transition-colors whitespace-nowrap">
+            Voir tout ({related.length})
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slider full-width : même structure que la home -->
+      <div class="product-slider relative" data-slider>
+        <div class="slider-track flex gap-3 md:gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 pl-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] pr-6">
+          {related.map(p => (
+            <a
+              href={`/product/${p.slug}`}
+              class="slider-card group flex-none w-[72vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] xl:w-[310px] snap-start block"
+            >
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-3">
+                <img
+                  src={p.data.image}
+                  srcset={unsplashSrcset(p.data.image)}
+                  sizes="(max-width: 640px) 72vw, (max-width: 768px) 45vw, (max-width: 1024px) 32vw, 300px"
+                  alt={p.data.imageAlt ?? p.data.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  width="800" height="600" loading="lazy" decoding="async"
+                />
+                {p.data.compareAtPrice && (
+                  <span class="absolute top-3 left-3 bg-cream text-dark text-[10px] font-medium px-2 py-1 rounded-sm uppercase tracking-wider">
+                    -{Math.round((1 - p.data.price / p.data.compareAtPrice) * 100)}%
+                  </span>
+                )}
+              </div>
+              <h3 class="text-sm font-medium text-cream tracking-tight leading-snug line-clamp-2 mb-1 group-hover:underline underline-offset-4">
+                {p.data.name}
+              </h3>
+              <div class="flex items-baseline gap-2 text-xs">
+                <span class="text-cream font-medium">
+                  {p.data.priceRange && p.data.priceRange.min !== p.data.priceRange.max
+                    ? `Dès ${formatPrice(p.data.priceRange.min)}`
+                    : formatPrice(p.data.price)}
+                </span>
+                {p.data.compareAtPrice && (
+                  <span class="text-n-500 line-through font-light">{formatPrice(p.data.compareAtPrice)}</span>
+                )}
+              </div>
+            </a>
+          ))}
+          <div class="flex-none w-2" aria-hidden="true"></div>
+        </div>
+
+        <!-- Flèches desktop -->
+        <div class="pointer-events-none absolute inset-0 max-w-7xl mx-auto hidden md:block px-6">
+          <button
+            type="button"
+            data-scroll="prev"
+            class="pointer-events-auto absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
+            aria-label="Produits précédents"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button
+            type="button"
+            data-scroll="next"
+            class="pointer-events-auto absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
+            aria-label="Produits suivants"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <style>
+        .product-slider .slider-track { scrollbar-width: none; -ms-overflow-style: none; }
+        .product-slider .slider-track::-webkit-scrollbar { display: none; }
+      </style>
+    </section>
+  )}
+
   <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════ -->
   <script is:inline set:html={`
     (function() {
-      /* ─────── Galerie (swipe mobile + flèches desktop + thumbs + clavier) ─────── */
+      /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
+      document.querySelectorAll('[data-slider]').forEach(slider => {
+        const track = slider.querySelector('.slider-track');
+        const prev  = slider.querySelector('[data-scroll="prev"]');
+        const next  = slider.querySelector('[data-scroll="next"]');
+        if (!track) return;
+        function scrollBy(dir) {
+          const card = track.querySelector('.slider-card');
+          if (!card) return;
+          const cardWidth = card.getBoundingClientRect().width + 20;
+          track.scrollBy({ left: cardWidth * 2 * dir, behavior: 'smooth' });
+        }
+        prev?.addEventListener('click', () => scrollBy(-1));
+        next?.addEventListener('click', () => scrollBy(1));
+        function upd() {
+          if (!prev || !next) return;
+          prev.disabled = track.scrollLeft <= 1;
+          next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+        }
+        track.addEventListener('scroll', upd, { passive: true });
+        window.addEventListener('resize', upd);
+        requestAnimationFrame(upd);
+      });
+
+      /* ─────── Galerie (fade-switch sur thumb/flèches/clavier) ─────── */
       const gallery = document.querySelector('[data-gallery]');
       let goToSlide = () => {}; // exposé pour le sélecteur de variantes
 
       if (gallery) {
-        const track = gallery.querySelector('[data-gallery-track]');
-        const prev  = gallery.querySelector('[data-gallery-prev]');
-        const next  = gallery.querySelector('[data-gallery-next]');
-        const dots  = Array.from(gallery.querySelectorAll('[data-gallery-dot]'));
+        const slides = Array.from(gallery.querySelectorAll('[data-gallery-slide]'));
         const thumbs = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
-        const slideCount = parseInt(gallery.dataset.slideCount || '0', 10);
+        const prev   = gallery.querySelector('[data-gallery-prev]');
+        const next   = gallery.querySelector('[data-gallery-next]');
+        const slideCount = slides.length;
         let current = 0;
 
         function updateUI() {
-          // Dots : slide actif = pastille "w-4 bg-cream", autres "bg-white/30"
-          dots.forEach((d, i) => {
-            d.className = 'block w-1.5 h-1.5 rounded-full transition-all ' + (i === current ? 'bg-cream w-4' : 'bg-white/30');
+          slides.forEach((img, i) => {
+            if (i === current) {
+              img.classList.remove('opacity-0', 'pointer-events-none');
+              img.classList.add('opacity-100');
+            } else {
+              img.classList.add('opacity-0', 'pointer-events-none');
+              img.classList.remove('opacity-100');
+            }
           });
-          // Thumbs : borders
           thumbs.forEach((t, i) => {
             t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ' + (i === current ? 'border-cream' : 'border-white/[0.08] hover:border-white/30');
           });
-          // Flèches : disabled aux bouts
           if (prev) prev.disabled = current <= 0;
           if (next) next.disabled = current >= slideCount - 1;
         }
 
         goToSlide = (idx) => {
-          if (idx < 0 || idx >= slideCount || !track) return;
-          const w = track.clientWidth;
-          track.scrollTo({ left: w * idx, behavior: 'smooth' });
+          if (idx < 0 || idx >= slideCount) return;
+          current = idx;
+          updateUI();
         };
-
-        // Détecte le slide courant via scroll (swipe mobile + scrollTo)
-        if (track) {
-          let t = null;
-          track.addEventListener('scroll', () => {
-            if (t) cancelAnimationFrame(t);
-            t = requestAnimationFrame(() => {
-              const w = track.clientWidth;
-              const idx = Math.round(track.scrollLeft / w);
-              if (idx !== current) { current = idx; updateUI(); }
-            });
-          }, { passive: true });
-        }
 
         prev?.addEventListener('click', () => goToSlide(current - 1));
         next?.addEventListener('click', () => goToSlide(current + 1));
         thumbs.forEach((t, i) => t.addEventListener('click', () => goToSlide(i)));
-        dots.forEach((d, i) => d.addEventListener('click', () => goToSlide(i)));
 
-        // Clavier (← →) quand le focus est dans la galerie
         gallery.addEventListener('keydown', (e) => {
           if (e.key === 'ArrowLeft')  { e.preventDefault(); goToSlide(current - 1); }
           if (e.key === 'ArrowRight') { e.preventDefault(); goToSlide(current + 1); }
@@ -447,12 +504,10 @@ const breadcrumbSchema = {
 
       if (!variants.length || !selector || !buyBtn) return;
 
-      // Map slug d'image → index du slide (pour pouvoir switcher la galerie sur une variante)
+      // Map src d'image → index du slide (pour switcher la galerie sur une variante)
       const slideIndex = {};
       if (gallery) {
-        const slides = Array.from(gallery.querySelectorAll('[data-gallery-track] > div img'));
-        slides.forEach((img, i) => {
-          // on enregistre sous le src de base (sans srcset)
+        gallery.querySelectorAll('[data-gallery-slide]').forEach((img, i) => {
           slideIndex[img.getAttribute('src')] = i;
         });
       }
