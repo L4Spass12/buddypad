@@ -796,24 +796,33 @@ const breadcrumbSchema = {
   <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════ -->
   <script is:inline set:html={`
     (function() {
-      /* ─────── Sticky ATC bar : visible quand #buy-button sort du viewport ─────── */
+      /* ─────── Sticky ATC bar : visible quand #buy-button sort du viewport ───────
+         Init différée au 1er scroll utilisateur pour éviter une animation slide-up
+         pendant le load (qui empêche Lighthouse de committer le LCP → NO_LCP). */
       const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
       const stickyBar = document.getElementById('sticky-atc');
       if (mainCTA && stickyBar && 'IntersectionObserver' in window) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            const visible = entries[0].isIntersecting;
-            if (visible) {
-              stickyBar.classList.add('translate-y-full');
-              stickyBar.setAttribute('aria-hidden', 'true');
-            } else {
-              stickyBar.classList.remove('translate-y-full');
-              stickyBar.setAttribute('aria-hidden', 'false');
-            }
-          },
-          { rootMargin: '0px 0px -80px 0px', threshold: 0 }
-        );
-        io.observe(mainCTA);
+        const initSticky = () => {
+          const io = new IntersectionObserver(
+            (entries) => {
+              const visible = entries[0].isIntersecting;
+              if (visible) {
+                stickyBar.classList.add('translate-y-full');
+                stickyBar.setAttribute('aria-hidden', 'true');
+              } else {
+                stickyBar.classList.remove('translate-y-full');
+                stickyBar.setAttribute('aria-hidden', 'false');
+              }
+            },
+            { rootMargin: '0px 0px -80px 0px', threshold: 0 }
+          );
+          io.observe(mainCTA);
+        };
+        // Attend le premier scroll ou un délai de sécurité (LCP déjà committé)
+        const once = { once: true, passive: true };
+        window.addEventListener('scroll', initSticky, once);
+        window.addEventListener('touchstart', initSticky, once);
+        setTimeout(initSticky, 2500);
       }
 
       /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
