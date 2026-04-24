@@ -12,6 +12,13 @@ interface Props {
   noindex?: boolean;
   /** Additional JSON-LD block(s) to inject (object or array) */
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Preload hint pour le LCP : image(s) responsive prioritaires */
+  preloadImages?: Array<{
+    href: string;
+    media?: string;
+    imagesrcset?: string;
+    imagesizes?: string;
+  }>;
 }
 
 const SITE_NAME = siteConfig.name;
@@ -25,6 +32,7 @@ const {
   type = 'website',
   noindex = false,
   jsonLd,
+  preloadImages = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? SITE_URL);
@@ -66,6 +74,19 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#0A0A0F" />
     <meta name="format-detection" content="telephone=no" />
+
+    <!-- Preload des images LCP (hero) pour un meilleur First Paint -->
+    {preloadImages.map(img => (
+      <link
+        rel="preload"
+        as="image"
+        href={img.href}
+        media={img.media}
+        imagesrcset={img.imagesrcset}
+        imagesizes={img.imagesizes}
+        fetchpriority="high"
+      />
+    ))}
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -117,26 +117,36 @@ const faqSchema = {
   title={`${siteConfig.name} | La boutique référence du tapis de souris`}
   description="Tapis de souris XXL et personnalisés pour le gaming, le télétravail et la création : précision maximale, confort et designs uniques pour sublimer votre bureau."
   jsonLd={[websiteSchema, faqSchema]}
+  preloadImages={[
+    { href: '/images/home/hero-mobile-800w.webp', media: '(max-width: 767px)',
+      imagesrcset: '/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1200w',
+      imagesizes: '100vw' },
+    { href: '/images/home/hero-desktop.webp', media: '(min-width: 768px)',
+      imagesrcset: '/images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 1920w',
+      imagesizes: '100vw' },
+  ]}
 >
   <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-  <section class="hero-section relative overflow-hidden min-h-[70vh] md:min-h-[75vh] flex items-center">
-    <!-- Image de fond : <picture> avec source mobile/desktop séparées pour un LCP optimisé -->
-    <picture>
-      <source media="(max-width: 767px)" srcset="/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1200w" sizes="100vw" />
-      <img
-        src="/images/home/hero-desktop.webp"
-        srcset="/images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 1920w"
-        sizes="100vw"
-        alt="Tapis de souris BuddyPad dans un setup gaming élégant"
-        class="absolute inset-0 w-full h-full object-cover"
-        fetchpriority="high"
-        decoding="async"
-        width="1920"
-        height="1080"
-      />
-    </picture>
+  <section class="hero-section relative overflow-hidden min-h-[70vh] md:min-h-[75vh] flex items-center isolate">
+    <!-- Image de fond dans un wrapper sizé pour un LCP détection propre -->
+    <div class="absolute inset-0 w-full h-full -z-10">
+      <picture>
+        <source media="(max-width: 767px)" srcset="/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1200w" sizes="100vw" />
+        <img
+          src="/images/home/hero-desktop.webp"
+          srcset="/images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 1920w"
+          sizes="100vw"
+          alt="Tapis de souris BuddyPad dans un setup gaming élégant"
+          class="w-full h-full object-cover"
+          fetchpriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
+        />
+      </picture>
+    </div>
     <!-- Voile dark pour lisibilité du texte -->
-    <div class="absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/60 to-dark/30 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/60 to-dark/30 pointer-events-none -z-[5]"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 py-20 md:py-24 w-full flex flex-col justify-center">
       <span class="tag tag-status mb-6 self-start">Nouvelle collection 2026</span>
