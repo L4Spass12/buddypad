@@ -504,7 +504,7 @@ const breadcrumbSchema = {
     <!-- ═══════════════════════════ TOGGLES PRODUIT ═══════════════════════════
          3 accordéons en HTML natif (<details>). Google indexe parfaitement le
          contenu à l'intérieur (ouvert ou fermé), donc SEO-friendly. Zéro JS. -->
-    <section class="mt-16 max-w-3xl">
+    <section class="mt-16 max-w-3xl below-fold-defer">
       <!-- Description -->
       <details class="product-toggle group border-t border-white/[0.08] py-5">
         <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
@@ -700,11 +700,11 @@ const breadcrumbSchema = {
   </div>
 
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
-  <FabricationSection />
+  <div class="below-fold-defer"><FabricationSection /></div>
 
   <!-- ═══════════════════════════ VOUS AIMEREZ AUSSI (slider full-width) ═══════════════════════════ -->
   {related.length > 0 && (
-    <section class="relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden">
+    <section class="relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden below-fold-defer">
       <div class="relative max-w-7xl mx-auto px-6">
         <div class="flex items-end justify-between mb-6 md:mb-8 gap-4">
           <div>
@@ -789,6 +789,17 @@ const breadcrumbSchema = {
         /* Toggles produit : masque le marker natif des <summary> */
         .product-toggle summary::-webkit-details-marker { display: none; }
         .product-toggle summary::marker { content: ''; }
+
+        /* ─── content-visibility: auto ─────────────────────────────────
+           Le navigateur skip le rendu des sections hors viewport pour
+           économiser la layout/paint au load. Fix décisif pour Lighthouse
+           qui n'a plus à attendre que TOUTE la page soit peinte avant de
+           committer le LCP. `contain-intrinsic-size` réserve l'espace
+           pour éviter toute surprise de scroll. */
+        .below-fold-defer {
+          content-visibility: auto;
+          contain-intrinsic-size: auto 800px;
+        }
       </style>
     </section>
   )}
