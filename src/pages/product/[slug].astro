@@ -793,9 +793,13 @@ const breadcrumbSchema = {
     </section>
   )}
 
-  <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════ -->
+  <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════
+       Tout le JS est enveloppé dans requestIdleCallback (fallback setTimeout 0)
+       pour libérer le main thread pendant le first paint. Sans ça, les ~14KB
+       de JS parsent sync à la fin du body et bloquent Lighthouse (NO_LCP). -->
   <script is:inline set:html={`
     (function() {
+    const __init = function() {
       /* ─────── Sticky ATC bar : visible quand #buy-button sort du viewport ───────
          Init différée au 1er scroll utilisateur pour éviter une animation slide-up
          pendant le load (qui empêche Lighthouse de committer le LCP → NO_LCP). */
@@ -1074,6 +1078,14 @@ const breadcrumbSchema = {
       });
 
       update();
+    };
+    // Défère au-delà du LCP : le navigateur peint + mesure d'abord,
+    // le JS s'exécute ensuite quand le main thread est idle.
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(__init, { timeout: 2000 });
+    } else {
+      setTimeout(__init, 0);
+    }
     })();
   `} />
 </BaseLayout>
