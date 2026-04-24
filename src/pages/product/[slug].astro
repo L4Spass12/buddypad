@@ -22,15 +22,21 @@ const {
 } = product.data;
 
 const allProducts = await getCollection('products');
-// TOUS les produits de la même collection (hors produit courant) — slider horizontal
-const related = allProducts
-  .filter(p => p.slug !== product.slug && p.data.categories.some(c => categories.includes(c)));
 
-// Label de la collection (première catégorie) pour le titre de la section
-const relatedCategoryLabel = (categories?.[0] || '')
-  .replace(/^tapis-de-souris-/, '')
-  .replace(/-/g, ' ')
-  .replace(/^./, c => c.toUpperCase());
+// ─── Sélection catégorie pour "Vous aimerez aussi" ─────────────────────
+// Les catégories transversales (taille, feature) contiennent TOUS les produits
+// → on préfère une catégorie thématique. Priorité bas = déprioritisé.
+const GENERIC_CATEGORIES = new Set([
+  'tapis-de-souris-xxl',                          // taille
+  'tapis-souris-led-rgb',                         // feature
+  'tapis-souris-led-rgb-charge-sans-fil',         // feature
+]);
+const preferredCategory = (categories || []).find(c => !GENERIC_CATEGORIES.has(c))
+  ?? categories?.[0];
+
+// TOUS les produits de cette collection thématique (hors produit courant)
+const related = allProducts
+  .filter(p => p.slug !== product.slug && (p.data.categories || []).includes(preferredCategory));
 
 const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
   style: 'currency', currency: siteConfig.shop.currency,
@@ -121,9 +127,10 @@ const breadcrumbSchema = {
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
       <!-- ═══════════════════════════ GALERIE ═══════════════════════════ -->
       {(() => {
-        // Liste déduplicée : image principale + gallery + images de variantes
-        const variantImages = (variations || []).map(v => v.image).filter(Boolean);
-        const slides = Array.from(new Set([image, ...(gallery || []), ...variantImages]));
+        // Galerie épurée : UNIQUEMENT image principale + gallery définie dans le frontmatter.
+        // Les images de variations ne sont PAS ajoutées (design épuré).
+        // Au changement de variante, le slide principal sera swappé directement via JS.
+        const slides = Array.from(new Set([image, ...(gallery || [])]));
         return (
         <div class="product-gallery" data-gallery data-slide-count={slides.length}>
           <!-- Image principale : UNE SEULE visible à la fois. Les autres sont dans le DOM
@@ -342,7 +349,7 @@ const breadcrumbSchema = {
             <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">Collection</span>
             <h2 class="text-xl md:text-2xl font-medium tracking-tight text-cream">Vous aimerez aussi</h2>
           </div>
-          <a href={`/product-category/${categories?.[0]}`} class="inline-flex items-center gap-1.5 text-xs md:text-sm text-n-400 hover:text-cream transition-colors whitespace-nowrap">
+          <a href={`/product-category/${preferredCategory}`} class="inline-flex items-center gap-1.5 text-xs md:text-sm text-n-400 hover:text-cream transition-colors whitespace-nowrap">
             Voir tout ({related.length})
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -504,13 +511,11 @@ const breadcrumbSchema = {
 
       if (!variants.length || !selector || !buyBtn) return;
 
-      // Map src d'image → index du slide (pour switcher la galerie sur une variante)
-      const slideIndex = {};
-      if (gallery) {
-        gallery.querySelectorAll('[data-gallery-slide]').forEach((img, i) => {
-          slideIndex[img.getAttribute('src')] = i;
-        });
-      }
+      // Slide 0 = image principale (on swap son src à chaque changement de variante).
+      // La thumb 0 correspondante est aussi mise à jour.
+      const mainSlide = gallery ? gallery.querySelector('[data-gallery-slide="0"]') : null;
+      const mainThumb = gallery ? gallery.querySelector('[data-gallery-thumb="0"] img') : null;
+      const originalMainSrc = mainSlide ? mainSlide.getAttribute('src') : null;
 
       // Initial selection = premier bouton actif de chaque attribut
       const selected = {};
@@ -574,9 +579,17 @@ const breadcrumbSchema = {
           }
         }
 
-        // IMAGE : switch la galerie sur l'image de la variante (si elle est présente dans la galerie)
-        if (v.image && slideIndex[v.image] != null) {
-          goToSlide(slideIndex[v.image]);
+        // IMAGE : swap le src du slide principal + thumb 0 sur l'image de la variante
+        // (ou revient à l'image originale si la variante n'a pas d'image dédiée)
+        if (mainSlide) {
+          const nextSrc = v.image || originalMainSrc;
+          if (nextSrc && mainSlide.getAttribute('src') !== nextSrc) {
+            mainSlide.setAttribute('src', nextSrc);
+            mainSlide.removeAttribute('srcset');
+            if (mainThumb) mainThumb.setAttribute('src', nextSrc);
+          }
+          // Toujours ramener l'affichage sur le slide 0 (qui est maintenant l'image variante)
+          goToSlide(0);
         }
 
         // Bouton Atelier
