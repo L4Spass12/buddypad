@@ -589,52 +589,83 @@ const breadcrumbSchema = {
     class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
     aria-hidden="true"
   >
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5 flex items-center gap-3 md:gap-4">
-      <!-- Vignette (desktop uniquement) -->
-      <img
-        src={image}
-        alt=""
-        class="hidden md:block w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
-        loading="lazy"
-        decoding="async"
-      />
-      <!-- Nom + taille (desktop) / Juste taille (mobile) -->
-      <div class="flex-1 min-w-0">
-        <p class="hidden md:block text-sm font-medium text-cream truncate tracking-tight">{name}</p>
-        <p class="text-xs text-n-400 font-light truncate">
-          <span id="sticky-atc-size" class="text-cream font-medium">—</span>
-          <span class="hidden md:inline"> · <span id="sticky-atc-price">{formatPrice(price)}</span></span>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
+      <!-- Mobile : label taille au-dessus + bouton pleine largeur -->
+      <div class="md:hidden">
+        <p class="text-[11px] text-n-500 font-light mb-1.5 text-center">
+          Taille : <span id="sticky-atc-size-mobile" class="text-cream font-medium">—</span>
         </p>
+        {siteConfig.shop?.provider === 'atelier' ? (
+          <button
+            id="sticky-atc-btn"
+            class="buy-button btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={Math.round(price * 100)}
+            data-item-image={image}
+          >
+            Ajouter au panier — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span>
+          </button>
+        ) : (
+          <button
+            id="sticky-atc-btn"
+            class="snipcart-add-item btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={price.toFixed(2)}
+            data-item-url={`/product/${product.slug}/`}
+            data-item-image={image}
+          >
+            Ajouter au panier — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span>
+          </button>
+        )}
       </div>
-      <!-- Bouton -->
-      {siteConfig.shop?.provider === 'atelier' ? (
-        <button
-          id="sticky-atc-btn"
-          class="buy-button btn-primary text-xs md:text-sm px-5 md:px-6 py-2.5 md:py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
-          disabled={!inStock}
-          data-item-id={sku ?? product.slug}
-          data-item-name={name}
-          data-item-price={Math.round(price * 100)}
-          data-item-image={image}
-        >
-          <span class="md:hidden">Ajouter — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
-          <span class="hidden md:inline">Ajouter au panier</span>
-        </button>
-      ) : (
-        <button
-          id="sticky-atc-btn"
-          class="snipcart-add-item btn-primary text-xs md:text-sm px-5 md:px-6 py-2.5 md:py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
-          disabled={!inStock}
-          data-item-id={sku ?? product.slug}
-          data-item-name={name}
-          data-item-price={price.toFixed(2)}
-          data-item-url={`/product/${product.slug}/`}
-          data-item-image={image}
-        >
-          <span class="md:hidden">Ajouter — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
-          <span class="hidden md:inline">Ajouter au panier</span>
-        </button>
-      )}
+
+      <!-- Desktop : vignette + nom + taille · prix + bouton à droite -->
+      <div class="hidden md:flex items-center gap-4">
+        <img
+          src={image}
+          alt=""
+          class="w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-cream truncate tracking-tight">{name}</p>
+          <p class="text-xs text-n-400 font-light truncate">
+            <span id="sticky-atc-size" class="text-cream font-medium">—</span>
+            · <span id="sticky-atc-price">{formatPrice(price)}</span>
+          </p>
+        </div>
+        {siteConfig.shop?.provider === 'atelier' ? (
+          <button
+            id="sticky-atc-btn-desk"
+            class="buy-button btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={Math.round(price * 100)}
+            data-item-image={image}
+          >
+            Ajouter au panier
+          </button>
+        ) : (
+          <button
+            id="sticky-atc-btn-desk"
+            class="snipcart-add-item btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={price.toFixed(2)}
+            data-item-url={`/product/${product.slug}/`}
+            data-item-image={image}
+          >
+            Ajouter au panier
+          </button>
+        )}
+      </div>
     </div>
   </div>
 
@@ -837,9 +868,12 @@ const breadcrumbSchema = {
       const stockEl  = document.getElementById('product-stock');
       const selector = document.getElementById('variant-selector');
       const currency = '${siteConfig.shop.currency}';
-      // Sticky ATC bar
-      const stickyBtn         = document.getElementById('sticky-atc-btn');
-      const stickySize        = document.getElementById('sticky-atc-size');
+      // Sticky ATC bar (un bouton par breakpoint : mobile + desktop)
+      const stickyBtnMobile   = document.getElementById('sticky-atc-btn');
+      const stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
+      const stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
+      const stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
+      const stickySizeDesk    = document.getElementById('sticky-atc-size');
       const stickyPriceDesk   = document.getElementById('sticky-atc-price');
       const stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
 
@@ -941,24 +975,21 @@ const breadcrumbSchema = {
         if (v.image) buyBtn.dataset.itemImage = v.image;
         buyBtn.textContent = v.inStock ? 'Acheter — ' + fmtPrice(v.price) : 'Indisponible';
 
-        // Sync sticky ATC bar
-        if (stickyBtn) {
-          stickyBtn.disabled = !v.inStock;
-          stickyBtn.dataset.itemId = v.id;
-          stickyBtn.dataset.itemPrice = Math.round(v.price * 100);
-          stickyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
-          if (v.image) stickyBtn.dataset.itemImage = v.image;
-        }
-        // Label taille (mini-preview) — prend la valeur de l'attribut Dimensions si présent
-        if (stickySize) {
-          const dimPill = selector.querySelector('[data-variant-type="size"].border-cream');
-          if (dimPill) {
-            const label = dimPill.querySelector('.text-cream');
-            stickySize.textContent = label ? label.textContent.trim() : variantDesc;
-          } else {
-            stickySize.textContent = variantDesc;
-          }
-        }
+        // Sync sticky ATC bar (les 2 boutons mobile + desktop)
+        stickyBtns.forEach(b => {
+          b.disabled = !v.inStock;
+          b.dataset.itemId = v.id;
+          b.dataset.itemPrice = Math.round(v.price * 100);
+          b.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
+          if (v.image) b.dataset.itemImage = v.image;
+        });
+        // Label taille : prend le label du variant "size" sélectionné si présent
+        const dimPill = selector.querySelector('[data-variant-type="size"].border-cream');
+        const sizeLabel = dimPill
+          ? (dimPill.querySelector('.text-cream')?.textContent.trim() || variantDesc)
+          : variantDesc;
+        if (stickySizeMobile) stickySizeMobile.textContent = sizeLabel;
+        if (stickySizeDesk)   stickySizeDesk.textContent   = sizeLabel;
         if (stickyPriceDesk)   stickyPriceDesk.textContent   = fmtPrice(v.price);
         if (stickyPriceMobile) stickyPriceMobile.textContent = fmtPrice(v.price);
       }
