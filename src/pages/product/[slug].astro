@@ -133,24 +133,31 @@ const breadcrumbSchema = {
         const slides = Array.from(new Set([image, ...(gallery || [])]));
         return (
         <div class="product-gallery" data-gallery data-slide-count={slides.length}>
-          <!-- Image principale : UNE SEULE visible à la fois. Les autres sont dans le DOM
-               (pour l'indexation + preload rapide) mais masquées via `.hidden`. -->
+          <!-- Viewport : scroll-snap horizontal. Sur mobile = swipe natif,
+               sur desktop = flèches prev/next. Une seule image visible à la fois. -->
           <div class="relative rounded-2xl overflow-hidden bg-panel border border-white/[0.05] aspect-[4/3] group">
-            {slides.map((src, i) => (
-              <img
-                data-gallery-slide={i}
-                src={src}
-                srcset={unsplashSrcset(src)}
-                sizes="(max-width: 1024px) 100vw, 560px"
-                alt={i === 0 ? (imageAlt ?? name) : `${name} — image ${i + 1}`}
-                class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${i === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-                width="1200"
-                height="900"
-                fetchpriority={i === 0 ? 'high' : 'auto'}
-                loading={i === 0 ? 'eager' : 'lazy'}
-                decoding="async"
-              />
-            ))}
+            <div
+              class="gallery-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-full"
+              data-gallery-track
+            >
+              {slides.map((src, i) => (
+                <div class="flex-none w-full h-full snap-start snap-always">
+                  <img
+                    data-gallery-slide={i}
+                    src={src}
+                    srcset={unsplashSrcset(src)}
+                    sizes="(max-width: 1024px) 100vw, 560px"
+                    alt={i === 0 ? (imageAlt ?? name) : `${name} — image ${i + 1}`}
+                    class="w-full h-full object-cover"
+                    width="1200"
+                    height="900"
+                    fetchpriority={i === 0 ? 'high' : 'auto'}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
+                </div>
+              ))}
+            </div>
 
             <!-- Flèches desktop uniquement (apparaissent au hover) -->
             {slides.length > 1 && (
@@ -175,9 +182,9 @@ const breadcrumbSchema = {
             )}
           </div>
 
-          <!-- Thumbs : navigation principale sur mobile ET desktop -->
+          <!-- Thumbs : DESKTOP uniquement. Sur mobile → swipe natif. -->
           {slides.length > 1 && (
-            <div class="grid grid-cols-5 gap-2 mt-3">
+            <div class="hidden md:grid grid-cols-5 gap-2 mt-3">
               {slides.slice(0, 10).map((g, i) => (
                 <button
                   type="button"
@@ -421,6 +428,9 @@ const breadcrumbSchema = {
       <style>
         .product-slider .slider-track { scrollbar-width: none; -ms-overflow-style: none; }
         .product-slider .slider-track::-webkit-scrollbar { display: none; }
+        /* Galerie : masque scrollbar horizontale sur le track */
+        .gallery-track { scrollbar-width: none; -ms-overflow-style: none; }
+        .gallery-track::-webkit-scrollbar { display: none; }
       </style>
     </section>
   )}
@@ -452,28 +462,19 @@ const breadcrumbSchema = {
         requestAnimationFrame(upd);
       });
 
-      /* ─────── Galerie (fade-switch sur thumb/flèches/clavier) ─────── */
+      /* ─────── Galerie (scroll-snap swipe + flèches desktop + thumbs desktop) ─────── */
       const gallery = document.querySelector('[data-gallery]');
-      let goToSlide = () => {}; // exposé pour le sélecteur de variantes
+      let goToSlide = () => {};
 
       if (gallery) {
-        const slides = Array.from(gallery.querySelectorAll('[data-gallery-slide]'));
+        const track  = gallery.querySelector('[data-gallery-track]');
         const thumbs = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
         const prev   = gallery.querySelector('[data-gallery-prev]');
         const next   = gallery.querySelector('[data-gallery-next]');
-        const slideCount = slides.length;
+        const slideCount = parseInt(gallery.dataset.slideCount || '0', 10);
         let current = 0;
 
         function updateUI() {
-          slides.forEach((img, i) => {
-            if (i === current) {
-              img.classList.remove('opacity-0', 'pointer-events-none');
-              img.classList.add('opacity-100');
-            } else {
-              img.classList.add('opacity-0', 'pointer-events-none');
-              img.classList.remove('opacity-100');
-            }
-          });
           thumbs.forEach((t, i) => {
             t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ' + (i === current ? 'border-cream' : 'border-white/[0.08] hover:border-white/30');
           });
@@ -482,10 +483,21 @@ const breadcrumbSchema = {
         }
 
         goToSlide = (idx) => {
-          if (idx < 0 || idx >= slideCount) return;
-          current = idx;
-          updateUI();
+          if (idx < 0 || idx >= slideCount || !track) return;
+          track.scrollTo({ left: track.clientWidth * idx, behavior: 'smooth' });
         };
+
+        // Détecte le slide courant via scroll (swipe mobile + scrollTo)
+        if (track) {
+          let rafId = null;
+          track.addEventListener('scroll', () => {
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(() => {
+              const idx = Math.round(track.scrollLeft / track.clientWidth);
+              if (idx !== current) { current = idx; updateUI(); }
+            });
+          }, { passive: true });
+        }
 
         prev?.addEventListener('click', () => goToSlide(current - 1));
         next?.addEventListener('click', () => goToSlide(current + 1));
