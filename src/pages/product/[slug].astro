@@ -76,13 +76,13 @@ const seoTitle = (name.length + brandSuffix.length) <= 60
 
 // Meta description : combine shortDesc tronquée + catégorie + prix pour garantir
 // l'unicité même si shortDescription est dupliquée entre produits.
-// Format : "<nom>. <shortDesc courte>. À partir de X€. Livraison dès 49€."
+// Format : "<nom>. <shortDesc courte>. À partir de X€. Livraison sécurisée."
 const priceStart = priceRange?.min ?? price;
 const catLabel = categories?.[0]?.replace(/^tapis-de-souris-/, '').replace(/-/g, ' ') ?? '';
 const truncated = shortDescription.length > 70
   ? shortDescription.slice(0, 70).replace(/\s+\S*$/, '') + '…'
   : shortDescription;
-const rawDesc = `${name}${catLabel ? ` ${catLabel}` : ''}. ${truncated} Dès ${priceStart}€, livraison offerte dès 49€.`;
+const rawDesc = `${name}${catLabel ? ` ${catLabel}` : ''}. ${truncated} Dès ${priceStart}€, livraison sécurisée.`;
 const seoDescription = rawDesc.length > 160
   ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '') + '…'
   : rawDesc;
@@ -484,8 +484,8 @@ const breadcrumbSchema = {
               <Icon name="shield-check" size={16} strokeWidth={1.5} />
             </div>
             <div>
-              <p class="text-xs font-medium text-cream tracking-tight">Livraison offerte</p>
-              <p class="text-xs text-n-500 font-light">dès 49€ d'achat</p>
+              <p class="text-xs font-medium text-cream tracking-tight">Livraison sécurisée</p>
+              <p class="text-xs text-n-500 font-light">colis suivi & assuré</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
@@ -559,7 +559,7 @@ const breadcrumbSchema = {
           </div>
           <div>
             <h3 class="text-cream font-medium mb-1.5">Frais de livraison</h3>
-            <p><strong class="text-cream">Livraison offerte dès 49€ d'achat</strong> en France métropolitaine. En dessous, les frais sont calculés au checkout selon le transporteur sélectionné.</p>
+            <p><strong class="text-cream">Livraison sécurisée</strong> : tous les colis sont expédiés avec numéro de suivi et assurance transporteur. Les frais sont calculés au checkout selon le transporteur sélectionné et la destination.</p>
           </div>
           <div>
             <h3 class="text-cream font-medium mb-1.5">Retours & remboursement</h3>
