@@ -580,6 +580,64 @@ const breadcrumbSchema = {
 
   </div>
 
+  <!-- ═══════════════════════════ STICKY ATC BAR (mobile + desktop) ═══════════════════════════
+       Apparaît quand le CTA principal (#buy-button) sort du viewport.
+       Mobile : label taille + bouton pleine largeur avec prix.
+       Desktop : vignette + nom + taille + prix + bouton. -->
+  <div
+    id="sticky-atc"
+    class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
+    aria-hidden="true"
+  >
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5 flex items-center gap-3 md:gap-4">
+      <!-- Vignette (desktop uniquement) -->
+      <img
+        src={image}
+        alt=""
+        class="hidden md:block w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
+        loading="lazy"
+        decoding="async"
+      />
+      <!-- Nom + taille (desktop) / Juste taille (mobile) -->
+      <div class="flex-1 min-w-0">
+        <p class="hidden md:block text-sm font-medium text-cream truncate tracking-tight">{name}</p>
+        <p class="text-xs text-n-400 font-light truncate">
+          <span id="sticky-atc-size" class="text-cream font-medium">—</span>
+          <span class="hidden md:inline"> · <span id="sticky-atc-price">{formatPrice(price)}</span></span>
+        </p>
+      </div>
+      <!-- Bouton -->
+      {siteConfig.shop?.provider === 'atelier' ? (
+        <button
+          id="sticky-atc-btn"
+          class="buy-button btn-primary text-xs md:text-sm px-5 md:px-6 py-2.5 md:py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+          disabled={!inStock}
+          data-item-id={sku ?? product.slug}
+          data-item-name={name}
+          data-item-price={Math.round(price * 100)}
+          data-item-image={image}
+        >
+          <span class="md:hidden">Ajouter — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+          <span class="hidden md:inline">Ajouter au panier</span>
+        </button>
+      ) : (
+        <button
+          id="sticky-atc-btn"
+          class="snipcart-add-item btn-primary text-xs md:text-sm px-5 md:px-6 py-2.5 md:py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+          disabled={!inStock}
+          data-item-id={sku ?? product.slug}
+          data-item-name={name}
+          data-item-price={price.toFixed(2)}
+          data-item-url={`/product/${product.slug}/`}
+          data-item-image={image}
+        >
+          <span class="md:hidden">Ajouter — <span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+          <span class="hidden md:inline">Ajouter au panier</span>
+        </button>
+      )}
+    </div>
+  </div>
+
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
   <FabricationSection />
 
@@ -677,6 +735,26 @@ const breadcrumbSchema = {
   <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════ -->
   <script is:inline set:html={`
     (function() {
+      /* ─────── Sticky ATC bar : visible quand #buy-button sort du viewport ─────── */
+      const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
+      const stickyBar = document.getElementById('sticky-atc');
+      if (mainCTA && stickyBar && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            const visible = entries[0].isIntersecting;
+            if (visible) {
+              stickyBar.classList.add('translate-y-full');
+              stickyBar.setAttribute('aria-hidden', 'true');
+            } else {
+              stickyBar.classList.remove('translate-y-full');
+              stickyBar.setAttribute('aria-hidden', 'false');
+            }
+          },
+          { rootMargin: '0px 0px -80px 0px', threshold: 0 }
+        );
+        io.observe(mainCTA);
+      }
+
       /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
       document.querySelectorAll('[data-slider]').forEach(slider => {
         const track = slider.querySelector('.slider-track');
@@ -759,6 +837,11 @@ const breadcrumbSchema = {
       const stockEl  = document.getElementById('product-stock');
       const selector = document.getElementById('variant-selector');
       const currency = '${siteConfig.shop.currency}';
+      // Sticky ATC bar
+      const stickyBtn         = document.getElementById('sticky-atc-btn');
+      const stickySize        = document.getElementById('sticky-atc-size');
+      const stickyPriceDesk   = document.getElementById('sticky-atc-price');
+      const stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
 
       if (!variants.length || !selector || !buyBtn) return;
 
@@ -857,6 +940,27 @@ const breadcrumbSchema = {
         buyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
         if (v.image) buyBtn.dataset.itemImage = v.image;
         buyBtn.textContent = v.inStock ? 'Acheter — ' + fmtPrice(v.price) : 'Indisponible';
+
+        // Sync sticky ATC bar
+        if (stickyBtn) {
+          stickyBtn.disabled = !v.inStock;
+          stickyBtn.dataset.itemId = v.id;
+          stickyBtn.dataset.itemPrice = Math.round(v.price * 100);
+          stickyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
+          if (v.image) stickyBtn.dataset.itemImage = v.image;
+        }
+        // Label taille (mini-preview) — prend la valeur de l'attribut Dimensions si présent
+        if (stickySize) {
+          const dimPill = selector.querySelector('[data-variant-type="size"].border-cream');
+          if (dimPill) {
+            const label = dimPill.querySelector('.text-cream');
+            stickySize.textContent = label ? label.textContent.trim() : variantDesc;
+          } else {
+            stickySize.textContent = variantDesc;
+          }
+        }
+        if (stickyPriceDesk)   stickyPriceDesk.textContent   = fmtPrice(v.price);
+        if (stickyPriceMobile) stickyPriceMobile.textContent = fmtPrice(v.price);
       }
 
       selector.querySelectorAll('[data-variant-option]').forEach(btn => {
