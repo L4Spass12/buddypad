@@ -1,5 +1,5 @@
 ---
-title: "Tapis de Souris LED / RGB — Notre sélection 2026"
+title: "Tapis de Souris LED / RGB | BuddyPad"
 metaDescription: "Nos tapis de souris LED et RGB illuminent votre setup gaming avec des effets lumineux spectaculaires. Rétroéclairage personnalisable, surface de glisse optimale"
 intro: "Nos tapis de souris LED et RGB illuminent votre setup gaming avec des effets lumineux spectaculaires. Rétroéclairage personnalisable, surface de glisse optimale et design futuriste pour un bureau gaming qui brille aussi bien qu'il performe."
 guideHeading: "Le tapis de souris LED / RGB en détail"

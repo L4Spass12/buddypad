@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Page 404 personnalisée
+ErrorDocument 404 /404.html
+
 # ─── Canonicalisation URL (anti-duplicate content SEO) ────────────────────
 # 1. Force HTTPS
 RewriteCond %{HTTPS} off

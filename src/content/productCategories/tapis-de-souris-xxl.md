@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris XXL — Notre sélection 2026"
+title: "Tapis de souris XXL | BuddyPad"
 metaDescription: "Découvrez nos tapis de souris XXL, conçus pour offrir une surface de glisse maximale et couvrir tout votre bureau. Idéaux pour le gaming intensif comme pour le "
 intro: "Découvrez nos tapis de souris XXL, conçus pour offrir une surface de glisse maximale et couvrir tout votre bureau. Idéaux pour le gaming intensif comme pour le travail, nos modèles XXL allient précision, confort et durabilité. Disponibles en nombreux designs, ils s'adaptent à tous les setups."
 guideHeading: "Pourquoi choisir un tapis de souris XXL"

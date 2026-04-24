@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris Minimaliste — Notre sélection 2026"
+title: "Tapis de souris Minimaliste | BuddyPad"
 metaDescription: "Nos tapis de souris minimalistes allient design épuré et performance. Coloris sobres, lignes nettes et surface optimisée pour une précision maximale — parfaits "
 intro: "Nos tapis de souris minimalistes allient design épuré et performance. Coloris sobres, lignes nettes et surface optimisée pour une précision maximale — parfaits pour un bureau élégant et professionnel. Un accessoire discret qui fait toute la différence."
 guideHeading: "Tout savoir sur les tapis de souris minimalistes"

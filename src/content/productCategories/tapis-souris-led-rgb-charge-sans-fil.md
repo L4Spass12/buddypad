@@ -1,5 +1,5 @@
 ---
-title: "Tapis de Souris LED / RGB & Charge Sans Fil — Notre sélection 2026"
+title: "Tapis de Souris LED / RGB & Charge Sans Fil | BuddyPad"
 metaDescription: "Le combo ultime : tapis de souris LED RGB avec recharge sans fil intégrée. Illuminez votre setup et rechargez vos appareils compatibles Qi directement sur votre"
 intro: "Le combo ultime : tapis de souris LED RGB avec recharge sans fil intégrée. Illuminez votre setup et rechargez vos appareils compatibles Qi directement sur votre bureau. Design gaming premium, éclairage personnalisable et surface de précision en un seul accessoire."
 guideHeading: "Tapis de souris LED RGB avec charge sans fil"

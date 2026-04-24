@@ -35,6 +35,27 @@ const imageUrl = new URL(image, SITE_URL).toString();
 const hasVariations = Array.isArray(variations) && variations.length > 0;
 const inStock = hasVariations ? variations.some(v => v.inStock) : (stock == null || stock > 0);
 
+// ─── SEO : titre court + meta description unique par produit ──────────
+// Titre : max ~60 chars. "Nom du produit | BuddyPad" si ça rentre,
+// sinon juste "Nom du produit" (sans le nom du site).
+const brandSuffix = ` | ${siteConfig.name}`;
+const seoTitle = (name.length + brandSuffix.length) <= 60
+  ? `${name}${brandSuffix}`
+  : name;
+
+// Meta description : combine shortDesc tronquée + catégorie + prix pour garantir
+// l'unicité même si shortDescription est dupliquée entre produits.
+// Format : "<nom>. <shortDesc courte>. À partir de X€. Livraison dès 49€."
+const priceStart = priceRange?.min ?? price;
+const catLabel = categories?.[0]?.replace(/^tapis-de-souris-/, '').replace(/-/g, ' ') ?? '';
+const truncated = shortDescription.length > 70
+  ? shortDescription.slice(0, 70).replace(/\s+\S*$/, '') + '…'
+  : shortDescription;
+const rawDesc = `${name}${catLabel ? ` ${catLabel}` : ''}. ${truncated} Dès ${priceStart}€, livraison offerte dès 49€.`;
+const seoDescription = rawDesc.length > 160
+  ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '') + '…'
+  : rawDesc;
+
 // Serialize variations + attributes pour le JS client (sélecteur de variantes)
 const variantsJson = JSON.stringify(variations || []);
 
@@ -75,8 +96,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`${name} – Boutique ${siteConfig.name}`}
-  description={shortDescription}
+  title={seoTitle}
+  description={seoDescription}
   image={image}
   jsonLd={[productSchema, breadcrumbSchema]}
 >

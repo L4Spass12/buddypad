@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris Buddypad Adventure — Notre sélection 2026"
+title: "Tapis de souris Buddypad Adventure | BuddyPad"
 metaDescription: "Notre collection BuddyPad Adventure vous emmène en voyage à travers des designs inspirés de la nature, du voyage et de l'aventure. Tapis de souris XXL aux illus"
 intro: "Notre collection BuddyPad Adventure vous emmène en voyage à travers des designs inspirés de la nature, du voyage et de l'aventure. Tapis de souris XXL aux illustrations évocatrices, alliant précision gaming et esprit d'exploration pour un setup hors du commun."
 guideHeading: "L'univers des tapis de souris Buddypad Adventure"

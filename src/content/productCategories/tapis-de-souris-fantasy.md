@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris Fantasy — Notre sélection 2026"
+title: "Tapis de souris Fantasy | BuddyPad"
 metaDescription: "Explorez notre collection de tapis de souris Fantasy aux illustrations féeriques, mystiques et fantastiques. Dragons, elfes, paysages enchantés : donnez vie à v"
 intro: "Explorez notre collection de tapis de souris Fantasy aux illustrations féeriques, mystiques et fantastiques. Dragons, elfes, paysages enchantés : donnez vie à votre imagination sur votre bureau avec des designs uniques en format XXL, alliant esthétique et haute précision de glisse."
 guideHeading: "Choisir un tapis de souris fantasy"

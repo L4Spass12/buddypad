@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris Girl Boss — Notre sélection 2026"
+title: "Tapis de souris Girl Boss | BuddyPad"
 metaDescription: "La collection Girl Boss : des tapis de souris pensés pour les femmes ambitieuses et créatives. Citations motivantes, esthétique moderne et couleurs affirmées po"
 intro: "La collection Girl Boss : des tapis de souris pensés pour les femmes ambitieuses et créatives. Citations motivantes, esthétique moderne et couleurs affirmées pour un bureau qui vous ressemble. Format XXL disponible pour un confort de travail optimal."
 guideHeading: "Le tapis de souris Girl Boss en détail"

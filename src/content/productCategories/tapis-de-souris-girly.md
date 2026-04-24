@@ -1,5 +1,5 @@
 ---
-title: "Tapis de souris Girly rose — Notre sélection 2026"
+title: "Tapis de souris Girly rose | BuddyPad"
 metaDescription: "Nos tapis de souris girly en rose sont doux, élégants et ultra-féminins. Motifs floraux, pastels et designs tendance pour un setup mignon et stylé. Disponibles "
 intro: "Nos tapis de souris girly en rose sont doux, élégants et ultra-féminins. Motifs floraux, pastels et designs tendance pour un setup mignon et stylé. Disponibles en format XXL avec surface précise et base antidérapante pour un confort au quotidien."
 guideHeading: "Choisir un tapis de souris girly rose"
