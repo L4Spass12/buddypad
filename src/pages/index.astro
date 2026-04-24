@@ -118,11 +118,8 @@ const faqSchema = {
   description="Tapis de souris XXL et personnalisés pour le gaming, le télétravail et la création : précision maximale, confort et designs uniques pour sublimer votre bureau."
   jsonLd={[websiteSchema, faqSchema]}
   preloadImages={[
-    { href: '/images/home/hero-mobile-800w.webp', media: '(max-width: 767px)',
-      imagesrcset: '/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1080w',
-      imagesizes: '100vw' },
-    { href: '/images/home/hero-desktop.webp', media: '(min-width: 768px)',
-      imagesrcset: '/images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 2560w',
+    { href: '/images/home/hero-desktop-800w.webp',
+      imagesrcset: '/images/home/hero-mobile.webp 1080w, /images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 2560w',
       imagesizes: '100vw' },
   ]}
 >
@@ -131,27 +128,19 @@ const faqSchema = {
        - L'image hero est un <img> direct de la section (pas de wrapper z-indexé)
        - Le voile sombre est appliqué via `::after` en CSS pur (pas de div overlay) -->
   <section class="hero-section relative overflow-hidden min-h-[70vh] md:min-h-[75vh] flex items-center">
-    <picture class="hero-bg">
-      <source
-        media="(max-width: 767px)"
-        srcset="/images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 1080w"
-        sizes="100vw"
-        width="1080"
-        height="700"
-      />
-      <img
-        src="/images/home/hero-desktop.webp"
-        srcset="/images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 2560w"
-        sizes="100vw"
-        alt="Tapis de souris BuddyPad dans un setup gaming élégant"
-        class="hero-img"
-        fetchpriority="high"
-        loading="eager"
-        decoding="sync"
-        width="2560"
-        height="1086"
-      />
-    </picture>
+    <!-- Un seul <img> avec srcset (plus simple, LCP-friendly) -->
+    <img
+      src="/images/home/hero-desktop.webp"
+      srcset="/images/home/hero-mobile.webp 1080w, /images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 2560w"
+      sizes="100vw"
+      alt="Tapis de souris BuddyPad dans un setup gaming élégant"
+      class="hero-img hero-bg"
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+      width="2560"
+      height="1086"
+    />
 
     <div class="relative max-w-7xl mx-auto px-6 py-20 md:py-24 w-full flex flex-col justify-center">
       <span class="tag tag-status mb-6 self-start">Nouvelle collection 2026</span>
@@ -346,17 +335,15 @@ const faqSchema = {
        Le voile sombre est un ::after en CSS (pas un div overlay dans le DOM
        → Lighthouse voit l'image comme non couverte). */
     .hero-section { isolation: isolate; }
-    .hero-bg {
+    /* Image hero : absolute fill de la section, z-index 0 */
+    .hero-img {
       position: absolute;
       inset: 0;
-      display: block;
-      z-index: 0;
-    }
-    .hero-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      z-index: 0;
     }
     /* Voile sombre en ::after : z-index 1 pour passer SOUS le contenu texte */
     .hero-section::after {
