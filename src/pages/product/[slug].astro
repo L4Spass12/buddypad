@@ -616,7 +616,7 @@ const breadcrumbSchema = {
        Desktop : vignette + nom + taille + prix + bouton. -->
   <div
     id="sticky-atc"
-    class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
+    class="fixed bottom-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08] sticky-atc-hidden"
     aria-hidden="true"
   >
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
@@ -800,6 +800,22 @@ const breadcrumbSchema = {
           content-visibility: auto;
           contain-intrinsic-size: auto 800px;
         }
+
+        /* ─── Sticky ATC bar : display:none par défaut ────────────────
+           Évite tout impact LCP sur mobile (où le buy-button est sous
+           le fold). Le JS retire la classe sticky-atc-hidden après
+           window load. Pas de transition au premier show pour ne pas
+           interférer avec d'éventuels mesures résiduelles. */
+        .sticky-atc-hidden {
+          display: none !important;
+        }
+        #sticky-atc {
+          transform: translateY(100%);
+          transition: transform 300ms ease-out;
+        }
+        #sticky-atc.sticky-atc-visible {
+          transform: translateY(0);
+        }
       </style>
     </section>
   )}
@@ -811,21 +827,24 @@ const breadcrumbSchema = {
   <script is:inline set:html={`
     (function() {
     const __init = function() {
-      /* ─────── Sticky ATC bar : visible quand #buy-button sort du viewport ───────
-         Init différée au 1er scroll utilisateur pour éviter une animation slide-up
-         pendant le load (qui empêche Lighthouse de committer le LCP → NO_LCP). */
+      /* ─────── Sticky ATC bar : init APRÈS window.load + 1er scroll ───────
+         La barre est display:none par défaut (ne participe pas au rendu LCP).
+         On la "réveille" uniquement quand l'utilisateur scrolle, et toujours
+         après window.load (= toutes ressources chargées, LCP committé). */
       const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
       const stickyBar = document.getElementById('sticky-atc');
       if (mainCTA && stickyBar && 'IntersectionObserver' in window) {
         const initSticky = () => {
+          // Active le rendu de la sticky bar (display:none → visible offscreen)
+          stickyBar.classList.remove('sticky-atc-hidden');
           const io = new IntersectionObserver(
             (entries) => {
               const visible = entries[0].isIntersecting;
               if (visible) {
-                stickyBar.classList.add('translate-y-full');
+                stickyBar.classList.remove('sticky-atc-visible');
                 stickyBar.setAttribute('aria-hidden', 'true');
               } else {
-                stickyBar.classList.remove('translate-y-full');
+                stickyBar.classList.add('sticky-atc-visible');
                 stickyBar.setAttribute('aria-hidden', 'false');
               }
             },
@@ -833,11 +852,17 @@ const breadcrumbSchema = {
           );
           io.observe(mainCTA);
         };
-        // Attend le premier scroll ou un délai de sécurité (LCP déjà committé)
-        const once = { once: true, passive: true };
-        window.addEventListener('scroll', initSticky, once);
-        window.addEventListener('touchstart', initSticky, once);
-        setTimeout(initSticky, 2500);
+        // Attend window.load (= LCP committé) PUIS un scroll utilisateur
+        const armScrollListener = () => {
+          const once = { once: true, passive: true };
+          window.addEventListener('scroll', initSticky, once);
+          window.addEventListener('touchstart', initSticky, once);
+        };
+        if (document.readyState === 'complete') {
+          armScrollListener();
+        } else {
+          window.addEventListener('load', armScrollListener, { once: true });
+        }
       }
 
       /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
