@@ -60,6 +60,17 @@ const config = {
     { slug: 'tapis-de-souris-xxl',                label: 'Tapis de souris XXL' },
   ],
 
+  // ─── Formulaires (Web3Forms) ─────────────────────────────────────
+  // Service gratuit illimité pour envoyer les formulaires par email,
+  // 100% côté client (pas de backend nécessaire).
+  // 1. Crée un compte sur https://web3forms.com avec contact@buddypad.com
+  // 2. Récupère ton "Access Key" et colle-la ici
+  // 3. Les soumissions arrivent automatiquement sur l'email du compte
+  forms: {
+    web3formsKey: 'YOUR_WEB3FORMS_ACCESS_KEY', // ← à remplacer
+    contactEmail: 'contact@buddypad.com',      // affiché dans le subject
+  },
+
   // Boutique — choix du provider de paiement :
   //   'atelier'  → widget Atelier (direct-buy, paiement 1 étape)
   //   'snipcart' → Snipcart (panier multi-étapes)
