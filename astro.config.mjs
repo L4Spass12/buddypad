@@ -20,8 +20,13 @@ export default defineConfig({
     rehypePlugins: [rehypeImageOptim],
   },
   prefetch: {
+    // hover (au lieu de viewport) : prefetch uniquement sur survol/focus,
+    // jamais automatiquement à l'apparition dans le viewport. Évite la
+    // saturation réseau qui empêchait le load event de se compléter
+    // (WebPageTest "Page Load Timeout" + Lighthouse "NO_LCP").
+    // L'UX reste excellente : prefetch démarre dès le hover (~80ms avant clic).
     prefetchAll: true,
-    defaultStrategy: 'viewport',
+    defaultStrategy: 'hover',
   },
   compressHTML: true,
 });
