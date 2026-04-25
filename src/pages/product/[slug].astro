@@ -610,14 +610,15 @@ const breadcrumbSchema = {
 
   </div>
 
-  <!-- ═══════════════════════════ STICKY ATC BAR (mobile + desktop) ═══════════════════════════
-       Apparaît quand le CTA principal (#buy-button) sort du viewport.
-       Mobile : label taille + bouton pleine largeur avec prix.
-       Desktop : vignette + nom + taille + prix + bouton. -->
-  <div
+  <!-- ═══════════════════════════ STICKY ATC BAR (template) ═══════════════════════════
+       Wrappée dans un <template> pour que le navigateur n'en rende AUCUN
+       élément au load (zero impact LCP). Le JS la clone dans le DOM
+       après window.load + 1er scroll utilisateur. -->
+  <template id="sticky-atc-tpl"><div
     id="sticky-atc"
-    class="fixed bottom-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08] sticky-atc-hidden"
+    class="fixed bottom-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
     aria-hidden="true"
+    style="transform: translateY(100%); transition: transform 300ms ease-out;"
   >
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
       <!-- Mobile : bouton pleine largeur + label taille en dessous -->
@@ -697,7 +698,7 @@ const breadcrumbSchema = {
         )}
       </div>
     </div>
-  </div>
+  </div></template>
 
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
   <div class="below-fold-defer"><FabricationSection /></div>
@@ -801,20 +802,12 @@ const breadcrumbSchema = {
           contain-intrinsic-size: auto 800px;
         }
 
-        /* ─── Sticky ATC bar : display:none par défaut ────────────────
-           Évite tout impact LCP sur mobile (où le buy-button est sous
-           le fold). Le JS retire la classe sticky-atc-hidden après
-           window load. Pas de transition au premier show pour ne pas
-           interférer avec d'éventuels mesures résiduelles. */
-        .sticky-atc-hidden {
-          display: none !important;
-        }
-        #sticky-atc {
-          transform: translateY(100%);
-          transition: transform 300ms ease-out;
-        }
+        /* Sticky ATC : la barre est dans un <template>, donc absente du
+           rendu initial. Une fois clonée par JS après window.load, son
+           état visible est piloté par la classe .sticky-atc-visible
+           (cf. style inline du template). */
         #sticky-atc.sticky-atc-visible {
-          transform: translateY(0);
+          transform: translateY(0) !important;
         }
       </style>
     </section>
@@ -827,42 +820,54 @@ const breadcrumbSchema = {
   <script is:inline set:html={`
     (function() {
     const __init = function() {
-      /* ─────── Sticky ATC bar : init APRÈS window.load + 1er scroll ───────
-         La barre est display:none par défaut (ne participe pas au rendu LCP).
-         On la "réveille" uniquement quand l'utilisateur scrolle, et toujours
-         après window.load (= toutes ressources chargées, LCP committé). */
+      /* ─────── Sticky ATC bar : injection depuis <template> après window.load ───────
+         La barre est dans un <template> donc absente du rendu initial → impact
+         LCP nul. Après window.load (LCP committé), on clone le template dans
+         le body et on observe le CTA principal. */
       const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
-      const stickyBar = document.getElementById('sticky-atc');
-      if (mainCTA && stickyBar && 'IntersectionObserver' in window) {
-        const initSticky = () => {
-          // Active le rendu de la sticky bar (display:none → visible offscreen)
-          stickyBar.classList.remove('sticky-atc-hidden');
-          const io = new IntersectionObserver(
-            (entries) => {
-              const visible = entries[0].isIntersecting;
-              if (visible) {
-                stickyBar.classList.remove('sticky-atc-visible');
-                stickyBar.setAttribute('aria-hidden', 'true');
-              } else {
-                stickyBar.classList.add('sticky-atc-visible');
-                stickyBar.setAttribute('aria-hidden', 'false');
-              }
-            },
-            { rootMargin: '0px 0px -80px 0px', threshold: 0 }
-          );
-          io.observe(mainCTA);
-        };
-        // Attend window.load (= LCP committé) PUIS un scroll utilisateur
-        const armScrollListener = () => {
-          const once = { once: true, passive: true };
-          window.addEventListener('scroll', initSticky, once);
-          window.addEventListener('touchstart', initSticky, once);
-        };
-        if (document.readyState === 'complete') {
-          armScrollListener();
-        } else {
-          window.addEventListener('load', armScrollListener, { once: true });
-        }
+      const stickyTpl = document.getElementById('sticky-atc-tpl');
+      let stickyBar = null;
+
+      const insertSticky = () => {
+        if (stickyBar || !stickyTpl) return;
+        document.body.appendChild(stickyTpl.content.cloneNode(true));
+        stickyBar = document.getElementById('sticky-atc');
+        if (!stickyBar || !mainCTA || !('IntersectionObserver' in window)) return;
+        const io = new IntersectionObserver(
+          (entries) => {
+            const visible = entries[0].isIntersecting;
+            if (visible) {
+              stickyBar.classList.remove('sticky-atc-visible');
+              stickyBar.setAttribute('aria-hidden', 'true');
+            } else {
+              stickyBar.classList.add('sticky-atc-visible');
+              stickyBar.setAttribute('aria-hidden', 'false');
+            }
+          },
+          { rootMargin: '0px 0px -80px 0px', threshold: 0 }
+        );
+        io.observe(mainCTA);
+        // Réinitialise les refs des labels/boutons sticky et trigger update()
+        stickyBtnMobile   = document.getElementById('sticky-atc-btn');
+        stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
+        stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
+        stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
+        stickySizeDesk    = document.getElementById('sticky-atc-size');
+        stickyPriceDesk   = document.getElementById('sticky-atc-price');
+        stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
+        if (typeof update === 'function') update();
+      };
+
+      // Attend window.load PUIS le 1er scroll utilisateur
+      const armSticky = () => {
+        const once = { once: true, passive: true };
+        window.addEventListener('scroll', insertSticky, once);
+        window.addEventListener('touchstart', insertSticky, once);
+      };
+      if (document.readyState === 'complete') {
+        armSticky();
+      } else {
+        window.addEventListener('load', armSticky, { once: true });
       }
 
       /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
@@ -948,13 +953,14 @@ const breadcrumbSchema = {
       const selector = document.getElementById('variant-selector');
       const currency = '${siteConfig.shop.currency}';
       // Sticky ATC bar (un bouton par breakpoint : mobile + desktop)
-      const stickyBtnMobile   = document.getElementById('sticky-atc-btn');
-      const stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
-      const stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
-      const stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
-      const stickySizeDesk    = document.getElementById('sticky-atc-size');
-      const stickyPriceDesk   = document.getElementById('sticky-atc-price');
-      const stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
+      // En 'let' car les refs sont (re)set quand le template est injecté après load
+      let stickyBtnMobile   = document.getElementById('sticky-atc-btn');
+      let stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
+      let stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
+      let stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
+      let stickySizeDesk    = document.getElementById('sticky-atc-size');
+      let stickyPriceDesk   = document.getElementById('sticky-atc-price');
+      let stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
 
       if (!variants.length || !selector || !buyBtn) return;
 
