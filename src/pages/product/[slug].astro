@@ -610,96 +610,6 @@ const breadcrumbSchema = {
 
   </div>
 
-  <!-- ═══════════════════════════ STICKY ATC BAR (template) ═══════════════════════════
-       Wrappée dans un <template> pour que le navigateur n'en rende AUCUN
-       élément au load (zero impact LCP). Le JS la clone dans le DOM
-       après window.load + 1er scroll utilisateur. -->
-  <template id="sticky-atc-tpl"><div
-    id="sticky-atc"
-    class="fixed bottom-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
-    aria-hidden="true"
-    style="transform: translateY(100%); transition: transform 300ms ease-out;"
-  >
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
-      <!-- Mobile : bouton pleine largeur + label taille en dessous -->
-      <div class="md:hidden">
-        {siteConfig.shop?.provider === 'atelier' ? (
-          <button
-            id="sticky-atc-btn"
-            class="buy-button btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
-            disabled={!inStock}
-            data-item-id={sku ?? product.slug}
-            data-item-name={name}
-            data-item-price={Math.round(price * 100)}
-            data-item-image={image}
-          >
-            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
-          </button>
-        ) : (
-          <button
-            id="sticky-atc-btn"
-            class="snipcart-add-item btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
-            disabled={!inStock}
-            data-item-id={sku ?? product.slug}
-            data-item-name={name}
-            data-item-price={price.toFixed(2)}
-            data-item-url={`/product/${product.slug}/`}
-            data-item-image={image}
-          >
-            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
-          </button>
-        )}
-        <p class="text-[11px] text-n-500 font-light mt-1.5 text-center">
-          Taille : <span id="sticky-atc-size-mobile" class="text-n-400">—</span>
-        </p>
-      </div>
-
-      <!-- Desktop : vignette + nom + taille · prix + bouton à droite -->
-      <div class="hidden md:flex items-center gap-4">
-        <img
-          src={image}
-          alt=""
-          class="w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
-          loading="lazy"
-          decoding="async"
-        />
-        <div class="flex-1 min-w-0">
-          <p class="text-sm font-medium text-cream truncate tracking-tight">{name}</p>
-          <p class="text-xs text-n-400 font-light truncate">
-            <span id="sticky-atc-size" class="text-cream font-medium">—</span>
-            · <span id="sticky-atc-price">{formatPrice(price)}</span>
-          </p>
-        </div>
-        {siteConfig.shop?.provider === 'atelier' ? (
-          <button
-            id="sticky-atc-btn-desk"
-            class="buy-button btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
-            disabled={!inStock}
-            data-item-id={sku ?? product.slug}
-            data-item-name={name}
-            data-item-price={Math.round(price * 100)}
-            data-item-image={image}
-          >
-            Ajouter au panier
-          </button>
-        ) : (
-          <button
-            id="sticky-atc-btn-desk"
-            class="snipcart-add-item btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
-            disabled={!inStock}
-            data-item-id={sku ?? product.slug}
-            data-item-name={name}
-            data-item-price={price.toFixed(2)}
-            data-item-url={`/product/${product.slug}/`}
-            data-item-image={image}
-          >
-            Ajouter au panier
-          </button>
-        )}
-      </div>
-    </div>
-  </div></template>
-
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
   <div class="below-fold-defer"><FabricationSection /></div>
 
@@ -802,216 +712,161 @@ const breadcrumbSchema = {
           contain-intrinsic-size: auto 800px;
         }
 
-        /* Sticky ATC : la barre est dans un <template>, donc absente du
-           rendu initial. Une fois clonée par JS après window.load, son
-           état visible est piloté par la classe .sticky-atc-visible
-           (cf. style inline du template). */
-        #sticky-atc.sticky-atc-visible {
-          transform: translateY(0) !important;
-        }
       </style>
     </section>
   )}
 
-  <!-- ═══════════════════════════ JS : VARIANTES + GALERIE ═══════════════════════════
-       Tout le JS est enveloppé dans requestIdleCallback (fallback setTimeout 0)
-       pour libérer le main thread pendant le first paint. Sans ça, les ~14KB
-       de JS parsent sync à la fin du body et bloquent Lighthouse (NO_LCP). -->
+  <!-- ═══════════════════════════ JS PRODUIT ═══════════════════════════
+       Trois modules indépendants, tous différés via requestIdleCallback :
+       1. Galerie (scroll-snap + thumbs + flèches desktop + clavier)
+       2. Slider "Vous aimerez aussi" (flèches desktop)
+       3. Sélecteur de variantes (pills/cards + sync prix/stock/image)
+  -->
   <script is:inline set:html={`
     (function() {
-    const __init = function() {
-      /* ─────── Sticky ATC bar : injection depuis <template> après window.load ───────
-         La barre est dans un <template> donc absente du rendu initial → impact
-         LCP nul. Après window.load (LCP committé), on clone le template dans
-         le body et on observe le CTA principal. */
-      const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
-      const stickyTpl = document.getElementById('sticky-atc-tpl');
-      let stickyBar = null;
 
-      const insertSticky = () => {
-        if (stickyBar || !stickyTpl) return;
-        document.body.appendChild(stickyTpl.content.cloneNode(true));
-        stickyBar = document.getElementById('sticky-atc');
-        if (!stickyBar || !mainCTA || !('IntersectionObserver' in window)) return;
-        const io = new IntersectionObserver(
-          (entries) => {
-            const visible = entries[0].isIntersecting;
-            if (visible) {
-              stickyBar.classList.remove('sticky-atc-visible');
-              stickyBar.setAttribute('aria-hidden', 'true');
-            } else {
-              stickyBar.classList.add('sticky-atc-visible');
-              stickyBar.setAttribute('aria-hidden', 'false');
-            }
-          },
-          { rootMargin: '0px 0px -80px 0px', threshold: 0 }
-        );
-        io.observe(mainCTA);
-        // Réinitialise les refs des labels/boutons sticky et trigger update()
-        stickyBtnMobile   = document.getElementById('sticky-atc-btn');
-        stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
-        stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
-        stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
-        stickySizeDesk    = document.getElementById('sticky-atc-size');
-        stickyPriceDesk   = document.getElementById('sticky-atc-price');
-        stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
-        if (typeof update === 'function') update();
+    /* ─── 1. GALERIE ───────────────────────────────────────────────── */
+    function initGallery() {
+      const root = document.querySelector('[data-gallery]');
+      if (!root) return null;
+      const track  = root.querySelector('[data-gallery-track]');
+      const thumbs = Array.from(root.querySelectorAll('[data-gallery-thumb]'));
+      const prev   = root.querySelector('[data-gallery-prev]');
+      const next   = root.querySelector('[data-gallery-next]');
+      const count  = parseInt(root.dataset.slideCount || '0', 10);
+      let current  = 0;
+
+      const paint = () => {
+        thumbs.forEach((t, i) => {
+          t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors '
+            + (i === current ? 'border-cream' : 'border-white/[0.08] hover:border-white/30');
+        });
+        if (prev) prev.disabled = current <= 0;
+        if (next) next.disabled = current >= count - 1;
       };
 
-      // Attend window.load PUIS le 1er scroll utilisateur
-      const armSticky = () => {
-        const once = { once: true, passive: true };
-        window.addEventListener('scroll', insertSticky, once);
-        window.addEventListener('touchstart', insertSticky, once);
+      const goTo = (idx) => {
+        if (idx < 0 || idx >= count || !track) return;
+        track.scrollTo({ left: track.clientWidth * idx, behavior: 'smooth' });
       };
-      if (document.readyState === 'complete') {
-        armSticky();
-      } else {
-        window.addEventListener('load', armSticky, { once: true });
+
+      // Détecte le slide courant via scroll (swipe natif mobile + scrollTo desktop)
+      if (track) {
+        let raf = null;
+        track.addEventListener('scroll', () => {
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            const idx = Math.round(track.scrollLeft / track.clientWidth);
+            if (idx !== current) { current = idx; paint(); }
+          });
+        }, { passive: true });
       }
 
-      /* ─────── Slider "Vous aimerez aussi" (flèches desktop) ─────── */
+      prev?.addEventListener('click', () => goTo(current - 1));
+      next?.addEventListener('click', () => goTo(current + 1));
+      thumbs.forEach((t, i) => t.addEventListener('click', () => goTo(i)));
+      root.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+      });
+      root.setAttribute('tabindex', '0');
+
+      paint();
+      // API exposée pour le sélecteur de variantes
+      return { goTo, getMainSlide: () => root.querySelector('[data-gallery-slide="0"]'),
+               getMainThumb: () => root.querySelector('[data-gallery-thumb="0"] img') };
+    }
+
+    /* ─── 2. SLIDER "VOUS AIMEREZ AUSSI" ───────────────────────────── */
+    function initRelatedSlider() {
       document.querySelectorAll('[data-slider]').forEach(slider => {
         const track = slider.querySelector('.slider-track');
         const prev  = slider.querySelector('[data-scroll="prev"]');
         const next  = slider.querySelector('[data-scroll="next"]');
         if (!track) return;
-        function scrollBy(dir) {
+
+        const scrollByCards = (dir) => {
           const card = track.querySelector('.slider-card');
           if (!card) return;
-          const cardWidth = card.getBoundingClientRect().width + 20;
-          track.scrollBy({ left: cardWidth * 2 * dir, behavior: 'smooth' });
-        }
-        prev?.addEventListener('click', () => scrollBy(-1));
-        next?.addEventListener('click', () => scrollBy(1));
-        function upd() {
+          const w = card.getBoundingClientRect().width + 20;
+          track.scrollBy({ left: w * 2 * dir, behavior: 'smooth' });
+        };
+        prev?.addEventListener('click', () => scrollByCards(-1));
+        next?.addEventListener('click', () => scrollByCards(1));
+
+        const upd = () => {
           if (!prev || !next) return;
           prev.disabled = track.scrollLeft <= 1;
           next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
-        }
+        };
         track.addEventListener('scroll', upd, { passive: true });
         window.addEventListener('resize', upd);
         requestAnimationFrame(upd);
       });
+    }
 
-      /* ─────── Galerie (scroll-snap swipe + flèches desktop + thumbs desktop) ─────── */
-      const gallery = document.querySelector('[data-gallery]');
-      let goToSlide = () => {};
-
-      if (gallery) {
-        const track  = gallery.querySelector('[data-gallery-track]');
-        const thumbs = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
-        const prev   = gallery.querySelector('[data-gallery-prev]');
-        const next   = gallery.querySelector('[data-gallery-next]');
-        const slideCount = parseInt(gallery.dataset.slideCount || '0', 10);
-        let current = 0;
-
-        function updateUI() {
-          thumbs.forEach((t, i) => {
-            t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ' + (i === current ? 'border-cream' : 'border-white/[0.08] hover:border-white/30');
-          });
-          if (prev) prev.disabled = current <= 0;
-          if (next) next.disabled = current >= slideCount - 1;
-        }
-
-        goToSlide = (idx) => {
-          if (idx < 0 || idx >= slideCount || !track) return;
-          track.scrollTo({ left: track.clientWidth * idx, behavior: 'smooth' });
-        };
-
-        // Détecte le slide courant via scroll (swipe mobile + scrollTo)
-        if (track) {
-          let rafId = null;
-          track.addEventListener('scroll', () => {
-            if (rafId) cancelAnimationFrame(rafId);
-            rafId = requestAnimationFrame(() => {
-              const idx = Math.round(track.scrollLeft / track.clientWidth);
-              if (idx !== current) { current = idx; updateUI(); }
-            });
-          }, { passive: true });
-        }
-
-        prev?.addEventListener('click', () => goToSlide(current - 1));
-        next?.addEventListener('click', () => goToSlide(current + 1));
-        thumbs.forEach((t, i) => t.addEventListener('click', () => goToSlide(i)));
-
-        gallery.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft')  { e.preventDefault(); goToSlide(current - 1); }
-          if (e.key === 'ArrowRight') { e.preventDefault(); goToSlide(current + 1); }
-        });
-        gallery.setAttribute('tabindex', '0');
-
-        updateUI();
-      }
-
-      /* ─────── Sélecteur de variantes ─────── */
+    /* ─── 3. SÉLECTEUR DE VARIANTES ────────────────────────────────── */
+    function initVariants(galleryApi) {
       const variants = ${variantsJson};
       const buyBtn   = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
       const priceEl  = document.getElementById('product-price');
       const compareEl = document.getElementById('product-compare');
       const stockEl  = document.getElementById('product-stock');
       const selector = document.getElementById('variant-selector');
-      const currency = '${siteConfig.shop.currency}';
-      // Sticky ATC bar (un bouton par breakpoint : mobile + desktop)
-      // En 'let' car les refs sont (re)set quand le template est injecté après load
-      let stickyBtnMobile   = document.getElementById('sticky-atc-btn');
-      let stickyBtnDesk     = document.getElementById('sticky-atc-btn-desk');
-      let stickyBtns        = [stickyBtnMobile, stickyBtnDesk].filter(Boolean);
-      let stickySizeMobile  = document.getElementById('sticky-atc-size-mobile');
-      let stickySizeDesk    = document.getElementById('sticky-atc-size');
-      let stickyPriceDesk   = document.getElementById('sticky-atc-price');
-      let stickyPriceMobile = document.getElementById('sticky-atc-price-mobile');
-
       if (!variants.length || !selector || !buyBtn) return;
 
-      // Slide 0 = image principale (on swap son src à chaque changement de variante).
-      // La thumb 0 correspondante est aussi mise à jour.
-      const mainSlide = gallery ? gallery.querySelector('[data-gallery-slide="0"]') : null;
-      const mainThumb = gallery ? gallery.querySelector('[data-gallery-thumb="0"] img') : null;
-      const originalMainSrc = mainSlide ? mainSlide.getAttribute('src') : null;
+      const currency = '${siteConfig.shop.currency}';
+      const fmtPrice = (v) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency }).format(v);
 
-      // Initial selection = premier bouton actif de chaque attribut
-      // (détecte bg-cream pour les pills OU border-cream pour les size cards)
+      // Slide 0 = image principale (swap au changement de variante)
+      const mainSlide = galleryApi?.getMainSlide() ?? null;
+      const mainThumb = galleryApi?.getMainThumb() ?? null;
+      const originalSrc = mainSlide?.getAttribute('src') ?? null;
+
+      // Initial : pill bg-cream OU size-card border-cream
       const selected = {};
       selector.querySelectorAll('[data-attr]').forEach(btn => {
-        const attr = btn.dataset.attr;
-        if (selected[attr]) return;
+        const a = btn.dataset.attr;
+        if (selected[a]) return;
         if (btn.classList.contains('bg-cream') || btn.classList.contains('border-cream')) {
-          selected[attr] = btn.dataset.value;
+          selected[a] = btn.dataset.value;
         }
       });
 
-      const fmtPrice = (v) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency }).format(v);
+      const findVariant = () => variants.find(v => {
+        for (const [k, val] of Object.entries(selected)) {
+          if (v.attributes[k] !== val) return false;
+        }
+        return true;
+      });
 
-      function findVariant() {
-        return variants.find(v => {
-          for (const [k, val] of Object.entries(selected)) {
-            if (v.attributes[k] !== val) return false;
-          }
-          return true;
-        });
-      }
+      const setStock = (inStock, label) => {
+        if (!stockEl) return;
+        const dot = stockEl.querySelector('span:first-child');
+        const txt = stockEl.querySelector('span:last-child');
+        stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light ' + (inStock ? 'text-sage' : 'text-n-500');
+        if (dot) dot.className = 'w-1.5 h-1.5 rounded-full ' + (inStock ? 'bg-sage' : 'bg-n-500');
+        if (txt) txt.textContent = label;
+      };
 
       function update() {
-        const v = findVariant();
-
         // Labels "Dimensions : 45 × 35 cm"
         Object.entries(selected).forEach(([attr, slug]) => {
           const label = document.querySelector('[data-selected-label="' + attr + '"]');
-          if (label) {
-            const pill = selector.querySelector('[data-attr="' + attr + '"][data-value="' + slug + '"]');
-            label.textContent = pill ? pill.textContent.trim() : slug;
-          }
+          if (!label) return;
+          const pill = selector.querySelector('[data-attr="' + attr + '"][data-value="' + slug + '"]');
+          label.textContent = pill ? pill.textContent.trim() : slug;
         });
 
+        const v = findVariant();
         if (!v) {
           buyBtn.disabled = true;
           buyBtn.textContent = 'Combinaison indisponible';
-          if (stockEl) { stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-n-500'; stockEl.querySelector('span:last-child').textContent = 'Indisponible'; stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-n-500'; }
+          setStock(false, 'Indisponible');
           return;
         }
 
-        // Prix / compare / badge
+        // Prix + compare
         if (priceEl) priceEl.textContent = fmtPrice(v.price);
         if (compareEl) {
           if (v.compareAtPrice) {
@@ -1023,111 +878,86 @@ const breadcrumbSchema = {
         }
 
         // Stock
-        if (stockEl) {
-          if (v.inStock) {
-            stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-sage';
-            stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-sage';
-            stockEl.querySelector('span:last-child').textContent = 'En stock';
-          } else {
-            stockEl.className = 'flex items-center gap-2 mb-6 text-sm font-light text-n-500';
-            stockEl.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-n-500';
-            stockEl.querySelector('span:last-child').textContent = 'Rupture';
-          }
-        }
+        setStock(v.inStock, v.inStock ? 'En stock' : 'Rupture');
 
-        // IMAGE : swap le src du slide principal + thumb 0 sur l'image de la variante
-        // (ou revient à l'image originale si la variante n'a pas d'image dédiée)
+        // Image : swap src du slide principal + thumb 0
         if (mainSlide) {
-          const nextSrc = v.image || originalMainSrc;
+          const nextSrc = v.image || originalSrc;
           if (nextSrc && mainSlide.getAttribute('src') !== nextSrc) {
             mainSlide.setAttribute('src', nextSrc);
             mainSlide.removeAttribute('srcset');
             if (mainThumb) mainThumb.setAttribute('src', nextSrc);
           }
-          // Toujours ramener l'affichage sur le slide 0 (qui est maintenant l'image variante)
-          goToSlide(0);
+          galleryApi?.goTo(0);
         }
 
-        // Bouton Atelier
-        buyBtn.disabled = !v.inStock;
-        buyBtn.dataset.itemId = v.id;
-        buyBtn.dataset.itemPrice = Math.round(v.price * 100);
+        // Bouton + dataset Atelier
         const variantDesc = Object.entries(selected).map(([k, val]) => {
           const pill = selector.querySelector('[data-attr="' + k + '"][data-value="' + val + '"]');
           return k + ': ' + (pill ? pill.textContent.trim() : val);
         }).join(', ');
+        buyBtn.disabled = !v.inStock;
+        buyBtn.dataset.itemId = v.id;
+        buyBtn.dataset.itemPrice = Math.round(v.price * 100);
         buyBtn.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
         if (v.image) buyBtn.dataset.itemImage = v.image;
         buyBtn.innerHTML = v.inStock
           ? 'Ajouter au panier <span class="opacity-70 font-normal">' + fmtPrice(v.price) + '</span>'
           : 'Indisponible';
-
-        // Sync sticky ATC bar (les 2 boutons mobile + desktop)
-        stickyBtns.forEach(b => {
-          b.disabled = !v.inStock;
-          b.dataset.itemId = v.id;
-          b.dataset.itemPrice = Math.round(v.price * 100);
-          b.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
-          if (v.image) b.dataset.itemImage = v.image;
-        });
-        // Label taille : prend le label du variant "size" sélectionné si présent
-        const dimPill = selector.querySelector('[data-variant-type="size"].border-cream');
-        const sizeLabel = dimPill
-          ? (dimPill.querySelector('.text-cream')?.textContent.trim() || variantDesc)
-          : variantDesc;
-        if (stickySizeMobile) stickySizeMobile.textContent = sizeLabel;
-        if (stickySizeDesk)   stickySizeDesk.textContent   = sizeLabel;
-        if (stickyPriceDesk)   stickyPriceDesk.textContent   = fmtPrice(v.price);
-        if (stickyPriceMobile) stickyPriceMobile.textContent = fmtPrice(v.price);
       }
+
+      // Click handlers (pills + size cards)
+      const pillClass = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors';
+      const sizeClass = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0';
+      const off = (type) => type === 'size'
+        ? sizeClass + ' bg-white/[0.02] border-white/[0.08] hover:border-white/25'
+        : pillClass + ' bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+      const on = (type) => type === 'size'
+        ? sizeClass + ' bg-white/[0.04] border-cream'
+        : pillClass + ' bg-cream text-dark border-cream';
 
       selector.querySelectorAll('[data-variant-option]').forEach(btn => {
         btn.addEventListener('click', () => {
           const attr = btn.dataset.attr;
           const type = btn.dataset.variantType || 'pill';
-
-          // Reset tous les boutons de cet attribut à leur style "non sélectionné"
           selector.querySelectorAll('[data-attr="' + attr + '"]').forEach(b => {
             const t = b.dataset.variantType || 'pill';
-            if (t === 'size') {
-              b.className = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.02] border-white/[0.08] hover:border-white/25';
-              // Repaint le rect du tapis en "non sélectionné"
-              const rect = b.querySelector('.tapis-rect');
-              if (rect) {
-                rect.setAttribute('fill', 'rgba(255,255,255,0.04)');
-                rect.setAttribute('stroke', 'rgba(255,255,255,0.25)');
-              }
-            } else {
-              b.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+            b.className = off(t);
+            const rect = b.querySelector('.tapis-rect');
+            if (rect) {
+              rect.setAttribute('fill', 'rgba(255,255,255,0.04)');
+              rect.setAttribute('stroke', 'rgba(255,255,255,0.25)');
             }
           });
-
-          // Active le bouton cliqué
+          btn.className = on(type);
           if (type === 'size') {
-            btn.className = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 bg-white/[0.04] border-cream';
             const rect = btn.querySelector('.tapis-rect');
             if (rect) {
               rect.setAttribute('fill', 'rgba(244,244,247,0.10)');
               rect.setAttribute('stroke', 'rgba(244,244,247,0.8)');
             }
-          } else {
-            btn.className = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors bg-cream text-dark border-cream';
           }
-
           selected[attr] = btn.dataset.value;
           update();
         });
       });
 
       update();
-    };
-    // Défère au-delà du LCP : le navigateur peint + mesure d'abord,
-    // le JS s'exécute ensuite quand le main thread est idle.
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(__init, { timeout: 2000 });
-    } else {
-      setTimeout(__init, 0);
     }
+
+    /* ─── ENTRYPOINT : tout différé jusqu'à idle (post-LCP) ─────────── */
+    function bootProductJS() {
+      const galleryApi = initGallery();
+      initRelatedSlider();
+      initVariants(galleryApi);
+    }
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(bootProductJS, { timeout: 2000 });
+    } else {
+      setTimeout(bootProductJS, 0);
+    }
+
     })();
   `} />
 </BaseLayout>
