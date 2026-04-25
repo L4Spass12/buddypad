@@ -67,7 +67,7 @@ const config = {
   // 2. Récupère ton "Access Key" et colle-la ici
   // 3. Les soumissions arrivent automatiquement sur l'email du compte
   forms: {
-    web3formsKey: 'YOUR_WEB3FORMS_ACCESS_KEY', // ← à remplacer
+    web3formsKey: 'cb2f0db3-85e5-4006-b2d9-bdeacf271b9f',
     contactEmail: 'contact@buddypad.com',      // affiché dans le subject
   },
 
