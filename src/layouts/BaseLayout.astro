@@ -131,7 +131,7 @@ const allSchemas = [...baseSchemas, ...extraSchemas];
 
     {/* ─────────── Atelier widget (paiement 1 étape via Stripe) ─────────── */}
     {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
-      <script src="https://seamless-cart-stripe.lovable.app/api/public/widget.js" defer></script>
+      <script src="https://tanstack-start-app.seamless-cart.workers.dev/api/public/widget.js" data-shop-id="50e9f184-21e0-43bc-940e-52768855c84f" defer></script>
     )}
 
     {/* ─────────── Snipcart (fallback, désactivé tant que provider ≠ snipcart) ─────────── */}
