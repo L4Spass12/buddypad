@@ -610,6 +610,97 @@ const breadcrumbSchema = {
 
   </div>
 
+  <!-- ═══════════════════════════ STICKY ATC BAR ═══════════════════════════
+       Apparaît quand le CTA principal (#buy-button) sort du viewport.
+       Mobile : bouton pleine largeur + label taille en dessous.
+       Desktop : vignette + nom + taille · prix + bouton à droite.
+       Démarre en translate-y-full (hors écran). Le JS toggle .sticky-visible. -->
+  <div
+    id="sticky-atc"
+    class="fixed bottom-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
+    aria-hidden="true"
+    style="transform: translateY(100%); transition: transform 300ms ease-out;"
+  >
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
+      <!-- Mobile : bouton pleine largeur + label taille en dessous -->
+      <div class="md:hidden">
+        {siteConfig.shop?.provider === 'atelier' ? (
+          <button
+            id="sticky-atc-btn"
+            class="buy-button btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={Math.round(price * 100)}
+            data-item-image={image}
+          >
+            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+          </button>
+        ) : (
+          <button
+            id="sticky-atc-btn"
+            class="snipcart-add-item btn-primary w-full text-base py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={price.toFixed(2)}
+            data-item-url={`/product/${product.slug}/`}
+            data-item-image={image}
+          >
+            Ajouter au panier <span class="opacity-70 font-normal"><span id="sticky-atc-price-mobile">{formatPrice(price)}</span></span>
+          </button>
+        )}
+        <p class="text-[11px] text-n-500 font-light mt-1.5 text-center">
+          Taille : <span id="sticky-atc-size-mobile" class="text-n-400">—</span>
+        </p>
+      </div>
+
+      <!-- Desktop : vignette + nom + taille · prix + bouton à droite -->
+      <div class="hidden md:flex items-center gap-4">
+        <img
+          src={image}
+          alt=""
+          class="w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-cream truncate tracking-tight">{name}</p>
+          <p class="text-xs text-n-400 font-light truncate">
+            <span id="sticky-atc-size" class="text-cream font-medium">—</span>
+            · <span id="sticky-atc-price">{formatPrice(price)}</span>
+          </p>
+        </div>
+        {siteConfig.shop?.provider === 'atelier' ? (
+          <button
+            id="sticky-atc-btn-desk"
+            class="buy-button btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={Math.round(price * 100)}
+            data-item-image={image}
+          >
+            Ajouter au panier
+          </button>
+        ) : (
+          <button
+            id="sticky-atc-btn-desk"
+            class="snipcart-add-item btn-primary text-sm px-6 py-3 whitespace-nowrap disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            disabled={!inStock}
+            data-item-id={sku ?? product.slug}
+            data-item-name={name}
+            data-item-price={price.toFixed(2)}
+            data-item-url={`/product/${product.slug}/`}
+            data-item-image={image}
+          >
+            Ajouter au panier
+          </button>
+        )}
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════ FABRICATION HAUTE PRÉCISION ═══════════════════════════ -->
   <div class="below-fold-defer"><FabricationSection /></div>
 
@@ -806,7 +897,7 @@ const breadcrumbSchema = {
     }
 
     /* ─── 3. SÉLECTEUR DE VARIANTES ────────────────────────────────── */
-    function initVariants(galleryApi) {
+    function initVariants(galleryApi, stickyRefs) {
       const variants = ${variantsJson};
       const buyBtn   = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
       const priceEl  = document.getElementById('product-price');
@@ -904,6 +995,26 @@ const breadcrumbSchema = {
         buyBtn.innerHTML = v.inStock
           ? 'Ajouter au panier <span class="opacity-70 font-normal">' + fmtPrice(v.price) + '</span>'
           : 'Indisponible';
+
+        // Sync sticky ATC bar (si présente)
+        if (stickyRefs) {
+          stickyRefs.btns.forEach(b => {
+            b.disabled = !v.inStock;
+            b.dataset.itemId = v.id;
+            b.dataset.itemPrice = Math.round(v.price * 100);
+            b.dataset.itemName = ${JSON.stringify(name)} + ' (' + variantDesc + ')';
+            if (v.image) b.dataset.itemImage = v.image;
+          });
+          // Label taille (label de la pill size sélectionnée)
+          const dimPill = selector.querySelector('[data-variant-type="size"].border-cream');
+          const sizeLabel = dimPill
+            ? (dimPill.querySelector('.text-cream')?.textContent.trim() || variantDesc)
+            : variantDesc;
+          if (stickyRefs.sizeMobile) stickyRefs.sizeMobile.textContent = sizeLabel;
+          if (stickyRefs.sizeDesk)   stickyRefs.sizeDesk.textContent   = sizeLabel;
+          if (stickyRefs.priceMobile) stickyRefs.priceMobile.textContent = fmtPrice(v.price);
+          if (stickyRefs.priceDesk)   stickyRefs.priceDesk.textContent   = fmtPrice(v.price);
+        }
       }
 
       // Click handlers (pills + size cards)
@@ -945,11 +1056,41 @@ const breadcrumbSchema = {
       update();
     }
 
+    /* ─── 4. STICKY ATC BAR ────────────────────────────────────────── */
+    function initStickyAtc(variantsApi) {
+      const bar    = document.getElementById('sticky-atc');
+      const mainCTA = document.getElementById('buy-button') || document.querySelector('.snipcart-add-item');
+      if (!bar || !mainCTA || !('IntersectionObserver' in window)) return null;
+
+      // Refs des éléments à synchroniser
+      const refs = {
+        btns: [
+          document.getElementById('sticky-atc-btn'),
+          document.getElementById('sticky-atc-btn-desk'),
+        ].filter(Boolean),
+        sizeMobile: document.getElementById('sticky-atc-size-mobile'),
+        sizeDesk:   document.getElementById('sticky-atc-size'),
+        priceMobile: document.getElementById('sticky-atc-price-mobile'),
+        priceDesk:   document.getElementById('sticky-atc-price'),
+      };
+
+      // Observer le CTA principal — toggle visible/hidden sur la sticky bar
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries[0].isIntersecting;
+        bar.style.transform = visible ? 'translateY(100%)' : 'translateY(0)';
+        bar.setAttribute('aria-hidden', visible ? 'true' : 'false');
+      }, { rootMargin: '0px 0px -80px 0px', threshold: 0 });
+      io.observe(mainCTA);
+
+      return refs;
+    }
+
     /* ─── ENTRYPOINT : tout différé jusqu'à idle (post-LCP) ─────────── */
     function bootProductJS() {
       const galleryApi = initGallery();
       initRelatedSlider();
-      initVariants(galleryApi);
+      const stickyRefs = initStickyAtc();
+      initVariants(galleryApi, stickyRefs);
     }
 
     if ('requestIdleCallback' in window) {
