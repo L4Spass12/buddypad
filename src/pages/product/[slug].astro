@@ -930,7 +930,14 @@ const breadcrumbSchema = {
           const nextSrc = v.image || originalSrc;
           if (nextSrc && mainSlide.getAttribute('src') !== nextSrc) {
             mainSlide.setAttribute('src', nextSrc);
-            mainSlide.removeAttribute('srcset');
+            // Reconstruit le srcset responsive pour les .webp locaux (variantes -400w/-800w pré-générées)
+            const m = nextSrc.match(/^(?!https?:)(.*)\.webp$/i);
+            if (m) {
+              const base = m[1];
+              mainSlide.setAttribute('srcset', base + '-400w.webp 400w, ' + base + '-800w.webp 800w, ' + nextSrc + ' 1200w');
+            } else {
+              mainSlide.removeAttribute('srcset');
+            }
             if (mainThumb) mainThumb.setAttribute('src', nextSrc);
           }
           galleryApi?.goTo(0);
