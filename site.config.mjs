@@ -71,16 +71,11 @@ const config = {
     contactEmail: 'contact@buddypad.com',      // affiché dans le subject
   },
 
-  // Boutique — choix du provider de paiement :
-  //   'atelier'  → widget Atelier (direct-buy, paiement 1 étape)
-  //   'snipcart' → Snipcart (panier multi-étapes)
-  //   ''         → désactivée
+  // Boutique — widget Atelier (direct-buy via Cloudflare Worker, paiement Stripe 1 étape)
   shop: {
     enabled: true,
     provider: 'atelier',
     currency: 'EUR',
-    // Snipcart key (utilisée seulement si provider === 'snipcart')
-    snipcartPublicKey: 'MmEzOWY1N2YtNTY3Yi00NGRlLWJkY2EtOTYxNjg2YWZiYjY4NjM5MTIyODc4MDUwNjU5Mzkx',
   },
 };
 

@@ -83,13 +83,6 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
     </nav>
 
     <div class="flex items-center gap-5 shrink-0">
-      {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'snipcart' && (
-        <button class="snipcart-checkout text-n-400 hover:text-cream transition-colors inline-flex items-center justify-center relative" aria-label="Voir le panier">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="snipcart-items-count absolute -top-1.5 -right-1.5 flex min-w-[14px] h-[14px] items-center justify-center rounded-full bg-cream text-dark text-[10px] font-medium leading-none px-1"></span>
-        </button>
-      )}
-
       {siteConfig.shop?.enabled && siteConfig.shop?.provider === 'atelier' && (
         <div data-atelier-cart-icon class="flex items-center"></div>
       )}
