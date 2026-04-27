@@ -43,6 +43,9 @@ const config = {
     author: "Équipe BuddyPad",
     // Mot-clé ajouté aux recherches Unsplash pour cadrer les images
     unsplashContext: "gaming setup desk mousepad",
+    // Mot-clé générique de repli si la recherche Unsplash ciblée ne renvoie rien
+    // (utilisé pour la cover quand le mot-clé SEO précis donne 0 résultat)
+    coverFallbackKeyword: "tapis de souris",
   },
 
   // Catégories produits WooCommerce (correspondent aux URLs /product-category/<slug>/)

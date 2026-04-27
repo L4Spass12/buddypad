@@ -347,8 +347,13 @@ Aucun lien ne peut être omis. Chaque lien doit apparaître une fois dans le tex
   // --- Images Unsplash ---
   const headings = extractH2Headings(rawContent);
 
-  // Image de couverture
-  const coverData = await fetchUnsplashImage(meta.kw, `${slug}.jpg`);
+  // Image de couverture — recherche ciblée avec le mot-clé SEO, repli sur le mot-clé
+  // générique du site (siteConfig.article.coverFallbackKeyword) si Unsplash ne renvoie rien.
+  let coverData = await fetchUnsplashImage(meta.kw, `${slug}.jpg`);
+  if (!coverData && siteConfig.article.coverFallbackKeyword) {
+    console.warn(`Cover Unsplash absente pour "${meta.kw}" → retry avec "${siteConfig.article.coverFallbackKeyword}"`);
+    coverData = await fetchUnsplashImage(siteConfig.article.coverFallbackKeyword, `${slug}.jpg`);
+  }
   let coverSeo = null;
   if (coverData) {
     coverSeo = await generateImageSeo(title, meta.kw, 'couverture', client);
