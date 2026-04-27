@@ -391,8 +391,26 @@ Titre : ${title}`
     ? `faq:\n${faqItems.map(f => `  - q: "${f.q.replace(/"/g, "'")}"\n    a: "${f.a.replace(/"/g, "'")}"`).join('\n')}\n`
     : '';
 
-  const imageFrontmatter = coverData && coverSeo
-    ? `image: "/images/blog/${coverData.filename}"\nimageAlt: "${coverSeo.alt}"\nimageTitle: "${coverSeo.title}"\n`
+  // Cover image avec fallback : si l'Unsplash de la cover a échoué (mot-clé sans résultat),
+  // on réutilise l'image 1 du contenu pour ne jamais publier d'article sans vignette.
+  let coverFile = null, coverAlt = null, coverTitle = null;
+  if (coverData && coverSeo) {
+    coverFile = coverData.filename;
+    coverAlt = coverSeo.alt;
+    coverTitle = coverSeo.title;
+  } else if (img1Data && img1Seo) {
+    console.warn('Cover Unsplash absente → fallback sur image 1 du contenu.');
+    coverFile = img1Data.filename;
+    coverAlt = img1Seo.alt;
+    coverTitle = img1Seo.title;
+  } else if (img2Data && img2Seo) {
+    console.warn('Cover + image 1 absentes → fallback sur image 2 du contenu.');
+    coverFile = img2Data.filename;
+    coverAlt = img2Seo.alt;
+    coverTitle = img2Seo.title;
+  }
+  const imageFrontmatter = coverFile
+    ? `image: "/images/blog/${coverFile}"\nimageAlt: "${coverAlt}"\nimageTitle: "${coverTitle}"\n`
     : '';
 
   const frontmatter = `---

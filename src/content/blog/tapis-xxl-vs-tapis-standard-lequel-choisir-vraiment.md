@@ -6,6 +6,9 @@ author: "Équipe BuddyPad"
 category: Guide d’achat & conseils
 tags: ["tapis de souris", "tapis XXL", "setup gaming", "équipement bureau", "comparatif"]
 featured: false
+image: "/images/blog/tapis-xxl-vs-tapis-standard-lequel-choisir-vraiment-1.webp"
+imageAlt: "Tapis souris XXL vs standard — comparaison de formats"
+imageTitle: "Tapis XXL vs tapis standard"
 faq:
   - q: "Un tapis XXL convient-il aussi pour un usage bureautique classique ?"
     a: "Oui, absolument. Un tapis XXL format *desk pad* unifie le bureau, protège la surface et améliore le confort du poignet, même sans usage gaming. C'est un excellent choix pour le télétravail ou les longues sessions de travail."
