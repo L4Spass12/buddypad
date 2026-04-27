@@ -205,6 +205,13 @@ Réponds en JSON uniquement, sans markdown :
     console.warn('Métadonnées par défaut utilisées.');
   }
 
+  // Snap la catégorie sur la valeur canonique du site.config (insensible aux variantes
+  // d'apostrophe ' / ' / ` et à la casse) pour respecter strictement le schéma Astro.
+  const normCat = s => String(s).normalize('NFKC').replace(/[‘’ʼ`']/g, '').toLowerCase().trim();
+  const canonicalCat = siteConfig.categories.find(c => normCat(c) === normCat(meta.category));
+  if (!canonicalCat) console.warn(`Catégorie "${meta.category}" inconnue → fallback "${siteConfig.categories[0]}"`);
+  meta.category = canonicalCat || siteConfig.categories[0];
+
   // Maillage interne dynamique — liste des articles existants
   const blogDir = path.join(__dirname, '..', 'src', 'content', 'blog');
   const existingArticles = fs.readdirSync(blogDir)

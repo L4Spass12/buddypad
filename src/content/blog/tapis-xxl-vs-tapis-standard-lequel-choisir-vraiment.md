@@ -3,7 +3,7 @@ title: "Tapis XXL vs tapis standard : lequel choisir vraiment"
 description: "Découvrez les différences entre tapis souris XXL vs standard. Comparaison complète pour choisir le meilleur tapis selon vos besoins de jeu et travail."
 pubDate: 2026-04-27
 author: "Équipe BuddyPad"
-category: Guide d'achat & conseils
+category: Guide d’achat & conseils
 tags: ["tapis de souris", "tapis XXL", "setup gaming", "équipement bureau", "comparatif"]
 featured: false
 faq:
