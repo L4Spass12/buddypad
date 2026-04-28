@@ -7,7 +7,11 @@ import siteConfig from '../../site.config.mjs';
 import { responsiveSrcset } from '../lib/responsive';
 
 const allProducts = await getCollection('products');
-const products = allProducts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// On masque les produits sans catégorie (= produits internes/tests) des listings publics.
+// La page /product/<slug>/ reste accessible directement par URL.
+const products = allProducts
+  .filter(p => (p.data.categories ?? []).length > 0)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Collect unique category slugs from all products (array field)
 const categorySlugs = [...new Set(products.flatMap(p => p.data.categories || []))].sort();
