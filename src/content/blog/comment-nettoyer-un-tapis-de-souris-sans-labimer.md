@@ -108,12 +108,12 @@ Notre [blog](/blog/) regroupe également d'autres guides pratiques pour entreten
 
 <details>
 <summary>À quelle fréquence faut-il nettoyer son tapis de souris ?</summary>
-<p>Un nettoyage **complet toutes les deux à quatre semaines** est suffisant pour un usage quotidien. Un passage rapide au chiffon humide une fois par semaine suffit à limiter l'accumulation de dépôts de surface entre deux lavages.</p>
+<p>Un nettoyage <strong>complet toutes les deux à quatre semaines</strong> est suffisant pour un usage quotidien. Un passage rapide au chiffon humide une fois par semaine suffit à limiter l'accumulation de dépôts de surface entre deux lavages.</p>
 </details>
 
 <details>
 <summary>Quels produits sont à éviter absolument sur un tapis de souris ?</summary>
-<p>Évitez l'alcool à brûler, l'eau de Javel, les nettoyants multi-surfaces agressifs et tout produit abrasif : ils décolorent la surface en tissu, dissolvent les traitements de glisse des *hard-pads* et fragilisent irrémédiablement le caoutchouc de la base.</p>
+<p>Évitez l'alcool à brûler, l'eau de Javel, les nettoyants multi-surfaces agressifs et tout produit abrasif : ils décolorent la surface en tissu, dissolvent les traitements de glisse des <em>hard-pads</em> et fragilisent irrémédiablement le caoutchouc de la base.</p>
 </details>
 
 ---

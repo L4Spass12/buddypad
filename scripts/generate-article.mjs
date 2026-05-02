@@ -285,6 +285,7 @@ Rédige un article de blog long-format, de haute qualité éditoriale, optimisé
 <summary>La question ici ?</summary>
 <p>La réponse complète ici en une ou deux phrases.</p>
 </details>
+   ⚠️ INTERDIT à l'intérieur des balises HTML <p>, <summary>, <details> : les caractères ** (gras markdown) et * (italique markdown) — ils ne seront PAS rendus. Si tu veux du gras, utilise <strong>texte</strong>. Si tu veux de l'italique, utilise <em>texte</em>.
 4. **Conclusion + CTA** (80-100 mots) - synthèse et invitation à ${siteConfig.article.cta}
 
 ## RÈGLES E-E-A-T
@@ -435,10 +436,21 @@ ${imageFrontmatter}${faqYaml}---
 
 `;
 
-  // Normalisation finale : supprime tout tiret cadratin (—) et demi-cadratin (–) restant
-  // dans le frontmatter ou le corps. Le LLM en glisse parfois malgré la consigne dans le prompt,
-  // notamment dans la description meta ou les FAQ.
-  const finalFile = (frontmatter + rawContent).replace(/[—–]/g, '-');
+  // Normalisation finale du fichier complet (frontmatter + body).
+  let finalFile = frontmatter + rawContent;
+
+  // 1. Tirets cadratin/demi-cadratin → tiret simple
+  finalFile = finalFile.replace(/[—–]/g, '-');
+
+  // 2. Markdown inline à l'intérieur des blocs HTML <details>…</details> :
+  //    le parseur CommonMark ne traite PAS le markdown dans les blocs HTML, donc
+  //    "**gras**" reste tel quel sur la page. On convertit ici en <strong>/<em>/<code>.
+  finalFile = finalFile.replace(/<details>[\s\S]*?<\/details>/g, (block) => block
+    .replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*<])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>')
+    .replace(/`([^`\n]+?)`/g, '<code>$1</code>')
+  );
+
   fs.writeFileSync(filePath, finalFile, 'utf8');
   markAsDone(title, today);
 

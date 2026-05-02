@@ -114,17 +114,17 @@ Nous publions régulièrement ce type de comparatifs et guides pratiques sur [no
 
 <details>
 <summary>Un tapis XXL convient-il aussi pour un usage bureautique classique ?</summary>
-<p>Oui, absolument. Un tapis XXL format *desk pad* unifie le bureau, protège la surface et améliore le confort du poignet, même sans usage gaming. C'est un excellent choix pour le télétravail ou les longues sessions de travail.</p>
+<p>Oui, absolument. Un tapis XXL format <em>desk pad</em> unifie le bureau, protège la surface et améliore le confort du poignet, même sans usage gaming. C'est un excellent choix pour le télétravail ou les longues sessions de travail.</p>
 </details>
 
 <details>
 <summary>Un tapis standard est-il suffisant pour jouer en compétitif ?</summary>
-<p>Cela dépend de votre sensibilité. Si vous jouez en *high DPI* (1200 DPI et plus), un tapis standard peut suffire. En revanche, pour un jeu en *low DPI* avec des mouvements amples, un format XXL est fortement recommandé pour éviter de sortir de la surface.</p>
+<p>Cela dépend de votre sensibilité. Si vous jouez en <em>high DPI</em> (1200 DPI et plus), un tapis standard peut suffire. En revanche, pour un jeu en <em>low DPI</em> avec des mouvements amples, un format XXL est fortement recommandé pour éviter de sortir de la surface.</p>
 </details>
 
 <details>
 <summary>Quelle est la différence entre un tapis XXL et un desk pad ?</summary>
-<p>Le tapis XXL désigne un grand tapis de souris dépassant les 600 x 300 mm, tandis qu'un *desk pad* couvre généralement l'intégralité du bureau (900 mm ou plus). Les deux se rejoignent sur la fonctionnalité, mais le *desk pad* est davantage orienté usage mixte et esthétique du setup.</p>
+<p>Le tapis XXL désigne un grand tapis de souris dépassant les 600 x 300 mm, tandis qu'un <em>desk pad</em> couvre généralement l'intégralité du bureau (900 mm ou plus). Les deux se rejoignent sur la fonctionnalité, mais le <em>desk pad</em> est davantage orienté usage mixte et esthétique du setup.</p>
 </details>
 
 ---
