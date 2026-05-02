@@ -45,7 +45,7 @@ const pageUrl = `${SITE_URL}/product-category/${category.slug}/`;
 
 // ─── Titre + meta (depuis la collection si dispo, sinon fallback) ──────────
 const pageTitle = content?.data.title
-  ?? `${category.label} — Boutique ${siteConfig.name}`;
+  ?? `${category.label} - Boutique ${siteConfig.name}`;
 const pageDescription = content?.data.metaDescription
   ?? `Notre sélection de ${category.label.toLowerCase()}. Livraison sécurisée, retour 30 jours.`;
 const intro = content?.data.intro ?? '';
@@ -233,7 +233,7 @@ if (faqSchema) jsonLd.push(faqSchema);
       </div>
     )}
 
-    <!-- Guide d'achat (corps markdown — toggle) -->
+    <!-- Guide d'achat (corps markdown - toggle) -->
     {Content && (
       <section class="mt-20 pt-12 border-t border-white/[0.08] max-w-3xl" aria-label="Guide d'achat">
         <details class="group rounded-2xl border border-white/[0.08] bg-panel open:border-white/20 transition-colors">
@@ -276,7 +276,7 @@ if (faqSchema) jsonLd.push(faqSchema);
 </BaseLayout>
 
 <style>
-  /* Intro catégorie — pur CSS, aucun JS.
+  /* Intro catégorie - pur CSS, aucun JS.
      Le texte entier est toujours dans le DOM → Googlebot le lit intégralement. */
   .intro-details summary {
     list-style: none;

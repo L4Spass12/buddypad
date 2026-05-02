@@ -166,7 +166,7 @@ const breadcrumbSchema = {
                     src={src}
                     srcset={unsplashSrcset(src)}
                     sizes="(max-width: 1024px) 100vw, 560px"
-                    alt={i === 0 ? (imageAlt ?? name) : `${name} — image ${i + 1}`}
+                    alt={i === 0 ? (imageAlt ?? name) : `${name} - image ${i + 1}`}
                     class="w-full h-full object-cover"
                     width="1200"
                     height="900"
@@ -287,7 +287,7 @@ const breadcrumbSchema = {
                 return (
                   <div>
                     <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
-                      {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
+                      {attr.name} : <span class="text-cream" data-selected-label={attr.name}>-</span>
                     </label>
                     <div class="flex flex-wrap gap-2">
                       {attr.values.map((val, idx) => (
@@ -319,7 +319,7 @@ const breadcrumbSchema = {
               return (
                 <div>
                   <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
-                    {attr.name} : <span class="text-cream" data-selected-label={attr.name}>—</span>
+                    {attr.name} : <span class="text-cream" data-selected-label={attr.name}>-</span>
                   </label>
                   <div class={`grid gap-2`} style={`grid-template-columns: repeat(${parsed.length}, minmax(0, 1fr));`}>
                     {parsed.map((val, idx) => {
@@ -610,7 +610,7 @@ const breadcrumbSchema = {
       <!-- Mobile : label taille au-dessus + bouton pleine largeur -->
       <div class="md:hidden">
         <p class="text-[11px] text-n-500 font-light mb-1.5 text-center">
-          Taille : <span id="sticky-atc-size-mobile" class="text-cream font-medium">—</span>
+          Taille : <span id="sticky-atc-size-mobile" class="text-cream font-medium">-</span>
         </p>
         <button
           id="sticky-atc-btn"
@@ -637,7 +637,7 @@ const breadcrumbSchema = {
         <div class="flex-1 min-w-0">
           <p class="text-sm font-medium text-cream truncate tracking-tight">{name}</p>
           <p class="text-xs text-n-400 font-light truncate">
-            <span id="sticky-atc-size" class="text-cream font-medium">—</span>
+            <span id="sticky-atc-size" class="text-cream font-medium">-</span>
             · <span id="sticky-atc-price">{formatPrice(price)}</span>
           </p>
         </div>

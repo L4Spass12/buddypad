@@ -23,7 +23,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
     <form id="contact-form" class="space-y-5" novalidate>
       <!-- Champs cachés Web3Forms -->
       <input type="hidden" name="access_key" value={web3formsKey} />
-      <input type="hidden" name="subject" value="Nouveau message contact — BuddyPad" />
+      <input type="hidden" name="subject" value="Nouveau message contact - BuddyPad" />
       <input type="hidden" name="from_name" value="Formulaire BuddyPad" />
       <!-- Honeypot anti-bot (laissez vide) -->
       <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -76,7 +76,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
           name="objet"
           class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors appearance-none"
         >
-          <option value="">— Sélectionnez —</option>
+          <option value="">- Sélectionnez -</option>
           <option value="Question avant achat">Question avant achat</option>
           <option value="Suivi de commande">Suivi de commande</option>
           <option value="Problème de livraison">Problème de livraison</option>
