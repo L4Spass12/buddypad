@@ -33,21 +33,21 @@ La règle d’or du minimalisme : limiter la palette à deux ou trois couleurs m
 
 La palette sombre est la plus utilisée dans les setups minimalistes gaming et télétravail. Elle donne une impression de sérieux, d’élégance, et se marie bien avec les écrans noirs et les claviers mécaniques. Pour ce type de setup, un desk mat en tissu noir uni ou anthracite est le choix évident : discret, intemporel, compatible avec n’importe quel équipement.
 
-Les designs sombres avec une illustration subtile, comme les collections [manga dark ou bushido](https://buddypad.com/product-category/tapis-de-souris-manga-anime/) de **BuddyPad**, permettent d’ajouter une touche de personnalité sans rompre l’harmonie visuelle. Le motif reste discret à distance mais se révèle à qui regarde de près.
+Les designs sombres avec une illustration subtile, comme les collections [manga dark ou bushido](/product-category/tapis-de-souris-manga-anime/) de **BuddyPad**, permettent d’ajouter une touche de personnalité sans rompre l’harmonie visuelle. Le motif reste discret à distance mais se révèle à qui regarde de près.
 
 ### Setup minimaliste clair : blanc, beige, gris perle
 
-La palette claire, popularisée par les setups scandinaves et les home offices lumineux, crée une atmosphère aérée et apaisante. Un **desk mat** en tissu gris clair ou blanc cassé joue parfaitement le jeu. Attention toutefois : les surfaces claires montrent les traces de doigts plus vite. Un entretien plus fréquent (deux à trois fois par mois) est recommandé. Notre [guide de nettoyage tissu](https://buddypad.com/laver-tapis-souris-tissu/) détaille la procédure en quelques minutes.
+La palette claire, popularisée par les setups scandinaves et les home offices lumineux, crée une atmosphère aérée et apaisante. Un **desk mat** en tissu gris clair ou blanc cassé joue parfaitement le jeu. Attention toutefois : les surfaces claires montrent les traces de doigts plus vite. Un entretien plus fréquent (deux à trois fois par mois) est recommandé. Notre [guide de nettoyage tissu](/laver-tapis-souris-tissu/) détaille la procédure en quelques minutes.
 
 ### Setup minimaliste avec touche de couleur
 
 Le vrai minimalisme n’est pas nécessairement monochrome. Une couleur d’accent bien choisie : un vert forêt, un bleu nuit, un terracotta doux. Cette teinte peut être la signature visuelle du setup sans le surcharger. Dans ce cas, le **desk mat** peut porter cette couleur d’accent de manière subtile, soit dans son fond, soit dans son illustration.
 
-Les collections florales de **BuddyPad** (Myosotis, Sakura, Kawaii Ciel Étoilé) fonctionnent très bien dans ce registre : elles apportent de la couleur de manière organique, sans les tons saturés des tapis gaming. Avant de choisir, la question de la matière (tissu, PU cuir) mérite aussi d’être tranchée : notre comparatif des [matières de tapis de souris pour le télétravail](https://buddypad.com/tapis-souris-teletravail-tissu-pu-cuir-rigide/) détaille les différences concrètes selon votre usage quotidien.
+Les collections florales de **BuddyPad** (Myosotis, Sakura, Kawaii Ciel Étoilé) fonctionnent très bien dans ce registre : elles apportent de la couleur de manière organique, sans les tons saturés des tapis gaming. Avant de choisir, la question de la matière (tissu, PU cuir) mérite aussi d’être tranchée : notre comparatif des [matières de tapis de souris pour le télétravail](/tapis-souris-teletravail-tissu-pu-cuir-rigide/) détaille les différences concrètes selon votre usage quotidien.
 
 ## Organiser son bureau minimaliste autour du desk mat
 
-Une fois le desk mat posé, le reste du bureau s’organise autour de lui. Voici la méthode en trois étapes pour obtenir un setup minimaliste cohérent. Si vous partez de zéro ou si vous réaménagez votre home office en profondeur, notre guide sur l’[aménagement du bureau à domicile](https://buddypad.com/amenager-bureau-domicile-essentiels-teletravail/) couvre les cinq essentiels à avoir en place avant même de choisir votre desk mat.
+Une fois le desk mat posé, le reste du bureau s’organise autour de lui. Voici la méthode en trois étapes pour obtenir un setup minimaliste cohérent. Si vous partez de zéro ou si vous réaménagez votre home office en profondeur, notre guide sur l’[aménagement du bureau à domicile](/amenager-bureau-domicile-essentiels-teletravail/) couvre les cinq essentiels à avoir en place avant même de choisir votre desk mat.
 
 ### Étape 1 : définir la zone active
 
@@ -69,7 +69,7 @@ Un **desk mat** sans RGB, un clavier sans RGB, une souris sans RGB : c’est le 
 
 ### Choisir un desk mat trop petit
 
-Un **tapis de souris standard** sur un **grand bureau** crée un îlot isolé qui rompt la cohérence visuelle. C’est l’erreur la plus fréquente dans les tentatives de setup minimaliste. Le desk mat doit couvrir l’ensemble de la zone active, pas seulement la zone souris. Pour comprendre les différences de format entre desk pad et tapis XXL, notre article [desk pad ou tapis de souris XXL](https://buddypad.com/desk-pad-ou-tapis-de-souris-xxl/) aide à faire le bon choix selon la taille de votre bureau.
+Un **tapis de souris standard** sur un **grand bureau** crée un îlot isolé qui rompt la cohérence visuelle. C’est l’erreur la plus fréquente dans les tentatives de setup minimaliste. Le desk mat doit couvrir l’ensemble de la zone active, pas seulement la zone souris. Pour comprendre les différences de format entre desk pad et tapis XXL, notre article [desk pad ou tapis de souris XXL](/desk-pad-ou-tapis-de-souris-xxl/) aide à faire le bon choix selon la taille de votre bureau.
 
 ### Négliger la verticalité
 
@@ -81,6 +81,6 @@ Le **setup minimaliste** n’est pas uniquement une question d’esthétique. De
 
 Le **desk mat** joue un rôle concret dans cette séparation : il délimite physiquement et visuellement la zone de travail. Quand vous le recouvrez à la fin de la journée ou que vous rangez les équipements dessus, c’est un signal spatial que la journée de travail est terminée.
 
-Pour trouver le desk mat qui correspond exactement à votre profil de bureau, retrouvez notre [sélection des meilleurs desk mats pour le télétravail](https://buddypad.com/meilleur-desk-mat-teletravail-2026/) classée par usage et par budget.
+Pour trouver le desk mat qui correspond exactement à votre profil de bureau, retrouvez notre [sélection des meilleurs desk mats pour le télétravail](/meilleur-desk-mat-teletravail/) classée par usage et par budget.
 
-Explorez notre [collection complète de desk mats XXL BuddyPad](https://buddypad.com/product-category/tapis-de-souris-xxl/) pour trouver le design qui devient la fondation visuelle de votre setup minimaliste.
+Explorez notre [collection complète de desk mats XXL BuddyPad](/product-category/tapis-de-souris-xxl/) pour trouver le design qui devient la fondation visuelle de votre setup minimaliste.

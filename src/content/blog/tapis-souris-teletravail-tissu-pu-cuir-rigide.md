@@ -11,7 +11,7 @@ imageAlt: "Tapis de souris pour le télétravail : tissu, PU cuir ou rigide, leq
 
 Vous cherchez un **tapis de souris pour le télétravail** et vous hésitez entre tissu, PU cuir et surface rigide ? La confusion est normale : les fabricants ciblent majoritairement les gamers, pas les télétravailleurs, et les critères ne sont pas les mêmes. Un gamer veut la glisse maximale. Un télétravailleur veut le confort sur 8 heures, la résistance aux taches, et un look adapté aux visioconférences.
 
-Ce guide compare les trois grandes familles de matières en les évaluant spécifiquement sur les critères du télétravail, et non du gaming compétitif. Si vous cherchez ensuite quel modèle acheter concrètement, notre [sélection des meilleurs desk mats pour le télétravail](https://buddypad.com/meilleur-desk-mat-teletravail-2026/) classe les options par profil de bureau.
+Ce guide compare les trois grandes familles de matières en les évaluant spécifiquement sur les critères du télétravail, et non du gaming compétitif. Si vous cherchez ensuite quel modèle acheter concrètement, notre [sélection des meilleurs desk mats pour le télétravail](/meilleur-desk-mat-teletravail/) classe les options par profil de bureau.
 
 ## Tissu haute densité : le standard polyvalent pour le télétravail
 
@@ -24,19 +24,19 @@ Le tissu est, de loin, le matériau le plus utilisé pour les tapis de souris et
 -   **Confort du poignet** : la surface souple amortit légèrement le contact permanent du poignet et de l’avant-bras. Sur une journée de 7 à 8 heures de frappe, c’est une vraie différence en termes de fatigue musculaire.
 -   **Silencieux** : les frappes de clavier et les déplacements de souris sur tissu sont nettement plus silencieux que sur une surface rigide. Un avantage non négligeable lors des réunions en visio ou si vous partagez votre espace.
 -   **Compatibilité universelle** : le tissu fonctionne avec toutes les souris optiques et laser, quelle que soit la sensibilité DPI. Aucune configuration particulière nécessaire.
--   **Lavable à la main** : un passage mensuel à l’eau tiède avec du savon doux suffit pour le maintenir propre. Notre [guide de lavage tissu](https://buddypad.com/laver-tapis-souris-tissu/) détaille chaque étape sans risque.
+-   **Lavable à la main** : un passage mensuel à l’eau tiède avec du savon doux suffit pour le maintenir propre. Notre [guide de lavage tissu](/laver-tapis-souris-tissu/) détaille chaque étape sans risque.
 
 ### Les limites du tissu en télétravail
 
 Le tissu accumule plus facilement les miettes, la poussière et les traces de doigts qu’une surface lisse. Si vous mangez ou buvez régulièrement à votre bureau, il faudra un entretien légèrement plus fréquent. En revanche, les modèles à bords cousus (comme tous les desk mats BuddyPad) résistent bien à l’usure et ne s’effilochent pas avec le temps.
 
-Pour le **télétravail**, un tissu de densité élevée (haute densité) est préférable à un tissu speed fin : il offre un meilleur confort au poignet et une résistance plus longue à l’usure. Pour comprendre les différences techniques entre les types de surfaces tissu, notre [comparatif tissu vs rigide](https://buddypad.com/materiau-tapis-souris-tissu-rigide/) va dans le détail.
+Pour le **télétravail**, un tissu de densité élevée (haute densité) est préférable à un tissu speed fin : il offre un meilleur confort au poignet et une résistance plus longue à l’usure. Pour comprendre les différences techniques entre les types de surfaces tissu, notre [comparatif tissu vs rigide](/materiau-tapis-souris-tissu-rigide/) va dans le détail.
 
 **Verdict tissu pour le télétravail** : recommandé pour la grande majorité des usages. Confort maximal, entretien simple, compatible avec tous les setups.
 
 ## PU cuir (simili cuir) : le choix premium du home office
 
-Le PU cuir synthétique, parfois appelé simili cuir ou leatherette, est moins courant dans les catalogues gaming mais très présent dans les gammes télétravail et bureau de marques comme Logitech (Studio Series) ou chez les accessoiristes premium. Son positionnement est clair : esthétique haut de gamme, entretien minimal, résistance aux liquides. Si vous êtes en train d’aménager un vrai home office de A à Z, notre guide sur l’[aménagement du bureau à domicile](https://buddypad.com/amenager-bureau-domicile-essentiels-teletravail/) vous aidera à situer le desk mat parmi les autres priorités.
+Le PU cuir synthétique, parfois appelé simili cuir ou leatherette, est moins courant dans les catalogues gaming mais très présent dans les gammes télétravail et bureau de marques comme Logitech (Studio Series) ou chez les accessoiristes premium. Son positionnement est clair : esthétique haut de gamme, entretien minimal, résistance aux liquides. Si vous êtes en train d’aménager un vrai home office de A à Z, notre guide sur l’[aménagement du bureau à domicile](/amenager-bureau-domicile-essentiels-teletravail/) vous aidera à situer le desk mat parmi les autres priorités.
 
 ### Les avantages du PU cuir pour le télétravail
 
@@ -135,7 +135,7 @@ Rapport qualité/prix
 
 ### Choisissez le tissu si…
 
-Vous cherchez le meilleur confort sur la durée, vous avez un bureau standard de 100 à 140 cm, votre priorité est le confort du poignet sur 7+ heures de frappe quotidienne, et vous voulez un format XXL qui couvre toute la surface de travail. Les collections [desk mats XXL BuddyPad](https://buddypad.com/product-category/tapis-de-souris-xxl/) en tissu haute densité couvrent tous ces cas de figure à prix accessible. Si vous souhaitez soigner l’esthétique d’ensemble, notre guide sur le [desk mat et setup minimaliste](https://buddypad.com/desk-mat-setup-minimaliste-bureau-epure-2026/) vous montrera comment créer un bureau épuré et cohérent autour de votre desk mat.
+Vous cherchez le meilleur confort sur la durée, vous avez un bureau standard de 100 à 140 cm, votre priorité est le confort du poignet sur 7+ heures de frappe quotidienne, et vous voulez un format XXL qui couvre toute la surface de travail. Les collections [desk mats XXL BuddyPad](/product-category/tapis-de-souris-xxl/) en tissu haute densité couvrent tous ces cas de figure à prix accessible. Si vous souhaitez soigner l’esthétique d’ensemble, notre guide sur le [desk mat et setup minimaliste](/desk-mat-setup-minimaliste-bureau-epure/) vous montrera comment créer un bureau épuré et cohérent autour de votre desk mat.
 
 ### Choisissez le PU cuir si…
 
@@ -145,4 +145,4 @@ Vous buvez ou mangez régulièrement à votre bureau, l’esthétique premium es
 
 Vous utilisez le même bureau pour jouer le soir et travailler le matin, votre souris est configurée pour la glisse rapide, et vous n’avez pas de contrainte acoustique (bureau indépendant, pas de visios fréquentes). Dans ce cas uniquement, conserver une surface rigide gaming peut avoir du sens.
 
-Pour approfondir le choix entre desk mat et tapis de souris classique, notre article [desk pad ou tapis de souris XXL](https://buddypad.com/desk-pad-ou-tapis-de-souris-xxl/) couvre les différences de format en détail.
+Pour approfondir le choix entre desk mat et tapis de souris classique, notre article [desk pad ou tapis de souris XXL](/desk-pad-ou-tapis-de-souris-xxl/) couvre les différences de format en détail.

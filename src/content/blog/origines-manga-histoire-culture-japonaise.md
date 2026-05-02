@@ -67,7 +67,7 @@ En 1952, Tezuka publie **Astro Boy** (Tetsuwan Atom), un manga de science-fictio
 
 _En résumé : Osamu Tezuka (1928-1989) est le créateur du manga moderne tel qu’on le connaît aujourd’hui. Il importe les techniques cinématographiques dans le manga, popularise les grands yeux expressifs et invente avec Astro Boy le modèle manga-anime qui structure toute l’industrie contemporaine._
 
-Si l’univers samouraï et le Japon féodal vous passionnent, découvrez comment ces esthétiques inspirent directement la [collection de tapis de souris manga et anime BuddyPad](https://buddypad.com/product-category/tapis-de-souris-manga-anime/), pensée pour les fans de culture japonaise.
+Si l’univers samouraï et le Japon féodal vous passionnent, découvrez comment ces esthétiques inspirent directement la [collection de tapis de souris manga et anime BuddyPad](/product-category/tapis-de-souris-manga-anime/), pensée pour les fans de culture japonaise.
 
 ## Les grands genres du manga et les œuvres qui les ont définis
 
@@ -103,7 +103,7 @@ Le manga japonais se publie historiquement en feuilleton dans des magazines hebd
 
 La mondialisation du manga s’accélère massivement dans les années 1990 avec Dragon Ball Z à la télévision, puis Pokémon, Sailor Moon et Naruto qui touchent simultanément des centaines de millions d’enfants sur tous les continents. Internet amplifie ensuite le phénomène : les scanlations (traductions non officielles) circulent dès les années 2000, créant une communauté mondiale de fans bien avant que les éditeurs locaux ne suivent.
 
-Aujourd’hui, la **culture manga et anime** est devenue une référence esthétique mondiale, bien au-delà du seul médium dessiné. Elle influence la mode, le gaming, la musique, la décoration intérieure et les setups de bureau de millions de personnes à travers le monde. Pour les fans qui souhaitent intégrer cette esthétique à leur quotidien, notre [collection de tapis de souris manga et anime](https://buddypad.com/product-category/tapis-de-souris-manga-anime/) propose des designs inspirés des grandes esthétiques de la culture japonaise, de l’univers samouraï aux paysages de cerisiers.
+Aujourd’hui, la **culture manga et anime** est devenue une référence esthétique mondiale, bien au-delà du seul médium dessiné. Elle influence la mode, le gaming, la musique, la décoration intérieure et les setups de bureau de millions de personnes à travers le monde. Pour les fans qui souhaitent intégrer cette esthétique à leur quotidien, notre [collection de tapis de souris manga et anime](/product-category/tapis-de-souris-manga-anime/) propose des designs inspirés des grandes esthétiques de la culture japonaise, de l’univers samouraï aux paysages de cerisiers.
 
 _En résumé : le manga a conquis le monde grâce à trois facteurs principaux. Sa capacité à couvrir tous les genres pour tous les publics, son modèle de feuilleton hebdomadaire qui crée une fidélité intense, et l’explosion télévisuelle des années 1990 qui a exposé Dragon Ball, Pokémon et Sailor Moon à des générations entières dans le monde entier._
 
@@ -153,4 +153,4 @@ Les **origines du manga** nous rappellent que ce médium n’est pas né du vide
 
 Aujourd’hui, cette culture s’exprime bien au-delà des pages dessinées. Elle imprègne les jeux vidéo, la mode, l’architecture intérieure et les espaces de travail des fans du monde entier. Afficher son appartenance à cette culture, c’est revendiquer un héritage visuel millénaire, d’une richesse symbolique que peu d’autres traditions artistiques peuvent égaler.
 
-Pour les fans qui souhaitent un [cadeau original autour de la culture manga](https://buddypad.com/idee-cadeau-fan-manga/) ou tout simplement prolonger cette esthétique sur leur bureau au quotidien, la [**collection de tapis de souris manga et anime BuddyPad**](https://buddypad.com/product-category/tapis-de-souris-manga-anime/) propose des designs inspirés des grandes esthétiques de la culture japonaise : samouraïs, cerisiers, univers cosmiques et bien d’autres. Disponibles en format Standard, Large et [XXL desk mat](https://buddypad.com/product-category/tapis-de-souris-xxl/).
+Pour les fans qui souhaitent un [cadeau original autour de la culture manga](/idee-cadeau-fan-manga/) ou tout simplement prolonger cette esthétique sur leur bureau au quotidien, la [**collection de tapis de souris manga et anime BuddyPad**](/product-category/tapis-de-souris-manga-anime/) propose des designs inspirés des grandes esthétiques de la culture japonaise : samouraïs, cerisiers, univers cosmiques et bien d’autres. Disponibles en format Standard, Large et [XXL desk mat](/product-category/tapis-de-souris-xxl/).

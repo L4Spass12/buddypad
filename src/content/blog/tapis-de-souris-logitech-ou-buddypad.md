@@ -41,7 +41,7 @@ Logitech positionne ses tapis entre 30€ et 50€. Nos BuddyPad se situent entr
 
 **Choisissez BuddyPad si :** vous cherchez le meilleur rapport qualité-prix, vous voulez un produit durable, vous souhaitez exprimer votre personnalité à travers votre setup, et vous faites partie de la gaming ou anime culture.
 
-Parcourez notre [catalogue complet](https://buddypad.com/tapis-de-souris/) pour trouver le tapis parfait. Découvrez aussi notre [comparatif BuddyPad vs Razer vs SteelSeries](https://buddypad.com/tapis-de-souris-buddypad-vs-razer-vs-steelseries/).
+Parcourez notre [catalogue complet](/tapis-de-souris/) pour trouver le tapis parfait. Découvrez aussi notre [comparatif BuddyPad vs Razer vs SteelSeries](/tapis-de-souris-buddypad-vs-razer-vs-steelseries/).
 
 ## FAQ – Logitech vs BuddyPad
 

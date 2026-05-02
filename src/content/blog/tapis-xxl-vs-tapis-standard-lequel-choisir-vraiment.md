@@ -40,7 +40,7 @@ Un tapis de souris **standard** mesure généralement entre **250 x 300 mm** et 
 
 Les deux formats partagent souvent les mêmes matières premières - tissu *soft*, tissu *speed*, ou surface rigide. En revanche, les tapis XXL intègrent plus fréquemment une **base antidérapante renforcée** (caoutchouc naturel haute densité, entre 3 et 5 mm d'épaisseur) pour éviter le glissement sur de grandes surfaces. Les tapis standard privilégient parfois la légèreté et la portabilité.
 
-Pour aller plus loin sur les nuances de format, notre article sur les [différences entre desk pad et tapis XXL](/blog/desk-pad-ou-tapis-de-souris-xxl/) détaille précisément ces distinctions souvent mal comprises.
+Pour aller plus loin sur les nuances de format, notre article sur les [différences entre desk pad et tapis XXL](/desk-pad-ou-tapis-de-souris-xxl/) détaille précisément ces distinctions souvent mal comprises.
 
 ---
 
@@ -74,7 +74,7 @@ Les joueurs de jeux *FPS* (*First Person Shooter*) comme *CS2*, *Valorant* ou *A
 
 > Un tapis de 900 x 400 mm permet des *sweeps* complets sans jamais lever la souris, condition sine qua non d'une précision maximale en FPS.
 
-Les [avantages du format XXL pour gamers](/blog/tapis-souris-xxl-gaming-tendances-setup/) sont documentés : meilleure régularité des mouvements, réduction de la fatigue musculaire lors de longues sessions, et liberté de placement du clavier.
+Les [avantages du format XXL pour gamers](/tapis-souris-xxl-gaming-tendances-setup/) sont documentés : meilleure régularité des mouvements, réduction de la fatigue musculaire lors de longues sessions, et liberté de placement du clavier.
 
 ### Ergonomie et télétravail
 
@@ -104,7 +104,7 @@ Mesurez la surface libre de votre bureau. Si vous disposez de **moins de 50 cm d
 | Télétravailleur / bureautique | XXL format *desk pad* |
 | Utilisateur nomade | Standard compact |
 
-Pour approfondir les **critères de sélection d'un tapis** au-delà du format - matière, épaisseur, couture de bord, type de surface - notre guide complet [comment choisir le meilleur tapis de souris en 2026](/blog/choisir-tapis-souris-2026/) vous donnera toutes les clés.
+Pour approfondir les **critères de sélection d'un tapis** au-delà du format - matière, épaisseur, couture de bord, type de surface - notre guide complet [comment choisir le meilleur tapis de souris en 2026](/choisir-tapis-souris-2026/) vous donnera toutes les clés.
 
 Nous publions régulièrement ce type de comparatifs et guides pratiques sur [notre blog](/blog/), n'hésitez pas à y faire un tour.
 

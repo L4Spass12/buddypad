@@ -37,7 +37,7 @@ La question mérite d’être posée. Un petit tapis de souris kawaii, c’est m
 
 D’abord, il couvre la surface entière du bureau et devient la **pièce maîtresse de votre déco**. Finies les zones de bois nu qui cassent l’ambiance. Tout est homogène, unifié, pensé. Ensuite, il accueille à la fois la souris, le clavier, les petits objets déco (plantes, figures, agenda), et protège le bureau des rayures et des traces.
 
-Pour un setup kawaii réussi, on recommande systématiquement un **[tapis de souris XXL](https://buddypad.com/product-category/tapis-de-souris-xxl/)** : l’impact visuel est incomparable, et la surface de jeu ou de travail est bien plus confortable au quotidien.
+Pour un setup kawaii réussi, on recommande systématiquement un **[tapis de souris XXL](/product-category/tapis-de-souris-xxl/)** : l’impact visuel est incomparable, et la surface de jeu ou de travail est bien plus confortable au quotidien.
 
 ### Quelle matière pour un tapis kawaii ?
 
@@ -115,4 +115,4 @@ Cela dépend directement de la qualité de l’impression. Les tapis BuddyPad ut
 
 Ce qui est beau dans l’univers kawaii, c’est sa diversité. On peut être kawaii et aimer les chats, le Japon, les étoiles, les fleurs, la fantasy pastel ou simplement le rose. Il n’y a pas un seul type de setup kawaii : il y en a autant que de personnalités.
 
-Chez BuddyPad, chaque design est pensé pour incarner un univers précis, sans se ressembler. Parcourez notre [collection tapis kawaii](https://buddypad.com/collections/kawaii) et trouvez celui qui vous ressemble vraiment, pas celui que tout le monde a.
+Chez BuddyPad, chaque design est pensé pour incarner un univers précis, sans se ressembler. Parcourez notre [collection tapis kawaii](/product-category/tapis-de-souris-kawaii/) et trouvez celui qui vous ressemble vraiment, pas celui que tout le monde a.

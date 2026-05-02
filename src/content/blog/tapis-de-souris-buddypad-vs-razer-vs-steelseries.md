@@ -17,7 +17,7 @@ Un tapis de souris de qualité optimise la précision, améliore la fluidité de
 
 ## BuddyPad : L’excellence française au service des gamers
 
-BuddyPad s’est imposé comme une référence dans l’univers des [tapis de souris gaming](https://buddypad.com/product-category/tapis-de-souris-gaming/) en proposant des produits qui allient qualité premium et designs uniques. **Qualité de fabrication exceptionnelle** : tissu micro-tissé haute densité, base caoutchouc naturel antidérapant, bords surpiqués anti-effilochage. **Designs exclusifs** : manga, anime, gaming — introuvables chez les grandes marques. **Rapport qualité-prix imbattable** : 24-32€ pour un XL, sans intermédiaires.
+BuddyPad s’est imposé comme une référence dans l’univers des [tapis de souris gaming](/product-category/tapis-de-souris-gaming/) en proposant des produits qui allient qualité premium et designs uniques. **Qualité de fabrication exceptionnelle** : tissu micro-tissé haute densité, base caoutchouc naturel antidérapant, bords surpiqués anti-effilochage. **Designs exclusifs** : manga, anime, gaming — introuvables chez les grandes marques. **Rapport qualité-prix imbattable** : 24-32€ pour un XL, sans intermédiaires.
 
 ## Razer : Le géant du gaming avec une gamme étendue
 

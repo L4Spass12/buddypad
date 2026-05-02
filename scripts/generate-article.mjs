@@ -227,7 +227,7 @@ Réponds en JSON uniquement, sans markdown :
   let internalLinks = `- [${siteConfig.name}](/) — page d'accueil du site\n- [notre blog](/blog/) — tous nos articles`;
 
   if (existingArticles.length > 0) {
-    const articleList = existingArticles.map(a => `"${a.title}" -> /blog/${a.slug}/`).join('\n');
+    const articleList = existingArticles.map(a => `"${a.title}" -> /${a.slug}/`).join('\n');
     const linkMsg = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 400,
@@ -239,7 +239,7 @@ Articles existants :
 ${articleList}
 
 Choisis les 3 articles les plus pertinents à lier naturellement depuis le nouvel article.
-Réponds en JSON sans markdown : [{"title": "...", "path": "/blog/slug/", "anchor": "texte du lien naturel 3-5 mots"}]`
+Réponds en JSON sans markdown : [{"title": "...", "path": "/slug/", "anchor": "texte du lien naturel 3-5 mots"}]`
       }]
     });
 
@@ -255,7 +255,7 @@ Réponds en JSON sans markdown : [{"title": "...", "path": "/blog/slug/", "ancho
           console.warn(`Lien rejeté (slug introuvable) : ${p.path ?? p.title}`);
           return null;
         }
-        return { anchor: p.anchor, path: `/blog/${match.slug}/`, title: match.title };
+        return { anchor: p.anchor, path: `/${match.slug}/`, title: match.title };
       }).filter(Boolean);
       if (validated.length > 0) {
         const dynamicLinks = validated.map(p => `- [${p.anchor}](${p.path}) — ${p.title}`).join('\n');
@@ -317,19 +317,24 @@ Aucun lien ne peut être omis. Chaque lien doit apparaître une fois dans le tex
 
   let rawContent = articleMsg.content[0].text.replace(/—/g, '-');
 
-  // Valide les liens internes /blog/*/ : corrige les typos vers le slug canonique le plus proche
+  // Valide les liens internes vers les articles. Les articles sont à la racine
+  // (/<slug>/, pas /blog/<slug>/). On accepte les 2 formats en entrée pour rattraper
+  // les hallucinations du LLM, et on normalise systématiquement vers /<slug>/.
   const validSlugs = new Set(existingArticles.map(a => a.slug));
-  rawContent = rawContent.replace(/\]\(\/blog\/([a-z0-9-]+)\/?\)/g, (fullMatch, slug) => {
-    if (validSlugs.has(slug)) return fullMatch;
-    // Cherche une correspondance approximative (distance de Levenshtein basique)
+  rawContent = rawContent.replace(/\]\(\/(?:blog\/)?([a-z0-9-]+)\/?\)/g, (fullMatch, slug) => {
+    // Slugs réservés non-blog (homepage, listing, etc.) : on laisse passer le match d'origine.
+    const reserved = new Set(['blog', 'contact', 'tapis-de-souris', 'category', 'product', 'product-category']);
+    if (reserved.has(slug)) return fullMatch;
+    if (validSlugs.has(slug)) return `](/${slug}/)`;
+    // Correspondance approximative (chars en commun à la même position)
     const best = existingArticles
       .map(a => ({ slug: a.slug, score: [...slug].filter((c, i) => a.slug[i] === c).length / Math.max(slug.length, a.slug.length) }))
       .sort((a, b) => b.score - a.score)[0];
     if (best && best.score > 0.7) {
-      console.log(`🔗 Lien corrigé : /blog/${slug}/ → /blog/${best.slug}/`);
-      return `](/blog/${best.slug}/)`;
+      console.log(`🔗 Lien corrigé : ${fullMatch} → /${best.slug}/`);
+      return `](/${best.slug}/)`;
     }
-    console.warn(`⚠ Lien cassé non corrigé : /blog/${slug}/`);
+    console.warn(`⚠ Lien cassé non corrigé : ${fullMatch}`);
     return `](/blog/)`;
   });
 

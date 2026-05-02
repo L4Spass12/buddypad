@@ -170,9 +170,51 @@ const breadcrumbSchema = {
           prose-ul:font-light prose-ol:font-light prose-li:text-n-400
           prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-n-400
           prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal
-          prose-hr:border-white/[0.08]">
+          prose-hr:border-white/[0.08]
+          blog-tables">
           <slot />
         </article>
+
+        <!-- Tables : design dark cohérent avec le reste du site (cards .bg-panel + border-white/[0.08]).
+             prose-table:* ne couvre pas tout (pas de prose-tr/prose-thead), donc on cible en CSS scoped. -->
+        <style is:global>
+          .blog-tables { overflow-x: auto; }
+          .blog-tables table {
+            display: table;
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid rgb(255 255 255 / 0.08);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            font-size: 0.9rem;
+          }
+          .blog-tables thead {
+            background: rgb(255 255 255 / 0.04);
+          }
+          .blog-tables th {
+            color: rgb(248 246 240); /* cream */
+            font-weight: 500;
+            text-align: left;
+            padding: 0.875rem 1.25rem;
+            border-bottom: 1px solid rgb(255 255 255 / 0.12);
+          }
+          .blog-tables td {
+            color: rgb(163 163 163); /* n-400 */
+            font-weight: 300;
+            padding: 0.875rem 1.25rem;
+            border-bottom: 1px solid rgb(255 255 255 / 0.06);
+          }
+          .blog-tables tbody tr:last-child td { border-bottom: 0; }
+          .blog-tables tbody tr:hover td {
+            background: rgb(255 255 255 / 0.02);
+          }
+          .blog-tables td em, .blog-tables th em {
+            color: rgb(212 212 212);
+            font-style: italic;
+          }
+        </style>
 
         <!-- Tags -->
         {tags.length > 0 && (

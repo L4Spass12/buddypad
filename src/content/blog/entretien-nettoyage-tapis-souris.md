@@ -56,7 +56,7 @@ Les tapis en tissu (surface textile sur base en caoutchouc) sont les plus couran
 8.  Essorez doucement en pressant (jamais en tordant)
 9.  Posez à plat sur une serviette pour séchage naturel
 
-**→ Guide détaillé:** [Comment laver un tapis de souris en tissu](https://buddypad.com/laver-tapis-souris-tissu)
+**→ Guide détaillé:** [Comment laver un tapis de souris en tissu](/laver-tapis-souris-tissu/)
 
 **Temps total:** 15 minutes de nettoyage + 24h de séchage
 
@@ -72,7 +72,7 @@ Les surfaces dures se nettoient rapidement mais demandent de la délicatesse pou
 4.  Séchez immédiatement avec un chiffon sec
 5.  Vérifiez qu’aucune trace ne subsiste
 
-**→ Tutoriel complet:** [Nettoyer un tapis de souris rigide](https://buddypad.com/nettoyer-tapis-souris-rigide)
+**→ Tutoriel complet:** [Nettoyer un tapis de souris rigide](/nettoyer-tapis-souris-rigide/)
 
 **Temps total:** 5 minutes
 
@@ -95,7 +95,7 @@ Les tapis lumineux demandent une attention particulière pour préserver les com
 4.  Laissez sécher complètement (minimum 2h) avant de rebrancher
 5.  Testez l’éclairage avant utilisation intensive
 
-**→ Guide spécialisé:** [Nettoyer un tapis RGB sans risque](https://buddypad.com/nettoyer-tapis-rgb)
+**→ Guide spécialisé:** [Nettoyer un tapis RGB sans risque](/nettoyer-tapis-rgb/)
 
 **Temps total:** 10 minutes + 2h de séchage
 
@@ -214,7 +214,7 @@ Le séchage est l’étape la plus critique qui conditionne la durée de vie de 
 
 Touchez la base en caoutchouc : c’est la partie qui sèche en dernier. Si elle est froide au toucher ou légèrement humide, poursuivez le séchage. Un tapis mal séché développera des moisissures et des mauvaises odeurs en quelques jours.
 
-**→ Guide complet:** [Sécher un tapis de souris correctement](https://buddypad.com/secher-tapis-souris)
+**→ Guide complet:** [Sécher un tapis de souris correctement](/secher-tapis-souris/)
 
 ## Fréquence d’entretien recommandée
 
@@ -248,7 +248,7 @@ Nettoyez immédiatement si vous constatez:
 -   Odeur désagréable
 -   Taches de liquide renversé
 
-**→ Calendrier détaillé:** [Fréquence de nettoyage optimale](https://buddypad.com/frequence-nettoyage-tapis)
+**→ Calendrier détaillé:** [Fréquence de nettoyage optimale](/frequence-nettoyage-tapis/)
 
 ## Problèmes courants et solutions professionnelles
 
@@ -298,7 +298,7 @@ Nettoyez immédiatement si vous constatez:
 4.  Séchez en extérieur si possible (UV naturels désinfectants)
 5.  Si l’odeur persiste, le tapis est probablement compromis
 
-**→ Troubleshooting complet:** [Problèmes de tapis et solutions](https://buddypad.com/problemes-tapis-souris-solutions)
+**→ Troubleshooting complet:** [Problèmes de tapis et solutions](/problemes-tapis-souris-solutions/)
 
 ## FAQ : Vos questions sur le nettoyage de tapis de souris
 

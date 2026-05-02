@@ -105,9 +105,9 @@ Si vous observez un dysfonctionnement après nettoyage, des dégâts d’eau imp
 
 ## Entretien optimal de votre tapis gaming
 
-Pour aller plus loin dans l’entretien de vos périphériques, consultez notre [guide complet sur l’entretien des tapis de souris](/entretien-nettoyage-tapis-souris), qui couvre les meilleures pratiques de nettoyage et durabilité applicables à tous vos accessoires gaming.
+Pour aller plus loin dans l’entretien de vos périphériques, consultez notre [guide complet sur l’entretien des tapis de souris](/entretien-nettoyage-tapis-souris/), qui couvre les meilleures pratiques de nettoyage et durabilité applicables à tous vos accessoires gaming.
 
-Si vous recherchez des solutions complètes pour votre setup, découvrez notre [gamme de tapis de souris gaming](https://buddypad.com/product-category/tapis-de-souris-gaming/) conçus pour la durabilité et la performance. Buddypad propose également une sélection variée dans notre [catalogue complet](https://buddypad.com/tapis-de-souris/) pour tous vos besoins en accessoires gaming.
+Si vous recherchez des solutions complètes pour votre setup, découvrez notre [gamme de tapis de souris gaming](/product-category/tapis-de-souris-gaming/) conçus pour la durabilité et la performance. Buddypad propose également une sélection variée dans notre [catalogue complet](/tapis-de-souris/) pour tous vos besoins en accessoires gaming.
 
 ## Conclusion
 

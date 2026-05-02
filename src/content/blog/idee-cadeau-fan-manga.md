@@ -33,22 +33,22 @@ Si la personne n’a pas encore lu l’intégralité d’une série qu’elle ad
 
 ![](/images/inline/tapis-de-souris-manga-anime-nuit-etoilee-et-arbres-fleuris.webp)
 
-[Découvrir la collection manga / anime](https://buddypad.com/product-category/tapis-de-souris-manga-anime/)
+[Découvrir la collection manga / anime](/product-category/tapis-de-souris-manga-anime/)
 
 Et voilà l’idée dont tout le monde passe à côté. Pourtant, c’est souvent le cadeau qui crée la meilleure réaction et qui mérite largement sa place dans le top 3.
 
 Un **fan de manga** passe des heures devant son bureau : pour jouer, regarder des animes, travailler ou étudier. Son setup, c’est son espace à lui. Et un **tapis de souris manga XXL** transforme cet espace en quelque chose qui lui ressemble vraiment. C’est visible, utilisé chaque jour, et c’est un **cadeau manga original** auquel personne ne pense, ce qui le rend encore plus impactant.
 
-**[BuddyPad](https://buddypad.com/)** imprime ses **tapis de souris manga** en haute définition par sublimation thermique, avec des illustrations inspirées de l’univers manga et japonais. La base en caoutchouc antidérapante et les bords cousus assurent une durabilité au quotidien. Quelques designs parfaits pour un fan :
+**[BuddyPad](/)** imprime ses **tapis de souris manga** en haute définition par sublimation thermique, avec des illustrations inspirées de l’univers manga et japonais. La base en caoutchouc antidérapante et les bords cousus assurent une durabilité au quotidien. Quelques designs parfaits pour un fan :
 
--   [**Yami Karasu**](https://buddypad.com/produit/tapis-de-souris-yami-karasu/) : corbeau noir sur fond de brume violette, esthétique **manga japonais** pur
--   [**Karasu Katana**](https://buddypad.com/produit/tapis-de-souris-karasu-katana/) : ambiance samouraï sombre et cinématique
--   [**Bushido Mist**](https://buddypad.com/produit/tapis-de-souris-bushido-mist/) : guerrier fantôme dans la brume bleue, style bushido épuré
--   [**Héros**](https://buddypad.com/produit/tapis-de-souris-heros/) : héros style anime au regard déterminé, énergie shōnen au maximum
--   [**Rêve Astral**](https://buddypad.com/produit/tapis-de-souris-reve-astral/) : étoiles, brume et ciel nocturne, ambiance anime onirique
--   [**Samouraï et Papillons Bleus**](https://buddypad.com/produit/tapis-de-souris-samourai-papillons-bleus/) : guerrière au katana entourée de papillons lumineux, design iconique BuddyPad
--   [**Pixel Ninja**](https://buddypad.com/produit/tapis-de-souris-pixel-ninja/) : ninja pixel art sur fond Mont Fuji, pour le fan de culture japonaise
--   [**Geisha et Cerisiers**](https://buddypad.com/produit/tapis-de-souris-geisha-et-cerisiers/) : touche de douceur et de culture nippone pour le bureau
+-   [**Yami Karasu**](/product/tapis-de-souris-yami-karasu/) : corbeau noir sur fond de brume violette, esthétique **manga japonais** pur
+-   [**Karasu Katana**](/product/tapis-de-souris-karasu-katana/) : ambiance samouraï sombre et cinématique
+-   [**Bushido Mist**](/product/tapis-de-souris-bushido-mist/) : guerrier fantôme dans la brume bleue, style bushido épuré
+-   [**Héros**](/product/tapis-de-souris-heros/) : héros style anime au regard déterminé, énergie shōnen au maximum
+-   [**Rêve Astral**](/product/tapis-de-souris-reve-astral/) : étoiles, brume et ciel nocturne, ambiance anime onirique
+-   [**Samouraï et Papillons Bleus**](/product/tapis-de-souris-samourai-papillons-bleus/) : guerrière au katana entourée de papillons lumineux, design iconique BuddyPad
+-   [**Pixel Ninja**](/product/tapis-de-souris-pixel-ninja/) : ninja pixel art sur fond Mont Fuji, pour le fan de culture japonaise
+-   [**Geisha et Cerisiers**](/product/tapis-de-souris-geisha-et-cerisiers/) : touche de douceur et de culture nippone pour le bureau
 
 Tous disponibles en format Standard, Large et **XXL desk mat**. **Budget : 19 € à 30 €.**
 
@@ -98,4 +98,4 @@ Figurine collector premium, expérience (convention, escape game)
 
 La meilleure **idée cadeau pour un fan de manga** est celle qui montre que vous avez vraiment pensé à la personne : ses animes favoris, son univers, son quotidien. Un **tapis de souris manga** utilisé chaque jour sur son bureau, c’est exactement ça : un cadeau qui lui ressemble et qu’il n’aurait pas forcément acheté lui-même.
 
-👉 [**Voir tous les tapis de souris manga BuddyPad**](https://buddypad.com/product-category/tapis-de-souris-manga-anime/)
+👉 [**Voir tous les tapis de souris manga BuddyPad**](/product-category/tapis-de-souris-manga-anime/)

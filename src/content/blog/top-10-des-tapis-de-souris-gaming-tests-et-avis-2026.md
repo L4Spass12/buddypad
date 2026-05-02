@@ -39,7 +39,7 @@ Tu cherches le **tapis de souris gaming** parfait ? On a bossé dur pour toi : t
 
 ### 7\. BuddyPad – Tapis Geisha et Cerisiers — 8.3/10
 
-19-29,90€ · Tissu XXL · Pour les setups lo-fi et les amoureux de la culture japonaise. Design magnifique, surface douce et précise, [format XXL](https://buddypad.com/product-category/tapis-de-souris-xxl/) à prix mini.
+19-29,90€ · Tissu XXL · Pour les setups lo-fi et les amoureux de la culture japonaise. Design magnifique, surface douce et précise, [format XXL](/product-category/tapis-de-souris-xxl/) à prix mini.
 
 ### 8\. HyperX Pulsefire Mat XL — 8.1/10
 
@@ -47,7 +47,7 @@ Tu cherches le **tapis de souris gaming** parfait ? On a bossé dur pour toi : t
 
 ### 9\. BuddyPad – Tapis Personnalisé — 8.0/10
 
-22-34€ · Tissu personnalisable · Le seul entièrement personnalisable avec ta propre image. 100% unique, impression fidèle. [Créer ton tapis personnalisé](https://buddypad.com/product/tapis-de-souris-personnalise/)
+22-34€ · Tissu personnalisable · Le seul entièrement personnalisable avec ta propre image. 100% unique, impression fidèle. [Créer ton tapis personnalisé](/product/tapis-de-souris-personnalise/)
 
 ### 10\. Amazon Basics – Gaming Mouse Pad XXL — 7.2/10
 
@@ -169,7 +169,7 @@ Budget débutant
 
 Si tu veux la performance pure sans regarder le budget, le **Razer Gigantus V2** reste la référence absolue. Le **SteelSeries QcK Heavy** est son challenger sérieux pour les sessions marathon. Mais si tu cherches le meilleur rapport qualité/prix avec un setup qui déchire visuellement, les **tapis BuddyPad XXL** sont une vraie révélation à 19-29,90€.
 
-[Découvre tous nos tapis de souris gaming sur BuddyPad](https://buddypad.com/product-category/tapis-de-souris-gaming/)
+[Découvre tous nos tapis de souris gaming sur BuddyPad](/product-category/tapis-de-souris-gaming/)
 
 ## FAQ – Razer, Corsair, SteelSeries ou BuddyPad ?
 

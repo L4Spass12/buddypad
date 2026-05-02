@@ -21,7 +21,7 @@ Le SteelSeries QcK est apparu en 2003 et n’a jamais quitté le top des ventes 
 
 ### BuddyPad : la boutique qui mise sur le design
 
-BuddyPad ne cherche pas à détrôner le QcK sur le terrain de la performance pure esport, ce serait présomptueux. En revanche, BuddyPad propose quelque chose que SteelSeries n’offrira jamais : un tapis qui te ressemble. Des [designs exclusifs manga et anime](https://buddypad.com/product-category/tapis-de-souris-manga-anime/), [fantasy](https://buddypad.com/product-category/tapis-de-souris-fantasy/) et minimaliste, à des prix inférieurs au QcK, avec des performances de surface qui couvrent 95% des usages gaming.
+BuddyPad ne cherche pas à détrôner le QcK sur le terrain de la performance pure esport, ce serait présomptueux. En revanche, BuddyPad propose quelque chose que SteelSeries n’offrira jamais : un tapis qui te ressemble. Des [designs exclusifs manga et anime](/product-category/tapis-de-souris-manga-anime/), [fantasy](/product-category/tapis-de-souris-fantasy/) et minimaliste, à des prix inférieurs au QcK, avec des performances de surface qui couvrent 95% des usages gaming.
 
 ## La gamme SteelSeries décryptée
 
@@ -141,11 +141,11 @@ Le tissu BuddyPad haute densité n’est pas identique au QcK, soyons honnêtes.
 
 ## Tailles disponibles : QcK vs BuddyPad
 
-SteelSeries écrase BuddyPad sur la variété des tailles : 7 formats pour le QcK contre 4 pour BuddyPad (jusqu’au XXL). Si tu as besoin d’un format Mini compact ou d’un desk-mat 4XL de 120 cm, le QcK est l’unique réponse. Pour les formats S à XXL (qui représentent 90% des usages), [BuddyPad couvre exactement les mêmes besoins](https://buddypad.com/product-category/tapis-de-souris-xxl/).
+SteelSeries écrase BuddyPad sur la variété des tailles : 7 formats pour le QcK contre 4 pour BuddyPad (jusqu’au XXL). Si tu as besoin d’un format Mini compact ou d’un desk-mat 4XL de 120 cm, le QcK est l’unique réponse. Pour les formats S à XXL (qui représentent 90% des usages), [BuddyPad couvre exactement les mêmes besoins](/product-category/tapis-de-souris-xxl/).
 
 ## Design : la force cachée de BuddyPad face au QcK uni
 
-Le QcK existe en noir uni. SteelSeries propose parfois des éditions limitées (collaboration artistes ou jeux) mais elles sont rares et souvent hors de prix. BuddyPad propose en permanence plus de 20 designs exclusifs : samouraïs, cerisiers en fleur, univers fantasy sombres, designs minimalistes et collections [Girl Boss](https://buddypad.com/product-category/girl-boss/). Pour construire un setup qui a du caractère, il n’y a pas photo.
+Le QcK existe en noir uni. SteelSeries propose parfois des éditions limitées (collaboration artistes ou jeux) mais elles sont rares et souvent hors de prix. BuddyPad propose en permanence plus de 20 designs exclusifs : samouraïs, cerisiers en fleur, univers fantasy sombres, designs minimalistes et collections [Girl Boss](/product-category/girl-boss/). Pour construire un setup qui a du caractère, il n’y a pas photo.
 
 ## Prix et rapport qualité/prix en 2026
 
@@ -161,7 +161,7 @@ Tu joues à un niveau compétitif sérieux (ranked, tournois) et chaque millisec
 
 Tu joues à un niveau casual à semi-compétitif et tu veux un bureau qui a du caractère. BuddyPad propose les mêmes performances que le QcK souple standard pour 95% des usages, avec des designs manga, fantasy et minimaliste que SteelSeries ne proposera jamais. À prix quasi-identique, le choix est évident si l’esthétique de ton setup compte pour toi.
 
-Pour compléter tes recherches, consulte aussi nos comparatifs [BuddyPad vs Logitech](https://buddypad.com/tapis-de-souris-logitech-ou-buddypad/), [BuddyPad vs Corsair](https://buddypad.com/tapis-de-souris-corsair-ou-buddypad/) et [BuddyPad vs Razer](https://buddypad.com/tapis-de-souris-razer-ou-buddypad/).
+Pour compléter tes recherches, consulte aussi nos comparatifs [BuddyPad vs Logitech](/tapis-de-souris-logitech-ou-buddypad/), [BuddyPad vs Corsair](/tapis-de-souris-corsair-ou-buddypad/) et [BuddyPad vs Razer](/tapis-de-souris-razer-ou-buddypad/).
 
 ## FAQ – SteelSeries vs BuddyPad
 

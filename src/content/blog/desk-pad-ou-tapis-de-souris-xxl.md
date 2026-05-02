@@ -61,7 +61,7 @@ La tendance des **grands tapis de bureau** n’est pas un effet de mode passager
 
 Si vous jouez à des **FPS** comme Valorant, CS2 ou Apex Legends avec une **faible sensibilité souris**, vous avez besoin d’espace. Un **tapis de souris XXL** (minimum 80×35 cm) vous permet de faire de grands mouvements de bras sans jamais sortir du tapis en pleine action — ce qui élimine les micro-frustrations qui coûtent des rounds.
 
-Pour tout savoir sur les critères techniques à vérifier avant d’acheter, consultez notre guide : [comment choisir le meilleur tapis de souris en 2026](https://buddypad.com/choisir-tapis-souris-2026/).
+Pour tout savoir sur les critères techniques à vérifier avant d’acheter, consultez notre guide : [comment choisir le meilleur tapis de souris en 2026](/choisir-tapis-souris-2026/).
 
 #### Pour les télétravailleurs : un bureau propre et professionnel
 
@@ -103,14 +103,14 @@ C’est **la question numéro 1** que se posent les acheteurs français. Voici l
 
 ## Tissu, PU cuir ou microfibre : quelle surface choisir pour votre desk pad ?
 
-Le matériau de surface est aussi important que la taille. Pour une analyse complète, consultez notre comparatif [tapis tissu vs rigide](https://buddypad.com/materiau-tapis-souris-tissu-rigide/). Voici l’essentiel pour les desk pads :
+Le matériau de surface est aussi important que la taille. Pour une analyse complète, consultez notre comparatif [tapis tissu vs rigide](/materiau-tapis-souris-tissu-rigide/). Voici l’essentiel pour les desk pads :
 
 ### Surface tissu (textile) — le choix de 80% des gamers français
 
 Le **tapis de souris en tissu** offre un excellent **contrôle de la souris**, une sensation agréable sous la main et se nettoie facilement. C’est le matériau de référence pour le gaming compétitif et le travail prolongé. Compatible avec tous les types de capteurs optiques et laser.
 
 **Points forts :** Grip excellent, silencieux, confortable sur de longues sessions.
-**Point faible :** Accumule la poussière et les résidus de peau plus vite qu’une surface dure. Prévoyez un nettoyage mensuel — notre [guide pour laver un tapis de souris en tissu](https://buddypad.com/laver-tapis-souris-tissu/) vous explique comment faire sans l’abîmer.
+**Point faible :** Accumule la poussière et les résidus de peau plus vite qu’une surface dure. Prévoyez un nettoyage mensuel — notre [guide pour laver un tapis de souris en tissu](/laver-tapis-souris-tissu/) vous explique comment faire sans l’abîmer.
 
 ### Surface PU cuir / synthétique — le choix télétravail premium
 
@@ -141,7 +141,7 @@ Optez pour un **desk pad XL ou full desk** avec un design qui correspond à votr
 
 ## Notre sélection : les meilleurs desk pads et tapis XXL en France (2026)
 
-Voici notre sélection des modèles qui offrent le meilleur rapport qualité/prix sur le marché français. Pour un comparatif plus large incluant les marques premium, consultez notre [top 10 des tapis de souris gaming testés en 2026](https://buddypad.com/top-10-des-tapis-de-souris-gaming-tests-et-avis-2026/).
+Voici notre sélection des modèles qui offrent le meilleur rapport qualité/prix sur le marché français. Pour un comparatif plus large incluant les marques premium, consultez notre [top 10 des tapis de souris gaming testés en 2026](/top-10-des-tapis-de-souris-gaming-tests-et-avis-2026/).
 
 ### 1\. BuddyPad XXL Gaming — Le meilleur rapport qualité/prix
 
@@ -169,7 +169,7 @@ Cousus (anti-effilochage)
 
 9.1/10
 
-Le **tapis de souris XXL BuddyPad** est notre coup de cœur. Surface tissu équilibrée (ni trop speed, ni trop control), base caoutchouc qui ne bouge pas même après des heures de jeu intense, et bords cousus qui garantissent une durée de vie bien supérieure aux modèles entrée de gamme. Disponible directement sur [la boutique BuddyPad](https://buddypad.com/tapis-de-souris/).
+Le **tapis de souris XXL BuddyPad** est notre coup de cœur. Surface tissu équilibrée (ni trop speed, ni trop control), base caoutchouc qui ne bouge pas même après des heures de jeu intense, et bords cousus qui garantissent une durée de vie bien supérieure aux modèles entrée de gamme. Disponible directement sur [la boutique BuddyPad](/tapis-de-souris/).
 
 ### 2\. Razer Strider XXL — Pour les gamers compétitifs exigeants
 
@@ -189,7 +189,7 @@ Tissu hybride (speed + control)
 
 8.7/10
 
-Razer reste une référence sur le marché français du gaming. Le Strider XXL propose une surface hybride qui convient aussi bien aux joueurs vitesse qu’aux joueurs contrôle. Pour voir comment il se positionne face aux autres grandes marques, lisez notre [comparatif BuddyPad vs Razer vs SteelSeries](https://buddypad.com/tapis-de-souris-buddypad-vs-razer-vs-steelseries/).
+Razer reste une référence sur le marché français du gaming. Le Strider XXL propose une surface hybride qui convient aussi bien aux joueurs vitesse qu’aux joueurs contrôle. Pour voir comment il se positionne face aux autres grandes marques, lisez notre [comparatif BuddyPad vs Razer vs SteelSeries](/tapis-de-souris-buddypad-vs-razer-vs-steelseries/).
 
 ### 3\. Logitech Desk Mat — Le choix télétravail élégant
 
@@ -209,7 +209,7 @@ Tissu doux résistant aux éclaboussures
 
 8.3/10
 
-Le **desk mat Logitech** est devenu une référence pour le télétravail en France. Design sobre, traitement anti-éclaboussures et tissu à glisse silencieuse en font un excellent compagnon de bureau. Notre verdict complet dans le comparatif [Logitech vs BuddyPad](https://buddypad.com/tapis-de-souris-logitech-ou-buddypad/).
+Le **desk mat Logitech** est devenu une référence pour le télétravail en France. Design sobre, traitement anti-éclaboussures et tissu à glisse silencieuse en font un excellent compagnon de bureau. Notre verdict complet dans le comparatif [Logitech vs BuddyPad](/tapis-de-souris-logitech-ou-buddypad/).
 
 ### 4\. SteelSeries QcK Heavy XXL — Pour les puristes du gaming
 
@@ -252,11 +252,11 @@ Les **desk pads haut de gamme** (Razer Strider, SteelSeries QcK Heavy, Corsair M
 Un **tapis de souris XXL** qui s’abîme vite est souvent victime d’un mauvais entretien. Voici les règles de base :
 
 -   **Nettoyage hebdomadaire léger** : passez un chiffon microfibre légèrement humide sur la surface pour retirer les résidus de peau et la poussière.
--   **Nettoyage mensuel en profondeur** : pour les modèles tissu, notre [guide de lavage complet](https://buddypad.com/laver-tapis-souris-tissu/) vous explique la procédure sans risque d’endommager les bords ou la base.
--   **Séchage obligatoire à plat** : ne jamais tordre ou suspendre un tapis XXL pour le sécher — notre [guide de séchage](https://buddypad.com/secher-tapis-souris/) vous montre la méthode correcte.
--   **Protéger des taches** : café, soda, encre — notre [guide d’élimination des taches](https://buddypad.com/enlever-taches-tapis-souris/) couvre les cas les plus courants.
+-   **Nettoyage mensuel en profondeur** : pour les modèles tissu, notre [guide de lavage complet](/laver-tapis-souris-tissu/) vous explique la procédure sans risque d’endommager les bords ou la base.
+-   **Séchage obligatoire à plat** : ne jamais tordre ou suspendre un tapis XXL pour le sécher — notre [guide de séchage](/secher-tapis-souris/) vous montre la méthode correcte.
+-   **Protéger des taches** : café, soda, encre — notre [guide d’élimination des taches](/enlever-taches-tapis-souris/) couvre les cas les plus courants.
 
-Pour tout savoir sur la durée de vie d’un tapis et la fréquence d’entretien idéale, consultez notre [guide complet d’entretien tapis de souris](https://buddypad.com/entretien-nettoyage-tapis-souris/).
+Pour tout savoir sur la durée de vie d’un tapis et la fréquence d’entretien idéale, consultez notre [guide complet d’entretien tapis de souris](/entretien-nettoyage-tapis-souris/).
 
 ## FAQ : vos questions sur les desk pads et tapis XXL
 
@@ -274,11 +274,11 @@ Oui, de deux façons. Premièrement, une surface **homogène et stable** assure 
 
 ### Peut-on passer un desk pad en tissu en machine à laver ?
 
-Certains modèles le permettent en programme délicat (30°C), mais ce n’est pas recommandé pour tous. La méthode la plus sûre reste le lavage à la main avec de l’eau tiède et du savon doux. Pour éviter toute erreur, suivez notre [guide complet de nettoyage](https://buddypad.com/laver-tapis-souris-tissu/).
+Certains modèles le permettent en programme délicat (30°C), mais ce n’est pas recommandé pour tous. La méthode la plus sûre reste le lavage à la main avec de l’eau tiède et du savon doux. Pour éviter toute erreur, suivez notre [guide complet de nettoyage](/laver-tapis-souris-tissu/).
 
 ### Quel desk pad pour un setup gaming RGB ?
 
-Si l’esthétique RGB est une priorité, optez pour un modèle avec **éclairage LED intégré** sur les bords (Corsair MM700 RGB, Razer Firefly V2 Pro). Pour un setup RGB sans risquer d’abîmer l’éclairage au nettoyage, consultez notre [guide de nettoyage des tapis RGB](https://buddypad.com/nettoyer-tapis-rgb/).
+Si l’esthétique RGB est une priorité, optez pour un modèle avec **éclairage LED intégré** sur les bords (Corsair MM700 RGB, Razer Firefly V2 Pro). Pour un setup RGB sans risquer d’abîmer l’éclairage au nettoyage, consultez notre [guide de nettoyage des tapis RGB](/nettoyer-tapis-rgb/).
 
 ## Conclusion : quel desk pad choisir en 2026 ?
 
@@ -286,9 +286,9 @@ Le **desk pad ou tapis de souris XXL** n’est plus réservé aux streamers prof
 
 Notre recommandation globale pour le marché français :
 
--   **Meilleur rapport qualité/prix** → [BuddyPad XXL](https://buddypad.com/tapis-de-souris/) (25–40 €, format L disponible)
+-   **Meilleur rapport qualité/prix** → [BuddyPad XXL](/tapis-de-souris/) (25–40 €, format L disponible)
 -   **Meilleur choix gaming compétitif** → SteelSeries QcK Heavy XXL ou Razer Strider
 -   **Meilleur choix télétravail** → Logitech Desk Mat ou BuddyPad surface tissu doux
 -   **Meilleur pour les setups premium** → BuddyPad XL ou Corsair MM700 RGB
 
-Pour affiner votre choix selon vos critères précis (sensibilité souris, jeux pratiqués, budget), notre [guide complet pour bien choisir son tapis de souris](https://buddypad.com/choisir-tapis-souris-2026/) reste la référence.
+Pour affiner votre choix selon vos critères précis (sensibilité souris, jeux pratiqués, budget), notre [guide complet pour bien choisir son tapis de souris](/choisir-tapis-souris-2026/) reste la référence.

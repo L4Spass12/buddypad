@@ -43,7 +43,7 @@ Au-delà des performances, un bon tapis réduit les frottements sur votre poigne
 
 **Surfaces hybrides :** Les dernières générations combinent vitesse et contrôle avec des tissages premium qui satisfont les utilisateurs exigeants.
 
-**→ Comparatif approfondi :** Notre [guide des matériaux](https://buddypad.com/materiau-tapis-souris-tissu-rigide) détaille les avantages de chaque surface (speed, control, balanced).
+**→ Comparatif approfondi :** Notre [guide des matériaux](/materiau-tapis-souris-tissu-rigide/) détaille les avantages de chaque surface (speed, control, balanced).
 
 ### 3\. Le type de glisse : Speed, Control ou Balanced
 
@@ -75,7 +75,7 @@ Un tapis à 8€ durera 6 mois quand un modèle à 25€ tiendra 3 ans. L’inve
 
 **Priorités :** Taille généreuse (minimum 45×40 cm), surface adaptée à votre style, durabilité.
 
-Les gamers pros changent de [tapis de souris XXL](https://buddypad.com/product-category/tapis-de-souris-xxl/) tous les 12-18 mois et le nettoient chaque semaine pour maintenir une glisse constante. La cohérence de la surface est cruciale pour la muscle memory.
+Les gamers pros changent de [tapis de souris XXL](/product-category/tapis-de-souris-xxl/) tous les 12-18 mois et le nettoient chaque semaine pour maintenir une glisse constante. La cohérence de la surface est cruciale pour la muscle memory.
 
 ### Pour la bureautique et la productivité
 
@@ -109,7 +109,7 @@ L’erreur classique du débutant : commander un tapis trop petit par rapport à
 
 Un tapis gaming accumule poussière, huile de peau et résidus. Sans nettoyage régulier, la glisse se dégrade progressivement. Un entretien mensuel maintient les performances optimales pendant des années.
 
-**→ Prolongez la durée de vie :** Notre [guide complet d’entretien](https://buddypad.com/entretien-nettoyage-tapis-souris) vous explique comment nettoyer selon le matériau et éviter les erreurs qui ruinent votre tapis.
+**→ Prolongez la durée de vie :** Notre [guide complet d’entretien](/entretien-nettoyage-tapis-souris/) vous explique comment nettoyer selon le matériau et éviter les erreurs qui ruinent votre tapis.
 
 ### Privilégier l’esthétique sur la fonction
 
@@ -152,4 +152,4 @@ Que vous optiez pour un tapis gaming compact à 20€ ou un desk mat XXL premium
 
 **Prêt à transformer votre expérience setup ?**
 
-**→** [**Découvrez notre collection de tapis de souris**](https://buddypad.com/tapis-de-souris/)
+**→** [**Découvrez notre collection de tapis de souris**](/tapis-de-souris/)

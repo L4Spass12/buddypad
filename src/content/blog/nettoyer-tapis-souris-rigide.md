@@ -34,7 +34,7 @@ Au-delà de la performance, votre tapis de souris devient un nid à bactéries e
 -   Alcool isopropylique 70% pour les taches tenaces
 -   Vinaigre blanc dilué comme alternative naturelle
 
-Si vous cherchez des accessoires de nettoyage spécialisés, consultez notre [catalogue complet](https://buddypad.com/tapis-de-souris/) qui propose des kits adaptés aux tapis de souris.
+Si vous cherchez des accessoires de nettoyage spécialisés, consultez notre [catalogue complet](/tapis-de-souris/) qui propose des kits adaptés aux tapis de souris.
 
 ### Équipements indispensables
 
@@ -67,7 +67,7 @@ Essuyez avec un chiffon sec et laissez sécher à l’air libre 10-15 minutes av
 
 ### Tapis avec surface texturée
 
-Utilisez une brosse douce pour accéder aux creux de la texture. Augmentez légèrement le temps de nettoyage et vérifiez l’absence d’eau stagnante dans les reliefs. Si vous possédez un tapis gaming haute performance, découvrez nos [tapis de souris gaming](https://buddypad.com/product-category/tapis-de-souris-gaming/) conçus pour un nettoyage optimal.
+Utilisez une brosse douce pour accéder aux creux de la texture. Augmentez légèrement le temps de nettoyage et vérifiez l’absence d’eau stagnante dans les reliefs. Si vous possédez un tapis gaming haute performance, découvrez nos [tapis de souris gaming](/product-category/tapis-de-souris-gaming/) conçus pour un nettoyage optimal.
 
 ### Tapis avec revêtement spécial
 
@@ -102,6 +102,6 @@ Rangez votre tapis dans un endroit sec et tempéré, à l’abri de l’expositi
 
 ## Conclusion : un tapis durable et performant
 
-Un tapis de souris rigide bien entretenu conserve sa performance et son esthétique pendant des années. En suivant cette méthode simple et régulière, vous évitez l’accumulation de saleté et la dégradation prématurée. Pour approfondir l’entretien de vos accessoires, consultez notre [guide complet d’entretien des tapis de souris](/entretien-nettoyage-tapis-souris) qui couvre tous les aspects de la maintenance.
+Un tapis de souris rigide bien entretenu conserve sa performance et son esthétique pendant des années. En suivant cette méthode simple et régulière, vous évitez l’accumulation de saleté et la dégradation prématurée. Pour approfondir l’entretien de vos accessoires, consultez notre [guide complet d’entretien des tapis de souris](/entretien-nettoyage-tapis-souris/) qui couvre tous les aspects de la maintenance.
 
-Découvrez les [tapis de souris Buddypad](https://buddypad.com/product-category/tapis-de-souris-manga-anime/) avec surface optimisée pour un nettoyage facile et une durabilité maximale. Notre gamme complète vous permet de trouver le modèle adapté à votre utilisation, qu’il soit pour le gaming, le travail ou les loisirs créatifs.
+Découvrez les [tapis de souris Buddypad](/product-category/tapis-de-souris-manga-anime/) avec surface optimisée pour un nettoyage facile et une durabilité maximale. Notre gamme complète vous permet de trouver le modèle adapté à votre utilisation, qu’il soit pour le gaming, le travail ou les loisirs créatifs.
