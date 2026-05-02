@@ -51,4 +51,4 @@ Si vous avez déjà un clavier et une souris RGB d'une marque (Razer, Corsair, L
 
 ### Combiné avec la recharge sans fil
 
-Certains tapis RGB intègrent une **zone Qi** pour recharger la souris (compatible) directement sur le tapis. C'est la gamme premium — voir notre catégorie dédiée.
+Certains tapis RGB intègrent une **zone Qi** pour recharger la souris (compatible) directement sur le tapis. C'est la gamme premium - voir notre catégorie dédiée.

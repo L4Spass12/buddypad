@@ -17,7 +17,7 @@ Un tapis de souris de qualité optimise la précision, améliore la fluidité de
 
 ## BuddyPad : L’excellence française au service des gamers
 
-BuddyPad s’est imposé comme une référence dans l’univers des [tapis de souris gaming](/product-category/tapis-de-souris-gaming/) en proposant des produits qui allient qualité premium et designs uniques. **Qualité de fabrication exceptionnelle** : tissu micro-tissé haute densité, base caoutchouc naturel antidérapant, bords surpiqués anti-effilochage. **Designs exclusifs** : manga, anime, gaming — introuvables chez les grandes marques. **Rapport qualité-prix imbattable** : 24-32€ pour un XL, sans intermédiaires.
+BuddyPad s’est imposé comme une référence dans l’univers des [tapis de souris gaming](/product-category/tapis-de-souris-gaming/) en proposant des produits qui allient qualité premium et designs uniques. **Qualité de fabrication exceptionnelle** : tissu micro-tissé haute densité, base caoutchouc naturel antidérapant, bords surpiqués anti-effilochage. **Designs exclusifs** : manga, anime, gaming - introuvables chez les grandes marques. **Rapport qualité-prix imbattable** : 24-32€ pour un XL, sans intermédiaires.
 
 ## Razer : Le géant du gaming avec une gamme étendue
 
@@ -42,7 +42,7 @@ La gamme **QcK** est une référence eSport depuis des années. Le **QcK Heavy**
 
 Pour 90% des gamers, **BuddyPad représente le meilleur choix** : qualité équivalente aux géants, prix 30-40% plus avantageux, designs uniques. Choisissez **Razer** si vous avez déjà un écosystème RGB Synapse. Choisissez **SteelSeries** si vous êtes compétiteur eSport et voulez 6mm d’épaisseur.
 
-## Questions fréquentes – BuddyPad vs Razer vs SteelSeries
+## Questions fréquentes - BuddyPad vs Razer vs SteelSeries
 
 Les tapis BuddyPad sont-ils vraiment aussi durables que Razer ou SteelSeries ?+
 

@@ -49,6 +49,6 @@ variations:
       "Dimensions": "90-x-40-cm"
 ---
 
-Trust the Process — un **tapis de souris motivationnel gaming setup** qui te rappelle chaque jour de rester focus. Le design illustre une femme déterminée, idéal pour un bureau de travail, un setup streaming ou un espace où la productivité rime avec caractère.
+Trust the Process - un **tapis de souris motivationnel gaming setup** qui te rappelle chaque jour de rester focus. Le design illustre une femme déterminée, idéal pour un bureau de travail, un setup streaming ou un espace où la productivité rime avec caractère.
 
 Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL (90×40 cm).

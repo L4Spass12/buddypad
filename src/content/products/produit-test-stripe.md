@@ -1,5 +1,5 @@
 ---
-name: "Produit Test — Paiement Stripe"
+name: "Produit Test - Paiement Stripe"
 price: 0.50
 image: "/images/products/tapis-de-souris-blanc/1.webp"
 imageAlt: "Produit de test"

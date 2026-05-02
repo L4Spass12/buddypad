@@ -18,13 +18,13 @@ faq:
   - q: "Peut-on avoir sa propre citation ?"
     a: "Certains modèles de la gamme proposent des variantes avec différentes citations inspirantes. Pour une personnalisation totale (votre citation), il faut passer par le tapis personnalisé."
   - q: "Le style Girl Boss passe-t-il en visio professionnelle ?"
-    a: "Absolument — c'est même souvent un excellent brise-glace en réunion. Les citations positives et l'esthétique sobre (noir + doré, ou pastel + texte) transmettent un message clair sans être agressives."
+    a: "Absolument - c'est même souvent un excellent brise-glace en réunion. Les citations positives et l'esthétique sobre (noir + doré, ou pastel + texte) transmettent un message clair sans être agressives."
 updatedDate: 2026-04-23
 ---
 
 ### Un bureau qui affirme vos valeurs
 
-La collection **Girl Boss** n'est pas qu'une tendance marketing : c'est un concept de bureau qui transforme votre espace de travail en territoire d'affirmation personnelle. Citations motivantes, esthétique sobre et affirmée, couleurs qui donnent de l'énergie — chaque détail contribue à l'état d'esprit.
+La collection **Girl Boss** n'est pas qu'une tendance marketing : c'est un concept de bureau qui transforme votre espace de travail en territoire d'affirmation personnelle. Citations motivantes, esthétique sobre et affirmée, couleurs qui donnent de l'énergie - chaque détail contribue à l'état d'esprit.
 
 ### Pour qui ces tapis sont-ils faits ?
 
@@ -34,7 +34,7 @@ Le tapis est un rappel visuel constant de vos objectifs pendant les longues jour
 
 #### Étudiantes ambitieuses
 
-Préparation de concours, études longues, projets perso — l'énergie que diffuse un bureau bien designé influence directement la productivité et la persévérance.
+Préparation de concours, études longues, projets perso - l'énergie que diffuse un bureau bien designé influence directement la productivité et la persévérance.
 
 #### Créatrices de contenu et designeuses
 

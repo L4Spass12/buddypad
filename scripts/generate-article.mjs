@@ -435,7 +435,11 @@ ${imageFrontmatter}${faqYaml}---
 
 `;
 
-  fs.writeFileSync(filePath, frontmatter + rawContent, 'utf8');
+  // Normalisation finale : supprime tout tiret cadratin (—) et demi-cadratin (–) restant
+  // dans le frontmatter ou le corps. Le LLM en glisse parfois malgré la consigne dans le prompt,
+  // notamment dans la description meta ou les FAQ.
+  const finalFile = (frontmatter + rawContent).replace(/[—–]/g, '-');
+  fs.writeFileSync(filePath, finalFile, 'utf8');
   markAsDone(title, today);
 
   console.log(`Article sauvegardé : ${filePath}`);

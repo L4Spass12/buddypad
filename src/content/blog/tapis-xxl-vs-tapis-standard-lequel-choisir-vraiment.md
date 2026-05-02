@@ -7,7 +7,7 @@ category: Guide d’achat & conseils
 tags: ["tapis de souris", "tapis XXL", "setup gaming", "équipement bureau", "comparatif"]
 featured: false
 image: "/images/blog/tapis-xxl-vs-tapis-standard-lequel-choisir-vraiment-1.webp"
-imageAlt: "Tapis souris XXL vs standard — comparaison de formats"
+imageAlt: "Tapis souris XXL vs standard - comparaison de formats"
 imageTitle: "Tapis XXL vs tapis standard"
 faq:
   - q: "Un tapis XXL convient-il aussi pour un usage bureautique classique ?"

@@ -1,6 +1,6 @@
 ---
 title: "Idée cadeau fan de Manga  : 7 idées originales"
-description: "Vous cherchez une idée cadeau fan de manga qui sorte des figurines et coffrets habituels ? Découvrez 7 idées originales, dont une que personne ne met jamais dans les listes — et qui fait pourtant touj"
+description: "Vous cherchez une idée cadeau fan de manga qui sorte des figurines et coffrets habituels ? Découvrez 7 idées originales, dont une que personne ne met jamais dans les listes - et qui fait pourtant touj"
 pubDate: 2026-03-29
 updatedDate: 2026-03-31
 author: "Équipe BuddyPad"

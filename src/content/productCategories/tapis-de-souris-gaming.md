@@ -16,7 +16,7 @@ faq:
   - q: "Quelle taille choisir pour du gaming ?"
     a: "Un 45×40 cm suffit pour la plupart des joueurs. Si vous jouez en sensibilité très basse (400 DPI ou moins), passez au XXL 90×40 cm pour couvrir aussi le clavier et avoir toute la place nécessaire pour un grand balayage."
   - q: "Un tapis gaming s'use-t-il vite ?"
-    a: "Un modèle avec base caoutchouc cousue et surface tissée tient 2-3 ans en usage intensif. Les patins de la souris usent la surface progressivement — c'est normal. Évitez juste de le rouler trop serré ou de le laisser au soleil."
+    a: "Un modèle avec base caoutchouc cousue et surface tissée tient 2-3 ans en usage intensif. Les patins de la souris usent la surface progressivement - c'est normal. Évitez juste de le rouler trop serré ou de le laisser au soleil."
   - q: "Le RGB sert-il à quelque chose pour gamer ?"
     a: "Pas en performance. Le RGB est purement esthétique (et pratique si le tapis intègre un hub USB ou une zone de recharge sans fil). Beaucoup de pros jouent sur tapis non éclairé."
 updatedDate: 2026-04-23
@@ -40,7 +40,7 @@ La taille doit correspondre à **votre sensibilité de souris**. Sensibilité ba
 
 #### La base antidérapante
 
-Un tapis qui bouge en plein 1v1 vous coûte la partie. Cherchez une **base caoutchouc dense et cousue au bord** — les collages finissent toujours par se décoller après quelques mois.
+Un tapis qui bouge en plein 1v1 vous coûte la partie. Cherchez une **base caoutchouc dense et cousue au bord** - les collages finissent toujours par se décoller après quelques mois.
 
 ### Entretien et durée de vie
 

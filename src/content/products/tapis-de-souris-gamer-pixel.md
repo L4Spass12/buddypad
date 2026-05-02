@@ -49,6 +49,6 @@ variations:
       "Dimensions": "90-x-40-cm"
 ---
 
-Un lever de soleil en pixel art sur un paysage rétro — ce **tapis de souris pixel art gaming** est fait pour les fans de la culture 8-bit et les setups gaming rétro. Le design nostalgique rappelle l’univers des jeux de construction et d’aventure, avec une qualité de surface bien actuelle.
+Un lever de soleil en pixel art sur un paysage rétro - ce **tapis de souris pixel art gaming** est fait pour les fans de la culture 8-bit et les setups gaming rétro. Le design nostalgique rappelle l’univers des jeux de construction et d’aventure, avec une qualité de surface bien actuelle.
 
 Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).

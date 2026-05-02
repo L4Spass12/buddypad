@@ -41,7 +41,7 @@ Le [QcK Prism RGB](https://steelseries.com/fr-fr/gaming-mousepads/qck-prism?colo
 
 | Critère | BuddyPad XXL | QcK (souple) | QcK Hard | QcK Prism RGB |
 |---|---|---|---|---|
-| **Prix (L/XL)** | 19 – 29,90 € | 20 à 30 € | environ 30 € | 40 à 55 € |
+| **Prix (L/XL)** | 19 - 29,90 € | 20 à 30 € | environ 30 € | 40 à 55 € |
 | **Matériau surface** | Tissu haute densité | Micro-tissé optimisé | Polyéthylène rigide | Micro-tissé |
 | **Type tracking** | Low et High DPI | Optimisé Low et High DPI | Optimisé High DPI | Low et High DPI |
 | **Tailles disponibles** | S / M / L / XXL | Mini à 4XL (7 tailles) | S à XXL | S à XXL |
@@ -84,7 +84,7 @@ Tu joues à un niveau casual à semi-compétitif et tu veux un bureau qui a du c
 
 Pour compléter tes recherches, consulte aussi nos comparatifs [BuddyPad vs Logitech](/tapis-de-souris-logitech-ou-buddypad/), [BuddyPad vs Corsair](/tapis-de-souris-corsair-ou-buddypad/) et [BuddyPad vs Razer](/tapis-de-souris-razer-ou-buddypad/).
 
-## FAQ – SteelSeries vs BuddyPad
+## FAQ - SteelSeries vs BuddyPad
 
 Le SteelSeries QcK est-il meilleur que BuddyPad pour le gaming ?+
 

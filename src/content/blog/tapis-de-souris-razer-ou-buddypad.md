@@ -17,7 +17,7 @@ Razer ou BuddyPad ? Ce duel oppose deux visions radicalement différentes du tap
 
 Razer construit son identité autour d’une promesse : des périphériques gaming ultra-performants pour les joueurs qui veulent l’excellence. Leurs tapis de souris sont conçus avec une obsession de la surface, chaque tissu est optimisé pour des capteurs spécifiques, en collaboration avec des joueurs pro. C’est une promesse de performance pure, vendue avec un packaging premium et un logo reconnaissable au premier coup d’œil.
 
-![Gamme tapis de souris Razer RGB Chroma – Firefly Holographique et Goliathus BuddyPad](/images/inline/Design-sans-titre-15-1024x559.webp)
+![Gamme tapis de souris Razer RGB Chroma - Firefly Holographique et Goliathus BuddyPad](/images/inline/Design-sans-titre-15-1024x559.webp)
 
 BuddyPad part d’une conviction différente : la performance et le design ne sont pas incompatibles. Les [tapis gaming BuddyPad](/product-category/tapis-de-souris-gaming/) utilisent un tissu haute densité qui couvre les besoins de 95% des gamers, tout en proposant des visuels exclusifs (manga, fantasy, minimaliste) que Razer n’offrira jamais dans ses catalogues.
 
@@ -43,7 +43,7 @@ Le [Firefly V2 Pro](https://www.razer.com/fr-fr/gaming-mouse-mats/razer-firefly-
 
 | Critère | BuddyPad XXL | Razer Goliathus Chroma | Razer Strider | Razer Atlas |
 |---|---|---|---|---|
-| **Prix** | 19 – 29,90 € | environ 35 € | environ 45 € | environ 60 € |
+| **Prix** | 19 - 29,90 € | environ 35 € | environ 45 € | environ 60 € |
 | **Matériau** | Tissu haute densité | Tissu micro-tissé | Hybride souple/rigide | Verre trempé |
 | **Type de surface** | Polyvalente | Speed ou Control | Hybrid (les deux) | Speed extrême |
 | **RGB** | Non | Oui, Chroma | Non | Non |
@@ -87,7 +87,7 @@ Tu veux un setup qui te ressemble : manga, fantasy, minimaliste, des univers que
 
 Pour aller plus loin dans tes comparaisons, consulte aussi notre article [BuddyPad vs Logitech](/tapis-de-souris-logitech-ou-buddypad/), notre article [BuddyPad vs Corsair](/tapis-de-souris-corsair-ou-buddypad/) et notre article [BuddyPad vs SteelSeries](/tapis-de-souris-steelseries-ou-buddypad/).
 
-## FAQ – Tapis Razer vs BuddyPad
+## FAQ - Tapis Razer vs BuddyPad
 
 Le Razer Goliathus est-il meilleur que BuddyPad pour le gaming ?+
 

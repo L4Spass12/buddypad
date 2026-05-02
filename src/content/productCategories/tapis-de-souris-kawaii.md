@@ -24,7 +24,7 @@ updatedDate: 2026-04-23
 
 ### L'esthétique kawaii, bien plus qu'une tendance
 
-Le **kawaii** (可愛い, "mignon" en japonais) est une culture visuelle à part entière : couleurs douces, personnages attachants, motifs rassurants. Dans un setup PC, un tapis kawaii apporte une touche de personnalité qui tranche avec l'uniformité du matériel gaming classique — tout noir, tout RGB, tout agressif.
+Le **kawaii** (可愛い, "mignon" en japonais) est une culture visuelle à part entière : couleurs douces, personnages attachants, motifs rassurants. Dans un setup PC, un tapis kawaii apporte une touche de personnalité qui tranche avec l'uniformité du matériel gaming classique - tout noir, tout RGB, tout agressif.
 
 ### Les styles kawaii les plus populaires
 
@@ -46,4 +46,4 @@ Un **motif dense** (paysage illustré, scène complète) est plus impactant visu
 
 ### Entretien pour préserver l'impression
 
-Les tapis kawaii utilisent une impression par sublimation qui pénètre dans les fibres — donc beaucoup plus durable qu'une impression de surface. Un nettoyage doux à l'éponge tous les 2-3 mois suffit à garder les couleurs comme au premier jour.
+Les tapis kawaii utilisent une impression par sublimation qui pénètre dans les fibres - donc beaucoup plus durable qu'une impression de surface. Un nettoyage doux à l'éponge tous les 2-3 mois suffit à garder les couleurs comme au premier jour.

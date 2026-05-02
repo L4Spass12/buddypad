@@ -17,7 +17,7 @@ On a passé 3 mois à tester côte à côte pour te donner un avis honnête. Voi
 
 ### Deux philosophies de tapis gaming très différentes
 
-![Tapis de souris Corsair Noir MM200 – Surface Tissu Gaming Précision BuddyPad](/images/inline/Design-sans-titre-14-1024x559.webp)
+![Tapis de souris Corsair Noir MM200 - Surface Tissu Gaming Précision BuddyPad](/images/inline/Design-sans-titre-14-1024x559.webp)
 
 Corsair est une marque américaine fondée en 1994, spécialisée dans le hardware gaming haut de gamme. Ses tapis de souris sont conçus avant tout pour la performance : traitement anti-éclaboussures, tissus optimisés pour les capteurs optiques modernes, finitions soignées. Ils ont un positionnement premium qui se traduit dans le prix.
 
@@ -41,7 +41,7 @@ Plus épais (6 mm), le MM200 Pro mise sur le confort et le contrôle avec sa sur
 
 | Critère | BuddyPad | Corsair MM350 Pro | Corsair MM700 RGB |
 |---|---|---|---|
-| **Prix (L/XL)** | 19 – 29,90 € | environ 35 € | environ 60 € |
+| **Prix (L/XL)** | 19 - 29,90 € | environ 35 € | environ 60 € |
 | **Tailles disponibles** | S, M, L, XXL | M / L / XL / 3XL | Extended XL seulement |
 | **Surface** | Tissu haute densité | Tissu premium anti-éclaboussures | Micro-tissu optimisé |
 | **Bords cousus** | ✓ Renforcés | ✓ Oui | ✓ Oui |
@@ -89,7 +89,7 @@ Tu veux un tapis qui te ressemble visuellement, avec un design manga, fantaisie 
 
 Pour comparer BuddyPad avec d’autres marques, consulte aussi notre comparatif [BuddyPad vs Logitech](/tapis-de-souris-logitech-ou-buddypad/), notre comparatif [BuddyPad vs Razer](/tapis-de-souris-razer-ou-buddypad/) et notre comparatif [BuddyPad vs SteelSeries](/tapis-de-souris-steelseries-ou-buddypad/).
 
-## FAQ – Corsair vs BuddyPad
+## FAQ - Corsair vs BuddyPad
 
 Le tapis de souris Corsair MM350 vaut-il vraiment plus cher que BuddyPad ?+
 

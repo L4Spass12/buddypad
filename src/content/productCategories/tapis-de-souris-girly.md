@@ -24,7 +24,7 @@ updatedDate: 2026-04-23
 
 ### Le girly, une esthétique assumée
 
-Un **tapis de souris girly** n'est pas un compromis : c'est un choix esthétique fort, avec la même exigence de qualité technique que les autres catégories. Rose poudré, pastels doux, motifs floraux ou marbrés — un bureau girly est souvent plus harmonieux visuellement qu'un setup gaming chargé.
+Un **tapis de souris girly** n'est pas un compromis : c'est un choix esthétique fort, avec la même exigence de qualité technique que les autres catégories. Rose poudré, pastels doux, motifs floraux ou marbrés - un bureau girly est souvent plus harmonieux visuellement qu'un setup gaming chargé.
 
 ### Les teintes qui marchent le mieux
 

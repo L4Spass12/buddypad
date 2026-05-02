@@ -30,19 +30,19 @@ La collection **Buddypad Adventure** part d'un constat simple : nos bureaux sont
 
 #### Paysages de montagne
 
-Crêtes au soleil couchant, sommets enneigés, vallées brumeuses — inspire calme et hauteur de vue.
+Crêtes au soleil couchant, sommets enneigés, vallées brumeuses - inspire calme et hauteur de vue.
 
 #### Scènes forestières
 
-Sous-bois embrumés, forêts d'automne, arbres isolés — idéal pour un bureau dans un environnement cosy (télétravail, studio).
+Sous-bois embrumés, forêts d'automne, arbres isolés - idéal pour un bureau dans un environnement cosy (télétravail, studio).
 
 #### Océans et côtes
 
-Vagues, falaises, couchers de soleil sur l'eau — apporte une sensation d'espace et d'horizon.
+Vagues, falaises, couchers de soleil sur l'eau - apporte une sensation d'espace et d'horizon.
 
 #### Déserts et mesas
 
-Paysages américains, rouges ocres, esthétique "road trip" — plus graphique, parfait pour un setup avec une vibe vintage ou créative.
+Paysages américains, rouges ocres, esthétique "road trip" - plus graphique, parfait pour un setup avec une vibe vintage ou créative.
 
 ### Comment intégrer un paysage dans son setup
 

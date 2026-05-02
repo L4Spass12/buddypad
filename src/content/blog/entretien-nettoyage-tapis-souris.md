@@ -153,12 +153,12 @@ Les tapis grand format (XXL desk mat) demandent une approche spécifique car ils
 
 ### Processus étape par étape
 
-**Phase 1 – Pré-nettoyage (5 min):**
+**Phase 1 - Pré-nettoyage (5 min):**
 
 -   Aspirez le tapis des deux côtés pour retirer poussière et miettes
 -   Identifiez les taches tenaces qui nécessiteront plus d’attention
 
-**Phase 2 – Lavage (15 min):**
+**Phase 2 - Lavage (15 min):**
 
 -   Étalez le tapis dans la baignoire
 -   Mouillez entièrement à l’eau tiède
@@ -167,13 +167,13 @@ Les tapis grand format (XXL desk mat) demandent une approche spécifique car ils
 -   Insistez sur les zones de contact main/poignet (plus sales)
 -   Retournez et nettoyez également la base en caoutchouc
 
-**Phase 3 – Rinçage (10 min):**
+**Phase 3 - Rinçage (10 min):**
 
 -   Rincez abondamment au pommeau de douche
 -   Assurez-vous qu’aucune mousse ne reste dans les fibres
 -   Le rinçage doit être complet pour éviter les résidus collants
 
-**Phase 4 – Séchage:**
+**Phase 4 - Séchage:**
 
 -   Essorez en pressant, jamais en tordant
 -   Étalez sur une grande serviette

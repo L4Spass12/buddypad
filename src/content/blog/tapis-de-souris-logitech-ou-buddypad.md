@@ -33,7 +33,7 @@ Le Logitech G440 montre des signes d’usure visibles après trois mois d’util
 
 ## Prix et valeur : notre positionnement assumé
 
-Logitech positionne ses tapis entre 30€ et 50€. Nos BuddyPad se situent entre 20€ et 35€ pour des formats équivalents, voire supérieurs. Nous ne prétendons pas être une marque de luxe — nous voulons rendre la qualité accessible.
+Logitech positionne ses tapis entre 30€ et 50€. Nos BuddyPad se situent entre 20€ et 35€ pour des formats équivalents, voire supérieurs. Nous ne prétendons pas être une marque de luxe - nous voulons rendre la qualité accessible.
 
 ## Notre verdict honnête
 
@@ -43,7 +43,7 @@ Logitech positionne ses tapis entre 30€ et 50€. Nos BuddyPad se situent entr
 
 Parcourez notre [catalogue complet](/tapis-de-souris/) pour trouver le tapis parfait. Découvrez aussi notre [comparatif BuddyPad vs Razer vs SteelSeries](/tapis-de-souris-buddypad-vs-razer-vs-steelseries/).
 
-## FAQ – Logitech vs BuddyPad
+## FAQ - Logitech vs BuddyPad
 
 Les tapis Logitech sont-ils meilleurs que BuddyPad ?+
 

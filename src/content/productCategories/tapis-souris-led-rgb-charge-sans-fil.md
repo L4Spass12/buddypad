@@ -27,11 +27,11 @@ updatedDate: 2026-04-23
 
 ### Le combo ultime : RGB + recharge sans fil
 
-Les **tapis LED RGB avec charge sans fil** représentent le haut de gamme absolu en matière d'accessoires gaming. Vous n'avez plus jamais à penser à charger votre souris — elle se recharge en permanence pendant que vous jouez.
+Les **tapis LED RGB avec charge sans fil** représentent le haut de gamme absolu en matière d'accessoires gaming. Vous n'avez plus jamais à penser à charger votre souris - elle se recharge en permanence pendant que vous jouez.
 
 ### Comment ça marche ?
 
-Le tapis intègre une **bobine de charge Qi** (norme standard de recharge sans fil) dans une zone dédiée. Quand une souris compatible entre dans cette zone, la recharge s'active automatiquement. Aucun câble, aucun dock séparé — la souris se recharge dans son environnement naturel.
+Le tapis intègre une **bobine de charge Qi** (norme standard de recharge sans fil) dans une zone dédiée. Quand une souris compatible entre dans cette zone, la recharge s'active automatiquement. Aucun câble, aucun dock séparé - la souris se recharge dans son environnement naturel.
 
 ### Les vrais avantages au quotidien
 
@@ -56,7 +56,7 @@ Système Razer, plus limité en compatibilité mais avec intégration parfaite d
 
 #### Qi standard
 
-Tapis "ouverts" compatibles avec toutes les souris Qi — plus flexibles mais parfois moins optimisés en vitesse de charge.
+Tapis "ouverts" compatibles avec toutes les souris Qi - plus flexibles mais parfois moins optimisés en vitesse de charge.
 
 ### Le confort RGB en bonus
 

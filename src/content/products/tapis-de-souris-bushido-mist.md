@@ -48,6 +48,6 @@ variations:
       "Dimensions": "90-x-40-cm"
 ---
 
-Un guerrier fantôme émerge de la brume bleue — le Bushido Mist est un **desk mat gaming japonais** qui installe une ambiance mystique sur ton bureau. L’esthétique bushido épurée convient aussi bien aux setups gaming qu’aux bureaux créatifs qui veulent sortir du noir uni.
+Un guerrier fantôme émerge de la brume bleue - le Bushido Mist est un **desk mat gaming japonais** qui installe une ambiance mystique sur ton bureau. L’esthétique bushido épurée convient aussi bien aux setups gaming qu’aux bureaux créatifs qui veulent sortir du noir uni.
 
 Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL (90×40 cm).

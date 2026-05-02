@@ -12,11 +12,11 @@ faq:
   - q: "Un tapis XXL a-t-il un vrai intérêt ?"
     a: "Oui si vous jouez avec une sensibilité de souris basse ou si vous voulez unifier visuellement votre setup. Un XXL (90×40 cm minimum) couvre la souris ET le clavier, évite les micro-bords du tapis classique, et protège le bureau des rayures et de l'usure."
   - q: "Quelle taille exacte choisir ?"
-    a: "Le format standard XXL est 90×40 cm. Pour les très grands bureaux (160 cm+), visez 100×50 cm voire 120×60 cm. Mesurez votre bureau avant d'acheter — un tapis trop petit qui ne couvre pas le clavier perd son intérêt."
+    a: "Le format standard XXL est 90×40 cm. Pour les très grands bureaux (160 cm+), visez 100×50 cm voire 120×60 cm. Mesurez votre bureau avant d'acheter - un tapis trop petit qui ne couvre pas le clavier perd son intérêt."
   - q: "Est-ce que ça tient sur un bureau de 140 cm ?"
-    a: "Un 90×40 cm laisse environ 25 cm de libre de chaque côté sur un bureau 140 cm — c'est la configuration idéale pour avoir assez de place pour les avant-bras sans avoir le tapis qui dépasse."
+    a: "Un 90×40 cm laisse environ 25 cm de libre de chaque côté sur un bureau 140 cm - c'est la configuration idéale pour avoir assez de place pour les avant-bras sans avoir le tapis qui dépasse."
   - q: "Comment nettoyer un tapis XXL ?"
-    a: "À la main dans la baignoire, avec de l'eau tiède et un savon doux. Frottez délicatement, rincez à fond, puis laissez sécher à plat sur une serviette. Éviter la machine à laver — la base caoutchouc se déforme avec la chaleur."
+    a: "À la main dans la baignoire, avec de l'eau tiède et un savon doux. Frottez délicatement, rincez à fond, puis laissez sécher à plat sur une serviette. Éviter la machine à laver - la base caoutchouc se déforme avec la chaleur."
   - q: "Un XXL se roule-t-il bien pour le transporter ?"
     a: "Oui, mais roulez-le toujours dans le sens de la surface (tissu vers l'extérieur) pour ne pas marquer la base. Ne le pliez jamais."
 updatedDate: 2026-04-23
@@ -36,7 +36,7 @@ Un **tapis de souris XXL** ne sert pas qu'à faire beau sur Instagram. Il résou
 
 #### La matière
 
-Le **tissu tressé fin** reste la référence : glisse équilibrée, confort au touché, esthétique sobre ou imprimée. Les desk mats en **similicuir** sont plus élégants mais légèrement moins performants pour la souris — à privilégier pour un bureau majoritairement bureautique.
+Le **tissu tressé fin** reste la référence : glisse équilibrée, confort au touché, esthétique sobre ou imprimée. Les desk mats en **similicuir** sont plus élégants mais légèrement moins performants pour la souris - à privilégier pour un bureau majoritairement bureautique.
 
 #### La finition
 

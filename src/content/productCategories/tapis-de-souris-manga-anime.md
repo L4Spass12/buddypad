@@ -18,7 +18,7 @@ faq:
   - q: "Les couleurs vives tiennent dans le temps ?"
     a: "Oui, grâce à la sublimation thermique (les pigments deviennent partie intégrante des fibres). Après 2-3 ans d'usage intensif, les couleurs restent vibrantes."
   - q: "Un manga trop chargé nuit-il au gaming ?"
-    a: "Les joueurs compétitifs préfèrent souvent des tons uniformes pour ne pas distraire le regard du réticule. Mais pour du jeu occasionnel ou un setup déco, un design manga détaillé n'a aucun impact sur les performances — c'est surtout une question de goût."
+    a: "Les joueurs compétitifs préfèrent souvent des tons uniformes pour ne pas distraire le regard du réticule. Mais pour du jeu occasionnel ou un setup déco, un design manga détaillé n'a aucun impact sur les performances - c'est surtout une question de goût."
 updatedDate: 2026-04-23
 ---
 

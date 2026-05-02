@@ -49,6 +49,6 @@ variations:
       "Dimensions": "90-x-40-cm"
 ---
 
-Un héros de style anime au regard déterminé — Héros est un **tapis de souris style manga gaming** qui incarne l’énergie des protagonistes qu’on adore. Parfait pour un setup gaming énergique ou une chambre de passionné de culture japonaise.
+Un héros de style anime au regard déterminé - Héros est un **tapis de souris style manga gaming** qui incarne l’énergie des protagonistes qu’on adore. Parfait pour un setup gaming énergique ou une chambre de passionné de culture japonaise.
 
 Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
