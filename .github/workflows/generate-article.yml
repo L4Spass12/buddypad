@@ -39,13 +39,16 @@ jobs:
           const path = require('path');
           const dir = './public/images/blog';
           if (!fs.existsSync(dir)) process.exit(0);
-          const files = fs.readdirSync(dir).filter(f => f.endsWith('.webp'));
+          const files = fs.readdirSync(dir).filter(f => f.endsWith('.webp') && !/-\d+w\.webp$/.test(f));
           Promise.all(files.map(async f => {
             const fp = path.join(dir, f);
             const buf = await sharp(fp).webp({ quality: 65 }).toBuffer();
             if (buf.length < fs.statSync(fp).size) fs.writeFileSync(fp, buf);
           })).then(() => console.log('Images compressed'));
           "
+
+      - name: Generate responsive variants (-400w / -800w)
+        run: node scripts/generate-responsive.mjs
 
       - name: Check if article was created
         id: check
