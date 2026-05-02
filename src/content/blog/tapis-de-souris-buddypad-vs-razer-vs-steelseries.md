@@ -29,61 +29,14 @@ La gamme **QcK** est une référence eSport depuis des années. Le **QcK Heavy**
 
 ## Tableau comparatif : BuddyPad vs Razer vs SteelSeries
 
-Critère
-
-BuddyPad
-
-Razer
-
-SteelSeries
-
-**Prix (Large/XL)**
-
-24-32€
-
-35-49€
-
-29-40€
-
-**Qualité surface**
-
-⭐⭐⭐⭐⭐
-
-⭐⭐⭐⭐
-
-⭐⭐⭐⭐½
-
-**Durabilité**
-
-⭐⭐⭐⭐⭐
-
-⭐⭐⭐½
-
-⭐⭐⭐⭐
-
-**Designs**
-
-Très large
-
-Limité
-
-Très limité
-
-**Options RGB**
-
-Non
-
-Oui (certains)
-
-Oui (certains)
-
-**Rapport qualité/prix**
-
-⭐⭐⭐⭐⭐
-
-⭐⭐⭐
-
-⭐⭐⭐
+| Critère | BuddyPad | Razer | SteelSeries |
+|---|---|---|---|
+| **Prix (Large/XL)** | 24-32€ | 35-49€ | 29-40€ |
+| **Qualité surface** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐½ |
+| **Durabilité** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐½ | ⭐⭐⭐⭐ |
+| **Designs** | Très large | Limité | Très limité |
+| **Options RGB** | Non | Oui (certains) | Oui (certains) |
+| **Rapport qualité/prix** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
 
 ## Notre verdict : quel tapis de souris choisir en 2026 ?
 

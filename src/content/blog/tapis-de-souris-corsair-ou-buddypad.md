@@ -39,85 +39,17 @@ Plus épais (6 mm), le MM200 Pro mise sur le confort et le contrôle avec sa sur
 
 ## Tableau comparatif BuddyPad vs Corsair
 
-Critère
-
-BuddyPad
-
-Corsair MM350 Pro
-
-Corsair MM700 RGB
-
-Prix (L/XL)
-
-19 – 29,90 euros
-
-environ 35 euros
-
-environ 60 euros
-
-Tailles disponibles
-
-S, M, L, XXL
-
-M / L / XL / 3XL
-
-Extended XL seulement
-
-Surface
-
-Tissu haute densité
-
-Tissu premium anti-éclaboussures
-
-Micro-tissu optimisé
-
-Bords cousus
-
-✓ Renforcés
-
-✓ Oui
-
-✓ Oui
-
-Résistance à l’eau
-
-Lavable à la main
-
-Anti-éclaboussures intégré
-
-Traitement hydrofuge
-
-RGB / LED
-
-Non
-
-Non (MM350)
-
-Oui, iCUE
-
-Design
-
-20+ designs exclusifs
-
-Noir uni
-
-Noir avec liseré RGB
-
-Épaisseur
-
-3 à 4 mm
-
-4 mm plush
-
-4 mm
-
-SAV France
-
-Service FR direct
-
-Garantie 2 ans constructeur
-
-Garantie 2 ans constructeur
+| Critère | BuddyPad | Corsair MM350 Pro | Corsair MM700 RGB |
+|---|---|---|---|
+| **Prix (L/XL)** | 19 – 29,90 € | environ 35 € | environ 60 € |
+| **Tailles disponibles** | S, M, L, XXL | M / L / XL / 3XL | Extended XL seulement |
+| **Surface** | Tissu haute densité | Tissu premium anti-éclaboussures | Micro-tissu optimisé |
+| **Bords cousus** | ✓ Renforcés | ✓ Oui | ✓ Oui |
+| **Résistance à l’eau** | Lavable à la main | Anti-éclaboussures intégré | Traitement hydrofuge |
+| **RGB / LED** | Non | Non (MM350) | Oui, iCUE |
+| **Design** | 20+ designs exclusifs | Noir uni | Noir avec liseré RGB |
+| **Épaisseur** | 3 à 4 mm | 4 mm plush | 4 mm |
+| **SAV France** | Service FR direct | Garantie 2 ans constructeur | Garantie 2 ans constructeur |
 
 ## Surface et précision : qui gagne ?
 

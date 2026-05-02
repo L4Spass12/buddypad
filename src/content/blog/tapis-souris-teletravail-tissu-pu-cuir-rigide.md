@@ -67,69 +67,15 @@ La seule exception pertinente en **télétravail** : si vous combinez gaming le 
 
 ## Tableau comparatif : tissu vs PU cuir vs rigide pour le télétravail
 
-Critère
-
-Tissu
-
-PU cuir
-
-Rigide
-
-Confort du poignet (longue durée)
-
-5/5
-
-4/5
-
-2/5
-
-Résistance aux taches/liquides
-
-3/5
-
-5/5
-
-4/5
-
-Discrétion sonore (frappes, souris)
-
-5/5
-
-4/5
-
-2/5
-
-Aspect professionnel / visio
-
-4/5
-
-5/5
-
-3/5
-
-Facilité d’entretien
-
-4/5
-
-5/5
-
-5/5
-
-Disponibilité format XXL desk mat
-
-5/5
-
-3/5
-
-2/5
-
-Rapport qualité/prix
-
-5/5
-
-4/5
-
-3/5
+| Critère | Tissu | PU cuir | Rigide |
+|---|---|---|---|
+| **Confort du poignet (longue durée)** | 5/5 | 4/5 | 2/5 |
+| **Résistance aux taches / liquides** | 3/5 | 5/5 | 4/5 |
+| **Discrétion sonore (frappes, souris)** | 5/5 | 4/5 | 2/5 |
+| **Aspect professionnel / visio** | 4/5 | 5/5 | 3/5 |
+| **Facilité d’entretien** | 4/5 | 5/5 | 5/5 |
+| **Disponibilité format XXL desk mat** | 5/5 | 3/5 | 2/5 |
+| **Rapport qualité/prix** | 5/5 | 4/5 | 3/5 |
 
 ## Quelle matière choisir selon votre profil ?
 

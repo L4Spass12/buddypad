@@ -39,95 +39,16 @@ Le [QcK Prism RGB](https://steelseries.com/fr-fr/gaming-mousepads/qck-prism?colo
 
 ## Tableau comparatif BuddyPad vs SteelSeries QcK
 
-Critère
-
-BuddyPad XXL
-
-QcK (souple)
-
-QcK Hard
-
-QcK Prism RGB
-
-Prix (L/XL)
-
-19 – 29,90 euros
-
-20 à 30 euros
-
-environ 30 euros
-
-40 à 55 euros
-
-Matériau surface
-
-Tissu haute densité
-
-Micro-tissé optimisé
-
-Polyéthylène rigide
-
-Micro-tissé
-
-Type tracking
-
-Low et High DPI
-
-Optimisé Low et High DPI
-
-Optimisé High DPI
-
-Low et High DPI
-
-Tailles disponibles
-
-S / M / L / XXL
-
-Mini à 4XL (7 tailles)
-
-S à XXL
-
-S à XXL
-
-RGB
-
-Non
-
-Non
-
-Non
-
-Oui, 2 zones
-
-Design
-
-20+ visuels uniques
-
-Noir uni / éd. limitées
-
-Noir uni
-
-Noir avec RGB
-
-Lavable
-
-Oui (à la main)
-
-Oui (à la main)
-
-Non (essuyage)
-
-Non recommandé
-
-Référence esport
-
-Boutique FR émergente
-
-Standard mondial pro
-
-Plébiscité FPS
-
-Secondaire
+| Critère | BuddyPad XXL | QcK (souple) | QcK Hard | QcK Prism RGB |
+|---|---|---|---|---|
+| **Prix (L/XL)** | 19 – 29,90 € | 20 à 30 € | environ 30 € | 40 à 55 € |
+| **Matériau surface** | Tissu haute densité | Micro-tissé optimisé | Polyéthylène rigide | Micro-tissé |
+| **Type tracking** | Low et High DPI | Optimisé Low et High DPI | Optimisé High DPI | Low et High DPI |
+| **Tailles disponibles** | S / M / L / XXL | Mini à 4XL (7 tailles) | S à XXL | S à XXL |
+| **RGB** | Non | Non | Non | Oui, 2 zones |
+| **Design** | 20+ visuels uniques | Noir uni / éd. limitées | Noir uni | Noir avec RGB |
+| **Lavable** | Oui (à la main) | Oui (à la main) | Non (essuyage) | Non recommandé |
+| **Référence esport** | Boutique FR émergente | Standard mondial pro | Plébiscité FPS | Secondaire |
 
 ## Surface et tracking : qui performe le mieux ?
 

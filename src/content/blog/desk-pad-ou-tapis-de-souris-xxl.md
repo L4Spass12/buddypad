@@ -17,39 +17,13 @@ Dans ce guide complet, on vous explique la vraie différence entre un desk pad e
 
 Soyons honnêtes : la frontière est floue. En pratique, voici comment les distinguer :
 
-**Tapis de souris classique**
-
-**Desk pad / tapis XXL**
-
-Taille
-
-25×20 cm à 45×40 cm
-
-60×30 cm à 120×60 cm
-
-Usage principal
-
-Zone souris uniquement
-
-Souris + clavier + accessoires
-
-Esthétique
-
-Fonctionnel
-
-Setup & décoration bureau
-
-Public cible
-
-Gamers compétitifs
-
-Gamers + télétravailleurs + créateurs
-
-Prix moyen (FR)
-
-10–30 €
-
-25–70 €
+| Critère | Tapis de souris classique | Desk pad / tapis XXL |
+|---|---|---|
+| **Taille** | 25×20 cm à 45×40 cm | 60×30 cm à 120×60 cm |
+| **Usage principal** | Zone souris uniquement | Souris + clavier + accessoires |
+| **Esthétique** | Fonctionnel | Setup & décoration bureau |
+| **Public cible** | Gamers compétitifs | Gamers + télétravailleurs + créateurs |
+| **Prix moyen (FR)** | 10–30 € | 25–70 € |
 
 En résumé : un **desk pad** est un **tapis de souris XXL** qui couvre une grande partie du bureau. Le terme « desk pad » vient du monde anglophone du gaming et du setup, tandis que « tapis de souris grand format » ou « tapis de souris XXL » est le vocabulaire naturel en France. Les deux désignent la même catégorie de produit.
 

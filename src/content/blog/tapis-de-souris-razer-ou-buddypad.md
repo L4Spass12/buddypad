@@ -41,105 +41,17 @@ Le [Firefly V2 Pro](https://www.razer.com/fr-fr/gaming-mouse-mats/razer-firefly-
 
 ## Tableau comparatif BuddyPad vs gamme Razer
 
-Critère
-
-BuddyPad XXL
-
-Razer Goliathus Chroma
-
-Razer Strider
-
-Razer Atlas
-
-Prix
-
-19 – 29,90 euros
-
-environ 35 euros
-
-environ 45 euros
-
-environ 60 euros
-
-Matériau
-
-Tissu haute densité
-
-Tissu micro-tissé
-
-Hybride souple/rigide
-
-Verre trempé
-
-Type de surface
-
-Polyvalente
-
-Speed ou Control
-
-Hybrid (les deux)
-
-Speed extrême
-
-RGB
-
-Non
-
-Oui, Chroma
-
-Non
-
-Non
-
-Bords cousus
-
-✓
-
-✓
-
-✓
-
-N/A (rigide)
-
-Design
-
-20+ visuels exclusifs
-
-Logo Razer + RGB
-
-Noir/gris neutre
-
-Transparent/blanc
-
-Épaisseur
-
-3 à 4 mm
-
-3 mm
-
-2,5 mm
-
-Ultra-fin
-
-Entretien
-
-Lavable à la main
-
-Lavable à la main
-
-Essuyage humide
-
-Nettoyage facile
-
-Compatibilité souris
-
-Tous capteurs optiques
-
-Tous capteurs
-
-Tous capteurs
-
-Tous capteurs
+| Critère | BuddyPad XXL | Razer Goliathus Chroma | Razer Strider | Razer Atlas |
+|---|---|---|---|---|
+| **Prix** | 19 – 29,90 € | environ 35 € | environ 45 € | environ 60 € |
+| **Matériau** | Tissu haute densité | Tissu micro-tissé | Hybride souple/rigide | Verre trempé |
+| **Type de surface** | Polyvalente | Speed ou Control | Hybrid (les deux) | Speed extrême |
+| **RGB** | Non | Oui, Chroma | Non | Non |
+| **Bords cousus** | ✓ | ✓ | ✓ | N/A (rigide) |
+| **Design** | 20+ visuels exclusifs | Logo Razer + RGB | Noir/gris neutre | Transparent/blanc |
+| **Épaisseur** | 3 à 4 mm | 3 mm | 2,5 mm | Ultra-fin |
+| **Entretien** | Lavable à la main | Lavable à la main | Essuyage humide | Nettoyage facile |
+| **Compatibilité souris** | Tous capteurs optiques | Tous capteurs | Tous capteurs | Tous capteurs |
 
 ## Surface et glisse : tissu Razer vs tissu BuddyPad
 
