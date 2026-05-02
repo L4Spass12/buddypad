@@ -14,6 +14,9 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
+      // Exclut les produits internes/test qui ne doivent pas être indexés
+      // (slug commençant par `produit-test-` ou `test-`).
+      filter: (page) => !/\/product\/(produit-)?test[-/]/.test(page),
     }),
   ],
   markdown: {

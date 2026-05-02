@@ -131,6 +131,7 @@ const breadcrumbSchema = {
   description={seoDescription}
   image={image}
   jsonLd={[productSchema, breadcrumbSchema]}
+  noindex={(categories ?? []).length === 0}
 >
   <div class="max-w-7xl mx-auto px-6 pt-6 md:pt-8 pb-16 md:pb-20">
     <!-- Breadcrumb -->
