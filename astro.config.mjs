@@ -39,6 +39,20 @@ export default defineConfig({
       // Exclut les produits internes/test qui ne doivent pas être indexés
       // (slug commençant par `produit-test-` ou `test-`).
       filter: (page) => !/\/product\/(produit-)?test[-/]/.test(page),
+      // Multilingue : @astrojs/sitemap émet automatiquement les xhtml:link
+      // alternates par locale dès qu'il y a au moins 2 locales actives.
+      // Tant que `siteConfig.i18n.locales` ne contient que `fr`, l'option est
+      // ignorée et le sitemap reste mono-langue (comportement actuel).
+      ...(siteConfig.i18n.locales.length > 1
+        ? {
+            i18n: {
+              defaultLocale: siteConfig.i18n.defaultLocale,
+              locales: Object.fromEntries(
+                siteConfig.i18n.locales.map((l) => [l, siteConfig.i18n.locale[l].htmlLang])
+              ),
+            },
+          }
+        : {}),
     }),
   ],
   markdown: {

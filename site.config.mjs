@@ -23,9 +23,9 @@ const config = {
     // Currency : provisoirement EUR partout. À remplacer par les devises locales
     // une fois la compatibilité multi-devises confirmée côté Atelier widget.
     locale: {
-      fr: { label: 'Français', short: 'FR',  htmlLang: 'fr-FR', currency: 'EUR' },
-      en: { label: 'English',  short: 'EN',  htmlLang: 'en',    currency: 'EUR' },
-      de: { label: 'Deutsch',  short: 'DE',  htmlLang: 'de-DE', currency: 'EUR' },
+      fr: { label: 'Français', short: 'FR', htmlLang: 'fr-FR', ogLocale: 'fr_FR', currency: 'EUR' },
+      en: { label: 'English',  short: 'EN', htmlLang: 'en',    ogLocale: 'en_US', currency: 'EUR' },
+      de: { label: 'Deutsch',  short: 'DE', htmlLang: 'de-DE', ogLocale: 'de_DE', currency: 'EUR' },
     },
   },
   // Logo : partie principale + partie colorée (accent)
