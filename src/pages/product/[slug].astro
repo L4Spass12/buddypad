@@ -42,20 +42,15 @@ const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
   style: 'currency', currency: siteConfig.shop.currency,
 }).format(n);
 
-// Dates de livraison estimées (6 à 10 jours ouvrés à partir d'aujourd'hui)
+// Dates de livraison estimées : 6 à 10 jours calendaires (week-ends inclus)
 const _today = new Date();
-function addBusinessDays(date: Date, days: number) {
+function addCalendarDays(date: Date, days: number) {
   const d = new Date(date);
-  let added = 0;
-  while (added < days) {
-    d.setDate(d.getDate() + 1);
-    const day = d.getDay();
-    if (day !== 0 && day !== 6) added++;
-  }
+  d.setDate(d.getDate() + days);
   return d;
 }
-const deliveryStart = addBusinessDays(_today, 6);
-const deliveryEnd   = addBusinessDays(_today, 10);
+const deliveryStart = addCalendarDays(_today, 6);
+const deliveryEnd   = addCalendarDays(_today, 10);
 const fmtDeliveryDate = (d: Date) =>
   new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long' }).format(d);
 const deliveryWindowText = `entre le ${fmtDeliveryDate(deliveryStart)} et le ${fmtDeliveryDate(deliveryEnd)}`;
@@ -539,9 +534,9 @@ const breadcrumbSchema = {
           <div>
             <h3 class="text-cream font-medium mb-1.5">Délais de livraison</h3>
             <ul class="list-disc pl-5 space-y-1">
-              <li>France métropolitaine : 6 à 10 jours ouvrés</li>
-              <li>Europe (Belgique, Suisse, Luxembourg, Allemagne…) : 8 à 14 jours ouvrés</li>
-              <li>Reste du monde : 14 à 21 jours ouvrés</li>
+              <li>France métropolitaine : 6 à 10 jours</li>
+              <li>Europe (Belgique, Suisse, Luxembourg, Allemagne…) : 8 à 14 jours</li>
+              <li>Reste du monde : 14 à 21 jours</li>
             </ul>
           </div>
           <div>
