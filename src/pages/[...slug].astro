@@ -5,10 +5,15 @@ import { parseEntrySlug } from '../lib/i18n';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: post.slug },
-    props: { post, allPosts: posts },
-  }));
+  // Cette route catch-all à la racine émet uniquement les articles FR
+  // (sinon les fichiers en/foo.md seraient publiés en /en/foo/ AVANT que
+  // les routes EN/DE et le i18n config soient activés en phase 7).
+  return posts
+    .filter(p => parseEntrySlug(p.slug).lang === 'fr')
+    .map(post => ({
+      params: { slug: post.slug },
+      props: { post, allPosts: posts },
+    }));
 }
 
 const { post, allPosts } = Astro.props;
