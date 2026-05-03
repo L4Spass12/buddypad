@@ -5,9 +5,14 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset, unsplashAt } from '../../lib/image';
 import InfiniteReveal from '../../components/InfiniteReveal.astro';
+import { parseEntrySlug } from '../../lib/i18n';
 
+// Listing FR uniquement (la locale par défaut). Les versions EN/DE auront leur
+// propre route /<lang>/blog/index.astro quand le contenu sera traduit.
 const allPosts = await getCollection('blog');
-const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = allPosts
+  .filter(p => parseEntrySlug(p.slug).lang === 'fr')
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featured = posts.find(p => p.data.featured);
 const rest = posts.filter(p => !p.data.featured || p.slug !== featured?.slug);
 

@@ -5,6 +5,7 @@ import Icon from '../../components/Icon.astro';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset, unsplashAt } from '../../lib/image';
 import InfiniteReveal from '../../components/InfiniteReveal.astro';
+import { parseEntrySlug } from '../../lib/i18n';
 
 export function catToSlug(cat: string): string {
   return (siteConfig.categorySlugs as Record<string,string>)?.[cat]
@@ -16,11 +17,13 @@ const CATEGORIES = siteConfig.categories as unknown as string[];
 export async function getStaticPaths() {
   const CATS = siteConfig.categories as unknown as string[];
   const all = await getCollection('blog');
+  // Cat\u00e9gories FR uniquement. Les EN/DE auront leur propre route /[lang]/category/...
+  const frPosts = all.filter(p => parseEntrySlug(p.slug).lang === 'fr');
   return CATS.map(cat => ({
     params: { category: catToSlug(cat) },
     props: {
       cat,
-      posts: all
+      posts: frPosts
         .filter(p => p.data.category === cat)
         .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
     },

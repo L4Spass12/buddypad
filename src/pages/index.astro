@@ -5,6 +5,7 @@ import Icon from '../components/Icon.astro';
 import siteConfig from '../../site.config.mjs';
 import { getCollection } from 'astro:content';
 import { inlineMd } from '../lib/inline-md';
+import { parseEntrySlug } from '../lib/i18n';
 import { unsplashSrcset } from '../lib/image';
 
 // ─── Données ──────────────────────────────────────────────────────────────
@@ -14,8 +15,9 @@ const recentPosts = allPosts
   .slice(0, 3);
 
 const allProducts = await getCollection('products');
-// Masque les produits internes (catégorie vide) des listings publics.
+// Homepage FR : produits FR uniquement, hors internes/tests (catégorie vide).
 const sortedProducts = allProducts
+  .filter(p => parseEntrySlug(p.slug).lang === 'fr')
   .filter(p => (p.data.categories ?? []).length > 0)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 

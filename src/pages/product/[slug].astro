@@ -5,13 +5,19 @@ import FabricationSection from '../../components/FabricationSection.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset } from '../../lib/image';
+import { parseEntrySlug } from '../../lib/i18n';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
-  return products.map(product => ({
-    params: { slug: product.slug },
-    props: { product },
-  }));
+  // Cette route ne génère QUE les pages FR : /product/<slug>/. Les versions EN/DE
+  // (ex: /en/product/<slug>/) auront leur propre fichier dans src/pages/[lang]/...
+  // ajouté en phase 5 quand le contenu localisé sera disponible.
+  return products
+    .filter(p => parseEntrySlug(p.slug).lang === 'fr')
+    .map(product => ({
+      params: { slug: product.slug },
+      props: { product },
+    }));
 }
 
 const { product } = Astro.props;
@@ -34,9 +40,13 @@ const GENERIC_CATEGORIES = new Set([
 const preferredCategory = (categories || []).find(c => !GENERIC_CATEGORIES.has(c))
   ?? categories?.[0];
 
-// TOUS les produits de cette collection thématique (hors produit courant)
+// TOUS les produits de cette collection thématique (hors produit courant) ET
+// dans la même langue que le produit affiché (pas de mix FR/EN dans le slider).
+const productLang = parseEntrySlug(product.slug).lang;
 const related = allProducts
-  .filter(p => p.slug !== product.slug && (p.data.categories || []).includes(preferredCategory));
+  .filter(p => p.slug !== product.slug
+    && parseEntrySlug(p.slug).lang === productLang
+    && (p.data.categories || []).includes(preferredCategory));
 
 const formatPrice = (n: number) => new Intl.NumberFormat('fr-FR', {
   style: 'currency', currency: siteConfig.shop.currency,

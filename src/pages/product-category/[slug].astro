@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset } from '../../lib/image';
 import { inlineMd } from '../../lib/inline-md';
+import { parseEntrySlug } from '../../lib/i18n';
 import InfiniteReveal from '../../components/InfiniteReveal.astro';
 
 export async function getStaticPaths() {
@@ -11,14 +12,17 @@ export async function getStaticPaths() {
   const allCategoryContent = await getCollection('productCategories');
   const cats: { slug: string; label: string }[] = siteConfig.productCategories || [];
 
+  // Cette route émet uniquement les catégories FR (la version localisée
+  // /<lang>/product-category/<slug>/ aura sa propre route en phase 5).
   return cats.map(cat => {
-    const content = allCategoryContent.find(e => e.slug === cat.slug);
+    const content = allCategoryContent.find(e => parseEntrySlug(e.slug).lang === 'fr' && parseEntrySlug(e.slug).slug === cat.slug);
     return {
       params: { slug: cat.slug },
       props: {
         category: cat,
         content,
         products: allProducts
+          .filter(p => parseEntrySlug(p.slug).lang === 'fr')
           .filter(p => (p.data.categories || []).includes(cat.slug))
           .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
       },

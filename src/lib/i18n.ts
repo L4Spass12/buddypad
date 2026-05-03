@@ -97,6 +97,41 @@ export function localeMeta(lang: Locale) {
   };
 }
 
+/**
+ * Extrait la locale et le "vrai" slug d'une content entry Astro.
+ *
+ * Convention : si l'entry est dans un sous-dossier dont le nom correspond à
+ * une locale connue (ex: src/content/blog/en/foo.md → entry.slug = 'en/foo'),
+ * on considère que c'est la version localisée. Sinon, c'est la locale par
+ * défaut (FR), entièrement à plat (src/content/blog/foo.md → slug 'foo').
+ *
+ * Permet aux routes existantes de continuer à fonctionner exactement comme
+ * avant pour les fichiers FR, tout en supportant les versions EN/DE quand
+ * elles arrivent (phase 5).
+ */
+export function parseEntrySlug(entrySlug: string): { lang: Locale; slug: string } {
+  const parts = entrySlug.split('/');
+  const first = parts[0];
+  if (first && (ALL_LOCALES as string[]).includes(first)) {
+    return { lang: first as Locale, slug: parts.slice(1).join('/') };
+  }
+  return { lang: DEFAULT_LOCALE, slug: entrySlug };
+}
+
+/**
+ * Construit l'URL publique d'une content entry.
+ * - FR (locale par défaut) : pas de préfixe → URLs SEO existantes préservées.
+ * - EN / DE : préfixe /<lang>/.
+ *
+ * `base` est le segment de route (ex: 'product', 'product-category', '' pour blog à la racine).
+ */
+export function entryRoutePath(entrySlug: string, base = ''): string {
+  const { lang, slug } = parseEntrySlug(entrySlug);
+  const prefix = localePrefix(lang);
+  const segs = [base, slug].filter(Boolean).join('/');
+  return `${prefix}/${segs}/`.replace(/\/+/g, '/');
+}
+
 /** Format prix selon la locale (utilise Intl.NumberFormat natif). */
 export function formatPrice(value: number, lang: Locale = DEFAULT_LOCALE): string {
   const meta = localeMeta(lang);

@@ -5,11 +5,14 @@ import InfiniteReveal from '../components/InfiniteReveal.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../site.config.mjs';
 import { responsiveSrcset } from '../lib/responsive';
+import { parseEntrySlug } from '../lib/i18n';
 
 const allProducts = await getCollection('products');
-// On masque les produits sans catégorie (= produits internes/tests) des listings publics.
-// La page /product/<slug>/ reste accessible directement par URL.
+// Boutique FR uniquement (locale par défaut). Filtres :
+//  - même locale FR (pas de pollution cross-langue)
+//  - au moins une catégorie (masque les produits internes/tests).
 const products = allProducts
+  .filter(p => parseEntrySlug(p.slug).lang === 'fr')
   .filter(p => (p.data.categories ?? []).length > 0)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
