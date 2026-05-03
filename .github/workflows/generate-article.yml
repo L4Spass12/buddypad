@@ -1,8 +1,8 @@
-name: Generate Weekly Article
+name: Generate Article
 
 on:
   schedule:
-    - cron: '0 8 * * 1'  # Every Monday at 8am UTC
+    - cron: '0 8 * * 1,3,5'  # Mon, Wed, Fri at 8am UTC (3 articles / semaine)
   workflow_dispatch:
 
 concurrency:
