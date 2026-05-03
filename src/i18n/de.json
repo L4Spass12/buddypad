@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "shop": "Shop",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "categories": "Kategorien",
+    "categoriesAll": "Alle Kategorien",
+    "menu": "Menü",
+    "openCategoryMenu": "Kategoriemenü öffnen"
+  },
+  "shop": {
+    "label": "Shop",
+    "addToCart": "In den Warenkorb",
+    "outOfStock": "Nicht verfügbar",
+    "inStock": "Auf Lager",
+    "from": "Ab",
+    "secureDelivery": "Sichere Lieferung",
+    "return30Days": "30 Tage Rückgabe",
+    "deliveryWindow": "Du erhältst deine Bestellung {window}.",
+    "size": "Größe",
+    "popular": "Beliebt",
+    "viewAll": "Alle ansehen"
+  },
+  "blog": {
+    "title": "{site} Blog - Mauspads & Setup",
+    "subtitle": "Tests, Guides & Setup-Inspiration.",
+    "intro": "Mauspads, Ergonomie, Wettkampf-Gaming und Homeoffice - alles für einen Schreibtisch, der überzeugt.",
+    "readMore": "Artikel lesen",
+    "alsoRead": "Auch lesenswert",
+    "backToBlog": "← Zurück zum Blog",
+    "publishedOn": "Veröffentlicht am",
+    "updatedOn": "Aktualisiert am",
+    "readingTime": "{n} Min. Lesezeit"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen"
+  },
+  "footer": {
+    "explore": "Entdecken",
+    "categories": "Kategorien",
+    "stayInformed": "Auf dem Laufenden bleiben",
+    "newsletterIntro": "Die besten Tests & Setup-Neuheiten, einmal pro Woche.",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "join": "Abonnieren",
+    "newsletterSuccess": "✓ Danke! Du bist angemeldet.",
+    "newsletterError": "Fehler, bitte erneut versuchen.",
+    "rights": "Alle Rechte vorbehalten.",
+    "cgv": "AGB",
+    "privacy": "Datenschutz",
+    "legal": "Impressum",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Eine Frage zu unseren Mauspads, einer Bestellung oder zum Versand? Unser Team antwortet meist innerhalb von 24 Stunden.",
+    "firstname": "Vorname",
+    "lastname": "Nachname",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "selectPlaceholder": "- Auswählen -",
+    "subjectQuestion": "Frage vor dem Kauf",
+    "subjectOrder": "Bestellverfolgung",
+    "subjectShipping": "Versandproblem",
+    "subjectReturn": "Rückgabe oder Erstattung",
+    "subjectCustom": "Individuelles Mauspad",
+    "subjectPartnership": "Partnerschaft / Zusammenarbeit",
+    "subjectOther": "Sonstiges",
+    "message": "Nachricht",
+    "messagePlaceholder": "Beschreibe deine Anfrage in wenigen Zeilen…",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "responseDelay": "Antwort innerhalb von 24 Werktagsstunden · Deine Daten bleiben vertraulich.",
+    "success": "✓ Nachricht gesendet! Unser Team antwortet innerhalb von 24 Stunden.",
+    "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen oder schreib uns direkt an"
+  },
+  "common": {
+    "required": "*",
+    "and": "und",
+    "or": "oder"
+  }
+}

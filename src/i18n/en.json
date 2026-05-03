@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "blog": "Blog",
+    "contact": "Contact",
+    "categories": "Categories",
+    "categoriesAll": "All categories",
+    "menu": "Menu",
+    "openCategoryMenu": "Open category menu"
+  },
+  "shop": {
+    "label": "Shop",
+    "addToCart": "Add to cart",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock",
+    "from": "From",
+    "secureDelivery": "Secure shipping",
+    "return30Days": "30-day returns",
+    "deliveryWindow": "You'll receive your order {window}.",
+    "size": "Size",
+    "popular": "Popular",
+    "viewAll": "View all"
+  },
+  "blog": {
+    "title": "{site} Blog - Mouse pads & setup",
+    "subtitle": "Reviews, guides & setup inspiration.",
+    "intro": "Mouse pads, ergonomics, competitive gaming and remote work - everything you need for a desk that delivers.",
+    "readMore": "Read article",
+    "alsoRead": "Also read",
+    "backToBlog": "← Back to blog",
+    "publishedOn": "Published on",
+    "updatedOn": "Updated on",
+    "readingTime": "{n} min read"
+  },
+  "faq": {
+    "title": "Frequently asked questions"
+  },
+  "footer": {
+    "explore": "Explore",
+    "categories": "Categories",
+    "stayInformed": "Stay in the loop",
+    "newsletterIntro": "The best reviews & setup releases, once a week.",
+    "emailPlaceholder": "Email address",
+    "join": "Subscribe",
+    "newsletterSuccess": "✓ Thanks! You're subscribed.",
+    "newsletterError": "Error, please try again.",
+    "rights": "All rights reserved.",
+    "cgv": "Terms",
+    "privacy": "Privacy",
+    "legal": "Legal notice",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "A question about our mouse pads, an order, or delivery? Our team usually replies within 24 hours.",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "email": "Email",
+    "subject": "Subject",
+    "selectPlaceholder": "- Select -",
+    "subjectQuestion": "Pre-purchase question",
+    "subjectOrder": "Order tracking",
+    "subjectShipping": "Shipping issue",
+    "subjectReturn": "Return or refund",
+    "subjectCustom": "Custom mouse pad",
+    "subjectPartnership": "Partnership / collaboration",
+    "subjectOther": "Other",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your request in a few lines…",
+    "send": "Send message",
+    "sending": "Sending…",
+    "responseDelay": "Reply within 24 business hours · Your data stays confidential.",
+    "success": "✓ Message sent! Our team replies within 24 hours.",
+    "error": "Something went wrong. Please retry or email us at"
+  },
+  "common": {
+    "required": "*",
+    "and": "and",
+    "or": "or"
+  }
+}

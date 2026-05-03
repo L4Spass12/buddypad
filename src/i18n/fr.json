@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "blog": "Blog",
+    "contact": "Contact",
+    "categories": "Catégories",
+    "categoriesAll": "Toutes les catégories",
+    "menu": "Menu",
+    "openCategoryMenu": "Ouvrir le menu catégories"
+  },
+  "shop": {
+    "label": "Boutique",
+    "addToCart": "Ajouter au panier",
+    "outOfStock": "Indisponible",
+    "inStock": "En stock",
+    "from": "Dès",
+    "secureDelivery": "Livraison sécurisée",
+    "return30Days": "Retour 30 jours",
+    "deliveryWindow": "Vous recevez votre colis {window}.",
+    "size": "Taille",
+    "popular": "Populaire",
+    "viewAll": "Voir tout"
+  },
+  "blog": {
+    "title": "Blog {site} - Tapis de souris & setup",
+    "subtitle": "Tests, guides & inspirations setup.",
+    "intro": "Tapis de souris, ergonomie, gaming compétitif et télétravail - ce qu'il faut pour un bureau qui tient la route.",
+    "readMore": "Lire l'article",
+    "alsoRead": "À lire aussi",
+    "backToBlog": "← Retour au blog",
+    "publishedOn": "Publié le",
+    "updatedOn": "Mis à jour le",
+    "readingTime": "{n} min de lecture"
+  },
+  "faq": {
+    "title": "Questions fréquentes"
+  },
+  "footer": {
+    "explore": "Explorer",
+    "categories": "Catégories",
+    "stayInformed": "Restez informé",
+    "newsletterIntro": "Les meilleurs tests & nouveautés setup, une fois par semaine.",
+    "emailPlaceholder": "Adresse email",
+    "join": "Rejoindre",
+    "newsletterSuccess": "✓ Merci ! Vous êtes bien inscrit.",
+    "newsletterError": "Erreur, merci de réessayer.",
+    "rights": "Tous droits réservés.",
+    "cgv": "CGV",
+    "privacy": "Confidentialité",
+    "legal": "Mentions Légales",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question sur nos tapis de souris, une commande ou la livraison ? Notre équipe vous répond généralement sous 24 heures.",
+    "firstname": "Prénom",
+    "lastname": "Nom",
+    "email": "Email",
+    "subject": "Objet",
+    "selectPlaceholder": "- Sélectionnez -",
+    "subjectQuestion": "Question avant achat",
+    "subjectOrder": "Suivi de commande",
+    "subjectShipping": "Problème de livraison",
+    "subjectReturn": "Retour ou remboursement",
+    "subjectCustom": "Tapis personnalisé",
+    "subjectPartnership": "Partenariat / collaboration",
+    "subjectOther": "Autre",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre demande en quelques lignes…",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "responseDelay": "Réponse sous 24h ouvrées · Vos données sont confidentielles.",
+    "success": "✓ Message envoyé ! Notre équipe vous répond sous 24 heures.",
+    "error": "Une erreur est survenue. Merci de réessayer ou de nous écrire directement à"
+  },
+  "common": {
+    "required": "*",
+    "and": "et",
+    "or": "ou"
+  }
+}

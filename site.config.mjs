@@ -7,6 +7,27 @@ const config = {
   // Identité
   name: 'BuddyPad',
   url: 'https://buddypad.com',
+
+  // ─── Internationalisation ────────────────────────────────────────
+  // Stratégie : sous-dossier (URL canonique pour la locale par défaut sans
+  // préfixe). Les traductions sont gérées via Astro i18n + content collections
+  // organisées en sous-dossiers par locale (src/content/blog/<lang>/<slug>.md).
+  i18n: {
+    defaultLocale: 'fr',
+    // Liste des locales activées en prod. Pour activer une langue, il suffit
+    // de l'ajouter ici une fois les contenus traduits disponibles.
+    locales: ['fr'],
+    // Locales prévues (déjà câblées côté infra mais pas encore actives).
+    plannedLocales: ['en', 'de'],
+    // Métadonnées par locale (devise, format, drapeau pour le switcher…).
+    // Currency : provisoirement EUR partout. À remplacer par les devises locales
+    // une fois la compatibilité multi-devises confirmée côté Atelier widget.
+    locale: {
+      fr: { label: 'Français', short: 'FR',  htmlLang: 'fr-FR', currency: 'EUR' },
+      en: { label: 'English',  short: 'EN',  htmlLang: 'en',    currency: 'EUR' },
+      de: { label: 'Deutsch',  short: 'DE',  htmlLang: 'de-DE', currency: 'EUR' },
+    },
+  },
   // Logo : partie principale + partie colorée (accent)
   logoPrefix: 'Buddy',
   logoSuffix: 'Pad',

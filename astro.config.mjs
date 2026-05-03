@@ -7,6 +7,28 @@ import rehypeImageOptim from './src/lib/rehype-image-optim.mjs';
 
 export default defineConfig({
   site: siteConfig.url,
+  // ─── Internationalisation ────────────────────────────────────────
+  // Routing en sous-dossier : la locale par défaut (fr) reste à la racine
+  // pour préserver les URLs SEO existantes ; les autres prennent /<lang>/.
+  // Tant que les traductions ne sont pas prêtes, on garde uniquement `fr`
+  // dans `locales` (les pages /en/* et /de/* ne sont donc pas générées).
+  i18n: {
+    defaultLocale: siteConfig.i18n.defaultLocale,
+    locales: siteConfig.i18n.locales,
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    // fallback est ajouté dynamiquement uniquement si en/de sont activés.
+    // Astro refuse les entrées fallback qui ne sont pas listées dans locales.
+    ...(siteConfig.i18n.locales.includes('en') || siteConfig.i18n.locales.includes('de')
+      ? { fallback: Object.fromEntries(
+          siteConfig.i18n.locales
+            .filter((l) => l !== siteConfig.i18n.defaultLocale)
+            .map((l) => [l, siteConfig.i18n.defaultLocale])
+        ) }
+      : {}
+    ),
+  },
   integrations: [
     tailwind(),
     mdx(),
