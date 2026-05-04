@@ -1,347 +1,343 @@
 ---
-title: 'Entretien Tapis de Souris : Guide Complet Nettoyage & Durabilité'
-description: >-
-  Context Votre tapis de souris accumule quotidiennement poussière, traces de
-  doigts, sueur et résidus alimentaires. Au-delà de l'aspect esthétique, un
-  tapis sale affecte directement vos performances ga
+title: "Mouse Pad Maintenance: Complete Cleaning & Durability Guide"
+description: "Your mouse pad accumulates dust, fingerprints, sweat and food residue every day. Beyond the look, a dirty pad directly affects your gaming performance and your mouse accuracy."
 pubDate: '2026-01-03T00:00:00.000Z'
 updatedDate: '2026-02-09T00:00:00.000Z'
-author: Équipe BuddyPad
-category: Guide d’achat & conseils
-image: /images/blog/entretien-nettoyage-tapis-souris.webp
-imageAlt: 'Entretien Tapis de Souris : Guide Complet Nettoyage & Durabilité'
+author: "Équipe BuddyPad"
+category: "Guide d’achat & conseils"
+image: "/images/blog/entretien-nettoyage-tapis-souris.webp"
+imageAlt: "Mouse Pad Maintenance: Complete Cleaning & Durability Guide"
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
 
 ## Context
 
-Votre tapis de souris accumule quotidiennement poussière, traces de doigts, sueur et résidus alimentaires. Au-delà de l’aspect esthétique, un tapis sale affecte directement vos performances gaming et la précision de votre souris. Ce guide complet vous explique comment entretenir efficacement votre tapis selon son matériau, avec des méthodes testées et approuvées par notre équipe chez Buddypad.
+Your mouse pad accumulates dust, fingerprints, sweat and food residue every day. Beyond the look, a dirty pad directly affects your gaming performance and your mouse's accuracy. This complete guide explains how to maintain your pad effectively by material, with methods tested and approved by our team at BuddyPad.
 
-## Pourquoi nettoyer régulièrement son tapis de souris ?
+## Why clean your mouse pad regularly?
 
-![Une main humaine nettoie un tapis de souris encrassé avec un chiffon blanc, montrant l'importance de nettoyer régulièrement son tapis de souris. Des produits de nettoyage sont visibles.](/images/inline/conseils-pour-nettoyer-regulierement-son-tapis-de-souris-eff.webp)
+![A human hand cleans a dirty mouse pad with a white cloth, showing the importance of regularly cleaning your mouse pad. Cleaning products are visible.](/images/inline/conseils-pour-nettoyer-regulierement-son-tapis-de-souris-eff.webp)
 
-### Impact direct sur vos performances gaming
+### Direct impact on your gaming performance
 
-Un tapis encrassé modifie la glisse de votre souris et réduit la précision du capteur optique. Les particules accumulées créent des micro-frictions qui ralentissent vos mouvements et perturbent le tracking. Pour les joueurs compétitifs, cette dégradation peut faire la différence entre un headshot réussi et un tir manqué.
+A grimy pad alters your mouse glide and reduces optical sensor accuracy. Accumulated particles create micro-friction that slows your movements and disrupts tracking. For competitive players, this degradation can be the difference between a successful headshot and a missed shot.
 
-### Hygiène et accumulation de bactéries
+### Hygiene and bacteria buildup
 
-Des études montrent qu’un tapis de souris non entretenu peut héberger jusqu’à 10 000 bactéries par centimètre carré, soit plus qu’un siège de toilettes. Cette accumulation favorise les irritations cutanées et les allergies, particulièrement si vous passez plusieurs heures par jour devant votre setup.
+Studies show that an unmaintained mouse pad can host up to 10,000 bacteria per square centimeter - more than a toilet seat. That buildup encourages skin irritations and allergies, especially if you spend several hours a day in front of your setup.
 
-### Prolonger la durée de vie de votre équipement
+### Extending your equipment's lifespan
 
-Un entretien régulier préserve les fibres du tissu, maintient l’adhérence de la base antidérapante et évite le jaunissement prématuré. Un tapis bien entretenu peut durer 3 à 5 ans, contre 12 à 18 mois pour un tapis négligé. Investir quelques minutes par mois vous fait donc économiser sur le long terme.
+Regular maintenance preserves the cloth fibers, maintains the non-slip base's grip and prevents premature yellowing. A well-maintained pad can last 3 to 5 years, vs 12 to 18 months for a neglected one. Investing a few minutes a month saves you money long-term.
 
-## Comment nettoyer un tapis de souris selon le matériau ?
+## How to clean a mouse pad by material
 
-Le type de nettoyage dépend entièrement de la composition de votre tapis. Voici les méthodes adaptées à chaque matériau.
+The type of cleaning depends entirely on your pad's composition. Here are the methods adapted to each material.
 
-### Tapis en tissu : la méthode complète
+### Cloth pad: the complete method
 
-Les tapis en tissu (surface textile sur base en caoutchouc) sont les plus courants dans l’univers gaming. Ils nécessitent un nettoyage en profondeur tous les 1 à 2 mois.
+Cloth pads (textile surface on rubber base) are the most common in gaming. They need a deep clean every 1-2 months.
 
-**Matériel nécessaire:**
+**Equipment needed:**
 
--   Savon doux ou liquide vaisselle
--   Eau tiède (pas chaude)
--   Brosse à poils souples ou éponge douce
--   Serviette propre
+-   Mild soap or dish soap
+-   Lukewarm water (not hot)
+-   Soft-bristle brush or soft sponge
+-   Clean towel
 
-**Méthode pas à pas:**
+**Step-by-step method:**
 
-1.  Retirez d’abord la poussière superficielle avec un aspirateur ou en tapotant le tapis
-2.  Remplissez un évier ou une bassine d’eau tiède
-3.  Ajoutez quelques gouttes de savon doux
-4.  Immergez complètement le tapis et laissez tremper 10 minutes
-5.  Frottez délicatement la surface avec la brosse en mouvements circulaires
-6.  Insistez sur les zones tachées sans frotter trop fort
-7.  Rincez abondamment à l’eau claire jusqu’à disparition totale de la mousse
-8.  Essorez doucement en pressant (jamais en tordant)
-9.  Posez à plat sur une serviette pour séchage naturel
+1.  First remove surface dust with a vacuum or by patting the pad
+2.  Fill a sink or basin with lukewarm water
+3.  Add a few drops of mild soap
+4.  Fully submerge the pad and let it soak 10 minutes
+5.  Gently scrub the surface with the brush in circular motions
+6.  Focus on stained areas without scrubbing too hard
+7.  Rinse thoroughly with clean water until all foam is gone
+8.  Gently press out water (never wring)
+9.  Lay flat on a towel for natural drying
 
-**→ Guide détaillé:** [Comment laver un tapis de souris en tissu](/laver-tapis-souris-tissu/)
+**→ Detailed guide:** [How to wash a cloth mouse pad](/en/laver-tapis-souris-tissu/)
 
-**Temps total:** 15 minutes de nettoyage + 24h de séchage
+**Total time:** 15 minutes cleaning + 24h drying
 
-### Tapis rigide en plastique ou PVC
+### Hard plastic or PVC pad
 
-Les surfaces dures se nettoient rapidement mais demandent de la délicatesse pour éviter les micro-rayures qui affecteraient la glisse.
+Hard surfaces clean quickly but require gentleness to avoid micro-scratches that would affect glide.
 
-**Méthode express:**
+**Express method:**
 
-1.  Dépoussiérez avec un chiffon microfibre sec
-2.  Vaporisez un nettoyant multi-surfaces doux ou de l’eau savonneuse
-3.  Essuyez avec un chiffon microfibre humide en mouvements linéaires
-4.  Séchez immédiatement avec un chiffon sec
-5.  Vérifiez qu’aucune trace ne subsiste
+1.  Dust with a dry microfiber cloth
+2.  Spray a mild multi-surface cleaner or soapy water
+3.  Wipe with a damp microfiber cloth in linear motions
+4.  Dry immediately with a dry cloth
+5.  Check that no streaks remain
 
-**→ Tutoriel complet:** [Nettoyer un tapis de souris rigide](/nettoyer-tapis-souris-rigide/)
+**→ Complete tutorial:** [Cleaning a hard mouse pad](/en/nettoyer-tapis-souris-rigide/)
 
-**Temps total:** 5 minutes
+**Total time:** 5 minutes
 
-### Tapis RGB avec éclairage LED
+### RGB LED-lit pad
 
-Les tapis lumineux demandent une attention particulière pour préserver les composants électroniques et l’éclairage.
+Lit pads require special attention to preserve electronic components and lighting.
 
-**Précautions essentielles:**
+**Essential precautions:**
 
--   Débranchez TOUJOURS le câble USB avant nettoyage
--   N’immergez JAMAIS le boîtier électronique
--   Évitez l’eau sur les zones avec LEDs intégrées
--   Utilisez un chiffon légèrement humide, jamais mouillé
+-   ALWAYS unplug the USB cable before cleaning
+-   NEVER submerge the electronic enclosure
+-   Avoid water on areas with embedded LEDs
+-   Use a slightly damp cloth, never wet
 
-**Méthode sécurisée:**
+**Safe method:**
 
-1.  Débranchez et laissez refroidir 10 minutes
-2.  Nettoyez uniquement la surface textile avec un chiffon humide
-3.  Utilisez un coton-tige pour les zones proches du boîtier électronique
-4.  Laissez sécher complètement (minimum 2h) avant de rebrancher
-5.  Testez l’éclairage avant utilisation intensive
+1.  Unplug and let cool 10 minutes
+2.  Clean only the textile surface with a damp cloth
+3.  Use a cotton swab for areas near the electronics
+4.  Let dry completely (at least 2h) before reconnecting
+5.  Test the lighting before intensive use
 
-**→ Guide spécialisé:** [Nettoyer un tapis RGB sans risque](/nettoyer-tapis-rgb/)
+**→ Specialized guide:** [Cleaning an RGB pad safely](/en/nettoyer-tapis-rgb/)
 
-**Temps total:** 10 minutes + 2h de séchage
+**Total time:** 10 minutes + 2h drying
 
-### Tapis en verre ou aluminium
+### Glass or aluminum pad
 
-Ces matériaux premium offrent une glisse exceptionnelle mais se rayent facilement.
+These premium materials offer exceptional glide but scratch easily.
 
-**Méthode pour surfaces premium:**
+**Method for premium surfaces:**
 
-1.  Dépoussiérez avec un chiffon microfibre antistatique
-2.  Vaporisez un nettoyant vitres sans ammoniaque
-3.  Essuysulfigez avec un chiffon microfibre propre en mouvements circulaires
-4.  Polissez avec un second chiffon sec pour éliminer les traces
+1.  Dust with an antistatic microfiber cloth
+2.  Spray an ammonia-free glass cleaner
+3.  Wipe with a clean microfiber cloth in circular motions
+4.  Polish with a second dry cloth to remove streaks
 
-**Attention:** N’utilisez jamais de produits abrasifs ou d’éponges grattantes qui créeraient des micro-rayures définitives.
+**Warning:** Never use abrasive products or scouring pads - they would create permanent micro-scratches.
 
-**Temps total:** 3 minutes
+**Total time:** 3 minutes
 
-## Produits recommandés et erreurs à éviter
+## Recommended products and mistakes to avoid
 
-### Produits adaptés et sûrs
+### Suitable, safe products
 
-Pour un nettoyage efficace sans risque, privilégiez:
+For effective, risk-free cleaning, prefer:
 
--   **Savon de Marseille liquide** : naturel, efficace, économique
--   **Liquide vaisselle doux** : dégraisse sans agresser les fibres
--   **Savon noir liquide** : excellent pour les taches tenaces
--   **Eau déminéralisée** pour le rinçage : évite les traces blanches
--   **Vinaigre blanc dilué** (10%) : désinfecte et désodorise naturellement
+-   **Liquid Marseille soap**: natural, effective, economical
+-   **Mild dish soap**: cuts grease without harming fibers
+-   **Liquid black soap**: excellent for stubborn stains
+-   **Distilled water** for rinsing: avoids white marks
+-   **Diluted white vinegar** (10%): naturally disinfects and deodorizes
 
-### Les erreurs qui ruinent votre tapis
+### The mistakes that ruin your pad
 
-**❌ À ne JAMAIS faire:**
+**❌ NEVER do:**
 
--   Utiliser de l’eau de Javel : décolore et fragilise les fibres
--   Nettoyer avec de l’alcool à 90° : dessèche le caoutchouc de la base
--   Passer en machine à laver (sauf mention explicite du fabricant)
--   Utiliser un sèche-linge : déformation garantie de la base antidérapante
--   Frotter avec une brosse dure : abîme la surface et réduit la glisse
--   Sécher au sèche-cheveux : risque de déformation thermique
--   Repasser le tapis : fait fondre le caoutchouc et les fibres synthétiques
+-   Use bleach: discolors and weakens fibers
+-   Clean with 90° alcohol: dries out the rubber base
+-   Run through a washing machine (unless explicitly approved by the manufacturer)
+-   Use a tumble dryer: guaranteed warping of the non-slip base
+-   Scrub with a stiff brush: damages the surface and reduces glide
+-   Dry with a hairdryer: thermal warping risk
+-   Iron the pad: melts the rubber and synthetic fibers
 
-Ces erreurs courantes peuvent détruire définitivement votre tapis en une seule opération. La douceur et la patience sont vos meilleures alliées.
+These common mistakes can permanently destroy your pad in a single operation. Gentleness and patience are your best allies.
 
-## Tutoriel détaillé : Laver un tapis XXL en profondeur
+## Detailed tutorial: deep cleaning an XXL pad
 
-Les tapis grand format (XXL desk mat) demandent une approche spécifique car ils ne rentrent souvent pas dans un évier standard.
+Large-format pads (XXL deskmat) require a specific approach because they often don't fit in a standard sink.
 
-### Préparation de l’espace
+### Setup
 
-1.  Nettoyez votre baignoire ou douche
-2.  Assurez-vous d’avoir suffisamment d’eau tiède
-3.  Préparez une grande serviette de bain pour le séchage
-4.  Comptez 30 minutes pour l’opération complète
+1.  Clean your bathtub or shower
+2.  Make sure you have enough lukewarm water
+3.  Prep a large bath towel for drying
+4.  Allow 30 minutes for the complete operation
 
-### Processus étape par étape
+### Step-by-step process
 
-**Phase 1 - Pré-nettoyage (5 min):**
+**Phase 1 - Pre-cleaning (5 min):**
 
--   Aspirez le tapis des deux côtés pour retirer poussière et miettes
--   Identifiez les taches tenaces qui nécessiteront plus d’attention
+-   Vacuum the pad on both sides to remove dust and crumbs
+-   Identify stubborn stains that will need more attention
 
-**Phase 2 - Lavage (15 min):**
+**Phase 2 - Washing (15 min):**
 
--   Étalez le tapis dans la baignoire
--   Mouillez entièrement à l’eau tiède
--   Appliquez le savon doux sur toute la surface
--   Brossez délicatement avec une brosse à poils souples
--   Insistez sur les zones de contact main/poignet (plus sales)
--   Retournez et nettoyez également la base en caoutchouc
+-   Spread the pad in the bathtub
+-   Fully wet with lukewarm water
+-   Apply mild soap across the entire surface
+-   Brush gently with a soft-bristle brush
+-   Focus on hand/wrist contact zones (dirtier)
+-   Flip and clean the rubber base too
 
-**Phase 3 - Rinçage (10 min):**
+**Phase 3 - Rinsing (10 min):**
 
--   Rincez abondamment au pommeau de douche
--   Assurez-vous qu’aucune mousse ne reste dans les fibres
--   Le rinçage doit être complet pour éviter les résidus collants
+-   Rinse thoroughly with the showerhead
+-   Make sure no foam remains in the fibers
+-   The rinse must be complete to avoid sticky residue
 
-**Phase 4 - Séchage:**
+**Phase 4 - Drying:**
 
--   Essorez en pressant, jamais en tordant
--   Étalez sur une grande serviette
--   Roulez l’ensemble pour absorber l’excès d’eau
--   Suspendez à plat ou sur un séchoir
--   Patience : 24 à 48h selon l’humidité ambiante
+-   Press out water, never wring
+-   Spread on a large towel
+-   Roll the whole thing to absorb excess water
+-   Hang flat or on a drying rack
+-   Patience: 24 to 48h depending on ambient humidity
 
-**💡 Astuce Buddypad:** Nettoyez votre tapis en fin de semaine pour qu’il soit sec et prêt le lundi matin.
+**💡 BuddyPad tip:** Clean your pad on the weekend so it's dry and ready Monday morning.
 
-## Séchage : les bonnes pratiques pour éviter les déformations
+## Drying: best practices to avoid warping
 
-Le séchage est l’étape la plus critique qui conditionne la durée de vie de votre tapis.
+Drying is the most critical step that conditions the lifespan of your pad.
 
-### Temps de séchage selon les matériaux
+### Drying time by material
 
--   **Tapis tissu standard:** 24 heures minimum
--   **Tapis XXL épais:** 36 à 48 heures
--   **Tapis rigide:** 5 à 10 minutes
--   **Tapis RGB:** 2 heures minimum avant rebranchement
+-   **Standard cloth pad:** at least 24 hours
+-   **Thick XXL pad:** 36 to 48 hours
+-   **Hard pad:** 5 to 10 minutes
+-   **RGB pad:** at least 2 hours before reconnecting
 
-### Méthode de séchage optimale
+### Optimal drying method
 
-**Configuration idéale:**
+**Ideal setup:**
 
--   Pièce ventilée (fenêtre ouverte ou ventilateur)
--   Température ambiante (20-22°C)
--   Tapis posé à plat sur serviette
--   Évitez le soleil direct qui peut décolorer
+-   Ventilated room (open window or fan)
+-   Room temperature (20-22°C / 68-72°F)
+-   Pad laid flat on a towel
+-   Avoid direct sun which can fade colors
 
-**Accélération du séchage:**
+**Speed up drying:**
 
--   Changez la serviette absorbante après 6h
--   Retournez le tapis toutes les 12h
--   Utilisez un ventilateur à distance (pas directement dessus)
--   En hiver, placez près d’un radiateur (jamais dessus)
+-   Change the absorbent towel after 6h
+-   Flip the pad every 12h
+-   Use a fan from a distance (not directly on it)
+-   In winter, place near a radiator (never on top)
 
-### Comment savoir si le tapis est complètement sec ?
+### How to know when the pad is fully dry?
 
-Touchez la base en caoutchouc : c’est la partie qui sèche en dernier. Si elle est froide au toucher ou légèrement humide, poursuivez le séchage. Un tapis mal séché développera des moisissures et des mauvaises odeurs en quelques jours.
+Touch the rubber base: that's the part that dries last. If it's cold to the touch or slightly damp, keep drying. A poorly dried pad will develop mold and bad smells in a few days.
 
-**→ Guide complet:** [Sécher un tapis de souris correctement](/secher-tapis-souris/)
+**→ Complete guide:** [Drying a mouse pad properly](/en/secher-tapis-souris/)
 
-## Fréquence d’entretien recommandée
+## Recommended maintenance frequency
 
-L’entretien préventif est plus efficace qu’un grand nettoyage occasionnel.
+Preventive maintenance is more effective than an occasional deep clean.
 
-### Planning d’entretien selon l’utilisation
+### Maintenance schedule by use
 
-**Utilisation intensive (gaming quotidien, +6h/jour):**
+**Intensive use (daily gaming, 6+h/day):**
 
--   **Hebdomadaire:** Dépoussiérage rapide
--   **Mensuel:** Nettoyage en profondeur
--   **Semestriel:** Vérification de l’usure et remplacement si nécessaire
+-   **Weekly:** quick dusting
+-   **Monthly:** deep clean
+-   **Every 6 months:** wear check and replacement if needed
 
-**Utilisation modérée (3-5h/jour):**
+**Moderate use (3-5h/day):**
 
--   **Bi-mensuel:** Nettoyage complet
--   **Annuel:** Inspection et éventuel remplacement
+-   **Bi-monthly:** complete clean
+-   **Annually:** inspection and possible replacement
 
-**Utilisation occasionnelle (bureautique):**
+**Occasional use (office work):**
 
--   **Trimestriel:** Nettoyage suffisant
--   **Tous les 2-3 ans:** Remplacement
+-   **Quarterly:** sufficient cleaning
+-   **Every 2-3 years:** replacement
 
-### Signes qu’un nettoyage s’impose
+### Signs that a clean is needed
 
-Nettoyez immédiatement si vous constatez:
+Clean immediately if you notice:
 
--   Trace visible de saleté ou changement de couleur
--   Sensation de glisse dégradée
--   Accumulation de poussière visible
--   Odeur désagréable
--   Taches de liquide renversé
+-   Visible dirt or color change
+-   Degraded glide feel
+-   Visible dust buildup
+-   Bad smell
+-   Spilled liquid stains
 
-**→ Calendrier détaillé:** [Fréquence de nettoyage optimale](/frequence-nettoyage-tapis/)
+**→ Detailed schedule:** [Optimal cleaning frequency](/en/frequence-nettoyage-tapis/)
 
-## Problèmes courants et solutions professionnelles
+## Common problems and pro solutions
 
-### Mon tapis colle après le nettoyage
+### My pad is sticky after cleaning
 
-**Causes possibles:**
+**Possible causes:**
 
--   Résidus de savon mal rincés
--   Produit inadapté utilisé
--   Base en caoutchouc altérée par un produit agressif
+-   Soap residue not rinsed properly
+-   Wrong product used
+-   Rubber base altered by an aggressive product
 
 **Solution:**
 
-1.  Rincez à nouveau abondamment à l’eau claire
-2.  Utilisez de l’eau déminéralisée pour le dernier rinçage
-3.  Si le problème persiste, le tapis est peut-être endommagé définitivement
+1.  Rinse again thoroughly with clean water
+2.  Use distilled water for the final rinse
+3.  If the problem persists, the pad may be permanently damaged
 
-### Mon tapis a jauni avec le temps
-
-**Causes:**
-
--   Exposition prolongée à la lumière UV
--   Oxydation naturelle des fibres blanches
--   Accumulation de saleté incrustée
-
-**Solutions:**
-
--   Nettoyage avec du percarbonate de sodium (détachant oxygéné)
--   Bain prolongé (1h) dans de l’eau tiède savonneuse
--   Si le jaunissement est profond, envisagez un remplacement
-
-**Note:** Le jaunissement est souvent irréversible sur les tapis blancs de plus de 2 ans.
-
-### Odeurs persistantes malgré le nettoyage
+### My pad has yellowed over time
 
 **Causes:**
 
--   Moisissures développées dans l’épaisseur (séchage incomplet)
--   Bactéries incrustées dans les fibres
--   Base en caoutchouc qui se dégrade
+-   Prolonged exposure to UV light
+-   Natural oxidation of white fibers
+-   Embedded dirt buildup
 
 **Solutions:**
 
-1.  Lavez avec du vinaigre blanc dilué (10% dans l’eau)
-2.  Laissez tremper 30 minutes
-3.  Rincez abondamment
-4.  Séchez en extérieur si possible (UV naturels désinfectants)
-5.  Si l’odeur persiste, le tapis est probablement compromis
+-   Cleaning with sodium percarbonate (oxygen-based stain remover)
+-   Extended bath (1h) in lukewarm soapy water
+-   If yellowing is deep, consider replacement
 
-**→ Troubleshooting complet:** [Problèmes de tapis et solutions](/problemes-tapis-souris-solutions/)
+**Note:** Yellowing is often irreversible on white pads over 2 years old.
 
-## FAQ : Vos questions sur le nettoyage de tapis de souris
+### Persistent smells despite cleaning
 
-Peut-on laver un tapis de souris en machine à laver ? +
+**Causes:**
 
-La plupart des fabricants déconseillent formellement le lavage en machine. Le tambour peut déformer la base antidérapante et l’essorage risque de décoller les couches. Si le fabricant l’autorise explicitement, utilisez un cycle délicat (30°C max) sans essorage, et placez le tapis dans une taie d’oreiller. Chez Buddypad, nous recommandons toujours le lavage à la main pour préserver la longévité de vos tapis.
+-   Mold developed in the thickness (incomplete drying)
+-   Bacteria embedded in the fibers
+-   Rubber base degrading
 
-À quelle fréquence nettoyer son tapis gaming ? +
+**Solutions:**
 
-Pour un usage gaming intensif (quotidien), un nettoyage mensuel est idéal. Les joueurs professionnels nettoient même leur tapis chaque semaine. Pour une utilisation bureautique standard, tous les 2-3 mois suffisent. Adaptez selon votre environnement : si vous mangez à votre bureau ou si votre setup est dans une pièce poussiéreuse, augmentez la fréquence.
+1.  Wash with diluted white vinegar (10% in water)
+2.  Let soak 30 minutes
+3.  Rinse thoroughly
+4.  Dry outside if possible (natural UV disinfectants)
+5.  If smell persists, the pad is probably compromised
 
-Comment enlever une tache de café ou soda sur un tapis ? +
+**→ Complete troubleshooting:** [Pad problems and solutions](/en/problemes-tapis-souris-solutions/)
 
-Agissez immédiatement : épongez le liquide sans frotter, puis nettoyez la zone avec de l’eau tiède savonneuse. Pour les taches incrustées, préparez une pâte de bicarbonate de soude et d’eau, appliquez sur la tache, laissez agir 30 minutes, puis frottez délicatement et rincez. Les boissons sucrées laissent un résidu collant si non traitées rapidement.
+## FAQ: your questions on mouse pad cleaning
 
-Le vinaigre blanc abîme-t-il les tapis de souris ? +
+Can you wash a mouse pad in the washing machine? +
 
-Non, le vinaigre blanc dilué (10% maximum) est sans danger pour la plupart des tapis en tissu. Il désinfecte naturellement et neutralise les odeurs. Évitez cependant d’utiliser du vinaigre pur (trop acide) et rincez toujours abondamment après utilisation. Le vinaigre n’est pas recommandé pour les tapis RGB ou les surfaces rigides spéciales.
+Most makers strongly advise against machine washing. The drum can warp the non-slip base and the spin cycle can unstick layers. If the maker explicitly allows it, use a delicate cycle (max 30°C / 86°F) without spinning, and place the pad in a pillowcase. At BuddyPad, we always recommend hand washing to preserve the longevity of your pads.
 
-Mon tapis XXL met 3 jours à sécher, c’est normal ? +
+How often to clean a gaming pad? +
 
-C’est effectivement long mais pas anormal pour un tapis épais (4-5mm) dans un environnement peu ventilé. Pour accélérer : essorez mieux lors du nettoyage (en pressant fort), changez la serviette absorbante plusieurs fois, utilisez un ventilateur, et privilégiez une pièce chaude et aérée. En hiver, le séchage est naturellement plus long. Si possible, nettoyez en été.
+For intensive gaming use (daily), monthly cleaning is ideal. Pro players even clean their pad every week. For standard office use, every 2-3 months is enough. Adjust by environment: if you eat at your desk or your setup is in a dusty room, increase the frequency.
 
-Peut-on utiliser un nettoyeur vapeur ? +
+How to remove a coffee or soda stain from a pad? +
 
-Déconseillé pour la plupart des tapis. La chaleur excessive (100°C+) peut faire fondre les fibres synthétiques, décoller la base en caoutchouc et déformer le tapis. Seuls certains tapis en tissu naturel épais pourraient le supporter, mais le risque ne vaut pas la peine. Le nettoyage manuel à l’eau tiède est plus sûr et tout aussi efficace.
+Act immediately: blot the liquid without rubbing, then clean the area with lukewarm soapy water. For embedded stains, mix baking soda and water into a paste, apply to the stain, let sit 30 minutes, then gently scrub and rinse. Sugary drinks leave a sticky residue if not handled quickly.
 
-Comment nettoyer un tapis de souris blanc ou clair ? +
+Does white vinegar damage mouse pads? +
 
-Les tapis clairs montrent plus facilement la saleté mais se nettoient de la même manière. Pour raviver la blancheur, ajoutez du percarbonate de sodium (détachant oxygéné) dans l’eau de lavage. Évitez l’eau de Javel qui jaunit à long terme. Lavez plus fréquemment (toutes les 3 semaines) pour éviter l’accumulation qui grisaille progressivement le tissu.
+No - diluted white vinegar (10% maximum) is safe for most cloth pads. It naturally disinfects and neutralizes smells. However, avoid using pure vinegar (too acidic) and always rinse thoroughly after use. Vinegar is not recommended for RGB pads or special hard surfaces.
 
-Les tapis RGB peuvent-ils aller dans l’eau ? +
+My XXL pad takes 3 days to dry, is that normal? +
 
-La surface textile peut être nettoyée avec un chiffon humide, mais le boîtier électronique ne doit JAMAIS être immergé. Débranchez systématiquement avant nettoyage et laissez sécher complètement (minimum 2h) avant de rebrancher. Un contact avec l’eau sur les composants électroniques détruirait définitivement votre tapis RGB.
+It's long but not abnormal for a thick pad (4-5mm) in a poorly ventilated environment. To speed up: press out better when cleaning (press hard), change the absorbent towel multiple times, use a fan, and prefer a warm, ventilated room. In winter, drying is naturally longer. If possible, clean in summer.
 
-Mon tapis gondole après le lavage, que faire ? +
+Can you use a steam cleaner? +
 
-Le gondolement vient souvent d’un séchage incorrect (exposé à une source de chaleur directe ou séché suspendu). Pour corriger : mouillez légèrement le tapis, posez-le à plat avec des livres lourds sur les coins pendant 24h, puis laissez sécher naturellement à plat. Si la déformation est trop importante, le tapis est malheureusement irrécupérable.
+Not recommended for most pads. Excessive heat (100°C+ / 212°F+) can melt synthetic fibers, unstick the rubber base and warp the pad. Only some thick natural-cloth pads might handle it, but the risk isn't worth it. Manual cleaning with lukewarm water is safer and just as effective.
 
-Faut-il nettoyer aussi la base antidérapante ? +
+How to clean a white or light-colored mouse pad? +
 
-Oui, absolument ! La base accumule aussi de la saleté qui réduit son adhérence. Lors du nettoyage complet, retournez le tapis et frottez la base en caoutchouc avec la même eau savonneuse. Rincez bien et séchez complètement. Une base propre adhère mieux au bureau et prolonge la durée de vie de votre tapis.
+Light pads show dirt more easily but clean the same way. To restore whiteness, add sodium percarbonate (oxygen-based stain remover) to the wash water. Avoid bleach, which yellows long-term. Wash more frequently (every 3 weeks) to prevent buildup that progressively grays the cloth.
+
+Can RGB pads go in water? +
+
+The textile surface can be cleaned with a damp cloth, but the electronic enclosure must NEVER be submerged. Always unplug before cleaning and let dry completely (at least 2h) before reconnecting. Water contact with the electronic components would permanently destroy your RGB pad.
+
+My pad warps after washing, what should I do? +
+
+Warping often comes from incorrect drying (exposed to a direct heat source or hung up). To fix: lightly wet the pad, lay it flat with heavy books on the corners for 24h, then let it dry naturally flat. If the deformation is too significant, the pad is unfortunately unrecoverable.
+
+Should you also clean the non-slip base? +
+
+Yes, absolutely! The base also accumulates dirt that reduces its grip. During complete cleaning, flip the pad and scrub the rubber base with the same soapy water. Rinse well and dry completely. A clean base sticks better to the desk and extends the life of your pad.
