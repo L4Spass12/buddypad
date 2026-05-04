@@ -1,143 +1,123 @@
 ---
-title: Comment nettoyer un tapis de souris sans l'abîmer
-description: >-
-  Découvrez comment nettoyer tapis de souris efficacement sans l'endommager. Nos
-  conseils simples et rapides pour un tapis propre et durable.
+title: "How to clean a mouse pad without damaging it"
+description: "Learn how to clean a mouse pad effectively without damaging it. Simple, fast tips for a clean, long-lasting pad."
 pubDate: '2026-05-02T00:00:00.000Z'
-author: Équipe BuddyPad
-category: Guide d’achat & conseils
-tags:
-  - nettoyage tapis souris
-  - entretien tapis gaming
-  - tapis bureau
-  - conseils maintenance
-  - durabilité équipement
+author: "Équipe BuddyPad"
+category: "Guide d’achat & conseils"
+tags: ["mouse pad cleaning", "gaming pad maintenance", "deskmat", "maintenance tips", "equipment durability"]
 featured: false
-image: /images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer.webp
-imageAlt: comment nettoyer tapis de souris - couverture
-imageTitle: Comment nettoyer un tapis de souris sans l'abîmer
+image: "/images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer.webp"
+imageAlt: "how to clean a mouse pad - cover"
+imageTitle: "How to clean a mouse pad without damaging it"
 faq:
-  - q: Peut-on mettre un tapis de souris en tissu en machine à laver ?
-    a: >-
-      Techniquement possible pour certains modèles basiques, mais fortement
-      déconseillé : le cycle d'essorage déforme la base en caoutchouc et les
-      coutures périphériques s'effilochent rapidement. Privilégiez toujours le
-      lavage à la main à l'eau tiède.
-  - q: À quelle fréquence faut-il nettoyer son tapis de souris ?
-    a: >-
-      Un nettoyage **complet toutes les deux à quatre semaines** est suffisant
-      pour un usage quotidien. Un passage rapide au chiffon humide une fois par
-      semaine suffit à limiter l'accumulation de dépôts de surface entre deux
-      lavages.
-  - q: Quels produits sont à éviter absolument sur un tapis de souris ?
-    a: >-
-      Évitez l'alcool à brûler, l'eau de Javel, les nettoyants multi-surfaces
-      agressifs et tout produit abrasif : ils décolorent la surface en tissu,
-      dissolvent les traitements de glisse des *hard-pads* et fragilisent
-      irrémédiablement le caoutchouc de la base.
+  - q: "Can you put a cloth mouse pad in the washing machine?"
+    a: "Technically possible on some basic models, but strongly discouraged: the spin cycle deforms the rubber base and the edge stitching frays quickly. Always go for hand washing with lukewarm water."
+  - q: "How often should you clean a mouse pad?"
+    a: "A **deep clean every two to four weeks** is enough for daily use. A quick wipe with a damp cloth once a week is enough to limit surface buildup between deep cleans."
+  - q: "Which products should you absolutely avoid on a mouse pad?"
+    a: "Avoid rubbing alcohol, bleach, aggressive multi-surface cleaners and any abrasive product: they discolor the cloth surface, dissolve the glide treatments on *hard pads* and irreversibly weaken the rubber base."
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
 
-Votre tapis de souris est l'un des périphériques les plus utilisés de votre bureau - et pourtant, l'un des plus négligés en matière d'entretien. Après quelques semaines d'utilisation intensive, taches de café, traces de gras et poussières accumulées finissent par dégrader non seulement son apparence, mais aussi ses performances. Savoir **comment nettoyer un tapis de souris** correctement, sans l'abîmer, est une compétence que tout utilisateur sérieux devrait maîtriser. Chez [BuddyPad](/), nous avons accompagné des milliers d'utilisateurs dans l'optimisation de leur setup, et la question du nettoyage revient systématiquement. Ce guide pratique vous donne toutes les étapes pour retrouver un tapis propre, fonctionnel et durable - qu'il soit en tissu, en plastique rigide ou doté de LED RGB.
+Your mouse pad is one of the most-used peripherals on your desk - and yet one of the most neglected when it comes to maintenance. After a few weeks of intensive use, coffee stains, grease marks and accumulated dust end up degrading not only its look but also its performance. Knowing **how to clean a mouse pad** properly, without damaging it, is a skill every serious user should master. At [BuddyPad](/en/), we've helped thousands of users optimize their setup, and the cleaning question comes up systematically. This practical guide gives you every step to recover a clean, functional, durable pad - whether it's cloth, hard plastic or RGB-lit.
 
 ---
 
-## Pourquoi nettoyer régulièrement son tapis de souris ?
+## Why clean a mouse pad regularly?
 
-Un tapis de souris sale n'est pas qu'une question d'esthétique. La saleté accumulée affecte directement la **précision du capteur optique ou laser** de votre souris. Les résidus graisseux créent des micro-reliefs invisibles à l'oeil nu, mais suffisants pour perturber le tracking, surtout sur les tapis *low-DPI* utilisés en gaming compétitif.
+A dirty mouse pad isn't just an aesthetic issue. Accumulated grime directly affects the **accuracy of your mouse's optical or laser sensor**. Greasy residue creates micro-textures invisible to the naked eye but enough to disturb tracking, especially on *low-DPI* pads used in competitive gaming.
 
-> Un tapis de souris encrassé peut faire perdre jusqu'à 15 à 20 % de précision au capteur de votre souris - un écart critique en gaming compétitif.
+> A grimy mouse pad can cost you up to 15-20% of your sensor accuracy - a critical gap in competitive gaming.
 
-Chez BuddyPad, nous avons constaté que la majorité des utilisateurs nettoient leur tapis **moins d'une fois par mois**, alors qu'un nettoyage bimensuel suffit à maintenir des performances optimales. Les tapis XXL de bureau sont particulièrement exposés, car leur surface accueille claviers, tasses et avant-bras en permanence.
+At BuddyPad, we've found that most users clean their pad **less than once a month**, while a bi-monthly clean is enough to maintain optimal performance. XXL deskmats are particularly exposed because their surface hosts keyboards, mugs and forearms continuously.
 
-Pour aller plus loin sur les bonnes pratiques, consultez notre [guide complet d'entretien](/entretien-nettoyage-tapis-souris/) qui couvre tous les types de matériaux et de finitions de surface.
+For more on best practices, check our [complete maintenance guide](/en/entretien-nettoyage-tapis-souris/) covering every material and surface finish.
 
 ---
 
 <figure>
-<img src="/images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer-1.webp" alt="comment nettoyer tapis de souris - Pourquoi nettoyer régulièrement son tapis de souris ?" title="Comment nettoyer un tapis de souris sans l'abîmer" width="900" height="600" loading="lazy" />
-<figcaption>Photo de <a href="https://unsplash.com/@hieu101193?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Đào Hiếu</a> sur <a href="https://unsplash.com?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Unsplash</a></figcaption>
+<img src="/images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer-1.webp" alt="how to clean a mouse pad - Why clean a mouse pad regularly?" title="How to clean a mouse pad without damaging it" width="900" height="600" loading="lazy" />
+<figcaption>Photo by <a href="https://unsplash.com/@hieu101193?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Đào Hiếu</a> on <a href="https://unsplash.com?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Unsplash</a></figcaption>
 </figure>
 
-## Comment nettoyer un tapis de souris en tissu : la méthode étape par étape
+## How to clean a cloth mouse pad: the step-by-step method
 
-Les tapis en tissu représentent la grande majorité des modèles gaming et bureautique. Ils sont efficaces, confortables, mais **absorbent facilement les liquides et les graisses**. Voici la méthode recommandée.
+Cloth pads make up the vast majority of gaming and office models. They're effective, comfortable, but **easily absorb liquids and grease**. Here's the recommended method.
 
-### Le matériel nécessaire
+### Materials needed
 
-Pas besoin d'équipement sophistiqué. Prévoyez :
+No fancy equipment required. Have ready:
 
-- Un peu de savon doux (savon de Marseille ou liquide vaisselle neutre)
-- De l'eau tiède (jamais chaude - la chaleur déforme les coutures et décolle la base en caoutchouc)
-- Une brosse souple à poils doux
-- Une serviette propre et absorbante
+- A bit of mild soap (Marseille soap or neutral dish soap)
+- Lukewarm water (never hot - heat warps the stitching and unsticks the rubber base)
+- A soft-bristle brush
+- A clean, absorbent towel
 
-### Les étapes du nettoyage
+### The cleaning steps
 
-1. **Rincez le tapis** sous un filet d'eau tiède pour ramollir les dépôts de surface.
-2. Appliquez une **petite quantité de savon** directement sur la surface et frottez en cercles concentriques avec la brosse souple.
-3. Rincez abondamment jusqu'à élimination complète des résidus de mousse.
-4. Pressez doucement le tapis dans une serviette pour absorber l'excédent d'eau - **ne tordez jamais**, cela déforme irrémédiablement la base caoutchouc.
+1. **Rinse the pad** under a stream of lukewarm water to soften surface buildup.
+2. Apply a **small amount of soap** directly to the surface and scrub in concentric circles with the soft brush.
+3. Rinse thoroughly until all foam residue is gone.
+4. Gently press the pad in a towel to absorb the excess water - **never wring**, that irreversibly deforms the rubber base.
 
-Pour les souillures résistantes, notre article dédié sur [enlever les taches incrustées](/enlever-taches-tapis-souris/) propose des techniques ciblées selon le type de tache - café, encre, graisse alimentaire.
+For stubborn stains, our dedicated article on [removing embedded stains](/en/enlever-taches-tapis-souris/) covers targeted techniques by stain type - coffee, ink, food grease.
 
 ---
 
-## Nettoyer un tapis de souris rigide ou RGB : précautions spécifiques
+## Cleaning a hard or RGB mouse pad: specific precautions
 
-Les tapis en plastique *hard-pad* et les modèles avec éclairage RGB nécessitent une approche différente. Leur surface lisse tolère moins bien l'humidité prolongée et les composants électroniques ne supportent pas l'immersion.
+*Hard-pad* plastic models and RGB-lit models require a different approach. Their smooth surface tolerates prolonged moisture less well, and electronic components can't be submerged.
 
-### Pour les tapis rigides (*hard-pad*)
+### For hard pads (*hard-pad*)
 
-Un chiffon microfibre légèrement humide suffit dans la quasi-totalité des cas. Passez-le en **mouvements linéaires** plutôt que circulaires pour éviter de redistribuer les particules. Pour les taches grasses, une **goutte de produit nettoyant pour écran** sur le chiffon donne d'excellents résultats sans agresser la surface.
+A microfiber cloth slightly damp is enough in nearly every case. Wipe in **linear motions** rather than circular ones to avoid redistributing particles. For greasy stains, a **drop of screen cleaner** on the cloth gives excellent results without harming the surface.
 
-### Pour les tapis RGB
+### For RGB pads
 
-C'est la situation la plus délicate. Le câble USB et les LED intégrées sont vulnérables à toute infiltration d'eau. Recommandations essentielles :
+This is the trickiest situation. The USB cable and the integrated LEDs are vulnerable to any water ingress. Essential recommendations:
 
-- **Débranchez systématiquement** le tapis avant tout nettoyage
-- Utilisez un chiffon microfibre à peine humide, jamais mouillé
-- Évitez les bords où le câble est raccordé
-- Ne passez pas l'appareil sous l'eau
+- **Always unplug** the pad before any cleaning
+- Use a microfiber cloth barely damp, never wet
+- Avoid the edges where the cable is connected
+- Don't run the device under water
 
 ---
 
 <figure>
-<img src="/images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer-2.webp" alt="comment nettoyer tapis de souris - Nettoyer un tapis de souris rigide ou RGB : précautions spécifiques" title="Comment nettoyer un tapis de souris sans l'abîmer" width="900" height="600" loading="lazy" />
-<figcaption>Photo de <a href="https://unsplash.com/@amrrabi1?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Amr Rabie</a> sur <a href="https://unsplash.com?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Unsplash</a></figcaption>
+<img src="/images/blog/comment-nettoyer-un-tapis-de-souris-sans-labimer-2.webp" alt="how to clean a mouse pad - Cleaning a hard or RGB mouse pad: specific precautions" title="How to clean a mouse pad without damaging it" width="900" height="600" loading="lazy" />
+<figcaption>Photo by <a href="https://unsplash.com/@amrrabi1?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Amr Rabie</a> on <a href="https://unsplash.com?utm_source=buddypad&utm_medium=referral" rel="nofollow" target="_blank">Unsplash</a></figcaption>
 </figure>
 
-## Bien sécher son tapis de souris après le nettoyage
+## Drying your mouse pad properly after cleaning
 
-C'est l'étape la plus sous-estimée - et la plus déterminante pour la longévité du tapis. Un séchage mal réalisé provoque **la délamination de la base caoutchouc**, des odeurs persistantes, voire le développement de moisissures sur les modèles en tissu épais.
+This is the most underestimated step - and the most decisive for the pad's longevity. A bad dry causes **the rubber base to delaminate**, persistent odors, even mold growth on thick cloth models.
 
-La règle d'or : **séchage à l'air libre uniquement**. Posez le tapis à plat sur une surface propre, dans une pièce bien ventilée, pendant **minimum 12 à 24 heures** avant de le remettre en service. Jamais de sèche-cheveux, jamais de radiateur - la chaleur artificielle dégrade le caoutchouc naturel et décolle les coutures.
+The golden rule: **air drying only**. Lay the pad flat on a clean surface, in a well-ventilated room, for **at least 12 to 24 hours** before putting it back into service. Never a hairdryer, never a radiator - artificial heat degrades natural rubber and unsticks the stitching.
 
-Pour maîtriser cette étape en détail, consultez notre article complet sur [bien sécher après nettoyage](/secher-tapis-souris/) qui aborde aussi le cas des tapis XXL et des grandes surfaces en tissu.
+To master this step in detail, check our complete article on [drying a mouse pad properly](/en/secher-tapis-souris/) which also covers XXL pads and large cloth surfaces.
 
-Notre [blog](/blog/) regroupe également d'autres guides pratiques pour entretenir tous vos périphériques de bureau.
+Our [blog](/en/blog/) also gathers other practical guides to maintain all your desk peripherals.
 
 ---
 
-## Questions fréquentes
+## Frequently asked questions
 
 <details>
-<summary>Peut-on mettre un tapis de souris en tissu en machine à laver ?</summary>
-<p>Techniquement possible pour certains modèles basiques, mais fortement déconseillé : le cycle d'essorage déforme la base en caoutchouc et les coutures périphériques s'effilochent rapidement. Privilégiez toujours le lavage à la main à l'eau tiède.</p>
+<summary>Can you put a cloth mouse pad in the washing machine?</summary>
+<p>Technically possible on some basic models, but strongly discouraged: the spin cycle deforms the rubber base and the edge stitching frays quickly. Always go for hand washing with lukewarm water.</p>
 </details>
 
 <details>
-<summary>À quelle fréquence faut-il nettoyer son tapis de souris ?</summary>
-<p>Un nettoyage <strong>complet toutes les deux à quatre semaines</strong> est suffisant pour un usage quotidien. Un passage rapide au chiffon humide une fois par semaine suffit à limiter l'accumulation de dépôts de surface entre deux lavages.</p>
+<summary>How often should you clean a mouse pad?</summary>
+<p>A <strong>deep clean every two to four weeks</strong> is enough for daily use. A quick wipe with a damp cloth once a week is enough to limit surface buildup between deep cleans.</p>
 </details>
 
 <details>
-<summary>Quels produits sont à éviter absolument sur un tapis de souris ?</summary>
-<p>Évitez l'alcool à brûler, l'eau de Javel, les nettoyants multi-surfaces agressifs et tout produit abrasif : ils décolorent la surface en tissu, dissolvent les traitements de glisse des <em>hard-pads</em> et fragilisent irrémédiablement le caoutchouc de la base.</p>
+<summary>Which products should you absolutely avoid on a mouse pad?</summary>
+<p>Avoid rubbing alcohol, bleach, aggressive multi-surface cleaners and any abrasive product: they discolor the cloth surface, dissolve the glide treatments on <em>hard pads</em> and irreversibly weaken the rubber base.</p>
 </details>
 
 ---
 
 ## Conclusion
 
-Nettoyer son tapis de souris régulièrement, c'est préserver ses performances, prolonger sa durée de vie et maintenir un setup propre au quotidien. Avec les bonnes méthodes - eau tiède, savon doux, séchage à l'air libre - l'opération prend moins de 20 minutes et change radicalement le confort d'utilisation. Prêt à renouveler votre équipement ou à trouver un modèle plus facile à entretenir ? [Découvrez la sélection BuddyPad](/) et trouvez le tapis parfaitement adapté à votre setup et à votre usage.
+Cleaning your mouse pad regularly preserves performance, extends its lifespan and keeps your daily setup clean. With the right methods - lukewarm water, mild soap, air drying - the operation takes less than 20 minutes and radically changes the comfort of use. Ready to refresh your gear or find a model that's easier to maintain? [Discover the BuddyPad selection](/en/) and find the pad perfectly suited to your setup and use.
