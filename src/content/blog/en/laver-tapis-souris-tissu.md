@@ -1,136 +1,132 @@
 ---
-title: Comment laver un tapis de souris en tissu
-description: >-
-  Comment laver un tapis de souris en tissu Un tapis de souris en tissu accumule
-  rapidement poussière, miettes et résidus de sueur, affectant à la fois son
-  apparence et la
+title: "How to wash a cloth mouse pad"
+description: "How to wash a cloth mouse pad. A cloth mouse pad accumulates dust, crumbs and sweat residue quickly, affecting both its look and your mouse accuracy."
 pubDate: '2026-01-21T00:00:00.000Z'
 updatedDate: '2026-03-13T00:00:00.000Z'
-author: Équipe BuddyPad
-category: Guide d’achat & conseils
-image: /images/blog/laver-tapis-souris-tissu.webp
-imageAlt: Comment laver un tapis de souris en tissu
+author: "Équipe BuddyPad"
+category: "Guide d’achat & conseils"
+image: "/images/blog/laver-tapis-souris-tissu.webp"
+imageAlt: "How to wash a cloth mouse pad"
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
 
-## Comment laver un tapis de souris en tissu
+## How to wash a cloth mouse pad
 
-Un tapis de souris en tissu accumule rapidement poussière, miettes et résidus de sueur, affectant à la fois son apparence et la précision de votre souris. La plupart des utilisateurs ignorent qu’un nettoyage régulier prolonge la durée de vie du tapis et améliore les performances de navigation. Découvrez les méthodes éprouvées pour nettoyer votre tapis de souris sans l’endommager, avec des résultats professionnels.
+A cloth mouse pad quickly accumulates dust, crumbs and sweat residue, affecting both its look and your mouse accuracy. Most users don't know that regular cleaning extends the pad's lifespan and improves navigation performance. Discover proven methods to clean your mouse pad without damaging it, with professional results.
 
-## Pourquoi nettoyer régulièrement son tapis de souris en tissu
+## Why clean your cloth mouse pad regularly
 
-### Impact sur la performance de la souris
+### Impact on mouse performance
 
-L’accumulation de poussière ralentit progressivement le capteur optique de votre souris, réduisant sa réactivité. Les résidus créent une friction excessive qui entrave les mouvements fluides, tandis que la perte de précision devient perceptible après quelques semaines d’utilisation intensive. Un tapis propre garantit une navigation optimale et une expérience utilisateur sans compromis.
+Dust buildup gradually slows your mouse's optical sensor and reduces responsiveness. Residues create excessive friction that hinders fluid movements, while accuracy loss becomes noticeable after a few weeks of intensive use. A clean pad ensures optimal navigation and a no-compromise user experience.
 
-### Prolonger la durée de vie du tapis
+### Extending the pad's lifespan
 
-Nettoyer régulièrement votre tapis prévient l’usure prématurée des fibres et maintient l’adhérence naturelle du tissu. Cette maintenance simple représente une économie significative à long terme, car un tapis bien entretenu conserve ses propriétés pendant des années. L’investissement dans un nettoyage préventif surpasse largement le coût d’un remplacement prématuré.
+Cleaning regularly prevents premature fiber wear and maintains the natural grip of the cloth. This simple maintenance represents significant long-term savings, because a well-maintained pad keeps its properties for years. Investing in preventive cleaning largely beats the cost of premature replacement.
 
-### Hygiène et santé
+### Hygiene and health
 
-Les tapis de souris en tissu deviennent des nids à bactéries et acariens, particulièrement dans les environnements chauds et humides. Cette accumulation présente des risques allergiques et crée un environnement de travail moins sain. Un nettoyage régulier élimine ces micro-organismes et crée un espace de travail plus hygiénique.
+Cloth mouse pads become bacteria and dust mite hubs, especially in warm and humid environments. This buildup creates allergy risks and an unhealthy work environment. Regular cleaning eliminates these microorganisms and creates a more hygienic workspace.
 
-## Préparation avant le nettoyage
+## Preparation before cleaning
 
-### Matériel nécessaire
+### Equipment needed
 
--   Aspirateur avec brosse douce ou brosse à vêtements
--   Eau tiède et savon doux
--   Serviettes microfibre
--   Brosse à dents souple (optionnel)
--   Vinaigre blanc dilué pour taches tenaces
+-   Vacuum with soft brush or clothing brush
+-   Lukewarm water and mild soap
+-   Microfiber towels
+-   Soft toothbrush (optional)
+-   Diluted white vinegar for stubborn stains
 
-### Inspection du tapis
+### Pad inspection
 
-Avant de commencer, vérifiez l’état général des fibres et identifiez les taches ou zones critiques nécessitant une attention particulière. Évaluez le niveau de saleté global pour déterminer si un nettoyage à sec suffira ou si un traitement humide est nécessaire. Cette inspection préalable vous permet d’adapter votre approche aux besoins spécifiques de votre tapis.
+Before starting, check the general state of the fibers and identify stains or critical zones needing particular attention. Assess overall dirt level to determine whether dry cleaning is enough or wet treatment is needed. This upfront inspection lets you tailor your approach to the specific needs of your pad.
 
-### Déconnexion et sécurité
+### Disconnection and safety
 
-Débranchez toujours la souris et le câble USB avant de commencer le nettoyage. Laissez le tapis à température ambiante et vérifiez les recommandations du fabricant, surtout si vous possédez un modèle premium. Cette précaution protège vos équipements électroniques et assure un nettoyage sécurisé.
+Always unplug the mouse and the USB cable before starting cleaning. Leave the pad at room temperature and check the maker's recommendations, especially if you have a premium model. This precaution protects your electronics and ensures safe cleaning.
 
-## Méthode de nettoyage à sec
+## Dry cleaning method
 
-### Aspiration initiale
+### Initial vacuuming
 
-Commencez par passer l’aspirateur sur toute la surface du tapis en utilisant une brosse douce pour préserver l’intégrité des fibres. Insistez particulièrement sur les zones de forte accumulation, généralement autour de la zone de clic central. Cette première étape élimine 70 à 80% de la poussière sans risque d’endommagement.
+Start by vacuuming the entire pad surface using a soft brush to preserve fiber integrity. Focus particularly on heavy buildup zones, generally around the central click area. This first step removes 70-80% of dust without damage risk.
 
-### Brossage en profondeur
+### Deep brushing
 
-Utilisez une brosse à vêtements avec des mouvements circulaires, en respectant le sens des fibres. Le brossage soulève les résidus incrustés que l’aspirateur n’a pas capturés. Éliminez immédiatement les débris soulevés à l’aspirateur pour éviter qu’ils ne se réinstallent dans le tissu.
+Use a clothing brush with circular motions, respecting the fiber direction. Brushing lifts embedded residue the vacuum didn't catch. Immediately remove the lifted debris with the vacuum to prevent it from settling back into the cloth.
 
-### Avantages de cette méthode
+### Benefits of this method
 
-Le nettoyage à sec présente aucun risque de détremprage et s’avère rapide et efficace pour la poussière courante. Cette approche convient particulièrement aux tapis de qualité premium, notamment ceux de [Buddypad](/product-category/tapis-de-souris-gaming/), qui bénéficient d’une protection fibrée optimale. Pour la plupart des utilisateurs, cette méthode suffit pour maintenir un tapis impeccable.
+Dry cleaning carries no soaking risk and is fast and effective for everyday dust. This approach particularly suits premium-quality pads, including the [BuddyPad](/en/product-category/tapis-de-souris-gaming/) range, which benefits from optimal fiber protection. For most users, this method is enough to keep a pad spotless.
 
-## Nettoyage humide pour taches persistantes
+## Wet cleaning for persistent stains
 
-### Préparation de la solution
+### Solution preparation
 
-Mélangez eau tiède et savon doux dans un ratio équilibré, en privilégiant un savon neutre ou spécialisé pour textiles. Évitez absolument les produits agressifs, javellisants ou contenant des solvants qui endommagent les fibres. Une solution douce suffit pour traiter efficacement la majorité des taches sans risque de décoloration.
+Mix lukewarm water and mild soap in a balanced ratio, preferring a neutral or textile-specialized soap. Strictly avoid aggressive products, bleach or solvent-containing products that damage the fibers. A gentle solution is enough to effectively treat the majority of stains without discoloration risk.
 
-### Application et frottage
+### Application and dabbing
 
-Imbibez légèrement une serviette microfibre de la solution préparée et tamponnez les taches sans frotter vigoureusement. Les mouvements de tamponnage transfèrent la saleté vers le tissu sans endommager les fibres. Laissez agir 5 à 10 minutes pour les taches tenaces avant de rincer.
+Lightly dampen a microfiber towel with the prepared solution and dab the stains without scrubbing vigorously. Dabbing motions transfer dirt to the cloth without damaging the fibers. Let act 5 to 10 minutes for stubborn stains before rinsing.
 
-### Traitement des taches difficiles
+### Treating tough stains
 
-Pour les taches organiques persistantes, le vinaigre blanc dilué s’avère très efficace. Le bicarbonate de soude traite excellemment les odeurs en absorbant les molécules responsables. Laissez reposer 15 minutes avant rinçage pour permettre aux produits naturels d’agir en profondeur. Cette approche respectueuse de l’environnement rivalise avec les nettoyants commerciaux.
+For persistent organic stains, diluted white vinegar is very effective. Baking soda excellently treats odors by absorbing the responsible molecules. Let sit 15 minutes before rinsing to allow natural products to act in depth. This eco-friendly approach competes with commercial cleaners.
 
-### Rinçage
+### Rinsing
 
-Utilisez une serviette humide imbibée d’eau claire pour rincer complètement les résidus de savon. Tamponnez délicatement jusqu’à élimination totale du produit nettoyant. Un rinçage insuffisant laisse des résidus qui attirent la poussière et réduisent l’adhérence du tapis.
+Use a damp towel soaked with clean water to fully rinse soap residue. Dab gently until the cleaning product is completely gone. Insufficient rinsing leaves residue that attracts dust and reduces pad grip.
 
-## Séchage correct du tapis
+## Proper drying of the pad
 
-### Techniques de séchage
+### Drying techniques
 
-Laissez sécher à l’air libre à température ambiante sur une surface plane et bien ventilée. Évitez absolument la lumière directe du soleil qui décolore le tissu, et n’utilisez jamais de sèche-cheveux ou radiateur qui endommagent les fibres. Une ventilation naturelle garantit un séchage uniforme sans risque de détérioration.
+Air-dry at room temperature on a flat, well-ventilated surface. Strictly avoid direct sunlight which fades the cloth, and never use a hairdryer or radiator which damage the fibers. Natural ventilation guarantees uniform drying without deterioration risk.
 
-### Durée de séchage
+### Drying duration
 
-Comptez minimum 4 à 6 heures pour un nettoyage humide complet avant de réutiliser votre tapis. Vérifiez que le tapis est complètement sec en pressant légèrement le tissu pour vous assurer qu’aucune humidité ne persiste. Un séchage incomplet favorise la moisissure et compromet les performances de votre souris.
+Allow at least 4 to 6 hours for a complete wet cleaning before reusing your pad. Check that the pad is fully dry by lightly pressing the cloth to confirm no moisture remains. Incomplete drying encourages mold and compromises mouse performance.
 
-### Prévention de la moisissure
+### Mold prevention
 
-Assurez une bonne circulation d’air en utilisant un ventilateur si nécessaire, particulièrement dans les environnements humides. Stockez votre tapis dans un endroit sec et frais pour prévenir la prolifération fongique. Ces précautions garantissent la longévité de votre accessoire et maintiennent un environnement sain.
+Ensure good air circulation by using a fan if needed, particularly in humid environments. Store your pad in a dry, cool place to prevent fungal proliferation. These precautions guarantee accessory longevity and maintain a healthy environment.
 
-## Produits recommandés pour le nettoyage
+## Recommended cleaning products
 
-### Solutions naturelles
+### Natural solutions
 
-Le vinaigre blanc dilué, le bicarbonate de soude, le savon de Marseille et l’eau distillée constituent une trousse de nettoyage complète et économique. Ces produits naturels évitent les risques chimiques tout en offrant une efficacité éprouvée. Ils s’avèrent particulièrement adaptés aux tapis sensibles nécessitant une approche douce.
+Diluted white vinegar, baking soda, Marseille soap and distilled water make a complete, economical cleaning kit. These natural products avoid chemical risks while offering proven effectiveness. They're particularly suited to sensitive pads needing a gentle approach.
 
-### Produits commerciaux
+### Commercial products
 
-Les nettoyants spécialisés pour textiles, sprays détachants doux et mousses nettoyantes offrent des résultats rapides et pratiques. Choisissez des formulations douces spécifiquement conçues pour les tissus délicats. Les tapis de souris [Buddypad](/tapis-de-souris/) sont conçus avec des fibres résistantes au nettoyage régulier, facilitant leur entretien comparé aux modèles concurrents.
+Specialized textile cleaners, mild stain-removal sprays and cleaning foams offer fast, practical results. Choose mild formulas specifically designed for delicate fabrics. [BuddyPad](/en/tapis-de-souris/) mouse pads are designed with fibers resistant to regular cleaning, making them easier to maintain than competing models.
 
-## Erreurs à éviter
+## Mistakes to avoid
 
-### Erreurs courantes
+### Common mistakes
 
-Ne jamais utiliser d’eau trop chaude qui endommage les fibres, et évitez de frotter agressivement au lieu de tamponner. Le séchage au soleil direct et l’utilisation de produits chimiques agressifs constituent les pièges majeurs du nettoyage de tapis. Ces erreurs réduisent considérablement la durée de vie de votre accessoire.
+Never use water that's too hot - it damages fibers, and avoid scrubbing aggressively instead of dabbing. Drying in direct sunlight and using aggressive chemical products are the major pitfalls of pad cleaning. These mistakes considerably reduce your accessory's lifespan.
 
-### Risques d’endommagement
+### Damage risks
 
-Un nettoyage inapproprié provoque la décoloration du tissu, la détérioration des fibres et la perte d’adhérence. Ces dommages compromettent également la performance du capteur de votre souris. Pour maximiser la longévité de votre tapis, respectez scrupuleusement les méthodes recommandées.
+Inappropriate cleaning causes cloth discoloration, fiber deterioration and grip loss. These damages also compromise your mouse sensor performance. To maximize pad longevity, strictly follow the recommended methods.
 
-## Fréquence et maintenance préventive
+## Frequency and preventive maintenance
 
-### Calendrier de nettoyage
+### Cleaning schedule
 
-Effectuez une aspiration hebdomadaire si vous utilisez intensivement votre tapis, complétée par un nettoyage humide mensuel. Réalisez une inspection trimestrielle complète pour identifier les problèmes avant qu’ils ne s’aggravent. Ce calendrier préventif maintient votre tapis en condition optimale sans effort excessif.
+Run a weekly vacuum if you use your pad intensively, complemented by a monthly wet cleaning. Do a complete quarterly inspection to identify problems before they get worse. This preventive schedule keeps your pad in optimal condition without excessive effort.
 
-### Gestes quotidiens
+### Daily habits
 
-Gardez vos mains propres avant utilisation et évitez de manger près de votre tapis pour minimiser l’accumulation de résidus. Rangez votre accessoire dans un endroit protégé quand vous ne l’utilisez pas. Ces gestes simples réduisent considérablement la fréquence des nettoyages intensifs.
+Keep your hands clean before use and avoid eating near your pad to minimize residue buildup. Store your accessory in a protected place when not in use. These simple habits considerably reduce intensive cleaning frequency.
 
-### Stockage approprié
+### Proper storage
 
-Enroulez délicatement votre tapis sans le plier excessivement et placez-le dans un endroit sec et frais. Utilisez une housse de protection pour éviter l’accumulation de poussière pendant le stockage. Un rangement soigné préserve la forme et l’intégrité du tissu.
+Roll your pad gently without folding it excessively and place it in a dry, cool place. Use a protective cover to prevent dust accumulation during storage. Careful storage preserves the cloth's shape and integrity.
 
 ## Conclusion
 
-Nettoyer régulièrement votre tapis de souris en tissu est simple, rapide et prolonge significativement sa durée de vie. Les méthodes à sec suffisent généralement pour l’entretien courant, tandis que le nettoyage humide traite efficacement les taches tenaces. Consultez notre [guide complet d’entretien des tapis de souris](/entretien-nettoyage-tapis-souris/) pour approfondir vos connaissances sur la maintenance de vos accessoires informatiques.
+Regularly cleaning your cloth mouse pad is simple, fast and significantly extends its lifespan. Dry methods are usually enough for routine maintenance, while wet cleaning effectively treats stubborn stains. Check our [complete mouse pad maintenance guide](/en/entretien-nettoyage-tapis-souris/) to deepen your knowledge of computer accessory upkeep.
 
-Découvrez notre gamme de tapis de souris [Buddypad](/product-category/tapis-de-souris-gaming/), conçus pour un nettoyage facile et une durabilité maximale. Nos tapis combinent qualité premium et facilité d’entretien pour garantir des performances optimales pendant des années.
+Discover our [BuddyPad](/en/product-category/tapis-de-souris-gaming/) mouse pad lineup, designed for easy cleaning and maximum durability. Our pads combine premium quality and ease of maintenance to guarantee optimal performance for years.
