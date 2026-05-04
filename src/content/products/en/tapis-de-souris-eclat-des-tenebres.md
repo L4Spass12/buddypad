@@ -49,6 +49,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un chevalier des ténèbres sur fond sombre et dramatique, ce **tapis de souris dark fantasy XXL** donne à ton setup gaming une atmosphère épique et unique. Tissu haute densité, base caoutchouc, bords cousus. Format Standard, Large ou XXL.
+A dark knight against a moody dramatic background - this **dark fantasy XXL mouse pad** brings an epic, one-of-a-kind atmosphere to your gaming setup. High-density cloth, rubber base, stitched edges. Standard, Large or XXL.

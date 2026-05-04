@@ -1,12 +1,12 @@
 ---
-name: Mauspad Cœurs en Fourrure Rose
+name: "Mauspad Rosa Fell-Herzen"
 price: 19
 compareAtPrice: 25
 priceRange:
   min: 19
   max: 34.9
 image: /images/products/tapis-de-souris-coeurs-fourrure-rose/1.webp
-imageAlt: Mauspad Cœurs en Fourrure Rose
+imageAlt: "Mauspad Rosa Fell-Herzen"
 gallery:
   - /images/products/tapis-de-souris-coeurs-fourrure-rose/1.webp
   - /images/products/tapis-de-souris-samourai-papillons-bleus/2.webp
@@ -48,8 +48,6 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Bring eine sanfte, romantische und gemütliche Atmosphäre an deinen Schreibtisch mit diesem **Mauspad** im Design rosa Fell-Herzen. Seine samtige Textur und das kuschelige Muster machen es zum Accessoire, das genauso schön anzusehen wie angenehm zu nutzen ist.
 
-Offre à ton bureau une atmosphère douce, romantique et cosy avec ce **tapis de souris** au design cœurs en fourrure rose. Sa texture veloutée et son motif moelleux craquant en font un accessoire aussi beau à regarder qu’agréable à utiliser.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+Hochdichte mikro-gewebte Oberfläche, optimiert für präzises Tracking mit jeder optischen und Laser-Maus. Dicke rutschfeste Gummibasis für totale Stabilität. Verstärkte vernähte Ränder gegen Ausfransen für maximale Haltbarkeit.

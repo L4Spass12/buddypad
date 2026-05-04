@@ -47,6 +47,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un lever de soleil en pixel art sur Miami Street, ce **tapis de souris gaming pixel art** mêle nostalgie rétro et ambiance néon pour un setup gaming unique. Surface optimisée pour la précision, base antidérapante, bords cousus. Formats Standard, Large et XXL.
+A pixel art sunrise on Miami Street - this **pixel art gaming mouse pad** blends retro nostalgia with neon vibes for a one-of-a-kind gaming setup. Surface optimized for precision, non-slip base, stitched edges. Standard, Large and XXL.

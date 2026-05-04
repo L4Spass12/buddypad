@@ -48,6 +48,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un chevalier des ténèbres surgit de l’obscurité sur ce **tapis de souris gaming dark fantasy XXL** signé **Buddypad**. Le design sombre et cinématique installe une ambiance épique et immersive sur ton setup gaming, que tu joues ou que tu streames. Surface micro-tissée haute densité pour un suivi précis de ta souris optique ou laser. Base caoutchouc antidérapante qui reste ancrée même en pleine session intensive. Bords cousus anti-effilochage pour une durée de vie maximale.
+A dark knight rises from the shadows on this **dark fantasy XXL gaming mouse pad** by **BuddyPad**. The dark, cinematic design installs an epic, immersive vibe on your gaming setup, whether you play or you stream. High-density micro-woven surface for precise tracking with your optical or laser mouse. Non-slip rubber base that stays anchored even during the most intense session. Anti-fraying stitched edges for maximum lifespan.

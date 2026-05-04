@@ -48,8 +48,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+A pixel art sunrise on a retro landscape - this **pixel art gaming mouse pad** is made for 8-bit culture fans and retro gaming setups. The nostalgic design echoes the world of building and adventure games, with a very modern surface quality.
 
-Un lever de soleil en pixel art sur un paysage rétro - ce **tapis de souris pixel art gaming** est fait pour les fans de la culture 8-bit et les setups gaming rétro. Le design nostalgique rappelle l’univers des jeux de construction et d’aventure, avec une qualité de surface bien actuelle.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
+High-density micro-woven cloth, non-slip rubber base, anti-fraying stitched edges. Available in Standard (45x35 cm / 18x14 in), Large (60x40 cm / 24x16 in) and XXL deskmat (90x40 cm / 35x16 in).

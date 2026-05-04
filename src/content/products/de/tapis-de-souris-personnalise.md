@@ -43,14 +43,12 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+### Personalisiertes Mauspad, mit deinem Bild bedruckt
 
-### Tapis de souris personnalisé, Impression avec votre image
+Erstelle ein einzigartiges **ergonomisches personalisiertes Mauspad**, indem du dein Foto, Logo oder Design hochlädst. Dieses **maßgefertigte Mauspad** ist ideal, um deinen Schreibtisch zu personalisieren, deinen Arbeitskomfort zu verbessern oder ein nützliches und originelles Geschenk zu machen.
 
-Créez un **tapis de souris ergonomique personnalisé** unique en important votre photo, logo ou design. Ce **tapis de souris personnalisé sur mesure** est idéal pour personnaliser votre bureau, améliorer votre confort de travail ou offrir un cadeau original et utile.
+Seine glatte, hochpräzise Oberfläche liefert flüssiges Gleiten und optimales Tracking für jede optische und Laser-Maus. Die rutschfeste Basis garantiert perfekte Stabilität auf dem Schreibtisch, auch bei langer Nutzung.
 
-Sa surface lisse haute précision assure une glisse fluide et un suivi optimal pour toutes les souris optiques et laser. La base antidérapante garantit une parfaite stabilité sur le bureau, même lors d’une utilisation prolongée.
+Der **HD-Druck** liefert ein scharfes Ergebnis mit naturgetreuen, langlebigen Farben. Für ein optimales Ergebnis lade ein hochwertiges, nicht verpixeltes, gut aufgelöstes Bild hoch, um eine professionelle, hochwertige Optik auf deinem personalisierten Mauspad zu erzielen.
 
-L’**impression haute définition** permet un rendu net, avec des couleurs fidèles et durables. Pour un résultat optimal, il est recommandé d’importer une image de haute qualité, non pixelisée et en bonne résolution, afin d’obtenir un rendu visuel professionnel et qualitatif sur votre tapis de souris personnalisé.
-
-Ce **tapis de souris ergonomique personnalisé avec photo ou logo** convient aussi bien à un usage personnel qu’à un usage professionnel, et constitue une excellente idée cadeau pour un anniversaire, une entreprise ou un événement.
+Dieses **ergonomische personalisierte Mauspad mit Foto oder Logo** eignet sich sowohl für den privaten als auch für den beruflichen Einsatz und ist eine ausgezeichnete Geschenkidee für einen Geburtstag, ein Unternehmen oder ein Event.

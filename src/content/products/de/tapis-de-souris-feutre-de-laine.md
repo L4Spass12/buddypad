@@ -125,32 +125,30 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Dieses hochwertige **Wollfilz-Mauspad** wertet deinen Arbeitsplatz auf. Es verbindet die Wärme echter Wolle mit einer rutschfesten Gummibasis - dieses **Schreibtischunterlage** liefert perfekte Stabilität und thermischen Komfort zu jeder Jahreszeit. Ideal, um deinen Schreibtisch vor Kratzern zu schützen und gleichzeitig ein präzises Gleitverhalten der Maus zu garantieren.
 
-Ce **tapis de souris en feutre** de haute qualité transforme votre espace de travail. Alliant la chaleur de la laine véritable à une base en gomme antidérapante, ce **sous-main de bureau** offre une stabilité parfaite et un confort thermique en toute saison. Idéal pour protéger votre bureau des rayures tout en assurant une glisse précise de la souris.
+**Warum dieses Wollfilz-Deskmat wählen?**
 
-**Pourquoi choisir ce tapis de bureau en feutre ?**
+-   **Rutschfeste Stabilität:** Anders als klassische Filzpads hat dieses Modell eine vollflächige **Gummibasis**, die das Pad fest am Schreibtisch verankert.
 
--   **Stabilité Antidérapante :** Contrairement aux feutres classiques, ce modèle dispose d’une **base en caoutchouc** intégrale qui fixe fermement le tapis au bureau.
+-   **Wärmeregulierende Wolle:** Die Filztextur hält die Handgelenke im Winter warm und nimmt im Sommer Feuchtigkeit auf. Klebt nicht auf der Haut.
 
--   **Matière Laine Thermorégulatrice :** La texture en feutre garde les poignets au chaud l’hiver et absorbe l’humidité l’été. Ne colle pas à la peau.
+-   **Optimaler Schreibtischschutz:** 3 mm Dicke dämpft die Stöße mechanischer Tastaturen und verhindert Möbelabnutzung.
 
--   **Protection Bureau Optimale :** Épaisseur de 3mm qui absorbe les chocs du clavier mécanique et évite l’usure du mobilier.
-
--   **Design et Formats :** Disponible du petit tapis de souris (26x21cm) au **tapis de bureau XXL** (90x40cm) pour accueillir clavier et accessoires.
+-   **Designs und Größen:** Verfügbar vom kompakten Mauspad (26x21 cm) bis zum **XXL-Schreibtischunterlage** (90x40 cm), das Tastatur und Zubehör fasst.
 
 
-**Caractéristiques Techniques :**
+**Technische Daten:**
 
--   **Type :** Tapis de souris gamer et bureautique / Sous-main.
+-   **Typ:** Gaming- und Büromauspad / Schreibtischunterlage.
 
--   **Matériaux :** Feutre de laine + Base gomme caoutchouc.
+-   **Materialien:** Wollfilz + Gummibasis.
 
--   **Épaisseur :** 3 mm.
+-   **Dicke:** 3 mm.
 
--   **Couleurs :** Gris clair, Gris foncé, Noir.
+-   **Farben:** Hellgrau, Dunkelgrau, Schwarz.
 
--   **Dimensions :** 26×21 cm, 60×30 cm, 80×30 cm, 90×40 cm.
+-   **Größen:** 26x21 cm, 60x30 cm, 80x30 cm, 90x40 cm.
 
 
-**Note :** Vérifiez les dimensions de votre bureau avant achat (les photos montrent souvent le format XXL). Produit contenant de la laine.
+**Hinweis:** Prüfe vor dem Kauf die Maße deines Schreibtisches (die Fotos zeigen oft das XXL-Format). Produkt enthält Wolle.

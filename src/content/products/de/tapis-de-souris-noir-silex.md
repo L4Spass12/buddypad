@@ -48,42 +48,40 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+## **Bring mineralische Kraft und absolute Präzision in deinen Arbeitsbereich.**
 
-## **Apportez une touche de force minérale et de précision absolue à votre espace de travail.**
+Verwandle deinen Schreibtisch in einen Ort der Inspiration mit dem **Mauspad Schwarzer Feuerstein**. Es verbindet rohe Ästhetik mit technischer Leistung - dieses Deskmat ist für anspruchsvolle Gamer wie für eleganzsuchende Profis konzipiert.
 
-Transformez votre bureau en un lieu d’inspiration avec le **tapis de souris Silex Noir**. Alliant esthétique brute et performance technique, ce tapis de bureau (Desk Mat) est conçu pour les gamers exigeants comme pour les professionnels en quête d’élégance.
+Sein monochromes Design, das die tiefe Textur des geschlagenen Feuersteins und die Schlichtheit von Vulkangestein heraufbeschwört, passt perfekt zu jedem minimalistischen Gaming-Setup oder modernen Schreibtisch.
 
-Son design monochrome, évoquant la texture profonde du silex taillé et la sobriété de la roche volcanique, s’intègre parfaitement à tout type de setup gaming minimaliste ou de bureau moderne.
+## Warum Schwarzer Feuerstein wählen?
 
-## Pourquoi choisir le Silex Noir ?
+-   **Mineralisches & elegantes Design:** Der HD-Druck fängt Schattierungen von Schwarz und Graphitgrau ein und schafft eine beruhigende Atmosphäre, ohne den Raum visuell zu überladen. Die texturierte Optik bringt einzigartige Tiefe in deinen Schreibtisch.
 
--   **Design Minéral & Élégant :** L’impression haute définition capture des nuances de noir et de gris graphite, offrant une ambiance apaisante sans surcharger visuellement votre espace. Son aspect texturé apporte une profondeur unique à votre bureau.
+-   **Unerschütterliche Stabilität (Gummibasis):** Schluss mit dem Pad, das mitten in der Aktion verrutscht. Die texturierte Naturgummi-Basis garantiert vollen Halt auf Holz, Glas oder Kunststoff. Es bleibt verankert, auch bei ultra-schnellen Mausbewegungen.
 
--   **Stabilité Infaillible (Base Caoutchouc) :** Fini le tapis qui glisse en pleine action. La base en caoutchouc naturel texturé garantit une adhérence totale sur le bois, le verre ou le plastique. Il reste ancré, même lors de mouvements de souris ultra-rapides.
+-   **Optimierte Gleitfläche:** Die glatte mikro-gewebte Stoffoberfläche ermöglicht präzises Tracking (optisch oder Laser), perfekt ausbalanciert zwischen **Speed** und **Control**.
 
--   **Surface de Glisse Optimisée :** Le revêtement en tissu micro-tissé lisse permet un suivi précis (optique ou laser), offrant l’équilibre parfait entre vitesse (**Speed**) et contrôle (**Control**).
+-   **Verstärkte Haltbarkeit:** Die Ränder haben vernähte Anti-Ausfransen-Nähte. Das garantiert eine außergewöhnliche Lebensdauer und verhindert, dass sich die Oberfläche mit der Zeit ablöst.
 
--   **Durabilité Renforcée :** Les contours sont dotés de bords cousus et surpiqués anti-effilochage. Cela assure une longévité exceptionnelle et évite que le revêtement ne se décolle avec le temps.
-
--   **Formats pour tous les besoins :** Disponible en taille standard pour la souris ou en format XXL étendu pour accueillir votre clavier et protéger l’intégralité de votre surface de travail.
+-   **Größen für jeden Bedarf:** Verfügbar in Standardgröße für die Maus oder im XXL-Format, um auch die Tastatur abzudecken und den gesamten Arbeitsbereich zu schützen.
 
 
-## Caractéristiques Techniques :
+## Technische Daten:
 
--   **Matériau :** Surface en tissu technique / Base en caoutchouc antidérapant haute densité.
+-   **Material:** technische Stoffoberfläche / hochdichte rutschfeste Gummibasis.
 
--   **Couleur :** Noir Silex (Nuances de gris et noir profond).
+-   **Farbe:** Schwarzer Feuerstein (Grau- und Tiefschwarztöne).
 
--   **Épaisseur :** 2 mm (Profil fin pour un confort optimal du poignet).
+-   **Dicke:** 2 mm (schmales Profil für optimalen Handgelenkkomfort).
 
--   **Entretien :** Résistant à l’eau et facile à nettoyer.
+-   **Pflege:** wasserfest und leicht zu reinigen.
 
 
-## Dimensions disponibles :
+## Verfügbare Größen:
 
--   **35 x 45 cm :** Format standard généreux, idéal pour le gaming FPS.
+-   **35 x 45 cm:** großzügiges Standardformat, ideal für FPS-Gaming.
 
--   **40 x 60 cm :** Format intermédiaire polyvalent.
+-   **40 x 60 cm:** vielseitiges mittleres Format.
 
--   **40 x 90 cm (XXL) :** Le format « Desk Mat » ultime. Couvre tout l’espace clavier + souris pour une immersion totale.
+-   **40 x 90 cm (XXL):** das ultimative "Deskmat"-Format. Deckt den gesamten Tastatur- + Mausbereich ab für totale Immersion.

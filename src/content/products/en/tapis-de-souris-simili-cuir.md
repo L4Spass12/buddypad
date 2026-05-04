@@ -186,23 +186,21 @@ variations:
       Couleurs: rose-pale
       Dimensions: 100x50 cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+**Combine protection, comfort and elegance for your workspace.**
 
-**Alliez protection, confort et élégance pour votre espace de travail.**
+This high-quality PU faux-leather desk mat is the must-have accessory to modernize your setup. Designed to replace traditional mouse pads, it offers a generous surface that protects your furniture while improving your daily work comfort.
 
-Ce sous-main de bureau en cuir PU de haute qualité est l’accessoire indispensable pour moderniser votre installation. Conçu pour remplacer les tapis de souris traditionnels, il offre une surface généreuse qui protège votre mobilier tout en améliorant votre confort de travail quotidien.
+**Tech specs and benefits:**
 
-**Caractéristiques techniques et avantages :**
+-   **Reinforced stability (Suede base):** unlike standard pads that slide, this model is fitted with a suede-textured back. This specific design boosts friction by 70%, ensuring the pad stays perfectly in place on your desk.
 
--   **Stabilité Renforcée (Base Suede) :** Contrairement aux tapis standards qui glissent, ce modèle est équipé d’un dos en texture daim (Suede). Cette conception spécifique augmente la friction de 70%, garantissant que le tapis reste parfaitement en place sur votre bureau.
+-   **Full protection:** the durable synthetic-leather surface acts as an effective barrier against scratches, scuffs, stains and the heat from computers or hot mugs.
 
--   **Protection Intégrale :** Le revêtement en cuir synthétique durable agit comme une barrière efficace contre les rayures, les éraflures, les taches et la chaleur émise par les ordinateurs ou les tasses chaudes.
+-   **Versatile 2-in-1 surface:** the smooth texture is optimized for precise mouse glide and also serves as a comfortable handwriting support, reducing wrist fatigue.
 
--   **Surface Polyvalente 2-en-1 :** La texture lisse est optimisée pour une glisse de souris précise et sert également de support confortable pour l’écriture manuscrite, réduisant la fatigue du poignet.
+-   **Easy and quick care:** fully waterproof, the surface fears neither water nor oil stains. A wipe with a damp cloth is all it takes to bring it back to new.
 
--   **Entretien Facile et Rapide :** Totalement imperméable, la surface ne craint ni l’eau ni les taches d’huile. Un simple coup de chiffon humide suffit pour le rendre comme neuf.
-
--   **Formats Adaptés :** Disponible en plusieurs dimensions (45×35 cm, 60×40 cm, 90×40 cm) pour s’ajuster parfaitement à la taille de votre bureau, du petit espace de travail au grand setup complet.
+-   **Sized to fit:** available in several dimensions (45x35 cm, 60x40 cm, 90x40 cm) to perfectly fit your desk, from a small workspace to a full big setup.
 
 
-**Un bureau toujours impeccable.** Fini les petits tapis de souris qui limitent vos mouvements. Optez pour une solution large, propre et professionnelle qui met en valeur votre équipement.
+**A desk that always looks sharp.** No more tiny mouse pads that limit your movements. Pick a wide, clean and professional solution that showcases your equipment.

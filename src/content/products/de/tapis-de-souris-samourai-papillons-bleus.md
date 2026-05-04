@@ -50,6 +50,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Une guerrière au katana entourée de papillons bleus lumineux, ce **tapis de souris samouraï anime gaming** est l’un des designs les plus emblématiques de BuddyPad. Tissu micro-tissé, base caoutchouc antidérapante, bords cousus. Formats Standard, Large et XXL.
+Eine Kriegerin mit Katana, umgeben von leuchtend blauen Schmetterlingen - dieses **Samurai Anime Gaming Mauspad** ist eines der ikonischsten Designs von BuddyPad. Mikro-gewebter Stoff, rutschfeste Gummibasis, vernähte Ränder. Standard, Large und XXL.

@@ -49,6 +49,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un explosion de couleurs spectrales pour un **desk mat gaming coloré XXL** qui fait sortir ton setup du lot. Tissu micro-tissé haute densité, base caoutchouc antidérapante, bords cousus. Disponible en Standard, Large et XXL.
+Eine Explosion spektraler Farben für ein **buntes XXL Gaming Deskmat**, das dein Setup aus der Masse hebt. Hochdichter mikro-gewebter Stoff, rutschfeste Gummibasis, vernähte Ränder. In Standard, Large und XXL verfügbar.

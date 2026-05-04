@@ -47,6 +47,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un héros contemplatif face à un vaste paysage fantastique au lever du soleil, ce **tapis de souris paysage gaming XXL** donne à ton bureau une ambiance d’aventure et d’évasion. Tissu haute densité, base caoutchouc antidérapante, bords cousus. Formats Standard, Large et XXL.
+Ein nachdenklicher Held vor einer weitläufigen Fantasie-Landschaft im Sonnenaufgang - dieses **Fantasy-Landschaft XXL Gaming Mauspad** bringt eine abenteuerliche und entrückte Stimmung auf deinen Schreibtisch. Hochdichter Stoff, rutschfeste Gummibasis, vernähte Ränder. Standard, Large und XXL.

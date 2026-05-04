@@ -50,8 +50,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Small blue flowers on a soft, calming background - Myosotis is a **minimalist floral office mouse pad** for lo-fi setups, remote-work spaces and desks that want a touch of nature without overdoing it. Discreet, elegant, timeless.
 
-De petites fleurs bleues sur fond doux et apaisant - Myosotis est un **tapis de souris floral minimaliste bureau** pour les setups lo-fi, les espaces de télétravail et les bureaux qui veulent une touche de nature sans en faire trop. Discret, élégant, intemporel.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
+High-density micro-woven cloth, non-slip rubber base, anti-fraying stitched edges. Available in Standard (45x35 cm / 18x14 in), Large (60x40 cm / 24x16 in) and XXL deskmat (90x40 cm / 35x16 in).

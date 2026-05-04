@@ -48,8 +48,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+An anime-style hero with a determined gaze - Heros is a **manga-style gaming mouse pad** that captures the energy of the protagonists we love. Perfect for an energetic gaming setup or a Japanese-culture fan's bedroom.
 
-Un héros de style anime au regard déterminé - Héros est un **tapis de souris style manga gaming** qui incarne l’énergie des protagonistes qu’on adore. Parfait pour un setup gaming énergique ou une chambre de passionné de culture japonaise.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
+High-density micro-woven cloth, non-slip rubber base, anti-fraying stitched edges. Available in Standard (45x35 cm / 18x14 in), Large (60x40 cm / 24x16 in) and XXL deskmat (90x40 cm / 35x16 in).

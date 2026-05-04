@@ -49,8 +49,6 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Ein einsamer Krieger blickt in den Sonnenuntergang am Ende seiner Reise - Fin de la Quête ist ein **episches RPG-Gaming-Mauspad** für Spieler, die ihre Sessions wie Abenteuer erleben. Das cinematische Design passt perfekt zu einem Gaming-Setup oder einem kreativen Schreibtisch.
 
-Un guerrier solitaire face au coucher de soleil, au terme de sa quête - Fin de la Quête est un **tapis de souris RPG gaming épique** pour les joueurs qui vivent leurs sessions comme des aventures. Le design cinématique s’adapte parfaitement à un setup gaming ou un bureau d’écriture créative.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
+Hochdichter mikro-gewebter Stoff, rutschfeste Gummibasis, vernähte Anti-Ausfransen-Ränder. Verfügbar in Standard (45x35 cm), Large (60x40 cm) und XXL Deskmat (90x40 cm).

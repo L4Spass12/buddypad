@@ -137,32 +137,30 @@ variations:
       Couleurs: noir
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+This high-quality **wool felt mouse pad** upgrades your workspace. Combining the warmth of real wool with a non-slip rubber base, this **desk mat** delivers perfect stability and year-round thermal comfort. Ideal to protect your desk from scratches while ensuring precise mouse glide.
 
-Ce **tapis de souris en feutre** de haute qualité transforme votre espace de travail. Alliant la chaleur de la laine véritable à une base en gomme antidérapante, ce **sous-main de bureau** offre une stabilité parfaite et un confort thermique en toute saison. Idéal pour protéger votre bureau des rayures tout en assurant une glisse précise de la souris.
+**Why choose this wool felt desk mat?**
 
-**Pourquoi choisir ce tapis de bureau en feutre ?**
+-   **Non-slip stability:** Unlike standard felt pads, this model has a full **rubber base** that locks the pad firmly to the desk.
 
--   **Stabilité Antidérapante :** Contrairement aux feutres classiques, ce modèle dispose d’une **base en caoutchouc** intégrale qui fixe fermement le tapis au bureau.
+-   **Thermo-regulating wool:** The felt texture keeps your wrists warm in winter and absorbs moisture in summer. Doesn't stick to the skin.
 
--   **Matière Laine Thermorégulatrice :** La texture en feutre garde les poignets au chaud l’hiver et absorbe l’humidité l’été. Ne colle pas à la peau.
+-   **Optimal desk protection:** 3mm thickness absorbs the impact of mechanical keyboards and prevents furniture wear.
 
--   **Protection Bureau Optimale :** Épaisseur de 3mm qui absorbe les chocs du clavier mécanique et évite l’usure du mobilier.
-
--   **Design et Formats :** Disponible du petit tapis de souris (26x21cm) au **tapis de bureau XXL** (90x40cm) pour accueillir clavier et accessoires.
+-   **Design and sizes:** Available from compact mouse-only (26x21 cm / 10x8 in) to **XXL desk mat** (90x40 cm / 35x16 in) that fits keyboard and accessories.
 
 
-**Caractéristiques Techniques :**
+**Tech specs:**
 
--   **Type :** Tapis de souris gamer et bureautique / Sous-main.
+-   **Type:** Gaming and office mouse pad / desk mat.
 
--   **Matériaux :** Feutre de laine + Base gomme caoutchouc.
+-   **Materials:** Wool felt + rubber base.
 
--   **Épaisseur :** 3 mm.
+-   **Thickness:** 3 mm.
 
--   **Couleurs :** Gris clair, Gris foncé, Noir.
+-   **Colors:** Light grey, dark grey, black.
 
--   **Dimensions :** 26×21 cm, 60×30 cm, 80×30 cm, 90×40 cm.
+-   **Sizes:** 26x21 cm, 60x30 cm, 80x30 cm, 90x40 cm.
 
 
-**Note :** Vérifiez les dimensions de votre bureau avant achat (les photos montrent souvent le format XXL). Produit contenant de la laine.
+**Note:** Check your desk dimensions before purchase (photos often show the XXL format). Product contains wool.

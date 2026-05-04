@@ -49,6 +49,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Une geisha élégante sous des cerisiers en fleurs roses, ce **tapis de souris japonais cerisiers XXL** apporte une touche de douceur et de culture nippone à ton bureau. Tissu micro-tissé, base antidérapante, bords cousus. Standard, Large et XXL.
+An elegant geisha beneath pink cherry blossoms - this **Japanese cherry blossom XXL mouse pad** brings a touch of softness and Japanese culture to your desk. Micro-woven cloth, non-slip base, stitched edges. Standard, Large and XXL.

@@ -48,6 +48,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un ninja pixel art sur fond Mont Fuji en dégradé de gris, ce **tapis de souris japonais minimaliste gaming** apporte une atmosphère zen et épurée à ton setup. Tissu micro-tissé, base caoutchouc antidérapante, bords cousus surpiqués. Formats Standard, Large et XXL.
+Ein Pixel-Art-Ninja vor einem Mount-Fuji-Hintergrund im Grauverlauf - dieses **minimalistische japanische Gaming Mauspad** bringt eine zen-artige, klare Atmosphäre in dein Setup. Mikro-gewebter Stoff, rutschfeste Gummibasis, vernähte Ränder. Standard, Large und XXL.

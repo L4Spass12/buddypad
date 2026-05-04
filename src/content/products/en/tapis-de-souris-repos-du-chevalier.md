@@ -48,6 +48,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un chevalier solitaire entouré de nature, le Repos du chevalier est un **tapis de souris gaming XXL et Standard** fantasy qui mêle poésie et univers guerrier pour un bureau vraiment hors du commun. Le contraste entre la brutalité du combattant et la douceur des fleurs en fait un design unique dans son genre. Surface de précision micro-tissée haute densité pour un tracking optimal de ta souris. Base caoutchouc antidérapante pour rester stable quelle que soit l’intensité de ta session. Bords cousus pour une finition soignée et durable.
+A lone knight surrounded by nature - Knight's Rest is a **fantasy XXL and Standard gaming mouse pad** that mixes poetry and warrior energy for a truly out-of-the-ordinary desk. The contrast between the warrior's brutality and the softness of the flowers makes for a one-of-a-kind design. High-density micro-woven precision surface for optimal mouse tracking. Non-slip rubber base to stay stable no matter how intense the session. Stitched edges for a clean, durable finish.

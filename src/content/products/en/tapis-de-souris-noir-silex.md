@@ -48,42 +48,40 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+## **Bring mineral strength and absolute precision to your workspace.**
 
-## **Apportez une touche de force minérale et de précision absolue à votre espace de travail.**
+Turn your desk into a place of inspiration with the **Black Flint Mouse Pad**. Combining raw aesthetics and technical performance, this deskmat is built for demanding gamers and professionals chasing elegance.
 
-Transformez votre bureau en un lieu d’inspiration avec le **tapis de souris Silex Noir**. Alliant esthétique brute et performance technique, ce tapis de bureau (Desk Mat) est conçu pour les gamers exigeants comme pour les professionnels en quête d’élégance.
+Its monochrome design, evoking the deep texture of carved flint and the soberness of volcanic rock, fits any minimalist gaming setup or modern desk perfectly.
 
-Son design monochrome, évoquant la texture profonde du silex taillé et la sobriété de la roche volcanique, s’intègre parfaitement à tout type de setup gaming minimaliste ou de bureau moderne.
+## Why choose Black Flint?
 
-## Pourquoi choisir le Silex Noir ?
+-   **Mineral & elegant design:** the high-definition print captures shades of black and graphite grey, creating a soothing atmosphere without visually overloading the space. The textured look adds unique depth to your desk.
 
--   **Design Minéral & Élégant :** L’impression haute définition capture des nuances de noir et de gris graphite, offrant une ambiance apaisante sans surcharger visuellement votre espace. Son aspect texturé apporte une profondeur unique à votre bureau.
+-   **Unshakeable stability (rubber base):** no more pad sliding mid-action. The textured natural rubber base delivers full grip on wood, glass or plastic. It stays anchored, even during ultra-fast mouse movements.
 
--   **Stabilité Infaillible (Base Caoutchouc) :** Fini le tapis qui glisse en pleine action. La base en caoutchouc naturel texturé garantit une adhérence totale sur le bois, le verre ou le plastique. Il reste ancré, même lors de mouvements de souris ultra-rapides.
+-   **Optimized glide surface:** the smooth micro-woven cloth coating allows precise tracking (optical or laser), striking the perfect balance between **Speed** and **Control**.
 
--   **Surface de Glisse Optimisée :** Le revêtement en tissu micro-tissé lisse permet un suivi précis (optique ou laser), offrant l’équilibre parfait entre vitesse (**Speed**) et contrôle (**Control**).
+-   **Reinforced durability:** edges have stitched anti-fraying seams. That ensures exceptional longevity and prevents the surface from peeling over time.
 
--   **Durabilité Renforcée :** Les contours sont dotés de bords cousus et surpiqués anti-effilochage. Cela assure une longévité exceptionnelle et évite que le revêtement ne se décolle avec le temps.
-
--   **Formats pour tous les besoins :** Disponible en taille standard pour la souris ou en format XXL étendu pour accueillir votre clavier et protéger l’intégralité de votre surface de travail.
+-   **Sizes for every need:** available in standard size for the mouse or in extended XXL to fit your keyboard and protect the whole work surface.
 
 
-## Caractéristiques Techniques :
+## Tech specs:
 
--   **Matériau :** Surface en tissu technique / Base en caoutchouc antidérapant haute densité.
+-   **Material:** technical cloth surface / high-density non-slip rubber base.
 
--   **Couleur :** Noir Silex (Nuances de gris et noir profond).
+-   **Color:** Black Flint (shades of grey and deep black).
 
--   **Épaisseur :** 2 mm (Profil fin pour un confort optimal du poignet).
+-   **Thickness:** 2 mm (slim profile for optimal wrist comfort).
 
--   **Entretien :** Résistant à l’eau et facile à nettoyer.
+-   **Care:** water-resistant and easy to clean.
 
 
-## Dimensions disponibles :
+## Sizes available:
 
--   **35 x 45 cm :** Format standard généreux, idéal pour le gaming FPS.
+-   **35 x 45 cm:** generous standard format, ideal for FPS gaming.
 
--   **40 x 60 cm :** Format intermédiaire polyvalent.
+-   **40 x 60 cm:** versatile mid-size.
 
--   **40 x 90 cm (XXL) :** Le format « Desk Mat » ultime. Couvre tout l’espace clavier + souris pour une immersion totale.
+-   **40 x 90 cm (XXL):** the ultimate "deskmat" format. Covers the full keyboard + mouse area for total immersion.

@@ -49,8 +49,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+A lone warrior facing the sunset at the end of his quest - End of the Quest is an **epic RPG gaming mouse pad** for players who live their sessions like adventures. The cinematic design fits a gaming setup or a creative writing desk perfectly.
 
-Un guerrier solitaire face au coucher de soleil, au terme de sa quête - Fin de la Quête est un **tapis de souris RPG gaming épique** pour les joueurs qui vivent leurs sessions comme des aventures. Le design cinématique s’adapte parfaitement à un setup gaming ou un bureau d’écriture créative.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL desk mat (90×40 cm).
+High-density micro-woven cloth, non-slip rubber base, anti-fraying stitched edges. Available in Standard (45x35 cm / 18x14 in), Large (60x40 cm / 24x16 in) and XXL deskmat (90x40 cm / 35x16 in).

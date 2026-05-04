@@ -55,25 +55,23 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Add a touch of kawaii softness to your setup with this **rower bunny mouse pad** floating on a water-lily pond. A poetic, cute illustration that turns your desk into a fairytale world - perfect for anime fans and kawaii aesthetic lovers.
 
-Apporte une touche de douceur kawaii à ton setup avec ce **tapis de souris lapin rameur** sur un étang de nénuphars. Une illustration poétique et mignonne qui transforme ton bureau en monde féérique, idéale pour les fans d’anime et d’esthétique kawaii.
+## Why pick this BuddyPad kawaii mouse pad?
 
-## Pourquoi choisir ce tapis de souris kawaii BuddyPad ?
+-   **Exclusive kawaii illustration:** rower bunny on a lily pond, soft and soothing vibe, high-definition print.
+-   **Optimized glide surface:** micro-woven cloth compatible with every optical and laser sensor, balanced between speed and control.
+-   **Non-slip rubber base:** total grip on wood, glass or plastic, even during the fastest movements.
+-   **Reinforced stitched edges:** anti-fraying stitching for long-term durability.
+-   **3 sizes available:** from standard to XXL to cover the whole desk.
 
--   **Illustration kawaii exclusive :** lapin rameur sur étang de nénuphars, ambiance douce et apaisante, impression haute définition.
--   **Surface de glisse optimisée :** tissu micro-tissé compatible tous capteurs optiques et laser, équilibre parfait entre vitesse et contrôle.
--   **Base caoutchouc antidérapante :** adhérence totale sur bois, verre ou plastique, même lors des mouvements les plus rapides.
--   **Bords cousus renforcés :** surpiqûre anti-effilochage pour une durabilité longue durée.
--   **3 formats disponibles :** du standard au XXL pour couvrir tout ton bureau.
+## Tech specs
 
-## Caractéristiques techniques
+-   **Material:** micro-woven cloth surface / high-density non-slip rubber base
+-   **Care:** hand wash with lukewarm water, dry flat in open air
 
--   **Matériau :** Surface tissu micro-tissé / Base caoutchouc antidérapant haute densité
--   **Entretien :** Lavage à la main à l’eau tiède, séchage à plat à l’air libre
+## Sizes available
 
-## Dimensions disponibles
-
--   **35 x 45 cm :** Format standard, idéal pour la souris seule.
--   **40 x 60 cm :** Format intermédiaire, clavier et souris confortablement.
--   **40 x 90 cm (XXL) :** Format desk mat ultime, couvre tout l’espace clavier et souris.
+-   **35 x 45 cm:** standard size, ideal for the mouse alone.
+-   **40 x 60 cm:** mid size, comfortably fits keyboard and mouse.
+-   **40 x 90 cm (XXL):** the ultimate deskmat, covers the full keyboard + mouse area.

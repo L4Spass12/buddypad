@@ -48,25 +48,23 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Turn your desk into an epic backdrop with this **starry-night samurai mouse pad**, inspired by the dark and poetic universe of Ghost of Tsushima. A striking Japanese night landscape that dresses your setup with a unique atmosphere - somewhere between honor and mystery.
 
-Transforme ton bureau en décor épique avec ce **tapis de souris samouraï nuit étoilée**, inspiré de l’univers sombre et poétique de Ghost of Tsushima. Un paysage nocturne japonais saisissant qui habille ton setup d’une atmosphère unique, entre honneur et mystère.
+## Why pick this BuddyPad samurai mouse pad?
 
-## Pourquoi choisir ce tapis de souris samouraï BuddyPad ?
+-   **Immersive samurai design:** Ghost-of-Tsushima-style starry-night illustration, high-definition print with deep, contrasted colors.
+-   **Optimized glide surface:** micro-woven cloth compatible with every optical and laser sensor, balanced between speed and control.
+-   **Non-slip rubber base:** maximum grip on wood, glass or plastic, even during the fastest movements.
+-   **Reinforced stitched edges:** anti-fraying stitching for long-term durability.
+-   **3 sizes available:** from standard to XXL to cover the whole desk.
 
--   **Design samouraï immersif :** illustration nuit étoilée style Ghost of Tsushima, impression haute définition aux couleurs profondes et contrastées.
--   **Surface de glisse optimisée :** tissu micro-tissé compatible tous capteurs optiques et laser, équilibre parfait entre vitesse et contrôle.
--   **Base caoutchouc antidérapante :** adhérence maximale sur bois, verre ou plastique, même lors des mouvements les plus rapides.
--   **Bords cousus renforcés :** surpiqûre anti-effilochage pour une durabilité longue durée.
--   **3 formats disponibles :** du standard au XXL pour couvrir tout ton bureau.
+## Tech specs
 
-## Caractéristiques techniques
+-   **Material:** micro-woven cloth surface / high-density non-slip rubber base
+-   **Care:** hand wash with lukewarm water, dry flat in open air
 
--   **Matériau :** Surface tissu micro-tissé / Base caoutchouc antidérapant haute densité
--   **Entretien :** Lavage à la main à l’eau tiède, séchage à plat à l’air libre
+## Sizes available
 
-## Dimensions disponibles
-
--   **35 x 45 cm :** Format standard, idéal pour la souris seule.
--   **40 x 60 cm :** Format intermédiaire, clavier et souris confortablement.
--   **40 x 90 cm (XXL) :** Format desk mat ultime, couvre tout l’espace clavier et souris.
+-   **35 x 45 cm:** standard size, ideal for the mouse alone.
+-   **40 x 60 cm:** mid size, comfortably fits keyboard and mouse.
+-   **40 x 90 cm (XXL):** the ultimate deskmat, covers the full keyboard + mouse area.

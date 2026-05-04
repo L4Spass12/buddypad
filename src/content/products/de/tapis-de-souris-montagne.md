@@ -47,42 +47,40 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+## **Bring eine Prise Ruhe und Präzision in deinen Arbeitsbereich.**
 
-## **Apportez une touche de sérénité et de précision à votre espace de travail.**
+Verwandle deinen Schreibtisch in einen Ort der Inspiration mit unserem **Mauspad**. Es verbindet minimalistische japanische Ästhetik mit technischer Leistung - dieses Deskmat ist für anspruchsvolle Gamer wie für Homeoffice-Profis konzipiert.
 
-Transformez votre bureau en un lieu d’inspiration avec notre **Tapis de Souris** . Alliant esthétique japonaise minimaliste et performance technique, ce tapis de bureau (Desk Mat) est conçu pour les gamers exigeants comme pour les professionnels en télétravail.
+Sein monochromes Schwarz-Weiß-Design, das den berühmten japanischen Gipfel zeigt, der aus dem Nebel auftaucht, passt perfekt zu jedem **Gaming-Setup** oder modernen Schreibtisch.
 
-Son design monochrome en noir et blanc, représentant le célèbre sommet japonais émergeant de la brume, s’intègre parfaitement à tout type de **setup gaming** ou de bureau moderne.
+## **Warum dieses Deskmat wählen?**
 
-## **Pourquoi choisir ce tapis de bureau ?**
+-   **Zen-Design & Eleganz:** Der HD-Druck des Mount Fuji erzeugt eine beruhigende, klare Atmosphäre. Der Grauverlauf bringt Tiefe, ohne den Raum visuell zu überladen.
 
--   **Design Zen & Élégant :** L’impression haute définition du Mont Fuji offre une ambiance apaisante et épurée. Le dégradé de gris ajoute de la profondeur sans surcharger visuellement votre espace.
+-   **Unerschütterliche Stabilität (Gummibasis):** Schluss mit dem Pad, das mitten in der Aktion verrutscht. Die **texturierte Naturgummi-Basis** garantiert vollen Halt auf Holz, Glas oder Kunststoff. Es bleibt verankert, auch bei schnellsten Mausbewegungen.
 
--   **Stabilité Infaillible (Base Caoutchouc) :** Fini le tapis qui bouge en pleine action. La **base en caoutchouc naturel texturé** garantit une adhérence totale sur le bois, le verre ou le plastique. Il reste ancré, même lors de mouvements de souris rapides.
+-   **Optimierte Gleitfläche:** Die glatte Stoffoberfläche ermöglicht präzises Tracking (optisch oder Laser), perfekt ausbalanciert zwischen Speed und Control.
 
--   **Surface de Glisse Optimisée :** Le revêtement en tissu lisse permet un suivi précis de la souris (optique ou laser), offrant un équilibre parfait entre vitesse (Speed) et contrôle (Control).
+-   **Verstärkte Haltbarkeit:** Die Ränder sind mit **vernähten Anti-Ausfransen-Nähten** versehen. Das garantiert eine lange Lebensdauer und verhindert, dass sich die Oberfläche mit der Zeit ablöst.
 
--   **Durabilité Renforcée :** Les contours sont dotés de **bords cousus et surpiqués** (anti-effilochage). Cela assure une longue durée de vie et évite que le revêtement ne se décolle avec le temps.
-
--   **Formats pour tous les besoins :** Disponible en taille standard pour la souris uniquement ou en format **XXL étendu** pour accueillir votre clavier et protéger l’intégralité de votre bureau.
+-   **Größen für jeden Bedarf:** Verfügbar in Standardgröße nur für die Maus oder im **XXL-Format**, um auch die Tastatur abzudecken und den gesamten Schreibtisch zu schützen.
 
 
-### **Caractéristiques Techniques :**
+### **Technische Daten:**
 
--   **Matériau :** Surface en tissu micro-tissé / Base en **Caoutchouc antidérapant** haute densité.
+-   **Material:** mikro-gewebte Stoffoberfläche / hochdichte **rutschfeste Gummibasis**.
 
--   **Couleur :** Noir, Blanc, Gris (Monochrome).
+-   **Farbe:** Schwarz, Weiß, Grau (monochrom).
 
--   **Épaisseur :** Confortable pour le poignet 2 mm .
+-   **Dicke:** handgelenkfreundliche 2 mm.
 
--   **Entretien :** Résistant à l’eau et facile à nettoyer.
+-   **Pflege:** wasserfest und leicht zu reinigen.
 
 
-### **Dimensions disponibles :**
+### **Verfügbare Größen:**
 
--   **35 x 45 cm :** Format standard généreux, idéal pour le gaming FPS.
+-   **35 x 45 cm:** großzügiges Standardformat, ideal für FPS-Gaming.
 
--   **40 x 60 cm :** Format intermédiaire polyvalent.
+-   **40 x 60 cm:** vielseitiges mittleres Format.
 
--   **40 x 90 cm (XXL) :** Le format « Desk Mat » ultime. Couvre tout l’espace clavier + souris pour une immersion totale.
+-   **40 x 90 cm (XXL):** das ultimative "Deskmat"-Format. Deckt den gesamten Tastatur- + Mausbereich ab für totale Immersion.

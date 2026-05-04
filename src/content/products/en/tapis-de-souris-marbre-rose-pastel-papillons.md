@@ -51,8 +51,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Lift up your desk with this **mouse pad** featuring a pastel pink marble and iridescent butterflies design. The marbled background in delicate tones, dotted with butterflies in holographic shimmer, brings a chic, feminine and sophisticated touch to your workspace.
 
-Sublime ton bureau avec ce **tapis de souris** au design marbre rose pastel et papillons irisés. Le fond marbré aux tons délicats, orné de papillons aux reflets holographiques, apporte une touche chic, féminine et sophistiquée à ton espace de travail.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.

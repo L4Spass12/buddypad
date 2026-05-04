@@ -48,25 +48,23 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Verwandle deinen Schreibtisch in eine epische Kulisse mit diesem **Samurai Sternennacht Mauspad**, inspiriert vom düsteren und poetischen Universum von Ghost of Tsushima. Eine ergreifende japanische Nachtlandschaft, die dein Setup mit einer einzigartigen Atmosphäre einhüllt - irgendwo zwischen Ehre und Mysterium.
 
-Transforme ton bureau en décor épique avec ce **tapis de souris samouraï nuit étoilée**, inspiré de l’univers sombre et poétique de Ghost of Tsushima. Un paysage nocturne japonais saisissant qui habille ton setup d’une atmosphère unique, entre honneur et mystère.
+## Warum dieses BuddyPad Samurai Mauspad wählen?
 
-## Pourquoi choisir ce tapis de souris samouraï BuddyPad ?
+-   **Immersives Samurai-Design:** Sternennacht-Illustration im Ghost-of-Tsushima-Stil, HD-Druck mit tiefen, kontrastreichen Farben.
+-   **Optimierte Gleitfläche:** mikro-gewebter Stoff, kompatibel mit allen optischen und Laser-Sensoren, ausgewogen zwischen Speed und Control.
+-   **Rutschfeste Gummibasis:** maximaler Halt auf Holz, Glas oder Kunststoff, auch bei schnellsten Bewegungen.
+-   **Verstärkte vernähte Ränder:** Anti-Ausfransen-Naht für lange Haltbarkeit.
+-   **3 Größen verfügbar:** vom Standardformat bis XXL, um den ganzen Schreibtisch abzudecken.
 
--   **Design samouraï immersif :** illustration nuit étoilée style Ghost of Tsushima, impression haute définition aux couleurs profondes et contrastées.
--   **Surface de glisse optimisée :** tissu micro-tissé compatible tous capteurs optiques et laser, équilibre parfait entre vitesse et contrôle.
--   **Base caoutchouc antidérapante :** adhérence maximale sur bois, verre ou plastique, même lors des mouvements les plus rapides.
--   **Bords cousus renforcés :** surpiqûre anti-effilochage pour une durabilité longue durée.
--   **3 formats disponibles :** du standard au XXL pour couvrir tout ton bureau.
+## Technische Daten
 
-## Caractéristiques techniques
+-   **Material:** mikro-gewebte Stoffoberfläche / hochdichte rutschfeste Gummibasis
+-   **Pflege:** Handwäsche mit lauwarmem Wasser, flach an der Luft trocknen
 
--   **Matériau :** Surface tissu micro-tissé / Base caoutchouc antidérapant haute densité
--   **Entretien :** Lavage à la main à l’eau tiède, séchage à plat à l’air libre
+## Verfügbare Größen
 
-## Dimensions disponibles
-
--   **35 x 45 cm :** Format standard, idéal pour la souris seule.
--   **40 x 60 cm :** Format intermédiaire, clavier et souris confortablement.
--   **40 x 90 cm (XXL) :** Format desk mat ultime, couvre tout l’espace clavier et souris.
+-   **35 x 45 cm:** Standardformat, ideal nur für die Maus.
+-   **40 x 60 cm:** mittleres Format, Tastatur und Maus haben bequem Platz.
+-   **40 x 90 cm (XXL):** das ultimative Deskmat, deckt den gesamten Tastatur- und Mausbereich ab.

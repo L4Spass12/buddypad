@@ -52,8 +52,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Drift away into a pastel kawaii universe with this **mouse pad** featuring a starry sky and pastel tulips in blue and pink tones. A poetic, magical **XXL mouse pad** that brings softness and wonder to your desk.
 
-Laisse-toi emporter dans un univers kawaii pastel avec ce **tapis de souris** au design ciel étoilé et tulipes pastels en tons bleu et rose. Un **tapis de souris XXL** poétique et féerique qui apporte douceur et magie à ton bureau.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.

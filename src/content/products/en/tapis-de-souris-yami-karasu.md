@@ -47,6 +47,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un corbeau noir déploie ses ailes sur un fond de brume violette, le Yami Karasu est un **tapis de souris gaming manga** qui plonge ton bureau dans l’univers mystique du Japon féodal. Yami (闇) signifie « l’obscurité » : le nom parfait pour ce design à la fois élégant et intense. Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris gaming optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage.
+A black raven spreads its wings against a violet mist - Yami Karasu is a **gaming manga mouse pad** that drops your desk into the mystical world of feudal Japan. Yami (闇) means "darkness" - the perfect name for this design that's both elegant and intense. High-density micro-woven surface, optimized for precise tracking with every optical and laser gaming mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying.

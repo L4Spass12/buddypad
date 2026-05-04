@@ -47,6 +47,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un corbeau noir sur fond de brume violette, ce **tapis de souris samouraï gaming** transforme ton bureau en univers manga japonais. Surface micro-tissée haute densité, base caoutchouc antidérapante, bords cousus. Disponible en Standard, Large et XXL pour couvrir clavier et souris sur la même surface.
+Ein schwarzer Rabe vor violettem Nebel - dieses **Samurai Gaming Mauspad** verwandelt deinen Schreibtisch in ein japanisches Manga-Universum. Hochdichte mikro-gewebte Oberfläche, rutschfeste Gummibasis, vernähte Ränder. In Standard, Large und XXL verfügbar - bedeckt Tastatur und Maus auf derselben Fläche.

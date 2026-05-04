@@ -47,6 +47,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un jeune garçon pêcheur entouré de carpes koï et d’un oiseau, ce **tapis de souris japonais koï esthétique** habille ton bureau d’une illustration douce et poétique. Tissu micro-tissé, base antidérapante, bords cousus. Standard, Large et XXL.
+Ein junger Fischerjunge, umgeben von Koi-Karpfen und einem Vogel - dieses **japanische Koi-Mauspad mit ästhetischer Note** verleiht deinem Schreibtisch eine sanfte, poetische Illustration. Mikro-gewebter Stoff, rutschfeste Basis, vernähte Ränder. Standard, Large und XXL.

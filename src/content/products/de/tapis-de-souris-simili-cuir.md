@@ -170,23 +170,21 @@ variations:
     attributes:
       Größe: 100x50 cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+**Verbinde Schutz, Komfort und Eleganz für deinen Arbeitsbereich.**
 
-**Alliez protection, confort et élégance pour votre espace de travail.**
+Dieses hochwertige Schreibtischunterlage aus PU-Kunstleder ist das unverzichtbare Accessoire, um dein Setup zu modernisieren. Konzipiert, um traditionelle Mauspads zu ersetzen, bietet es eine großzügige Oberfläche, die deine Möbel schützt und gleichzeitig deinen täglichen Arbeitskomfort verbessert.
 
-Ce sous-main de bureau en cuir PU de haute qualité est l’accessoire indispensable pour moderniser votre installation. Conçu pour remplacer les tapis de souris traditionnels, il offre une surface généreuse qui protège votre mobilier tout en améliorant votre confort de travail quotidien.
+**Technische Daten und Vorteile:**
 
-**Caractéristiques techniques et avantages :**
+-   **Verstärkte Stabilität (Suede-Basis):** Anders als Standard-Pads, die rutschen, ist dieses Modell mit einer Wildleder-Textur (Suede) ausgestattet. Diese spezielle Konzeption erhöht die Reibung um 70 % und garantiert, dass das Pad perfekt auf deinem Schreibtisch hält.
 
--   **Stabilité Renforcée (Base Suede) :** Contrairement aux tapis standards qui glissent, ce modèle est équipé d’un dos en texture daim (Suede). Cette conception spécifique augmente la friction de 70%, garantissant que le tapis reste parfaitement en place sur votre bureau.
+-   **Vollständiger Schutz:** Die langlebige Kunstleder-Oberfläche wirkt als effektive Barriere gegen Kratzer, Schrammen, Flecken und die Hitze von Computern oder heißen Tassen.
 
--   **Protection Intégrale :** Le revêtement en cuir synthétique durable agit comme une barrière efficace contre les rayures, les éraflures, les taches et la chaleur émise par les ordinateurs ou les tasses chaudes.
+-   **Vielseitige 2-in-1 Oberfläche:** Die glatte Textur ist auf präzises Mausgleiten optimiert und dient gleichzeitig als komfortable Schreibunterlage, was die Handgelenkermüdung reduziert.
 
--   **Surface Polyvalente 2-en-1 :** La texture lisse est optimisée pour une glisse de souris précise et sert également de support confortable pour l’écriture manuscrite, réduisant la fatigue du poignet.
+-   **Einfache und schnelle Pflege:** Vollständig wasserdicht - die Oberfläche fürchtet weder Wasser noch Ölflecken. Ein Wischen mit einem feuchten Tuch genügt, um es wie neu aussehen zu lassen.
 
--   **Entretien Facile et Rapide :** Totalement imperméable, la surface ne craint ni l’eau ni les taches d’huile. Un simple coup de chiffon humide suffit pour le rendre comme neuf.
-
--   **Formats Adaptés :** Disponible en plusieurs dimensions (45×35 cm, 60×40 cm, 90×40 cm) pour s’ajuster parfaitement à la taille de votre bureau, du petit espace de travail au grand setup complet.
+-   **Passende Größen:** In mehreren Abmessungen verfügbar (45x35 cm, 60x40 cm, 90x40 cm), um perfekt zur Größe deines Schreibtisches zu passen, vom kleinen Arbeitsplatz bis zum großen Komplett-Setup.
 
 
-**Un bureau toujours impeccable.** Fini les petits tapis de souris qui limitent vos mouvements. Optez pour une solution large, propre et professionnelle qui met en valeur votre équipement.
+**Ein Schreibtisch, der immer makellos aussieht.** Schluss mit winzigen Mauspads, die deine Bewegungen einschränken. Wähl eine breite, saubere und professionelle Lösung, die deine Ausrüstung in Szene setzt.

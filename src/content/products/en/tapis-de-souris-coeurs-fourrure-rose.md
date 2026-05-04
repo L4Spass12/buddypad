@@ -1,12 +1,12 @@
 ---
-name: Cœurs en Fourrure Rose Mouse Pad
+name: "Pink Fur Hearts Mouse Pad"
 price: 19
 compareAtPrice: 25
 priceRange:
   min: 19
   max: 34.9
 image: /images/products/tapis-de-souris-coeurs-fourrure-rose/1.webp
-imageAlt: Cœurs en Fourrure Rose Mouse Pad
+imageAlt: "Pink Fur Hearts Mouse Pad"
 gallery:
   - /images/products/tapis-de-souris-coeurs-fourrure-rose/1.webp
   - /images/products/tapis-de-souris-samourai-papillons-bleus/2.webp
@@ -48,8 +48,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Bring a soft, romantic and cosy vibe to your desk with this **mouse pad** featuring a pink fur hearts design. Its velvety texture and pillowy pattern make it as good to look at as it is to use.
 
-Offre à ton bureau une atmosphère douce, romantique et cosy avec ce **tapis de souris** au design cœurs en fourrure rose. Sa texture veloutée et son motif moelleux craquant en font un accessoire aussi beau à regarder qu’agréable à utiliser.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.

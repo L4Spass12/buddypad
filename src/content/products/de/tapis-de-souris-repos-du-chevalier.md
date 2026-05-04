@@ -48,6 +48,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un chevalier solitaire entouré de nature, le Repos du chevalier est un **tapis de souris gaming XXL et Standard** fantasy qui mêle poésie et univers guerrier pour un bureau vraiment hors du commun. Le contraste entre la brutalité du combattant et la douceur des fleurs en fait un design unique dans son genre. Surface de précision micro-tissée haute densité pour un tracking optimal de ta souris. Base caoutchouc antidérapante pour rester stable quelle que soit l’intensité de ta session. Bords cousus pour une finition soignée et durable.
+Ein einsamer Ritter umgeben von Natur - Ruhe des Ritters ist ein **Fantasy XXL und Standard Gaming Mauspad**, das Poesie und Kriegerwelt verbindet, für einen wirklich außergewöhnlichen Schreibtisch. Der Kontrast zwischen der Brutalität des Kämpfers und der Sanftheit der Blumen macht das Design einzigartig. Hochdichte mikro-gewebte Präzisionsoberfläche für optimales Maustracking. Rutschfeste Gummibasis bleibt stabil, egal wie intensiv die Session. Vernähte Ränder für ein sauberes, langlebiges Finish.

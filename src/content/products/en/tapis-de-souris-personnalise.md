@@ -43,14 +43,12 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+### Custom mouse pad, printed with your image
 
-### Tapis de souris personnalisé, Impression avec votre image
+Create a unique **ergonomic custom mouse pad** by uploading your photo, logo or design. This **personalized made-to-order mouse pad** is ideal to customize your desk, improve your work comfort, or give a useful and original gift.
 
-Créez un **tapis de souris ergonomique personnalisé** unique en important votre photo, logo ou design. Ce **tapis de souris personnalisé sur mesure** est idéal pour personnaliser votre bureau, améliorer votre confort de travail ou offrir un cadeau original et utile.
+Its smooth high-precision surface delivers fluid glide and optimal tracking for every optical and laser mouse. The non-slip base guarantees perfect stability on the desk, even during long use.
 
-Sa surface lisse haute précision assure une glisse fluide et un suivi optimal pour toutes les souris optiques et laser. La base antidérapante garantit une parfaite stabilité sur le bureau, même lors d’une utilisation prolongée.
+The **high-definition print** delivers crisp output with accurate, durable colors. For best results, upload a high-quality, non-pixelated, well-resolved image to get a professional, premium look on your custom mouse pad.
 
-L’**impression haute définition** permet un rendu net, avec des couleurs fidèles et durables. Pour un résultat optimal, il est recommandé d’importer une image de haute qualité, non pixelisée et en bonne résolution, afin d’obtenir un rendu visuel professionnel et qualitatif sur votre tapis de souris personnalisé.
-
-Ce **tapis de souris ergonomique personnalisé avec photo ou logo** convient aussi bien à un usage personnel qu’à un usage professionnel, et constitue une excellente idée cadeau pour un anniversaire, une entreprise ou un événement.
+This **ergonomic custom mouse pad with photo or logo** is suited to personal as well as professional use, and makes an excellent gift idea for a birthday, a company or an event.

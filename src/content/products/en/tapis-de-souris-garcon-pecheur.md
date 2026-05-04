@@ -47,6 +47,4 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
-
-Un jeune garçon pêcheur entouré de carpes koï et d’un oiseau, ce **tapis de souris japonais koï esthétique** habille ton bureau d’une illustration douce et poétique. Tissu micro-tissé, base antidérapante, bords cousus. Standard, Large et XXL.
+A young boy fisher surrounded by koi carp and a bird - this **Japanese koi aesthetic mouse pad** dresses your desk with a soft, poetic illustration. Micro-woven cloth, non-slip base, stitched edges. Standard, Large and XXL.

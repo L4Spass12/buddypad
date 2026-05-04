@@ -52,8 +52,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Step aboard for an immersive, fantastic journey with this **mouse pad** featuring a lush landscape seen from a train, inhabited by a cat and a mysterious creature. A detail-rich illustration that turns your desk into a window onto an imaginary world.
 
-Embarque pour un voyage immersif et fantastique avec ce **tapis de souris** illustrant un paysage luxuriant vu depuis un train, habité d’un chat et d’une créature mystérieuse. Une illustration riche en détails qui transforme ton bureau en fenêtre sur un monde imaginaire.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.

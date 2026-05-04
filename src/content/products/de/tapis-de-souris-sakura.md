@@ -48,6 +48,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Un chemin fleuri sous des cerisiers en fleurs, ce **desk mat sakura japonais** transforme ton bureau en paysage printanier serein. Idéal pour un setup lo-fi, gaming ou télétravail. Tissu micro-tissé, base antidérapante, bords cousus. Standard, Large et XXL.
+Ein blühender Weg unter Kirschblüten - dieses **japanische Sakura Deskmat** verwandelt deinen Schreibtisch in eine friedliche Frühlingslandschaft. Ideal für ein Lo-Fi-, Gaming- oder Homeoffice-Setup. Mikro-gewebter Stoff, rutschfeste Basis, vernähte Ränder. Standard, Large und XXL.

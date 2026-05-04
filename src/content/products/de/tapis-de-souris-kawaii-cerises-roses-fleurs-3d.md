@@ -51,8 +51,6 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Verlieb dich in dieses **Mauspad** mit einem niedlichen Kawaii-Patisserie-Design mit rosa Kirschen und weißen **3D**-Reliefblüten auf rosa Hintergrund. Ein fruchtiges, süßes Motiv, das Frische und gute Laune auf deinen Schreibtisch bringt.
 
-Craque pour ce **tapis de souris** au design kawaii pâtisserie avec ses cerises roses et ses fleurs blanches en relief **3D** sur fond rose. Un motif fruité et gourmand qui apporte bonne humeur et fraîcheur à ton bureau.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+Hochdichte mikro-gewebte Oberfläche, optimiert für präzises Tracking mit jeder optischen und Laser-Maus. Dicke rutschfeste Gummibasis für totale Stabilität. Verstärkte vernähte Ränder gegen Ausfransen für maximale Haltbarkeit.

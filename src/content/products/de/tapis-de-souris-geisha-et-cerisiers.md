@@ -49,6 +49,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Une geisha élégante sous des cerisiers en fleurs roses, ce **tapis de souris japonais cerisiers XXL** apporte une touche de douceur et de culture nippone à ton bureau. Tissu micro-tissé, base antidérapante, bords cousus. Standard, Large et XXL.
+Eine elegante Geisha unter rosa Kirschblüten - dieses **japanische Kirschblüten XXL Mauspad** bringt Zartheit und japanische Kultur an deinen Schreibtisch. Mikro-gewebter Stoff, rutschfeste Basis, vernähte Ränder. Standard, Large und XXL.

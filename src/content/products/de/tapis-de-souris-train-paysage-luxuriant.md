@@ -52,8 +52,6 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Steig ein für eine immersive, fantastische Reise mit diesem **Mauspad**, das eine üppige Landschaft aus einem Zug zeigt, bewohnt von einer Katze und einer geheimnisvollen Kreatur. Eine detailreiche Illustration, die deinen Schreibtisch in ein Fenster auf eine imaginäre Welt verwandelt.
 
-Embarque pour un voyage immersif et fantastique avec ce **tapis de souris** illustrant un paysage luxuriant vu depuis un train, habité d’un chat et d’une créature mystérieuse. Une illustration riche en détails qui transforme ton bureau en fenêtre sur un monde imaginaire.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+Hochdichte mikro-gewebte Oberfläche, optimiert für präzises Tracking mit jeder optischen und Laser-Maus. Dicke rutschfeste Gummibasis für totale Stabilität. Verstärkte vernähte Ränder gegen Ausfransen für maximale Haltbarkeit.

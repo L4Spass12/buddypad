@@ -55,25 +55,23 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Bring eine Prise Kawaii-Sanftheit in dein Setup mit diesem **ruderndem Hasen-Mauspad** auf einem Seerosenteich. Eine poetische, niedliche Illustration, die deinen Schreibtisch in eine Märchenwelt verwandelt - ideal für Anime-Fans und Liebhaber der Kawaii-Ästhetik.
 
-Apporte une touche de douceur kawaii à ton setup avec ce **tapis de souris lapin rameur** sur un étang de nénuphars. Une illustration poétique et mignonne qui transforme ton bureau en monde féérique, idéale pour les fans d’anime et d’esthétique kawaii.
+## Warum dieses BuddyPad Kawaii-Mauspad wählen?
 
-## Pourquoi choisir ce tapis de souris kawaii BuddyPad ?
+-   **Exklusive Kawaii-Illustration:** rudernder Hase auf Seerosenteich, sanfte und beruhigende Atmosphäre, HD-Druck.
+-   **Optimierte Gleitfläche:** mikro-gewebter Stoff, kompatibel mit allen optischen und Laser-Sensoren, ausgewogen zwischen Speed und Control.
+-   **Rutschfeste Gummibasis:** voller Halt auf Holz, Glas oder Kunststoff, auch bei schnellsten Bewegungen.
+-   **Verstärkte vernähte Ränder:** Anti-Ausfransen-Naht für lange Haltbarkeit.
+-   **3 Größen verfügbar:** vom Standardformat bis XXL, um den ganzen Schreibtisch abzudecken.
 
--   **Illustration kawaii exclusive :** lapin rameur sur étang de nénuphars, ambiance douce et apaisante, impression haute définition.
--   **Surface de glisse optimisée :** tissu micro-tissé compatible tous capteurs optiques et laser, équilibre parfait entre vitesse et contrôle.
--   **Base caoutchouc antidérapante :** adhérence totale sur bois, verre ou plastique, même lors des mouvements les plus rapides.
--   **Bords cousus renforcés :** surpiqûre anti-effilochage pour une durabilité longue durée.
--   **3 formats disponibles :** du standard au XXL pour couvrir tout ton bureau.
+## Technische Daten
 
-## Caractéristiques techniques
+-   **Material:** mikro-gewebte Stoffoberfläche / hochdichte rutschfeste Gummibasis
+-   **Pflege:** Handwäsche mit lauwarmem Wasser, flach an der Luft trocknen
 
--   **Matériau :** Surface tissu micro-tissé / Base caoutchouc antidérapant haute densité
--   **Entretien :** Lavage à la main à l’eau tiède, séchage à plat à l’air libre
+## Verfügbare Größen
 
-## Dimensions disponibles
-
--   **35 x 45 cm :** Format standard, idéal pour la souris seule.
--   **40 x 60 cm :** Format intermédiaire, clavier et souris confortablement.
--   **40 x 90 cm (XXL) :** Format desk mat ultime, couvre tout l’espace clavier et souris.
+-   **35 x 45 cm:** Standardformat, ideal nur für die Maus.
+-   **40 x 60 cm:** mittleres Format, Tastatur und Maus haben bequem Platz.
+-   **40 x 90 cm (XXL):** das ultimative Deskmat, deckt den gesamten Tastatur- und Mausbereich ab.

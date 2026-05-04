@@ -49,6 +49,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Des étoiles, de la brume et un ciel nocturne envoûtant, ce **tapis de souris esthétique anime japonais** donne à ton bureau une atmosphère onirique et hors du temps. Tissu micro-tissé, base caoutchouc, bords cousus. Format Standard, Large ou XXL.
+Sterne, Nebel und ein bezaubernder Nachthimmel - dieses **anime-ästhetische japanische Mauspad** bringt eine traumhafte, zeitlose Stimmung auf deinen Schreibtisch. Mikro-gewebter Stoff, Gummibasis, vernähte Ränder. Standard, Large oder XXL.

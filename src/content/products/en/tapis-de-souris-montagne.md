@@ -47,42 +47,40 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+## **Bring a touch of serenity and precision to your workspace.**
 
-## **Apportez une touche de sérénité et de précision à votre espace de travail.**
+Turn your desk into a place of inspiration with our **Mouse Pad**. Combining minimalist Japanese aesthetics with technical performance, this deskmat is built for demanding gamers and remote-work professionals alike.
 
-Transformez votre bureau en un lieu d’inspiration avec notre **Tapis de Souris** . Alliant esthétique japonaise minimaliste et performance technique, ce tapis de bureau (Desk Mat) est conçu pour les gamers exigeants comme pour les professionnels en télétravail.
+Its monochrome black and white design - depicting the iconic Japanese peak emerging from the mist - fits any **gaming setup** or modern desk perfectly.
 
-Son design monochrome en noir et blanc, représentant le célèbre sommet japonais émergeant de la brume, s’intègre parfaitement à tout type de **setup gaming** ou de bureau moderne.
+## **Why choose this deskmat?**
 
-## **Pourquoi choisir ce tapis de bureau ?**
+-   **Zen & elegant design:** the high-definition print of Mount Fuji creates a soothing, refined atmosphere. The grey gradient adds depth without visually overloading the space.
 
--   **Design Zen & Élégant :** L’impression haute définition du Mont Fuji offre une ambiance apaisante et épurée. Le dégradé de gris ajoute de la profondeur sans surcharger visuellement votre espace.
+-   **Unshakeable stability (rubber base):** no more pad sliding mid-action. The **textured natural rubber base** delivers full grip on wood, glass or plastic. It stays anchored, even during fast mouse movements.
 
--   **Stabilité Infaillible (Base Caoutchouc) :** Fini le tapis qui bouge en pleine action. La **base en caoutchouc naturel texturé** garantit une adhérence totale sur le bois, le verre ou le plastique. Il reste ancré, même lors de mouvements de souris rapides.
+-   **Optimized glide surface:** the smooth fabric coating allows precise tracking (optical or laser), striking the perfect balance between speed and control.
 
--   **Surface de Glisse Optimisée :** Le revêtement en tissu lisse permet un suivi précis de la souris (optique ou laser), offrant un équilibre parfait entre vitesse (Speed) et contrôle (Control).
+-   **Reinforced durability:** edges have **stitched seams** (anti-fraying). That ensures a long lifespan and prevents the surface from peeling over time.
 
--   **Durabilité Renforcée :** Les contours sont dotés de **bords cousus et surpiqués** (anti-effilochage). Cela assure une longue durée de vie et évite que le revêtement ne se décolle avec le temps.
-
--   **Formats pour tous les besoins :** Disponible en taille standard pour la souris uniquement ou en format **XXL étendu** pour accueillir votre clavier et protéger l’intégralité de votre bureau.
+-   **Sizes for every need:** available in standard size for the mouse only or in **extended XXL** to fit your keyboard and protect the entire desk.
 
 
-### **Caractéristiques Techniques :**
+### **Tech specs:**
 
--   **Matériau :** Surface en tissu micro-tissé / Base en **Caoutchouc antidérapant** haute densité.
+-   **Material:** micro-woven cloth surface / high-density **non-slip rubber** base.
 
--   **Couleur :** Noir, Blanc, Gris (Monochrome).
+-   **Color:** black, white, grey (monochrome).
 
--   **Épaisseur :** Confortable pour le poignet 2 mm .
+-   **Thickness:** wrist-friendly 2 mm.
 
--   **Entretien :** Résistant à l’eau et facile à nettoyer.
+-   **Care:** water-resistant and easy to clean.
 
 
-### **Dimensions disponibles :**
+### **Sizes available:**
 
--   **35 x 45 cm :** Format standard généreux, idéal pour le gaming FPS.
+-   **35 x 45 cm (14 x 18 in):** generous standard format, ideal for FPS gaming.
 
--   **40 x 60 cm :** Format intermédiaire polyvalent.
+-   **40 x 60 cm (16 x 24 in):** versatile mid-size.
 
--   **40 x 90 cm (XXL) :** Le format « Desk Mat » ultime. Couvre tout l’espace clavier + souris pour une immersion totale.
+-   **40 x 90 cm (XXL - 16 x 35 in):** the ultimate "deskmat" format. Covers the full keyboard + mouse area for total immersion.

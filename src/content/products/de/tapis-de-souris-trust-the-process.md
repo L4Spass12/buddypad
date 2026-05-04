@@ -48,8 +48,6 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
+Trust the Process - ein **motivierendes Gaming-Setup-Mauspad**, das dich jeden Tag daran erinnert, fokussiert zu bleiben. Das Design zeigt eine entschlossene Frau, ideal für einen Arbeits-Schreibtisch, ein Streaming-Setup oder einen Bereich, in dem Produktivität auf Charakter trifft.
 
-Trust the Process - un **tapis de souris motivationnel gaming setup** qui te rappelle chaque jour de rester focus. Le design illustre une femme déterminée, idéal pour un bureau de travail, un setup streaming ou un espace où la productivité rime avec caractère.
-
-Tissu micro-tissé haute densité, base caoutchouc antidérapant, bords cousus anti-effilochage. Disponible en Standard (45×35 cm), Large (60×40 cm) et XXL (90×40 cm).
+Hochdichter mikro-gewebter Stoff, rutschfeste Gummibasis, vernähte Anti-Ausfransen-Ränder. Verfügbar in Standard (45x35 cm), Large (60x40 cm) und XXL (90x40 cm).

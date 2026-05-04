@@ -48,6 +48,4 @@ variations:
     attributes:
       Größe: 90-x-40-cm
 ---
-<!-- TODO i18n:de - body in FR, please translate -->
-
-Une silhouette féminine lumineuse dans un univers pastel, ce **tapis de souris esthétique bureau** apporte une touche douce et inspirante à ton setup. Tissu haute densité, base antidérapante, bords cousus. Formats Standard, Large et XXL disponibles.
+Eine leuchtende weibliche Silhouette in einem pastellfarbenen Universum - dieses **ästhetische Büro-Mauspad** bringt eine sanfte, inspirierende Note in dein Setup. Hochdichter Stoff, rutschfeste Basis, vernähte Ränder. Standard, Large und XXL verfügbar.

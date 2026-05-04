@@ -51,8 +51,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Drop your desk into a cosmic kawaii universe with this **mouse pad** featuring a pastel galaxy design dotted with shining stars and soft clouds. A celestial **mouse pad** in soft, luminous colors for a creative and dreamy setup.
 
-Plonge ton bureau dans un univers cosmique kawaii avec ce **tapis de souris** au design galaxie pastel, parsemé d’étoiles brillantes et de nuages doux. Un **tapis de souris** céleste aux couleurs douces et lumineuses pour un setup créatif et rêveur.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.

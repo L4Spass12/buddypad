@@ -51,8 +51,6 @@ variations:
     attributes:
       Dimensions: 90-x-40-cm
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
+Fall for this **mouse pad** with a kawaii pastry design featuring pink cherries and white **3D**-relief flowers on a pink background. A fruity, sweet motif that brings cheer and freshness to your desk.
 
-Craque pour ce **tapis de souris** au design kawaii pâtisserie avec ses cerises roses et ses fleurs blanches en relief **3D** sur fond rose. Un motif fruité et gourmand qui apporte bonne humeur et fraîcheur à ton bureau.
-
-Surface micro-tissée haute densité, optimisée pour le suivi précis de toutes les souris optiques et laser. Base caoutchouc antidérapante épaisse pour une stabilité totale. Bords cousus surpiqués anti-effilochage pour une durabilité optimale.
+High-density micro-woven surface, optimized for precise tracking with every optical and laser mouse. Thick non-slip rubber base for total stability. Reinforced stitched edges to prevent fraying for long-term durability.
