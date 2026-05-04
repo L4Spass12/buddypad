@@ -1,94 +1,90 @@
 ---
-title: Comment enlever les taches sur tapis de souris
-description: >-
-  Identifier le type de tache sur votre tapis de souris Le tapis de souris est
-  un accessoire quotidien souvent négligé, pourtant il accumule rapidement
-  poussière, miettes et taches qui dégradent
+title: "How to remove stains from a mouse pad"
+description: "Identify the type of stain on your mouse pad. The mouse pad is a daily accessory often neglected, yet it quickly accumulates dust, crumbs and stains that degrade its look and performance."
 pubDate: '2026-01-21T00:00:00.000Z'
 updatedDate: '2026-01-21T00:00:00.000Z'
-author: Équipe BuddyPad
-category: Guide d’achat & conseils
-image: /images/blog/enlever-taches-tapis-souris.webp
-imageAlt: Comment enlever les taches sur tapis de souris
+author: "Équipe BuddyPad"
+category: "Guide d’achat & conseils"
+image: "/images/blog/enlever-taches-tapis-souris.webp"
+imageAlt: "How to remove stains from a mouse pad"
 ---
-<!-- TODO i18n:en - body in FR, please translate -->
 
-## Identifier le type de tache sur votre tapis de souris
+## Identify the type of stain on your mouse pad
 
-Le tapis de souris est un accessoire quotidien souvent négligé, pourtant il accumule rapidement poussière, miettes et taches qui dégradent son apparence et ses performances. Avant de commencer le nettoyage, il est essentiel de bien identifier la nature de la tache pour appliquer le traitement adapté.
+The mouse pad is a daily accessory often neglected, yet it quickly accumulates dust, crumbs and stains that degrade its look and performance. Before starting cleaning, it's essential to identify the nature of the stain to apply the right treatment.
 
-### Les taches courantes et leurs causes
+### Common stains and their causes
 
-Les taches de café, thé ou boissons sont parmi les plus fréquentes, particulièrement si vous travaillez avec une tasse à proximité. Les traces de gras et de doigts s’accumulent naturellement avec l’utilisation quotidienne, tandis que la poussière s’incruste progressivement dans les fibres. Vous pouvez également rencontrer des marques d’usure et décoloration dues au frottement constant, ainsi que des taches de stylo ou encre accidentelles.
+Coffee, tea or beverage stains are among the most frequent, especially if you work with a mug nearby. Grease and fingerprint marks naturally accumulate with daily use, while dust gradually embeds into the fibers. You may also encounter wear marks and discoloration from constant friction, plus accidental pen or ink stains.
 
-### Pourquoi le type de tache importe
+### Why the type of stain matters
 
-Chaque tache nécessite un traitement adapté. Les produits inadéquats peuvent fixer la tache de manière permanente au lieu de l’éliminer. Il existe également un risque réel d’endommagement du matériau, qu’il soit en caoutchouc, tissu ou autre revêtement spécialisé. C’est pourquoi une bonne identification en amont garantit un nettoyage efficace sans détérioration.
+Each stain needs a tailored treatment. The wrong product can permanently set the stain instead of removing it. There's also a real risk of damaging the material, whether rubber, cloth or some specialized coating. That's why proper identification upfront guarantees effective cleaning without damage.
 
-## Préparation et matériel nécessaire avant le nettoyage
+## Preparation and equipment needed before cleaning
 
-### Les produits recommandés
+### Recommended products
 
-L’eau tiède et le savon doux constituent une solution universelle efficace pour la plupart des taches légères. Le vinaigre blanc dilué fonctionne remarquablement bien sur les taches tenaces et incrustées. L’alcool isopropylique convient particulièrement aux tapis avec base caoutchouc pour éliminer les traces de gras. Des produits spécialisés existent également sur le marché pour cibler des problèmes spécifiques. En revanche, évitez absolument l’eau de Javel, les solvants agressifs et les produits abrasifs qui risqueraient de ruiner votre accessoire.
+Lukewarm water and mild soap make a universal solution effective for most light stains. Diluted white vinegar works remarkably well on stubborn, embedded stains. Isopropyl alcohol is particularly suited to pads with a rubber base for removing grease marks. Specialized products also exist on the market for specific issues. Conversely, absolutely avoid bleach, aggressive solvents and abrasive products that would risk ruining your accessory.
 
-### Équipement à préparer
+### Equipment to prepare
 
-Rassemblez un chiffon microfibre doux, une brosse à poils souples, des serviettes absorbantes, un récipient pour préparer votre solution de nettoyage et optionnellement des gants de protection. Cet équipement basique suffit pour traiter efficacement la majorité des situations sans investissement important.
+Gather a soft microfiber cloth, a soft-bristle brush, absorbent towels, a container to mix your cleaning solution and optionally protective gloves. This basic equipment is enough to handle the majority of situations without a big investment.
 
-### Préparation du tapis
+### Preparing the pad
 
-Commencez par débrancher la souris et le câble USB pour éviter tout risque. Enlevez la poussière sèche avec un chiffon sec en effectuant des mouvements légers. Avant d’appliquer votre solution nettoyante, testez-la systématiquement sur une zone cachée du tapis pour vérifier qu’elle ne provoque pas de décoloration ou de dommage.
+Start by unplugging the mouse and the USB cable to avoid any risk. Remove dry dust with a dry cloth using light strokes. Before applying your cleaning solution, systematically test it on a hidden area of the pad to confirm it doesn't cause discoloration or damage.
 
-## Méthodes de nettoyage par type de tache
+## Cleaning methods by stain type
 
-### Nettoyage des taches liquides (café, thé, boissons)
+### Cleaning liquid stains (coffee, tea, beverages)
 
-La rapidité est cruciale avec les taches liquides. Épongez immédiatement avec un chiffon sec pour absorber le maximum de liquide. Appliquez ensuite une solution d’eau tiède et savon doux, puis frottez délicatement en mouvements circulaires. Rincez avec un chiffon humide et séchez complètement avant de réutiliser votre tapis. Cette méthode simple prévient la pénétration profonde du liquide dans les fibres.
+Speed is crucial with liquid stains. Blot immediately with a dry cloth to absorb the maximum liquid. Then apply a lukewarm-water + mild-soap solution and gently scrub in circular motions. Rinse with a damp cloth and dry completely before reusing your pad. This simple method prevents deep liquid penetration into the fibers.
 
-### Élimination des traces de gras et doigts
+### Removing grease and fingerprint marks
 
-Préparez une solution d’alcool isopropylique dilué à 50% avec de l’eau. Appliquez cette mixture sur un chiffon microfibre et frottez les zones affectées avec des mouvements circulaires doux. Laissez sécher à l’air libre sans intervention extérieure. Cette technique est particulièrement efficace car l’alcool élimine le gras sans laisser de résidu savonneux.
+Mix isopropyl alcohol diluted to 50% with water. Apply that mixture on a microfiber cloth and rub the affected zones with gentle circular motions. Let it air dry without intervention. The technique is especially effective because alcohol cuts grease without leaving soap residue.
 
-### Traitement des taches tenaces et incrustées
+### Treating stubborn, embedded stains
 
-Pour les taches qui ont eu le temps de s’incruster, préparez une solution de vinaigre blanc en diluant une part de vinaigre pour trois parts d’eau. Appliquez cette mixture et laissez reposer 5 à 10 minutes pour que le vinaigre agisse en profondeur. Frottez ensuite avec une brosse à poils souples, puis rincez abondamment à l’eau claire. Séchez avec une serviette absorbante en tamponnant plutôt qu’en frottant.
+For stains that have had time to set, mix white vinegar diluted one part vinegar to three parts water. Apply that mixture and let it sit 5 to 10 minutes so the vinegar penetrates. Then scrub with a soft-bristle brush, and rinse thoroughly with clean water. Dry with an absorbent towel by dabbing rather than rubbing.
 
-### Nettoyage en profondeur du tapis complet
+### Deep cleaning of the whole pad
 
-Lorsqu’un nettoyage global s’impose, immergez partiellement le tapis dans de l’eau savonneuse tiède. Brossez toute la surface délicatement avec une brosse à poils souples, puis rincez abondamment à l’eau claire. Effectuez un essorage léger sans tordre le tapis, puis procédez au séchage complet avant réutilisation.
+When a global clean becomes necessary, partially submerge the pad in lukewarm soapy water. Gently brush the entire surface with a soft-bristle brush, then rinse thoroughly with clean water. Lightly press out water without wringing the pad, then proceed to the full drying before reuse.
 
-## Erreurs à éviter lors du nettoyage
+## Mistakes to avoid during cleaning
 
-### Dommages matériels courants
+### Common material damage
 
-Ne jamais utiliser d’eau trop chaude, qui déforme le caoutchouc et peut endommager les couches de revêtement. Évitez de frotter trop vigoureusement, ce qui use prématurément le revêtement et réduit la durée de vie de votre accessoire. Laisser tremper le tapis longtemps détériore la base et peut créer des déformations permanentes. Enfin, n’utilisez jamais sèche-cheveux ou source de chaleur directe, qui risqueraient de causer des dommages irréversibles.
+Never use water that's too hot - it warps the rubber and can damage the surface coating layers. Avoid scrubbing too vigorously, which prematurely wears the coating and shortens the lifespan of your accessory. Letting the pad soak too long damages the base and can cause permanent deformation. Lastly, never use a hairdryer or direct heat source - they risk causing irreversible damage.
 
-### Produits à proscrire absolument
+### Products to absolutely avoid
 
-L’eau de Javel et les produits chlorés sont formellement interdits, tout comme les solvants chimiques agressifs qui peuvent dissoudre certains matériaux. Les produits abrasifs ou poudres usent rapidement le revêtement. L’alcool pur non dilué est également à éviter, car il peut endommager les adhésifs et les couches de protection du tapis.
+Bleach and chlorinated products are strictly forbidden, as are aggressive chemical solvents that can dissolve some materials. Abrasive products or powders quickly wear down the coating. Pure undiluted alcohol is also to be avoided, as it can damage adhesives and protection layers of the pad.
 
-## Séchage et finitions
+## Drying and finishing
 
-### Processus de séchage optimal
+### Optimal drying process
 
-Placez votre tapis sur une surface plane et propre après nettoyage. Laissez-le sécher naturellement pendant 24 à 48 heures. Évitez l’exposition directe au soleil qui pourrait causer une décoloration. Assurez une bonne circulation d’air autour du tapis en le positionnant dans un endroit aéré. Vérifiez que l’humidité est complètement éliminée avant de reprendre l’utilisation.
+Place your pad on a flat, clean surface after cleaning. Let it dry naturally for 24 to 48 hours. Avoid direct sunlight exposure that could cause discoloration. Ensure good air circulation around the pad by positioning it in a ventilated area. Check that moisture is fully eliminated before resuming use.
 
-### Vérification et test
+### Verification and test
 
-Inspectez la surface pour détecter tout résidu de nettoyage. Vérifiez l’adhérence de la base caoutchouc sur votre bureau. Testez la réactivité de votre souris pour confirmer que les performances n’ont pas été affectées. C’est également une bonne occasion de nettoyer la souris en même temps si nécessaire.
+Inspect the surface for any cleaning residue. Check the rubber base's grip on your desk. Test your mouse responsiveness to confirm performance hasn't been affected. It's also a good time to clean the mouse at the same time if needed.
 
-## Prévention des taches futures
+## Preventing future stains
 
-### Bonnes pratiques quotidiennes
+### Daily good practices
 
-Évitez de manger ou boire à proximité immédiate de votre tapis de souris. Nettoyez vos mains avant chaque utilisation prolongée. Vous pouvez utiliser un tapis de protection supplémentaire pour les zones particulièrement exposées. Rangez votre accessoire dans un environnement propre et sec lorsqu’il n’est pas utilisé.
+Avoid eating or drinking right next to your mouse pad. Clean your hands before each prolonged use. You can use a protective overlay for particularly exposed zones. Store your accessory in a clean, dry environment when not in use.
 
-### Entretien régulier recommandé
+### Recommended regular maintenance
 
-Un dépoussiérage hebdomadaire avec un chiffon sec suffit pour l’entretien basique. Effectuez un nettoyage léger mensuel pour éliminer les traces accumulées. Réalisez un nettoyage complet trimestriel pour maintenir votre tapis en excellent état. Inspectez régulièrement l’usure générale et les signes de détérioration.
+Weekly dusting with a dry cloth is enough for basic upkeep. Run a light monthly clean to remove accumulated marks. Do a complete quarterly clean to keep your pad in excellent shape. Regularly inspect general wear and signs of deterioration.
 
-Pour un entretien complet et des conseils détaillés, consultez notre [guide complet d’entretien des tapis de souris](/entretien-nettoyage-tapis-souris/) qui couvre tous les aspects de la maintenance de votre accessoire.
+For complete maintenance and detailed advice, check our [complete mouse pad maintenance guide](/en/entretien-nettoyage-tapis-souris/) covering all aspects of accessory upkeep.
 
 ## Conclusion
 
-Le nettoyage régulier de votre tapis de souris prolonge sa durée de vie et maintient ses performances optimales. En suivant ces méthodes éprouvées et en évitant les erreurs courantes, vous préserverez votre accessoire en excellent état pendant des années. Découvrez notre [gamme de tapis de souris gaming](/product-category/tapis-de-souris-gaming/) conçus pour résister aux taches et faciles à entretenir. Investir dans un accessoire de qualité, c’est aussi faciliter son nettoyage futur et garantir une expérience utilisateur durable.
+Cleaning your mouse pad regularly extends its lifespan and maintains optimal performance. By following these proven methods and avoiding the common mistakes, you'll preserve your accessory in excellent shape for years. Discover our [gaming mouse pad lineup](/en/product-category/tapis-de-souris-gaming/) designed to resist stains and easy to maintain. Investing in a quality accessory also makes future cleaning easier and guarantees a lasting user experience.
